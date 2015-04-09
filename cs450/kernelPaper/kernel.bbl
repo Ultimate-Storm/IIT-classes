@@ -1,0 +1,38 @@
+\begin{thebibliography}{1}
+
+\bibitem{MIT}
+{MIT Exokernel Operating System}, March 1998.
+\newblock \url{http://pdos.csail.mit.edu/exo/} [Online; accessed
+  30-January-2015].
+
+\bibitem{exo}
+OSDev.
+\newblock Exokernel, December 2011.
+\newblock \url{http://wiki.osdev.org/Exokernel} [Online; accessed
+  30-January-2015].
+
+\bibitem{Vs}
+Dave Powell.
+\newblock {Monolithic Kernel vs Microkernel}.
+\newblock Technical report, TU Wien.
+
+\bibitem{Mono}
+Wikipedia.
+\newblock {Monolithic Kernel --- Wikipedia{,} The Free Encyclopedia}, 2014.
+\newblock
+  \url{http://en.wikipedia.org/w/index.php?title=Monolithic_kernel&oldid=634403989}
+  [Online; accessed 27-January-2015].
+
+\bibitem{wiki:micro}
+Wikipedia.
+\newblock {Microkernel --- Wikipedia{,} The Free Encyclopedia}, 2015.
+\newblock
+  \url{http://en.wikipedia.org/w/index.php?title=Microkernel&oldid=644447376"}
+  [Online; accessed 29-January-2015].
+
+\bibitem{OS}
+W.~Wulf, E.~Cohen, A.~Jones W.~Corwin, R.~Levin, C.~Pierson, and F.~Pollack.
+\newblock Hydra: The kernel of a multiprocessor operating system.
+\newblock {\em Communications of the ACM}, 1979.
+
+\end{thebibliography}
