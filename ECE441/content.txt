@@ -1,0 +1,70 @@
+Welcome to ECE441 course.
+
+*** In each folder, you can find "Readme.txt", if necessary
+
+ECE441 CD contents:
+	
+	-Acrobat reader: 	Acrobat reader required for viewing .pdf files
+	
+	-ACIA&PIA ( reading material for PIA [LAB7] AND ACIA[LAB8]) 	*****IMPORTANT*****
+	
+	-Devices:	Datasheets for devices used in the experiments.
+
+                                 - ADC0801
+                                 - DAC0808
+                                 - Logic analyzer HP54620
+                                 - MC1408
+                                 - MC6821
+                                 - MC6850
+                                 - SN74LS373	
+		 - etc.
+
+	-Easy68K:
+		- Simulation software and help resources. It will be used for your final project.
+
+
+ 	-Educational Computer Board Manual: All the chapters are included individually.
+
+                                 -  Overview
+                                 -  Chapter1
+                                 -  Chapter2
+                                 -  Chapter3
+                                 -  Chapter4a
+                                 -  Chapter4b
+                                 -  Chapter5
+                                 -  Chapter6
+                                 -  Chapter7
+                                 -  Chapter8
+                                 -  Appendix
+
+	-Lab Experiments:	Experiments 1-10 in pdf format.
+
+                                 -  Overview
+                                 -  EXP01
+                                 -  EXP02  
+                                 -  EXP03
+                                 -  EXP04
+                                 -  EXP05
+                                 -  EXP06
+                                 -  EXP07
+                                 -  EXP08
+                                 -  AppendixA
+                                 -  AppendixB
+                                 -  AppendixC
+		 -  AppendixD
+
+	-Manuals:	M68k User Manual
+                                 - M68K_User_Manual                        
+                                 - M68K_User_Manual_Addendum     
+                                 - M68K_User_Manual_Addendum2  
+
+		M68k  Programmer's Reference Manual
+
+                                 - M68K_Programmer_Reference_Manual                       
+                                 - M68K_Programmer_Reference_manual_Errata  
+	
+
+
+
+***Warning***
+All manuals are copyrighted.

@@ -1,0 +1,82 @@
+Control Signals:
+
+    RW
+    AS
+    LDS
+    UDS
+    DTACK
+
+24 bits per address- meaning 6 hex digits $000000
+
+even    odd
+________________
+|       |       |
+|       |       |
+|       |       |
+|       |       |
+|       |       |
+|       |       |
+|       |       |
+|       |       |
+|       |       |
+|       |       |
+|       |       |
+|_______|_______|
+
+EVEN is UDS
+ODD is LDS
+
+Table 6-2 (Exceptions)
+    Bus error - bus fault
+
+
+
+Interrupt control signals
+-------------------------
+____
+IPL0---\
+____        
+IPL1----> 3 lines on the microprocessor
+____
+IPL2---/
+
+level 7 is highest level 1 is lowest
+
+
+A7 is the stack pointer of MC68k
+
+Status Register is 16-bit
+
+1-byte is the User byte
+1-byte is the System byte
+
+User byte usually has CCR (Condition Code Register)
+    
+System byte reserved for Supervisor Mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
