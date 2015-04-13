@@ -1,0 +1,179 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage{tabulary}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{multicol}
+%opening
+\title{\textbf{ECE 441 Test Corrections}}
+\author{Adam Sumner}
+\date{March 30th, 2015}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem 1}
+
+\textbf{Number of Bus Cycles: }6\\
+\textbf{Registers Changed and Contents? }None
+\begin{table}[H]
+	\centering
+	\begin{adjustbox}{max width=\textwidth}
+	\begin{tabulary}{1.1\textwidth}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+			\textbf{Bus Cycle Number}	&	\textbf{Address (Hex)}	&	\textbf{Data (Hex)}	&	R/$\overline{w}$	&	$\overline{UDS}$	&	$\overline{LDS}$	&	$\overline{AS}$	&	FC2	&	FC1	&	FC0 \\ \hline
+		
+		1	&	\$ABCD0	&	237C	&	1	&	0	&	0	&	0	&	1	&	1	&	0	\\	\hline
+		
+		2	&	\$ABCD2	&	00EC	&	1	&	0	&	0	&	0	&	1	&	1	&	0	\\	\hline
+		
+		3	&	\$ABCD4	&	E441	&	1	&	0	&	0	&	0	&	1	&	1	&	0	\\ \hline
+		
+		4	&	\$ABCD6	&	0029	&	1	&	0	&	0	&	0	&	1	&	1	&	0	\\ \hline
+		
+		5	&	\$AB44	&	00EC	&	0	&	0	&	0	&	0	&	1	&	0	&	1	\\ \hline
+		
+		6	&	\$AB46	&	E441	&	0	&	0	&	0	&	0	&	1	&	0	&	1	\\ \hline
+		\end{tabulary}
+	\end{adjustbox}
+\end{table}
+
+\noindent\textbf{Number of Bus Cycles: }6\\
+\textbf{Registers Changed and Contents? }None
+\begin{table}[H]
+	\centering
+	\begin{adjustbox}{max width=\textwidth}
+	\begin{tabulary}{1.1\textwidth}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		\textbf{Bus Cycle Number}	&	\textbf{Address (Hex)}	&	\textbf{Data (Hex)}	&	R/$\overline{w}$	&	$\overline{UDS}$	&	$\overline{LDS}$	&	$\overline{AS}$	&	FC2	&	FC1	&	FC0 \\ \hline
+		
+		1	&	\$ABCD0	&	0679	&	1	&	0	&	0	&	0	&	1	&	1	&	0	\\	\hline
+		
+		2	&	\$ABCD2	&	1BBC	&	1	&	0	&	0	&	0	&	1	&	1	&	0	\\	\hline
+		
+		3	&	\$ABCD4	&	0000	&	1	&	0	&	0	&	0	&	1	&	1	&	0	\\ \hline
+		
+		4	&	\$ABCD6	&	8100	&	1	&	0	&	0	&	0	&	1	&	1	&	0	\\ \hline
+		
+		5	&	\$8100	&	U	&	1	&	0	&	0	&	0	&	1	&	0	&	1	\\ \hline
+		
+		6	&	\$8100	&	U	&	0	&	0	&	0	&	0	&	1	&	0	&	1	\\ \hline
+		\end{tabulary}
+	\end{adjustbox}
+\end{table}
+
+\noindent\textbf{Number of Bus Cycles: }4\\
+\textbf{Registers Changed and Contents? }A7=\$AB76
+\begin{table}[H]
+	\centering
+	\begin{adjustbox}{max width=\textwidth}
+	\begin{tabulary}{1.1\textwidth}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		\textbf{Bus Cycle Number}	&	\textbf{Address (Hex)}	&	\textbf{Data (Hex)}	&	R/$\overline{w}$	&	$\overline{UDS}$	&	$\overline{LDS}$	&	$\overline{AS}$	&	FC2	&	FC1	& FC0 \\ \hline
+		
+		1	&	\$ABCD0	&	4870	&	1	&	0	&	0	&	0	&	1	&	1	&	0	\\	\hline
+		
+		2	&	\$ABCD2	&	0090	&	1	&	0	&	0	&	0	&	1	&	1	&	0	\\	\hline
+		
+		3	&	\$AB78	&	886A	&	0	&	0	&	0	&	0	&	1	&	0	&	1	\\ \hline
+		
+		4	&	\$AB76	&	0000	&	0	&	0	&	0	&	0	&	1	&	0	&	1	\\ \hline
+		
+		\end{tabulary}
+	\end{adjustbox}
+\end{table}
+
+\section*{Problem 2}
+\begin{enumerate}
+\item
+	\begin{enumerate}
+	\item 	Asynchronous: Used for various things such as data transfer acknowledge, checking if the address is valid, using the upper or lower byte of an address, and read/write functionality. $\overline{DTACK}$, $\overline{AS}$, $\overline{UDS}$, $\overline{LDS}$, $R/\overline{W}$
+	
+	\item Synchronous: Used to sync 6800 devices with the system. $\overline{E}$, $\overline{VMA}$, $\overline{VPA}$
+	
+	\item Function: Sets privileges for the program corresponding to either supervisor/user(FC0), Data Space(FC0), or Program Space(FC1). FC1, FC0, FC2
+	
+	\item Interrupt: Corresponds to interrupt level for exceptions ranging from 0$\to$7. $\overline{IPL2}$, $\overline{IPL1}$, $\overline{IPL0}$
+	\end{enumerate}
+\item The MC68000 provides support for virtual memory: \textbf{False}, implenting this requires the ability to trap and recover from a failed memory access. While the 68K does have a bus error exception, it does not save enough of the processor state to resume from the faulted instruction. Later implementations of the processor updated the instruction set to have restartable instructions, but the basic processor does not have this support.
+
+\item The MC68000 provides support for multiprocessor hardware designs: \textbf{True}, this is possible through the use of the Bus Arbitration control functions. This allows multiple processor to use $\overline{BR}$ to request control of the bus, $\overline{BG}$ to indicate to the other processors that it will relinquish bus control, and $\overline{BGACK}$ to acknowledge that a device has become the bus master.
+\end{enumerate}
+
+\section*{Problem 3}
+\begin{enumerate}
+	\item
+		\begin{enumerate}
+			\item \textbf{List of signals for Supervisor Program Space: }A23=0, A22=0, FC1=1, $\overline{AS}$=0, FC2=1, FC0=0
+			
+			\item \textbf{List of signals for Supervisor Data Space: }A23=0, A22=0, FC1=0, $\overline{AS}$=0, FC2=1, FC0=1
+			
+			\item \textbf{List of signals for User Program Space: }A23=0, A22=1, FC1=1, $\overline{AS}$=0, FC2=0, FC0=0
+			
+			\item \textbf{List of signals for User Data Space: }A23=1, A22=X, FC1=0, $\overline{AS}$=0, FC2=0, FC0=1
+		\end{enumerate}
+		
+	\item Program space is pointed to by the program counter. It is READ-ONLY and contains instructions that are to be executed. Data space is generally the execution of an instruction but could be anything that is not program space. It has both read and write capabilities.
+	
+	The first two rows of the vector table are program space(RESETS). The rest are data space and contain all of the other exceptions.
+\end{enumerate}
+
+\section*{Problem 4}
+
+\begin{enumerate}
+	\item
+		
+			
+				\begin{adjustbox}{max width=\linewidth}
+					\begin{tabular}{|c|c|c|}
+						\multicolumn{1}{c}{Address}		&	\multicolumn{1}{c}{D15...D8}	&	\multicolumn{1}{c}{D7...D1}	\\ \hline
+								&		&		\\	\hline
+										&		&		\\	\hline
+								&		&		\\	\hline
+						\$7FF4	&	22	&	00	\\	\hline
+						\$7FF6	&	00	&	00	\\	\hline
+						\$7FF8	&	20	&	0C	\\	\hline
+						\$7FFA	&	00	&	00	\\	\hline
+						\$7FFC	&	00	&	00	\\	\hline
+						\$7FFE	&	10	&	aC	\\	\hline
+						\$8000	&		&		\\	\hline
+					\end{tabular}
+				\end{adjustbox}
+	\item 	MOVE.W	\#\$0069,\$FFFFF7
+	
+	\item If in supervisor mode, the processor puts \$2700 into the SR, the PC goes to the next address, and the processor stops executing/fetching instructions. Only an interrupt of level 7 can resume execution.
+	\item	The supervisor stack is used to store the PC and the SR when exceptions occur. This way the exceptions can be executed, and once finished, the original program resumes where left off due to the PC and SR being stored. It's generally used to store exception frames. It is also used to perform subroutines in supervisor mode.
+\end{enumerate}
+
+\section*{Problem 5}
+\begin{adjustbox}{max width = \linewidth}
+
+\begin{tabulary}{\linewidth}{|c|c c c c|c c c c|c c c c|c c c c c c| c c|}
+	\hline
+	Components	&	A23 & A22 & A21 & A20	&	A19 & A18 & A17 & A16 & A15 & A14 & A13 & A12 & A11 & A10 & ... & A3 & A2 & A1 & $\overline{UDS}$ & $\overline{LDS}$ \\ \hline \hline
+	
+	RAM 1	&	0 & 0 & 0 & 0	&	0 & 0 & 0 & 1 & 0 & X & X & X & X & X & X & X & X & X & 0 & 1 \\ \hline
+	
+	RAM 2	&	0 & 0 & 0 & 0	&	0 & 0 & 0 & 1 & 0 & X & X & X & X & X & X & X & X & X & 0 & 1 \\ \hline
+	
+	RAM 3	&	0 & 0 & 0 & 0	&	0 & 0 & 0 & 1 & 0 & X & X & X & X & X & X & X & X & X & 1 & 0 \\ \hline
+	
+	RAM 4	&	0 & 0 & 0 & 0	&	0 & 0 & 0 & 1 & 0 & X & X & X & X & X & X & X & X & X & 1 & 0 \\ \hline
+	
+	RAM 5	&	0 & 0 & 0 & 0	&	0 & 0 & 0 & 1 & 1 & X & X & X & X & X & X & X & X & X & 0 & 1 \\ \hline
+	
+	RAM 6	&	0 & 0 & 0 & 0	&	0 & 0 & 0 & 1 & 1 & X & X & X & X & X & X & X & X & X & 0 & 1 \\ \hline
+	
+	RAM 7	&	0 & 0 & 0 & 0	&	0 & 0 & 0 & 1 & 1 & X & X & X & X & X & X & X & X & X & 1 & 0 \\ \hline
+	
+	RAM 8	&	0 & 0 & 0 & 0	&	0 & 0 & 0 & 1 & 1 & X & X & X & X & X & X & X & X & X & 1 & 0 \\ \hline 
+\end{tabulary}
+\end{adjustbox}
+
+\vspace{0.5in}
+\noindent \textbf{List the required signals for decoding and selecting RAM chips: } The possible range of memory addresses to implement RAM is \$010000$\to$\$FFFFFF. This means that A23$\to$A17 = X, A15$\to$A1= X, and A16 = 1. $\overline{AS} = 0$, $\overline{UDS} = X$, $\overline{LDS} = X$, $\overline{DTACK}$ = 0, Y0$\to$Y7 from the decoder = X to select a specific address range of RAM, R/$\overline{W}$ = X.
+\end{document}
