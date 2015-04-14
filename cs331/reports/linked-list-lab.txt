@@ -1,0 +1,174 @@
+Lab report for Linked List Lab - asumner
+Timestamp: 2014-02-16 02:46:42
+
+|  :scenario |                                    :title |                              :result | :score |
+|------------+-------------------------------------------+--------------------------------------+--------|
+|    working |     Test student code vs instructor tests |                                 Pass |     45 |
+| qualifying |     Test student tests vs instructor code |                                 Pass |      5 |
+|    broke-1 |            Insert doesn't increment size. | Pass: student tests detected errors. |      5 |
+|    broke-2 |                    Insert doesn't insert. | Pass: student tests detected errors. |      5 |
+|    broke-3 |                    Insert truncates list. | Pass: student tests detected errors. |      5 |
+|    broke-4 |                    Sorted insert deletes. | Pass: student tests detected errors. |      5 |
+|    broke-5 |             Sorted insert truncates list. | Pass: student tests detected errors. |      5 |
+|    broke-6 |                    Delete truncates list. | Pass: student tests detected errors. |      5 |
+|    broke-7 |            Delete doesn't decrement size. | Pass: student tests detected errors. |      5 |
+|    broke-8 |            Delete always decrements size. | Pass: student tests detected errors. |      5 |
+|    broke-9 |              Delete-all only deletes one. | Pass: student tests detected errors. |      5 |
+|   broke-10 | Delete all decrements count in all cases. | Pass: student tests detected errors. |      5 |
+|      total |                               Total Score |                                      |    100 |
+
+Details:
+
+
+** Details for Test student code vs instructor tests
+
+All checks (30) succeeded.
+
+
+** Details for Test student tests vs instructor code
+
+All checks (30) succeeded.
+
+
+** Details for Insert doesn't increment size.
+
+
+FAIL "about `insert-front` - it increments the size properly." at (t_core.clj:24)
+    Expected: 1
+      Actual: 0
+
+FAIL "about `insert-front` - it increments the size properly." at (t_core.clj:25)
+    Expected: 2
+      Actual: 0
+FAILURE: 2 checks failed.  (But 28 succeeded.)
+Subprocess failed
+
+
+** Details for Insert doesn't insert.
+
+
+FAIL "about `insert-front` - it puts the elements in the correct order." at (t_core.clj:27)
+    Expected: 10
+      Actual: nil
+
+FAIL "about `insert-front` - it puts the elements in the correct order." at (t_core.clj:29)
+    Expected: 20
+      Actual: nil
+
+FAIL "about `insert-front` - it puts the elements in the correct order." at (t_core.clj:30)
+    Expected: 10
+      Actual: nil
+FAILURE: 3 checks failed.  (But 27 succeeded.)
+Subprocess failed
+
+
+** Details for Insert truncates list.
+
+
+FAIL "about `insert-front` - it puts the elements in the correct order." at (t_core.clj:30)
+    Expected: 10
+      Actual: nil
+FAILURE: 1 check failed.  (But 29 succeeded.)
+Subprocess failed
+
+
+** Details for Sorted insert deletes.
+
+
+FAIL "about `insert-ordered` - it places elements properly." at (t_core.clj:49)
+    Expected: {:car 0, :cdr {:car 1, :cdr {:car 5, :cdr {:car 8, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: {:car 0, :cdr {:car 5, :cdr {:car 8, :cdr }}}::linked_list_lab.core.Cons
+
+FAIL "about `insert-ordered` - it places elements properly." at (t_core.clj:50)
+    Expected: {:car 1, :cdr {:car 2, :cdr {:car 5, :cdr {:car 8, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: {:car 1, :cdr {:car 2, :cdr {:car 8, :cdr }}}::linked_list_lab.core.Cons
+
+FAIL "about `insert-ordered` - it places elements properly." at (t_core.clj:51)
+    Expected: {:car 1, :cdr {:car 5, :cdr {:car 7, :cdr {:car 8, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: {:car 1, :cdr {:car 5, :cdr {:car 7, :cdr }}}::linked_list_lab.core.Cons
+
+FAIL "about `insert-ordered` - it places elements properly." at (t_core.clj:53)
+    Expected: {:car 1, :cdr {:car 5, :cdr {:car 5, :cdr {:car 8, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: {:car 1, :cdr {:car 5, :cdr {:car 8, :cdr }}}::linked_list_lab.core.Cons
+FAILURE: 4 checks failed.  (But 26 succeeded.)
+Subprocess failed
+
+
+** Details for Sorted insert truncates list.
+
+
+FAIL "about `insert-ordered` - it places elements properly." at (t_core.clj:50)
+    Expected: {:car 1, :cdr {:car 2, :cdr {:car 5, :cdr {:car 8, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: {:car 1, :cdr }::linked_list_lab.core.Cons
+
+FAIL "about `insert-ordered` - it places elements properly." at (t_core.clj:51)
+    Expected: {:car 1, :cdr {:car 5, :cdr {:car 7, :cdr {:car 8, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: {:car 1, :cdr }::linked_list_lab.core.Cons
+
+FAIL "about `insert-ordered` - it places elements properly." at (t_core.clj:52)
+    Expected: {:car 1, :cdr {:car 5, :cdr {:car 8, :cdr {:car 9, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: {:car 1, :cdr }::linked_list_lab.core.Cons
+
+FAIL "about `insert-ordered` - it places elements properly." at (t_core.clj:53)
+    Expected: {:car 1, :cdr {:car 5, :cdr {:car 5, :cdr {:car 8, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: {:car 1, :cdr }::linked_list_lab.core.Cons
+FAILURE: 4 checks failed.  (But 26 succeeded.)
+Subprocess failed
+
+
+** Details for Delete truncates list.
+
+
+FAIL "about `delete` - it deletes data" at (t_core.clj:58)
+    Expected: {:data {:car 3, :cdr {:car 1, :cdr }}, :size 2}::linked_list_lab.core.List
+      Actual: {:data {:car 3, :cdr }, :size 1}::linked_list_lab.core.List
+
+FAIL "about `delete`" at (t_core.clj:59)
+    Expected: {:data {:car 3, :cdr {:car 2, :cdr {:car 1, :cdr }}}, :size 3}::linked_list_lab.core.List
+      Actual: {:data {:car 3, :cdr }, :size 1}::linked_list_lab.core.List
+FAILURE: 2 checks failed.  (But 28 succeeded.)
+Subprocess failed
+
+
+** Details for Delete doesn't decrement size.
+
+
+FAIL "about `delete` - it deletes data" at (t_core.clj:58)
+    Expected: {:data {:car 3, :cdr {:car 1, :cdr }}, :size 2}::linked_list_lab.core.List
+      Actual: {:data {:car 3, :cdr {:car 1, :cdr }}, :size 3}::linked_list_lab.core.List
+FAILURE: 1 check failed.  (But 29 succeeded.)
+Subprocess failed
+
+
+** Details for Delete always decrements size.
+
+
+FAIL "about `delete`" at (t_core.clj:59)
+    Expected: {:data {:car 3, :cdr {:car 2, :cdr {:car 1, :cdr }}}, :size 3}::linked_list_lab.core.List
+      Actual: {:data {:car 3, :cdr {:car 2, :cdr {:car 1, :cdr }}}, :size 2}::linked_list_lab.core.List
+FAILURE: 1 check failed.  (But 29 succeeded.)
+Subprocess failed
+
+
+** Details for Delete-all only deletes one.
+
+
+FAIL "about `delete-all` - deletes all elements in a list" at (t_core.clj:65)
+    Expected: {:data {:car 2, :cdr }, :size 1}::linked_list_lab.core.List
+      Actual: {:data {:car 3, :cdr {:car 2, :cdr }}, :size 2}::linked_list_lab.core.List
+FAILURE: 1 check failed.  (But 29 succeeded.)
+Subprocess failed
+
+
+** Details for Delete all decrements count in all cases.
+
+
+FAIL "about `delete-all` - deletes all elements in a list" at (t_core.clj:65)
+    Expected: {:data {:car 2, :cdr }, :size 1}::linked_list_lab.core.List
+      Actual: {:data {:car 2, :cdr }, :size 2}::linked_list_lab.core.List
+
+FAIL "about `delete-all` - deletes all elements in a list" at (t_core.clj:66)
+    Expected: {:data {:car 3, :cdr {:car 3, :cdr {:car 2, :cdr }}}, :size 3}::linked_list_lab.core.List
+      Actual: {:data {:car 3, :cdr {:car 3, :cdr {:car 2, :cdr }}}, :size 2}::linked_list_lab.core.List
+FAILURE: 2 checks failed.  (But 28 succeeded.)
+Subprocess failed

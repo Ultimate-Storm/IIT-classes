@@ -1,0 +1,23 @@
+Assignment Report for Adam K. Sumner
+Assignment: Exam 1
+Produced 2014-05-05 15:39
+Netid: asumner cwid: A20283081
+Course: cs331 (2014-01)  Section: 02
+
+  Num  QDB Max Score Notes 
+----- ---- --- ----- ----- 
+    1 1001   6     6       
+    2 116b   6     6       
+    3        6     6       
+    4        6     6       
+    5        6     6       
+    6        6     6       
+    7        4     4       
+    8        6     6       
+    9        6     6       
+   10        4     2       
+   11        6     6       
+   12        4     2       
+   13        6     6       
+----- ---- --- ----- ----- 
+Total       72    68       

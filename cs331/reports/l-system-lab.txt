@@ -1,0 +1,14 @@
+Lab report for L-System Lab - asumner
+Timestamp: 2014-04-04 17:00:02
+
+| :scenario |                                :title | :result | :score |
+|-----------+---------------------------------------+---------+--------|
+|   working | Test student code vs instructor tests |    Pass |    100 |
+|     total |                           Total Score |         |    100 |
+
+Details:
+
+
+** Details for Test student code vs instructor tests
+
+All checks (15) succeeded.

@@ -1,0 +1,73 @@
+exit
+(def x (make-deque))
+x
+(push-front x 1)
+(push-front x 2)
+(push-back x 2)
+exit
+(def x (Deque. '() (2 3 4) 3))
+(def x (Deque. '() '(2 3 4) 3))
+(def x (Deque. '() '() 3))
+(def x (make-deque))
+exit
+(def x (Deque. '() '(2 3 4) 3))
+x
+(flip-front x)
+exit
+(def x (Deque. '(2 3 4) '() 3))
+x
+(flip-back x)
+exit
+(def x (Deque. '() '(2 3 4) 3))
+x
+(front x)
+exit
+(def x (Deque. '() '(2 3 4) 3))
+(front x)
+(def x (Deque. '(2 3 4) '() 3))
+x
+(front x)
+exit
+(def x (Deque. '(2 3 4) '() 3))
+(back x)
+(def x (Deque. '() '(2 3 4) 3))
+(back x)
+exit
+(def x (Deque. '() '(2 3 4) 3))
+(pop-front x)
+exit
+(def x (Deque. '() '(2 3 4) 3))
+(pop-back x)
+exit
+(def x (Deque. '(2 3 4) '() 3))
+x
+(pop-front x)
+(def x (Deque. '() '(2 3 4) 3))
+x
+(pop-front x)
+exit
+(def x (Deque. '() '(2 3 4) 3))
+(pop-back x)
+(def x (Deque.'(2 3 4) '() 3))
+(def x (Deque. '(2 3 4) '() 3))
+x
+(pop-back x)
+exit
+(def x (Deque. '(2 3 4) '(4 5) 5))
+x
+(pop-front x)
+(pop-back x)
+(def x (Deque. '(2 3 4) '() 5))
+x
+(pop-front x)
+(pop-back x)
+exit
+(def x (make-deque))
+x
+(pop-front x)
+(def x (Deque. '(1 2 3) '() 3))
+x
+(pop-front x)
+(def x (Deque. '(1 2 3) '() 0))
+(pop-front x)
+exit
