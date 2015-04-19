@@ -51,8 +51,19 @@ ERROR         DC.B      'ERROR: TRY COMMAND AGAIN WITH CORRECT SYNTAX'
 SPACE         DC.B      ' '
 
 *Debugger Print Statement*
-DEBUG         DC.B      'WIN'              
-        
+DEBUG         DC.B      'WIN'      
+
+*BTST Text*
+BTST1         DC.B      'Number written was: '
+BTST2         DC.B      'Number read was: '
+BTST3         DC.B      'Block Test PASSES!'
+BTST4         DC.B      'FAILURE!!!!'  
+BTST5         DC.B      'Error Occurred at address: '      
+
+*BSCH Text*
+BSCH1         DC.B      'Data: '
+BSCH2         DC.B      'Found at address: '
+BSCH3         DC.B      'Pattern not found'
     ORG     $1000
 START:  
 
@@ -68,12 +79,14 @@ SHELL:      LEA  PROMPT,A1      ;Load message
             BEQ     HELPORHXDC
             CMP.B   #$4D,(A1)   ;check for memory command
             BEQ     MEMTEST
-            CMP.B   #$47,(A1) ;check for go
+            CMP.B   #$47,(A1)   ;check for go
             BEQ     GOTST
             CMP.B   #$44,(A1)   ;check for df
             BEQ     DFTST
             CMP.B   #$42,(A1)   ;check for blck command
             BEQ     BLCKTEST
+            CMP.B   #$53,(A1)   ;check for sort command
+            BEQ     SORTTEST
             BRA     ERRORSR
 *--------------------------------------------------------------------------------------*
 
@@ -140,6 +153,25 @@ DFTST:      ADD.L   #1,A1
             CMP.B   #$00,(A1)
             BNE     ERRORSR
             BRA     DF
+*--------------------------------------------------------------------------------------*
+
+SORTTEST:    ADD.L   #1,A1
+            CMP.B   #$4F,(A1)   ;O?
+            BNE     ERRORSR
+             ADD.L   #1,A1
+            CMP.B   #$52,(A1)   ;R?
+            BNE     ERRORSR
+            ADD.L   #1,A1
+            CMP.B   #$54,(A1)   ;T?
+            BNE     ERRORSR
+            ADD.L   #1,A1
+            CMP.B   #$57,(A1)   ;W?
+            BNE     ERRORSR
+            ADD.L   #1,A1
+            CMP.B   #$20,(A1)
+            BNE     ERRORSR
+
+            BRA     SORTW
 *--------------------------------------------------------------------------------------*
 
 GOTST:      ADD.L   #1,A1
@@ -361,7 +393,7 @@ HELP:       LEA     HTXT,A1     ;list of commands test
             MOVE.B  #0,D0
             TRAP    #15
             LEA     HTXT9A,A1    ;block search command text
-            MOVE.W  #71,D1
+            MOVE.W  #45,D1
             MOVE.B  #0,D0
             TRAP    #15
             MOVE.B  #0,D1       ;newline
@@ -571,6 +603,8 @@ ENDPTRMM:
         BEQ     LONG
         BRA     ERRORSR
 
+***************************************************
+
 DEFAULT:
         
         ADD.L   #2,A1       ;set up for subroutine
@@ -579,10 +613,37 @@ DEFAULT:
         JSR     ASCII_ADDRESS
         MOVEM.L (SP)+,D1/D6/A1-A3
         MOVE.L  D5,A4       ;set up address to modify
-        MOVE.L  D5,D3       ;set up output for trap call
-        JSR     HEXTOASCII
-
+       
 MODIFYLOOP:
+        *-------Display Memory First-----*
+        MOVE.L  A4,D3       ;set up for subroutine
+        JSR     HEXTOASCII  ;convert new address to ascii for output
+        SUBA    A2,A3       ;get num of bytes to produce
+        MOVE.L  #1,D0
+        MOVE.L  A3,D1
+        MOVE.L  A2,A1
+        TRAP    #15
+        
+        *add colon to denote containing data*
+        MOVE.B  #$3A,(A1)
+        MOVE.L  #1,D1   ;display only the colon
+        MOVE.L  #1,D0
+        TRAP    #15
+        
+        MOVE.B  (A4),D3
+        JSR     HEXTOASCII
+        MOVE.L  #2,D1
+        MOVE.L  A2,A1
+        MOVE.B  #1,D0
+        TRAP    #15
+        
+        MOVE.B  #$20,(A1)
+        MOVE.L  #1,D1   ;space between held data and input
+        MOVE.L  #1,D0
+        TRAP    #15
+
+        
+        *-----Enter Input-------*
         CLR.L   D3
         MOVE.L  #4,D6
         LEA     BUFFER,A1   ;set up storage for command
@@ -590,6 +651,8 @@ MODIFYLOOP:
         TRAP    #15
         CMP.B   #$2E,(A1)
         BEQ     ENDLP
+        CMP.B   #$00,(A1)
+        BEQ     ENTER
         
 PARSELOOP:
         CMP.B   #$00,(A1)
@@ -608,26 +671,252 @@ NEXTMMSTEP:
         BRA     PARSELOOP
 ENDPARSE:
         MOVE.B  D3,(A4)   ;commit memory change 
-        ADD.L   #1,A4   ;increment address
+ENTER:  ADD.L   #1,A4   ;increment address
         BRA     MODIFYLOOP
         
-
+***************************************************
 
 WORD:
+            
+        ADD.L   #2,A1       ;set up for subroutine
+        MOVE    A1,A2       ;set up for subroutine
+        MOVEM.L D1/D6/A1-A3,-(SP)
+        JSR     ASCII_ADDRESS
+        MOVEM.L (SP)+,D1/D6/A1-A3
+        MOVE.L  D5,A4       ;set up address to modify
+       
+MODIFYLOOPW:
+        *-------Display Memory First-----*
+        MOVE.L  A4,D3       ;set up for subroutine
+        MOVE.L  A4,A5       ;next byte of memory may not be needed
+        ADD.L   #1,A5
+        JSR     HEXTOASCII  ;convert new address to ascii for output
+        SUBA    A2,A3       ;get num of bytes to produce
+        MOVE.L  #1,D0
+        MOVE.L  A3,D1
+        MOVE.L  A2,A1
+        TRAP    #15
+        
+        *add colon to denote containing data*
+        MOVE.B  #$3A,(A1)
+        MOVE.L  #1,D1   ;display only the colon
+        MOVE.L  #1,D0
+        TRAP    #15
+        
+        MOVE.B  (A4),D3
+        JSR     HEXTOASCII
+        MOVE.L  #2,D1
+        MOVE.L  A2,A1
+        MOVE.B  #1,D0
+        TRAP    #15
+        
+        MOVE.B  (A5),D3
+        JSR     HEXTOASCII
+        MOVE.L  #2,D1
+        MOVE.L  A2,A1
+        MOVE.B  #1,D0
+        TRAP    #15
+
+        
+        MOVE.B  #$20,(A1)
+        MOVE.L  #1,D1   ;space between held data and input
+        MOVE.L  #1,D0
+        TRAP    #15
+
+        
+        *-----Enter Input-------*
+        CLR.L   D3
+        MOVE.L  #12,D6
+        LEA     BUFFER,A1   ;set up storage for command
+        MOVE.B  #2,D0       ;load input trap call
+        TRAP    #15
+        CMP.B   #$2E,(A1)
+        BEQ     ENDLP
+        CMP.B   #$00,(A1)
+        BEQ     ENTERW
+        
+PARSELOOPW:
+        CMP.B   #$00,(A1)
+        BEQ     ENDPARSEW        
+        CMP.B   #$40,(A1)
+        BGT     HIGHHEXMMW
+        SUBI.B  #$30,(A1)   ;get hex value
+        BRA     NEXTMMSTEPW
+HIGHHEXMMW: SUBI.B  #$37,(A1)  ;get hex value
+NEXTMMSTEPW:
+        MOVE.B  (A1),D2
+        ROL.L   D6,D2
+        SUBI.L  #4,D6
+        ADD.L   #1,A1
+        ADD.L   D2,D3   ;total byte stored in D3
+        CLR.L   D2      ;clear for next rotate
+        BRA     PARSELOOPW
+ENDPARSEW:
+        MOVE.W  D3,(A4)   ;commit memory change 
+ENTERW:  ADD.L   #2,A4   ;increment address
+        BRA     MODIFYLOOPW
+
+***************************************************
 
 LONG:  
+        ADD.L   #2,A1       ;set up for subroutine
+        MOVE    A1,A2       ;set up for subroutine
+        MOVEM.L D1/D6/A1-A3,-(SP)
+        JSR     ASCII_ADDRESS
+        MOVEM.L (SP)+,D1/D6/A1-A3
+        MOVE.L  D5,A4       ;set up address to modify
+       
+MODIFYLOOPL:
+        *-------Display Memory First-----*
+        MOVE.L  A4,D3       ;set up for subroutine
+        MOVE.L  A4,A5       ;next byte of memory may not be needed
+        ADD.L   #1,A5
+        JSR     HEXTOASCII  ;convert new address to ascii for output
+        SUBA    A2,A3       ;get num of bytes to produce
+        MOVE.L  #1,D0
+        MOVE.L  A3,D1
+        MOVE.L  A2,A1
+        TRAP    #15
+        
+        *add colon to denote containing data*
+        MOVE.B  #$3A,(A1)
+        MOVE.L  #1,D1   ;display only the colon
+        MOVE.L  #1,D0
+        TRAP    #15
+        
+        MOVE.B  (A4),D3
+        JSR     HEXTOASCII
+        MOVE.L  #2,D1
+        MOVE.L  A2,A1
+        MOVE.B  #1,D0
+        TRAP    #15
+        
+        MOVE.B  (A5)+,D3
+        JSR     HEXTOASCII
+        MOVE.L  #2,D1
+        MOVE.L  A2,A1
+        MOVE.B  #1,D0
+        TRAP    #15
+        
+        MOVE.B  (A5)+,D3
+        JSR     HEXTOASCII
+        MOVE.L  #2,D1
+        MOVE.L  A2,A1
+        MOVE.B  #1,D0
+        TRAP    #15
+        MOVE.B  (A5)+,D3
+        JSR     HEXTOASCII
+        MOVE.L  #2,D1
+        MOVE.L  A2,A1
+        MOVE.B  #1,D0
+        TRAP    #15
+   
+        MOVE.B  #$20,(A1)
+        MOVE.L  #1,D1   ;space between held data and input
+        MOVE.L  #1,D0
+        TRAP    #15
 
-        ;LEA  DEBUG,A1      ;Load message           
-        ;MOVE.W  #3,D1      ;load n bytes
-        ;MOVE.B  #1,D0       ;set up trap call
-        ;TRAP    #15
+        
+        *-----Enter Input-------*
+        CLR.L   D3
+        MOVE.L  #28,D6
+        LEA     BUFFER,A1   ;set up storage for command
+        MOVE.B  #2,D0       ;load input trap call
+        TRAP    #15
+        CMP.B   #$2E,(A1)
+        BEQ     ENDLP
+        CMP.B   #$00,(A1)
+        BEQ     ENTERL
+        
+PARSELOOPL:
+        CMP.B   #$00,(A1)
+        BEQ     ENDPARSEL        
+        CMP.B   #$40,(A1)
+        BGT     HIGHHEXMML
+        SUBI.B  #$30,(A1)   ;get hex value
+        BRA     NEXTMMSTEPL
+HIGHHEXMML: SUBI.B  #$37,(A1)  ;get hex value
+NEXTMMSTEPL:
+        MOVE.B  (A1),D2
+        ROL.L   D6,D2
+        SUBI.L  #4,D6
+        ADD.L   #1,A1
+        ADD.L   D2,D3   ;total byte stored in D3
+        CLR.L   D2      ;clear for next rotate
+        BRA     PARSELOOPL
+ENDPARSEL:
+        MOVE.L  D3,(A4)   ;commit memory change 
+ENTERL:  ADD.L   #4,A4   ;increment address
+        BRA     MODIFYLOOPL
+
 
 ENDLP:  BRA SHELL
         
         
 *--------------------------------------------------------------------------------------*
 
-BF:    LEA  DEBUG,A1      ;Load message           
+BF:    
+       ADD.L    #1,A1   ;first byte of data
+       MOVE.L   A1,A3   ;for end ptr
+BFGETENDDATA:
+        CMP.B   #$20,(A3)+
+        BEQ     BFNEXTADDR
+        BRA     BFGETENDDATA
+BFNEXTADDR:
+        MOVE.L  A1,A2   ;for subroutine
+        SUB.L   #1,A3   ;off by one error
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,-(SP)    ;save data on the stack
+        
+        ADD.L   #1,A3   ;inc end ptr to first byte of address
+        MOVE.L  A3,A2   ;set start ptr
+BFGETENDADDRONE:
+        CMP.B   #$20,(A3)+
+        BEQ     BFNEXTADDRTWO
+        BRA     BFGETENDADDRONE
+        
+BFNEXTADDRTWO:
+        SUB.L   #1,A3   ;off by one error
+        JSR     ASCII_ADDRESS   ;convert address to hex
+        MOVE.L  D5,A5       ;store address 1 in A5
+        DIVU    #2,D5
+        SWAP    D5
+        CMP.W   #$00,D5
+        BNE     ERRORSR
+        
+        ADD.L   #1,A3   ;inc end ptr to first byte of address
+        MOVE.L  A3,A2   ;set start ptr
+BFGETLASTEND:
+        CMP.B   #$00,(A3)+
+        BEQ     STOREDATA
+        BRA     BFGETLASTEND
+        
+STOREDATA:
+        SUB.L   #1,A3   ;off by one error
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,A6   ;end address in A6
+        DIVU    #2,D5
+        SWAP    D5
+        CMP.W   #$00,D5
+        BNE     ERRORSR
+        MOVE.L  (SP)+,D5
+        
+DATALOOP:
+        CMP.L   A5,A6
+        BLT     ENDBF
+        MOVE.W  D5,(A5)+
+        BRA     DATALOOP
+
+ENDBF:  BRA SHELL
+*--------------------------------------------------------------------------------------*
+
+BMOV:   
+        
+
+
+
+
+        LEA  DEBUG,A1      ;Load message           
         MOVE.W  #3,D1      ;load n bytes
         MOVE.B  #1,D0       ;set up trap call
         TRAP    #15
@@ -635,26 +924,237 @@ BF:    LEA  DEBUG,A1      ;Load message
 
 *--------------------------------------------------------------------------------------*
 
-BMOV:    LEA  DEBUG,A1      ;Load message           
-        MOVE.W  #3,D1      ;load n bytes
-        MOVE.B  #1,D0       ;set up trap call
+BTST:   
+       ADD.L    #1,A1   ;first byte of data
+       MOVE.L   A1,A3   ;for end ptr
+BTSTGETENDDATA:
+        CMP.B   #$20,(A3)+
+        BEQ     BTSTNEXTADDR
+        BRA     BTSTGETENDDATA
+BTSTNEXTADDR:
+        MOVE.L  A1,A2   ;for subroutine
+        SUB.L   #1,A3   ;off by one error
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,-(SP)    ;save data on the stack
+        
+        ADD.L   #1,A3   ;inc end ptr to first byte of address
+        MOVE.L  A3,A2   ;set start ptr
+BTSTGETENDADDRONE:
+        CMP.B   #$20,(A3)+
+        BEQ     BTSTNEXTADDRTWO
+        BRA     BTSTGETENDADDRONE
+        
+BTSTNEXTADDRTWO:
+        SUB.L   #1,A3   ;off by one error
+        JSR     ASCII_ADDRESS   ;convert address to hex
+        MOVE.L  D5,A5       ;store address 1 in A5
+        MOVE.L  D5,A4       ;for second run through
+              
+        ADD.L   #1,A3   ;inc end ptr to first byte of address
+        MOVE.L  A3,A2   ;set start ptr
+BTSTGETLASTEND:
+        CMP.B   #$00,(A3)+
+        BEQ     STOREDATABTST
+        BRA     BTSTGETLASTEND
+
+
+STOREDATABTST:
+        SUB.L   #1,A3   ;off by one error
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,A6   ;end address in A6
+        MOVE.L  (SP)+,D5
+        
+BTSTDATALOOP:
+        CMP.L   A5,A6
+        BLT     READ
+        MOVE.B  D5,(A5)+
+        BRA     BTSTDATALOOP
+
+
+READ:
+        CMP.L   A4,A6
+        BLT     COMPLETE
+        CMP.B   (A4)+,D5
+        BNE     FAIL
+        BRA     READ
+        
+FAIL:
+        LEA     BTST4,A1
+        MOVE.L  #11,D1
+        MOVE.L  #0,D0
+        TRAP    #15
+        
+        LEA     BTST1,A1
+        MOVE.L  #1,D0
+        MOVE.L  #20,D1
+        TRAP    #15
+        
+        MOVE.B  D5,D3   ;for subroutine
+        JSR     HEXTOASCII
+        MOVE.L     A2,A1
+        MOVE.L  #0,D0
+        SUBA.L  A2,A3   ;number of bytes
+        MOVE.L  A3,D1
+        TRAP    #15
+        
+        
+        LEA     BTST2,A1
+        MOVE.L  #1,D0
+        MOVE.L  #17,D1
+        TRAP    #15
+        
+        
+        SUB.L   #1,A4   ;go back to address that failed
+        MOVE.B  (A4),D3
+        JSR     HEXTOASCII  ;convert for output
+        MOVE.L     A2,A1
+        MOVE.L  #0,D0
+        SUBA.L  A2,A3   ;number of bytes
+        MOVE.L  A3,D1
+        TRAP    #15
+        
+        LEA     BTST5,A1
+        MOVE.L  #27,D1
+        MOVE.B  #1,D0
+        TRAP    #15
+        MOVE.L  A4,D3
+        JSR     HEXTOASCII
+        MOVE.L     A2,A1
+        MOVE.L  #0,D0
+        SUBA.L  A2,A3   ;number of bytes
+        MOVE.L  A3,D1
+        TRAP    #15
+
+
+        
+COMPLETE:
+
+        LEA     BTST3,A1
+        MOVE.L  #18,D1
+        MOVE.L  #0,D0
         TRAP    #15
         BRA SHELL
 
 *--------------------------------------------------------------------------------------*
 
-BTST:    LEA  DEBUG,A1      ;Load message           
-        MOVE.W  #3,D1      ;load n bytes
-        MOVE.B  #1,D0       ;set up trap call
-        TRAP    #15
-        BRA SHELL
+BSCH:   
+        ADD.L   #1,A1   ;start of data
+        MOVE.L  A1,A2   ;set up bac ptr
+        
+BSCHENDDATA:
+        CMP.B   #$20,(A2)+
+        BEQ     BSCHFIRSTADD
+        BRA     BSCHENDDATA
 
-*--------------------------------------------------------------------------------------*
 
-BSCH:    LEA  DEBUG,A1      ;Load message           
-        MOVE.W  #3,D1      ;load n bytes
-        MOVE.B  #1,D0       ;set up trap call
+BSCHFIRSTADD:
+        SUB.L   #1,A2
+        MOVE.L  A2,A3
+        MOVE.L  A1,A2
+        JSR     ASCII_ADDRESS
+        SUB.L   A1,A3   ;see how many bytes
+        MOVE.L  A3,D6   ;store byte/word/long in D6   
+        ADD.L   #1,A2   ;set up for start of next address     
+        MOVE.L  A2,A3   ;set up for end ptr
+        MOVE.L  D5,-(SP)    ;save data to stack
+        
+        
+BSCHFADDEND:
+        CMP.B   #$20,(A3)+
+        BEQ     BSCHSECONDADD
+        BRA     BSCHFADDEND
+        
+        
+BSCHSECONDADD:
+        SUB.L   #1,A3   ;off by one
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,A5   ;first address destination
+        ADD.L   #1,A3   ;start it at next address
+        MOVE.L  A3,A2   ; set up for next address
+        
+        
+BSCHSECONDFIND:
+        CMP.B   #$00,(A3)+
+        BEQ     TESTOP
+        BRA     BSCHSECONDFIND
+        
+        
+TESTOP: 
+        SUB.L   #1,A3   ;off by one
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,A6   ;end address at A6
+        MOVE.L  (SP)+,D5    ;restore data
+        CMP.B   #2,D6
+        BEQ     BYTEBSCH
+        CMP.B   #4,D6
+        BEQ     WORDBSCH
+        CMP.B   #8,D6
+        BEQ     LONGBSCH
+        BRA     ERRORSR
+        
+BYTEBSCH:
+        CMP.L   A5,A6
+        BLT     ENDBSCH
+        CMP.B   (A5)+,D5
+        BEQ     FOUNDB
+        BRA     BYTEBSCH
+
+WORDBSCH:
+        CMP.L   A5,A6
+        BLT     ENDBSCH
+        CMP.W   (A5)+,D5
+        BEQ     FOUNDW
+        BRA     WORDBSCH
+
+LONGBSCH:
+        CMP.L   A5,A6
+        BLT     ENDBSCH
+        CMP.L   (A5)+,D5
+        BEQ     FOUNDL
+        BRA     LONGBSCH
+
+
+
+FOUNDB:
+        SUB.L   #1,A5
+        MOVE.B  (A5),D3
+        BRA     SUCCESSTEXT
+FOUNDW:
+        SUB.L   #2,A5
+        MOVE.W  (A5),D3
+        BRA     SUCCESSTEXT
+FOUNDL:
+        SUB.L   #4,A5
+        MOVE.L  (A5),D3
+        
+SUCCESSTEXT:
+        LEA BSCH1,A1
+        MOVE.L  #6,D1
+        MOVE.L  #1,D0
         TRAP    #15
+
+        JSR     HEXTOASCII
+        MOVE.L  A2,A1
+        SUB.L   A2,A3
+        MOVE.L  A3,D1   ;how many bytes
+        MOVE.L  #0,D0
+        TRAP    #15
+        
+        LEA BSCH2,A1
+        MOVE.L  #18,D1
+        MOVE.L  #1,D0
+        TRAP    #15
+        
+        MOVE.L  A5,D3
+        JSR     HEXTOASCII
+        MOVE.L  A2,A1
+        SUB.L   A2,A3
+        MOVE.L  A3,D1   ;how many bytes
+        MOVE.L  #0,D0
+        TRAP    #15
+
+        
+ENDBSCH:        
         BRA SHELL
 
 *--------------------------------------------------------------------------------------*
@@ -785,6 +1285,7 @@ NEXT:   ;for debugging single commands
 
 
        END    START        
+
 
 
 
