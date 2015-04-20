@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{radio}
+M.~Cooper, R.W. Dronsuth, A.J. Leitich, J.C.N. Lynk, J.J. Mikulski, J.F.
+  Mitchell, R.A. Richardson, and J.H. Sangster.
+\newblock Radio telephone system, September~16 1975.
+\newblock \url{http://www.google.com/patents/US3906166} US Patent 3,906,166.
+
 \bibitem{patent}
 C.~Marvin.
 \newblock Method and means of magnetic recording, June~13 1944.
@@ -12,6 +18,14 @@ Brad Reed.
 \newblock
   \url{http://www.nytimes.com/2000/01/06/technology/cell-phones-ruin-the-opera-meet-the-culprit.html:pagewanted=all&srs=pm}
   [Online; accessed 19-April-2015].
+
+\bibitem{wiki:coop}
+Wikipedia.
+\newblock Martin cooper (inventor) --- wikipedia{,} the free encyclopedia,
+  2015.
+\newblock
+  \url{http://en.wikipedia.org/w/index.php?title=Martin_Cooper_(inventor)&oldid=656874743}
+  [Online; accessed 20-April-2015].
 
 \bibitem{wire}
 Wikipedia.
