@@ -155,6 +155,8 @@ SHELL:      PEA     *           ;save PC on Stack for DF
             BEQ     BLCKTEST
             CMP.B   #$53,(A1)   ;check for sort command
             BEQ     SORTTEST
+            CMP.B   #$45,(A1)   ;check for echo command
+            BEQ     ECHOTEST
             BRA     ERRORSR
 RESTORE:    MOVEM.L (SP)+,D0-D7/A0-A6
             MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
@@ -167,6 +169,21 @@ RESTORE:    MOVEM.L (SP)+,D0-D7/A0-A6
             CLR.L   D0          ;no longer needed
 
             BRA     SHELL
+*--------------------------------------------------------------------------------------*
+
+ECHOTEST:   ADD.L   #1,A1
+            CMP.B   #$43,(A1)+   ;C?
+            BNE     ERRORSR
+            CMP.B   #$48,(A1)+   ;H?
+            BNE     ERRORSR
+            CMP.B   #$4F,(A1)+   ;O?
+            BNE     ERRORSR
+            CMP.B   #$20,(A1)+   ;SPACE?
+            BEQ     ECHO
+            BRA     ERRORSR
+*--------------------------------------------------------------------------------------*
+
+
 *--------------------------------------------------------------------------------------*
 
 BLCKTEST:   ADD.L   #1,A1
@@ -328,6 +345,24 @@ HXDCTEST:
             CMP.B   #$20,(A1)
             BNE     ERRORSR
             BRA     HXDC
+*----------------------------USER DEFINED COMMANDS---------------------------------*
+*--------------------------------------------------------------------------------------*
+ECHO:
+        MOVE.L  A1,A2   ;setup to find end of string
+EEND:   CMP.B   #$00,(A2)+
+        BEQ     EFOUND
+        BRA     EEND
+EFOUND:
+        SUB.L   #1,A2   ;off by one
+        SUB.L   A1,A2   ;find out how many bytes
+        MOVE.L  A2,D1   ;place it for trap function
+        MOVE.L  #0,D0
+        TRAP    #15
+        
+        BRA RESTORE
+
+
+
 
 *----------------------------COMMAND DEFINITION START---------------------------------*
 *--------------------------------------------------------------------------------------*
@@ -748,11 +783,7 @@ DSWAP:       MOVE.L  -(A4),D0    ;start bubbling
             SWAP.W  D0
             MOVE.L  D0,(A4)
             BRA     DRESETLOOP
-
-        ; LEA  DEBUG,A1      ;Load message           
-        ;MOVE.W  #3,D1      ;load n bytes
-        ;MOVE.B  #1,D0       ;set up trap call
-        ;TRAP    #15
+x
 DONEASCEND:
 DONEDESCEND:
             BRA RESTORE
@@ -1950,6 +1981,7 @@ NEXT:   ;for debugging single commands
 
 
        END    START        
+
 
 
 
