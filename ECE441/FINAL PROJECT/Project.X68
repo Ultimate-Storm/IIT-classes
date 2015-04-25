@@ -64,11 +64,55 @@ BTST5         DC.B      'Error Occurred at address: '
 BSCH1         DC.B      'Data: '
 BSCH2         DC.B      'Found at address: '
 BSCH3         DC.B      'Pattern not found'
+
+*DF Text*
+RD0            DC.B      'D0: '
+RD1            DC.B      'D1: '
+RD2            DC.B      'D2: '
+RD3            DC.B      'D3: '
+RD4            DC.B      'D4: '
+RD5            DC.B      'D5: '
+RD6            DC.B      'D6: '
+RD7            DC.B      'D7: '
+
+RA0            DC.B      'A0: '
+RA1            DC.B      'A1: '
+RA2            DC.B      'A2: '
+RA3            DC.B      'A3: '
+RA4            DC.B      'A4: '
+RA5            DC.B      'A5: '
+RA6            DC.B      'A6: '
+RA7            DC.B      'A7: '
+
+RSS            DC.B      'SS: '
+RUS            DC.B      'US: '
+RPC            DC.B      'PC: '
+RSR            DC.B      'SR: '
     ORG     $1000
 START:  
 
 *--------------------------------------------------------------------------------------*
-SHELL:      LEA  PROMPT,A1      ;Load message            
+SHELL:      PEA     *           ;save PC on Stack for DF
+            ADD.L   #4,SP       ;get original value of stack pointer
+            MOVE.L  SP,-8(SP)   ;save it
+            ADD.L   #-8,SP      ;update Stack position
+            MOVE    SR,-(SP)    ;save Status register for use with DF
+            MOVE.L  A6,-(SP)    ;temp save
+            MOVE    USP,A6      ;for use with DF command
+            MOVE.L  A6,-(SP)    ;store USP to STACK
+            ADD.L   #4,SP       
+            MOVE.L  (SP),A6    ;restore original value
+            MOVE.L  -(SP),4(SP)  ;move correct value to correct stack position
+            ADD.L   #4,SP       ;point stack to CORRECT PLACE
+            
+
+            MOVEM.L D0-D7/A0-A6,-(SP)  ;save initial values of registers
+            
+            
+            
+            
+              
+            LEA  PROMPT,A1      ;Load message            
             MOVE.W  #11,D1      ;load n bytes
             MOVE.B  #1,D0       ;set up trap call
             TRAP    #15
@@ -88,6 +132,16 @@ SHELL:      LEA  PROMPT,A1      ;Load message
             CMP.B   #$53,(A1)   ;check for sort command
             BEQ     SORTTEST
             BRA     ERRORSR
+RESTORE:    MOVEM.L (SP)+,D0-D7/A0-A6
+            ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+            MOVE    (SP)+,SR
+            MOVE.L  (SP)+,D0    ;save stack cuz it'll get destroyed
+            ADD.L   #4,SP       ;get rid of PC, itll fix itself
+            MOVE.L  D0,SP
+            CLR.L   D0          ;no longer needed
+
+            BRA     SHELL
 *--------------------------------------------------------------------------------------*
 
 BLCKTEST:   ADD.L   #1,A1
@@ -178,7 +232,7 @@ GOTST:      ADD.L   #1,A1
             CMP.B   #$4F,(A1)
             BNE     ERRORSR
             ADD.L   #1,A1
-            CMP.B   #$20,(A1)
+            CMP.B   #$20,(A1)+
             BNE     ERRORSR
             BRA     GO
 *--------------------------------------------------------------------------------------*
@@ -419,7 +473,7 @@ HELP:       LEA     HTXT,A1     ;list of commands test
             TRAP    #15
             MOVE.B  #0,D1       ;newline
             TRAP    #15   
-            BRA     SHELL  
+            BRA     RESTORE  
 *--------------------------------------------------------------------------------------*
 *Fix ASCII String input? ask in lab*
 MEMSET:     LEA     BUFFER,A2
@@ -449,7 +503,7 @@ MEMCONT:    SUB.L  #1,A3   ;get rid of off by one erro
             JSR     ASCII_ADDRESS  ;get address in workable form
             MOVE.L  D5,A4       ;load target address
             MOVE.B  D2,(A4)       ;put data in target address
-            BRA     SHELL                 ;return to shell
+            BRA     RESTORE                 ;return to shell
 *--------------------------------------------------------------------------------------*
 MEMDISP:    LEA     BUFFER,A2
             MOVE.L  #1,D6       ;counter for how many times to loop
@@ -508,7 +562,7 @@ SECONDLOOP:
             SUBI.L  #1,D6
             CMP.L   #$0,D6
             BEQ     DISPLOOP
-            BRA     SHELL
+            BRA     RESTORE
             
 *--------------------------------------------------------------------------------------*
 
@@ -571,7 +625,7 @@ OUTPUTNUM:
            MOVE.L   #0,D0   
            TRAP     #15
            
-           BRA SHELL
+           BRA RESTORE
 
 *--------------------------------------------------------------------------------------*
 
@@ -579,7 +633,7 @@ SORTW:    LEA  DEBUG,A1      ;Load message
         MOVE.W  #3,D1      ;load n bytes
         MOVE.B  #1,D0       ;set up trap call
         TRAP    #15
-        BRA SHELL
+        BRA RESTORE
 
 *--------------------------------------------------------------------------------------*
 
@@ -850,7 +904,7 @@ ENTERL:  ADD.L   #4,A4   ;increment address
         BRA     MODIFYLOOPL
 
 
-ENDLP:  BRA SHELL
+ENDLP:  BRA RESTORE
         
         
 *--------------------------------------------------------------------------------------*
@@ -907,20 +961,85 @@ DATALOOP:
         MOVE.W  D5,(A5)+
         BRA     DATALOOP
 
-ENDBF:  BRA SHELL
+ENDBF:  BRA RESTORE
 *--------------------------------------------------------------------------------------*
 
-BMOV:   
+BMOV:   ADD.L   #1,A1   ;get to start of first address
+        MOVE.L  A1,A2   ;set up start ptr
+        MOVE.L  A2,A3   ;set up end ptr
+        
+FIRSTADDRESS:
+        CMP.B #$20,(A3)+
+        BEQ     COMPUTEFIRSTADD
+        BRA     FIRSTADDRESS
+        
+COMPUTEFIRSTADD:
+        SUB.L   #1,A3   ;off by one error
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,A0   ; save 1st address
+        
+        ADD.L   #1,A3
+        MOVE.L  A3,A2
+SECONDADDRESS:
+        CMP.B   #$20,(A3)+
+        BEQ     COMPUTESECONDADDRESS
+        BRA     SECONDADDRESS
+        
+COMPUTESECONDADDRESS:
+        SUB.L   #1,A3   ;off by one error
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,A4   ;save 2nd address
+
+        ADD.L   #1,A3
+        MOVE.L  A3,A2
+THIRDADDRESS:
+        CMP.B   #$20,(A3)+
+        BEQ     COMPUTETHIRDADDRESS
+        BRA     THIRDADDRESS
+        
+COMPUTETHIRDADDRESS:
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,A5   ;save 3rd address
+        
+        ADD.L   #1,A3
+        MOVE.L  A3,A2
+FOURTHADDRESS:
+        CMP.B   #$00,(A3)+
+        BEQ     COMPUTEFOURTHADDRESS
+        BRA     FOURTHADDRESS
+        
+COMPUTEFOURTHADDRESS:
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,A6   ;save 3rd address
+        
+        
+
+        *Check for matching dimensions*
+        MOVE.L  A0,D0
+        MOVE.L  A4,D1
+        MOVE.L  A5,D5
+        MOVE.L  A6,D6
+        SUB.L   D0,D1
+        SUB.L   D5,D6
+        CMP.L   D1,D6
+        BNE     ERRORSR
+        CMP.L   A0,A4
+        BLT     ERRORSR
+        CMP.L   A5,A6
+        BLT     ERRORSR
+
+DATATRANSFER:
+        CMP.L   A0,A4
+        BLT     BMOVDONE
+        MOVE.B  (A0)+,(A5)+
+        BRA     DATATRANSFER
         
 
 
-
-
-        LEA  DEBUG,A1      ;Load message           
-        MOVE.W  #3,D1      ;load n bytes
-        MOVE.B  #1,D0       ;set up trap call
-        TRAP    #15
-        BRA SHELL
+BMOVDONE:
+        BRA RESTORE
 
 *--------------------------------------------------------------------------------------*
 
@@ -1033,7 +1152,7 @@ COMPLETE:
         MOVE.L  #18,D1
         MOVE.L  #0,D0
         TRAP    #15
-        BRA SHELL
+        BRA RESTORE
 
 *--------------------------------------------------------------------------------------*
 
@@ -1155,22 +1274,380 @@ SUCCESSTEXT:
 
         
 ENDBSCH:        
-        BRA SHELL
+        BRA RESTORE
 
 *--------------------------------------------------------------------------------------*
 
-GO:    LEA  DEBUG,A1      ;Load message           
-        MOVE.W  #3,D1      ;load n bytes
-        MOVE.B  #1,D0       ;set up trap call
-        TRAP    #15
-        BRA SHELL
+GO:    
+        MOVE.L  A1,A2   ;setup for hex conversion
+        MOVE.L  A2,A3   
+GGETEND:
+        CMP.B   #$00,(A3)+
+        BEQ     EXECUTE
+        BRA     GGETEND
+        
+EXECUTE:
+        SUB.L   #1,A3   ;off by one error
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,A0   
+        JSR     (A0)    ;go to program
+        **NOTE: THE PROGRAM MUST HAVE RTS OR CONTROL WILL NOT BE RETURNED BACK TO MONITOR441!!!**
+        BRA RESTORE
 
 *--------------------------------------------------------------------------------------*
 
-DF:    LEA  DEBUG,A1      ;Load message           
-        MOVE.W  #3,D1      ;load n bytes
-        MOVE.B  #1,D0       ;set up trap call
-        TRAP    #15
+DF:    *Registers have already been saved to STACK, just need to pop them off first*
+        *Stack looks like this*
+        
+        *-------------*
+        *|D0-D7/A0-A6|*
+        *|     USP   |*
+        *|     SR    |*
+        *|     SSP   |*
+        *|     PC    |*
+        *-------------*
+        *I should've used loops for efficiency but runtime is not a design constraint*
+        *Maybe fix this in the future?*
+        
+          *----------D0-----------*
+       LEA      RD0,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      D0DONTWORRY
+D0ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+D0DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+           *----------D1-----------*
+       LEA      RD1,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      D1DONTWORRY
+D1ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+D1DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+           *----------D2-----------*
+       LEA      RD2,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3   
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      D2DONTWORRY
+D2ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+D2DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+            *----------D3-----------*
+       LEA      RD3,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15   
+       MOVE.L   (SP)+,D3  
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      D3DONTWORRY
+D3ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+D3DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+            *----------D4-----------*
+       LEA      RD4,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      D4DONTWORRY
+D4ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+D4DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+       *----------D5-----------*
+       LEA      RD5,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      D5DONTWORRY
+D5ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+D5DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+
+        *----------D6-----------*
+       LEA      RD6,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      D6DONTWORRY
+D6ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+D6DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+         *----------D7-----------*
+       LEA      RD7,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      D7DONTWORRY
+D7ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+D7DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+
+   *----------A0-----------*
+       LEA      RA0,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      A0DONTWORRY
+A0ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+A0DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+          *----------A1-----------*
+       LEA      RA1,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      A1DONTWORRY
+A1ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+A1DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+        *----------A2-----------*
+       LEA      RA2,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      A2DONTWORRY
+A2ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+A2DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+         *----------A3-----------*
+       LEA      RA3,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      A3DONTWORRY
+A3ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+A3DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+        *----------A4-----------*
+       LEA      RA3,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      A4DONTWORRY
+A4ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+A4DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+               *----------A5-----------*
+       LEA      RA3,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      A5DONTWORRY
+A5ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+A5DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+
+
+
+
+
+
+
+
+
+
+
+       
+       
+
+
+        
+        
+        
+           
+       
+       *----------SR-----------*
+       LEA      RSR,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.W   (SP)+,D3    ;SR is only 16bits
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1   ;load for TRAP
+       MOVE.L   #0,D0
+       MOVE.L   #4,D1
+       TRAP     #15
+       
+       *----------PC-----------*
+       LEA      RPC,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1   
+       MOVE.L   #0,D0
+       MOVE.L   #4,D1
+       TRAP     #15
+
+       *A0*
+       
+       
+       
+       
+
+
+
+
+
+
+       ;LEA  DEBUG,A1      ;Load message           
+       ; MOVE.W  #3,D1      ;load n bytes
+       ; MOVE.B  #1,D0       ;set up trap call
+       ; TRAP    #15
+       ;MOVEM.L  
         BRA SHELL
 
 *--------------------------------------------------------------------------------------*
@@ -1185,7 +1662,7 @@ ERRORSR:        LEA   ERROR,A1    ;load message
                 MOVE.W  #44,D1
                 MOVE.L  #0,D0
                 TRAP    #15
-                BRA     SHELL
+                BRA     RESTORE
 *--------------------------------------------------------------------------------------*
 ASCII_TO_BCD:   *Number passed via D3 byte size only(to be expected)*
                 CMP #$46,D3
@@ -1273,7 +1750,11 @@ ADD:        ADD.L   #1,A2   ;increment to find start of string
             BRA     RID_ZEROS
 HEXASCIIDONE:   
             MOVE.L  #$3932,A3    ;end of original number
-            RTS
+            CMP.L   A2,A3
+            BEQ     ZEROS
+            BRA     NOTZEROS
+ZEROS       SUB.L   #8,A2               
+NOTZEROS    RTS
 *--------------------------------------------------------------------------------------*
 
 
@@ -1285,6 +1766,8 @@ NEXT:   ;for debugging single commands
 
 
        END    START        
+
+
 
 
 
