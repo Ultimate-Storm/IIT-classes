@@ -87,8 +87,21 @@ RSS            DC.B      'SS/A7: '
 RUS            DC.B      'US: '
 RPC            DC.B      'PC: '
 RSR            DC.B      'SR: '
+
+*Color definition for Font*
+FONT        EQU     $01090000  
+GREEN       EQU     $0000FF00
+
     ORG     $1000
 START:  
+        *Makes it look like a REAL terminal*
+        MOVE.L  #GREEN,D1
+        MOVE.L  #FONT,D2
+        MOVE.B  #21,D0
+        TRAP    #15
+        CLR.L   D1
+        CLR.L   D2
+        CLR.B   D0
 
 *--------------------------------------------------------------------------------------*
 SHELL:      PEA     *           ;save PC on Stack for DF
@@ -563,6 +576,7 @@ SECONDLOOP:
             SUBI.L  #1,D6
             CMP.L   #$0,D6
             BEQ     DISPLOOP
+            SUB.L   #4,SP   ;off by long error on stack
             BRA     RESTORE
             
 *--------------------------------------------------------------------------------------*
@@ -630,10 +644,44 @@ OUTPUTNUM:
 
 *--------------------------------------------------------------------------------------*
 
-SORTW:    LEA  DEBUG,A1      ;Load message           
-        MOVE.W  #3,D1      ;load n bytes
-        MOVE.B  #1,D0       ;set up trap call
-        TRAP    #15
+SORTW:  ADD.L   #1,A1       ;increment to check for semicolon/dash
+        CMP.B   #$2D,(A1)   ;check for default
+        BEQ     SPCHECK
+        CMP.B   #$3B,(A1)+
+        BNE     ERRORSR
+        CMP.B   #$41,(A1)   ;is it ascending?
+        BEQ     ASCEND
+        CMP.B   #$44,(A1)   ;or descending?
+        BNE     ERRORSR
+        BRA     DESCEND
+SPCHECK:
+        ADD.L   #1,A1       ;inc to space
+        CMP.B   #$20,(A1)   
+        BNE     ERRORSR     ;clearly wrong syntax
+        BRA     BEGINDESCEND
+        
+ASCEND:
+       ADD.L    #1,A1   ;inc
+       CMP.B    #$20,(A1)   ;check space
+       BNE      ERRORSR
+       ADD.L    #1,A1   ;start of 1st address
+       MOVE.L   A1,A2
+       MOVE.L   A2,A3
+AGETFIRSTADDRESS:
+       CMP.B    #$20,(A3)+  ;trying to find the end
+       BEQ      AFADDCONV
+       BRA      AGETFIRSTADDRESS
+AFADDCONV:
+       SUB.L    #1,A3   ;off by one error
+       JSR ASCII_ADDRESS    ;D5 now has that address 
+       MOVE D5,
+
+DESCEND:
+BEGINDESCEND:
+        ; LEA  DEBUG,A1      ;Load message           
+        ;MOVE.W  #3,D1      ;load n bytes
+        ;MOVE.B  #1,D0       ;set up trap call
+        ;TRAP    #15
         BRA RESTORE
 
 *--------------------------------------------------------------------------------------*
@@ -742,6 +790,11 @@ WORD:
        
 MODIFYLOOPW:
         *-------Display Memory First-----*
+        MOVE.L  A4,D0
+        DIVU    #2,D0
+        SWAP    D0      ;check if it's an odd address
+        CMP.W   #$00,D0
+        BNE     ERRORSR
         MOVE.L  A4,D3       ;set up for subroutine
         MOVE.L  A4,A5       ;next byte of memory may not be needed
         ADD.L   #1,A5
@@ -807,6 +860,7 @@ NEXTMMSTEPW:
         CLR.L   D2      ;clear for next rotate
         BRA     PARSELOOPW
 ENDPARSEW:
+        
         MOVE.W  D3,(A4)   ;commit memory change 
 ENTERW:  ADD.L   #2,A4   ;increment address
         BRA     MODIFYLOOPW
@@ -823,6 +877,11 @@ LONG:
        
 MODIFYLOOPL:
         *-------Display Memory First-----*
+        MOVE.L  A4,D0
+        DIVU    #2,D0
+        SWAP    D0      ;check if it's an odd address
+        CMP.W   #$00,D0
+        BNE     ERRORSR
         MOVE.L  A4,D3       ;set up for subroutine
         MOVE.L  A4,A5       ;next byte of memory may not be needed
         ADD.L   #1,A5
@@ -1694,10 +1753,11 @@ PCDONTWORRY:
        TRAP     #15       
        
    *---DF HACK RESTORE---*
-   ADD.L    #-74,SP
+   MOVE.W   D7,-(SP)
+   ADD.L    #-72,SP
    MOVEM.L  (SP)+,D0-D7/A0-A6
-   ADD.L    #14,SP  ;go back to original value
-   MOVE     D6,SR
+   ADD.L    #12,SP  ;go back to original value
+   MOVE.W   (SP)+,SR
         
        BRA SHELL
 
