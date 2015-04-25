@@ -4,6 +4,17 @@
 * Date       :  4/28/2015
 * Description:  Monitor Final Project
 *-----------------------------------------------------------
+
+
+*---------------DISCLAIMER!-------------------------*
+*Subroutines are not as optimized as they should be!*
+*Things such as checking for spaces, getting addresses, etc. *
+*can easily be their own subroutines to save code space!*
+*Luckily code size is not a huge concern*
+*This is why there are no plans to optimize in the future*
+
+
+
     ORG    $3000
     
 BUFFER        DS.B      80              ;space for command storage 
@@ -646,7 +657,7 @@ OUTPUTNUM:
 
 SORTW:  ADD.L   #1,A1       ;increment to check for semicolon/dash
         CMP.B   #$2D,(A1)   ;check for default
-        BEQ     SPCHECK
+        BEQ     DESCEND
         CMP.B   #$3B,(A1)+
         BNE     ERRORSR
         CMP.B   #$41,(A1)   ;is it ascending?
@@ -654,11 +665,6 @@ SORTW:  ADD.L   #1,A1       ;increment to check for semicolon/dash
         CMP.B   #$44,(A1)   ;or descending?
         BNE     ERRORSR
         BRA     DESCEND
-SPCHECK:
-        ADD.L   #1,A1       ;inc to space
-        CMP.B   #$20,(A1)   
-        BNE     ERRORSR     ;clearly wrong syntax
-        BRA     BEGINDESCEND
         
 ASCEND:
        ADD.L    #1,A1   ;inc
@@ -668,21 +674,88 @@ ASCEND:
        MOVE.L   A1,A2
        MOVE.L   A2,A3
 AGETFIRSTADDRESS:
+       CMP.B    #$00,(A3)
+       BEQ      ERRORSR     ;incorrect syntax
        CMP.B    #$20,(A3)+  ;trying to find the end
        BEQ      AFADDCONV
        BRA      AGETFIRSTADDRESS
 AFADDCONV:
        SUB.L    #1,A3   ;off by one error
        JSR ASCII_ADDRESS    ;D5 now has that address 
-       MOVE D5,
+       MOVE.L D5,A4
+       ADD.L    #1,A3   ;start of second address
+       MOVE.L   A3,A2   ;setup for second address
+AGETSECADDRESS:
+       CMP.B    #$00,(A3)+  ;trying to find the end
+       BEQ      ASADDCONV
+       BRA      AGETSECADDRESS
+ASADDCONV:
+        SUB.L   #1,A3   ;off by one
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,A5
+        MOVEA.L  A4,A6  ;CLR A6
+        
+ARESETLOOP: MOVE.L  A6,A4    ;reset to top of loop
+ACMP:       CMP.W   (A4)+,(A4)+  ;check adjacent mem
+            BLS.S   ASWAP    
+            SUBQ.L  #2,A4
+            CMP.L   A4,A5   ;done?
+            BNE     ACMP     ;nope
+            BRA     DONEASCEND  ;yep
+ASWAP:       MOVE.L  -(A4),D0    ;start bubbling 
+            SWAP.W  D0
+            MOVE.L  D0,(A4)
+            BRA     ARESETLOOP
+
 
 DESCEND:
-BEGINDESCEND:
+       ADD.L    #1,A1   ;inc
+       CMP.B    #$20,(A1)   ;check space
+       BNE      ERRORSR
+       ADD.L    #1,A1   ;start of 1st address
+       MOVE.L   A1,A2
+       MOVE.L   A2,A3
+DGETFIRSTADDRESS:
+       CMP.B    #$00,(A3)
+       BEQ      ERRORSR     ;incorrect syntax
+       CMP.B    #$20,(A3)+  ;trying to find the end
+       BEQ      DFADDCONV
+       BRA      DGETFIRSTADDRESS
+DFADDCONV:
+       SUB.L    #1,A3   ;off by one error
+       JSR ASCII_ADDRESS    ;D5 now has that address 
+       MOVE.L D5,A4
+       ADD.L    #1,A3   ;start of second address
+       MOVE.L   A3,A2   ;setup for second address
+DGETSECADDRESS:
+       CMP.B    #$00,(A3)+  ;trying to find the end
+       BEQ      DSADDCONV
+       BRA      DGETSECADDRESS
+DSADDCONV:
+        SUB.L   #1,A3   ;off by one
+        JSR     ASCII_ADDRESS
+        MOVE.L  D5,A5
+        MOVEA.L  A4,A6  ;CLR A6
+        
+DRESETLOOP: MOVE.L  A6,A4    ;reset to top of loop
+DCMP:       CMP.W   (A4)+,(A4)+  ;check adjacent mem
+            BHI.S   DSWAP    
+            SUBQ.L  #2,A4
+            CMP.L   A4,A5   ;done?
+            BNE     DCMP     ;nope
+            BRA     DONEDESCEND  ;yep
+DSWAP:       MOVE.L  -(A4),D0    ;start bubbling 
+            SWAP.W  D0
+            MOVE.L  D0,(A4)
+            BRA     DRESETLOOP
+
         ; LEA  DEBUG,A1      ;Load message           
         ;MOVE.W  #3,D1      ;load n bytes
         ;MOVE.B  #1,D0       ;set up trap call
         ;TRAP    #15
-        BRA RESTORE
+DONEASCEND:
+DONEDESCEND:
+            BRA RESTORE
 
 *--------------------------------------------------------------------------------------*
 
@@ -1877,6 +1950,8 @@ NEXT:   ;for debugging single commands
 
 
        END    START        
+
+
 
 
 
