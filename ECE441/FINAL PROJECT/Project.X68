@@ -82,9 +82,8 @@ RA3            DC.B      'A3: '
 RA4            DC.B      'A4: '
 RA5            DC.B      'A5: '
 RA6            DC.B      'A6: '
-RA7            DC.B      'A7: '
 
-RSS            DC.B      'SS: '
+RSS            DC.B      'SS/A7: '
 RUS            DC.B      'US: '
 RPC            DC.B      'PC: '
 RSR            DC.B      'SR: '
@@ -107,6 +106,7 @@ SHELL:      PEA     *           ;save PC on Stack for DF
             
 
             MOVEM.L D0-D7/A0-A6,-(SP)  ;save initial values of registers
+            MOVEM.L D0-D7/A0-A6,-(SP)  ;unorthodox implementation to save registers when using DF command
             
             
             
@@ -133,6 +133,7 @@ SHELL:      PEA     *           ;save PC on Stack for DF
             BEQ     SORTTEST
             BRA     ERRORSR
 RESTORE:    MOVEM.L (SP)+,D0-D7/A0-A6
+            MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
             ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
                                 ;EASY68k simulator starts in supervisor mode
             MOVE    (SP)+,SR
@@ -1569,7 +1570,7 @@ A4DONTWORRY:
        MOVE.L   #8,D1
        TRAP     #15
        
-               *----------A5-----------*
+       *----------A5-----------*
        LEA      RA3,A1
        MOVE.L   #4,D1
        MOVE.L   #1,D0
@@ -1588,67 +1589,117 @@ A5DONTWORRY:
        MOVE.L   #0,D0
        MOVE.L   #8,D1
        TRAP     #15
-
-
-
-
-
-
-
-
-
-
-
        
-       
+       *----------A6-----------*
+       LEA      RA3,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      A6DONTWORRY
+A6ACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+A6DONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+     *-----HACK---*
+     ADD.L  #60,SP  ;should put stack in correct place
+     
+              *----------USP-----------*
+       LEA      RUS,A1
+       MOVE.L   #4,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      USPDONTWORRY
+USPACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+USPDONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
 
-
-        
-        
-        
-           
-       
-       *----------SR-----------*
+              *----------SR-----------*
        LEA      RSR,A1
        MOVE.L   #4,D1
        MOVE.L   #1,D0
        TRAP     #15
-       MOVE.W   (SP)+,D3    ;SR is only 16bits
+       MOVE.W   (SP)+,D3
+       MOVE.W   D3,D7   ;temp storage to restore before return    
        JSR      HEXTOASCII
-       MOVE.L   A2,A1   ;load for TRAP
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-4,D2
+       BEQ      SRDONTWORRY
+SRACCOUNTFORZEROS:
+        ADDI.L  #4,D2
+        SUB.L   D2,A1
+SRDONTWORRY:
        MOVE.L   #0,D0
        MOVE.L   #4,D1
        TRAP     #15
        
-       *----------PC-----------*
+    *----------SS/A7-----------*
+       LEA      RSS,A1
+       MOVE.L   #7,D1
+       MOVE.L   #1,D0
+       TRAP     #15
+       MOVE.L   (SP)+,D3    
+       JSR      HEXTOASCII
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      SSDONTWORRY
+SSACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+SSDONTWORRY:
+       MOVE.L   #0,D0
+       MOVE.L   #8,D1
+       TRAP     #15
+       
+    *----------PC-----------*
        LEA      RPC,A1
        MOVE.L   #4,D1
        MOVE.L   #1,D0
        TRAP     #15
        MOVE.L   (SP)+,D3    
        JSR      HEXTOASCII
-       MOVE.L   A2,A1   
+       MOVE.L   A2,A1
+       SUB.L    A3,A2
+       MOVE.L   A2,D2
+       CMP.L    #-8,D2
+       BEQ      PCDONTWORRY
+PCACCOUNTFORZEROS:
+        ADDI.L  #8,D2
+        SUB.L   D2,A1
+PCDONTWORRY:
        MOVE.L   #0,D0
-       MOVE.L   #4,D1
-       TRAP     #15
-
-       *A0*
+       MOVE.L   #8,D1
+       TRAP     #15       
        
-       
-       
-       
-
-
-
-
-
-
-       ;LEA  DEBUG,A1      ;Load message           
-       ; MOVE.W  #3,D1      ;load n bytes
-       ; MOVE.B  #1,D0       ;set up trap call
-       ; TRAP    #15
-       ;MOVEM.L  
-        BRA SHELL
+   *---DF HACK RESTORE---*
+   ADD.L    #-74,SP
+   MOVEM.L  (SP)+,D0-D7/A0-A6
+   ADD.L    #14,SP  ;go back to original value
+   MOVE     D6,SR
+        
+       BRA SHELL
 
 *--------------------------------------------------------------------------------------*
 
