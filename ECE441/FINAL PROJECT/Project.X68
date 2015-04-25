@@ -99,12 +99,27 @@ RUS            DC.B      'US: '
 RPC            DC.B      'PC: '
 RSR            DC.B      'SR: '
 
+*Exception Messages*
+BERR_TEXT      DC.B 'A Bus Error Occured! :(',0
+AERR_TEXT      DC.B 'An Address Error Occured! :(',0
+IERR_TEXT      DC.B 'An Illegal Instruction Error Occured! :(',0
+PERR_TEXT      DC.B 'A Privilege Error Occured! :(',0
+ZERR_TEXT      DC.B 'A Divide by Zero Error Occured! :(',0
+ALERR_TEXT      DC.B 'An A Line Error Occured! :(',0
+FLERR_TEXT      DC.B 'An F Line Error Occured! :(',0
+CHKERR_TEXT      DC.B 'A Check Error Occured! :(',0
+
+SSW            DC.B 'SSW: ',0
+BA             DC.B 'BA: ',0
+IR             DC.B 'IR: ',0
+
 *Color definition for Font*
 FONT        EQU     $01090000  
 GREEN       EQU     $0000FF00
 
     ORG     $1000
 START:  
+        MOVEM.L D0-D2/A1,-(SP)
         *Makes it look like a REAL terminal*
         MOVE.L  #GREEN,D1
         MOVE.L  #FONT,D2
@@ -113,9 +128,28 @@ START:
         CLR.L   D1
         CLR.L   D2
         CLR.B   D0
+        *Load custom exceptions*
+        LEA BERR,A1 ;init exception handlers
+        MOVE.L A1,$8
+        LEA AERR,A1
+        MOVE.L A1,$C
+        LEA IERR,A1
+        MOVE.L A1,$10
+        LEA ZERR,A1
+        MOVE.L A1,$14
+        LEA CHKERR,A1
+        MOVE.L  A1,$18
+        LEA PERR,A1
+        MOVE.L A1,$20
+        LEA ALERR,A1
+        MOVE.L A1,$28
+        LEA FLERR,A1
+        MOVE.L A1,$2C
+        MOVEM.L (SP)+,D0-D2/A1  ;restore any preset values
 
 *--------------------------------------------------------------------------------------*
-SHELL:      PEA     *           ;save PC on Stack for DF
+SHELL:       
+            PEA     *           ;save PC on Stack for DF
             ADD.L   #4,SP       ;get original value of stack pointer
             MOVE.L  SP,-8(SP)   ;save it
             ADD.L   #-8,SP      ;update Stack position
@@ -749,10 +783,6 @@ MRDFINDDATA:
         BRA     MRDFINDDATA
 GOBACK: RTS
         
-        
-
-
-
 
         BRA RESTORE
 *--------------------REQUIRED COMMAND DEFINITION START---------------------------------*
@@ -2257,6 +2287,142 @@ PCDONTWORRY:
        BRA SHELL
 
 *--------------------------------------------------------------------------------------*
+
+
+************************************EXCEPTIONS!*****************************************
+*--------------------------------------------------------------------------------------*
+
+BERR:
+        MOVEM.L A1-A3/D0-D1,-(SP)
+        LEA     BERR_TEXT,A1
+        MOVE.L  #13,D0
+        TRAP    #15
+        LEA     SSW,A1
+        MOVE.L  #14,D0
+        TRAP    #15
+        MOVE.W  (20,SP),D3
+        JSR     HEXTOASCII
+        SUB.L   #4,A3
+        MOVEA.L A3,A1
+        MOVE.L  #4,D1
+        MOVE.L  #0,D0
+        TRAP    #15
+        LEA     BA,A1
+        MOVE.L  #14,D0
+        TRAP    #15
+        MOVE.L  (22,SP),D3
+        JSR     HEXTOASCII
+        SUB.L   #8,A3
+        MOVEA.L A3,A1
+        MOVE.L  #8,D1
+        MOVE.L  #0,D0
+        TRAP    #15
+        LEA     IR,A1
+        MOVE.L  #14,D0
+        TRAP    #15
+        MOVE.W  (26,SP),D3
+        JSR     HEXTOASCII
+        SUB.L   #4,A3
+        MOVEA.L A3,A1
+        MOVE.L  #4,D1
+        MOVE.L  #0,D0
+        TRAP    #15
+        MOVEM.L (SP)+,A1-A3/D0-D1
+        MOVE.L  #$01000000,SP   ;reset stack
+        BRA     SHELL
+
+AERR:
+        MOVEM.L A1-A3/D0-D1,-(SP)
+        LEA     AERR_TEXT,A1
+        MOVE.L  #13,D0
+        TRAP    #15
+        LEA     SSW,A1
+        MOVE.L  #14,D0
+        TRAP    #15
+        MOVE.W  (20,SP),D3
+        JSR     HEXTOASCII
+        SUB.L   #4,A3
+        MOVEA.L A3,A1
+        MOVE.L  #4,D1
+        MOVE.L  #0,D0
+        TRAP    #15
+        LEA     BA,A1
+        MOVE.L  #14,D0
+        TRAP    #15
+        MOVE.L  (22,SP),D3
+        JSR     HEXTOASCII
+        SUB.L   #8,A3
+        MOVEA.L A3,A1
+        MOVE.L  #8,D1
+        MOVE.L  #0,D0
+        TRAP    #15
+        LEA     IR,A1
+        MOVE.L  #14,D0
+        TRAP    #15
+        MOVE.W  (26,SP),D3
+        JSR     HEXTOASCII
+        SUB.L   #4,A3
+        MOVEA.L A3,A1
+        MOVE.L  #4,D1
+        MOVE.L  #0,D0
+        TRAP    #15
+        MOVEM.L (SP)+,A1-A3/D0-D1
+        MOVE.L  #$01000000,SP   ;reset stack
+        BRA     SHELL
+
+IERR:
+    MOVEM.L A1/D0,-(SP)
+    LEA IERR_TEXT,A1
+    MOVE.L #13,D0
+    TRAP #15
+    MOVEM.L (SP)+,A1/D0
+    MOVE.L #$01000000,SP
+    BRA SHELL
+
+PERR:
+    MOVEM.L A1/D0,-(SP)
+    LEA PERR_TEXT,A1
+    MOVE.L #13,D0
+    TRAP #15
+    MOVEM.L (SP)+,A1/D0
+    MOVE.L #$01000000,SP
+    BRA SHELL
+    
+ZERR:
+    MOVEM.L A1/D0,-(SP)
+    LEA ZERR_TEXT,A1
+    MOVE.L #13,D0
+    TRAP #15
+    MOVEM.L (SP)+,A1/D0
+    MOVE.L #$01000000,SP
+    BRA SHELL
+
+ALERR:
+    MOVEM.L A1/D0,-(SP)
+    LEA ALERR_TEXT,A1
+    MOVE.L #13,D0
+    TRAP #15
+    MOVEM.L (SP)+,A1/D0
+    MOVE.L #$01000000,SP
+    BRA SHELL
+    
+FLERR:
+    MOVEM.L A1/D0,-(SP)
+    LEA FLERR_TEXT,A1
+    MOVE.L #13,D0
+    TRAP #15
+    MOVEM.L (SP)+,A1/D0
+    MOVE.L #$01000000,SP
+    BRA SHELL
+    
+CHKERR:
+    MOVEM.L A1/D0,-(SP)
+    LEA CHKERR_TEXT,A1
+    MOVE.L #13,D0
+    TRAP #15
+    MOVEM.L (SP)+,A1/D0
+    MOVE.L #$01000000,SP
+    BRA SHELL
 
 
 
