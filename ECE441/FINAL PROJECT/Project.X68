@@ -131,10 +131,7 @@ SHELL:      PEA     *           ;save PC on Stack for DF
 
             MOVEM.L D0-D7/A0-A6,-(SP)  ;save initial values of registers
             MOVEM.L D0-D7/A0-A6,-(SP)  ;unorthodox implementation to save registers when using DF command
-            
-            
-            
-            
+             
               
             LEA  PROMPT,A1      ;Load message            
             MOVE.W  #11,D1      ;load n bytes
@@ -157,6 +154,8 @@ SHELL:      PEA     *           ;save PC on Stack for DF
             BEQ     SORTTEST
             CMP.B   #$45,(A1)   ;check for echo command
             BEQ     ECHOTEST
+            CMP.B   #$2E,(A1)   ;check for modify register command
+            BEQ     MODIFYREGTEST
             BRA     ERRORSR
 RESTORE:    MOVEM.L (SP)+,D0-D7/A0-A6
             MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
@@ -345,9 +344,19 @@ HXDCTEST:
             CMP.B   #$20,(A1)
             BNE     ERRORSR
             BRA     HXDC
+*--------------------------------------------------------------------------------------*
+MODIFYREGTEST:
+            ADD.L   #1,A1
+            CMP.B   #$44,(A1)
+            BEQ     MRD
+            CMP.B   #$41,(A1)
+            BEQ     MRA
+            BRA     ERRORSR
+            
 *----------------------------USER DEFINED COMMANDS---------------------------------*
 *--------------------------------------------------------------------------------------*
-ECHO:
+ECHO: *This command was made for fun. What terminal DOESN'T have echo?*
+
         MOVE.L  A1,A2   ;setup to find end of string
 EEND:   CMP.B   #$00,(A2)+
         BEQ     EFOUND
@@ -360,11 +369,393 @@ EFOUND:
         TRAP    #15
         
         BRA RESTORE
+*--------------------------------------------------------------------------------------*
+MODIFYREGS:
+
+MRD:
+        ADD.L   #1,A1   ;inc
+        CMP.B   #$30,(A1)
+        BEQ     MRD0
+        CMP.B   #$31,(A1)
+        BEQ     MRD1
+        CMP.B   #$32,(A1)
+        BEQ     MRD2
+        CMP.B   #$33,(A1)
+        BEQ     MRD3
+        CMP.B   #$34,(A1)
+        BEQ     MRD4
+        CMP.B   #$35,(A1)
+        BEQ     MRD5
+        CMP.B   #$36,(A1)
+        BEQ     MRD6
+        CMP.B   #$37,(A1)
+        BEQ     MRD7
+        BRA     ERRORSR
+
+MRA:
+        ADD.L   #1,A1   ;inc
+        CMP.B   #$30,(A1)
+        BEQ     MRA0
+        CMP.B   #$31,(A1)
+        BEQ     MRA1
+        CMP.B   #$32,(A1)
+        BEQ     MRA2
+        CMP.B   #$33,(A1)
+        BEQ     MRA3
+        CMP.B   #$34,(A1)
+        BEQ     MRA4
+        CMP.B   #$35,(A1)
+        BEQ     MRA5
+        CMP.B   #$36,(A1)
+        BEQ     MRA6
+        BRA     ERRORSR
+             
+
+
+        
+        
+MRD0: 
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),D0
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+             
+MRD1:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),D1
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRD2:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),D2
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRD3:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),D3
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRD4:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),D4
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRD5:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),D5
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRD6:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),D6
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRD7:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+       ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),D7
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRA0:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),A0
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+MRA1:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+       ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),A1
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRA2:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),A2
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+        
+MRA3:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),A3
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRA4:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),A4
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRA5:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+       ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),A5
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRA6:
+        ADD.L   #1,A1
+        CMP.B   #$20,(A1)+
+        BNE     ERRORSR
+        MOVE.L  A1,A2
+        MOVE.L  A2,A3
+        JSR     MRDFINDDATA
+        SUB.L   #1,A3
+        JSR     ASCII_ADDRESS   ;convert data to hex
+        MOVE.L  D5,-(SP)        ;store it temporarily
+        ADD.L   #4,SP       ;dont lose data
+        MOVEM.L (SP)+,D0-D7/A0-A6
+        MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
+        ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
+                                ;EASY68k simulator starts in supervisor mode
+        MOVE    (SP)+,SR
+        ADD.L   #4,SP       ;skip saved stack
+        SUB.L   #134,SP     ;find data again
+        MOVE.L  (SP),A6
+        ADD.L   #138,SP     ;go back to original spot
+        BRA     SHELL
+
+MRDFINDDATA:
+        CMP.B   #$00,(A3)+
+        BEQ     GOBACK
+        BRA     MRDFINDDATA
+GOBACK: RTS
+        
+        
 
 
 
 
-*----------------------------COMMAND DEFINITION START---------------------------------*
+        BRA RESTORE
+*--------------------REQUIRED COMMAND DEFINITION START---------------------------------*
 *--------------------------------------------------------------------------------------*
 HELP:       LEA     HTXT,A1     ;list of commands test
             MOVE.W  #17,D1
@@ -1981,6 +2372,7 @@ NEXT:   ;for debugging single commands
 
 
        END    START        
+
 
 
 
