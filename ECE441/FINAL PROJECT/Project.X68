@@ -54,6 +54,9 @@ HTXT9A        DC.B      'in memory block from <address1> to <address2>'
 HTXT10        DC.B      'GO <address> - Execute Program: Executes program at <address>'
 HTXT11        DC.B      'DF - Display Formatted Registers: Displays all registers'
 HTXT12        DC.B      'HELP - Help: Displays all available commands and their description'
+HTXT13        DC.B      'ECHO <data> - Echo: Displays <data> to the terminal'
+HTXT14        DC.B      '.<Register Type><Register Number> <data>- Modify Register: Modifies the'
+HTXT15        DC.B      'contents of register <Register Type><Register Number> to <data>'
 
 *Error Message*
 ERROR         DC.B      'ERROR: TRY COMMAND AGAIN WITH CORRECT SYNTAX'
@@ -372,6 +375,9 @@ HXDCTEST:
             CMP.B   #$44,(A1)
             BNE     ERRORSR
             ADD.L   #1,A1
+            CMP.B   #$45,(A1)
+            BNE     ERRORSR
+            ADD.L   #1,A1
             CMP.B   #$43,(A1)
             BNE     ERRORSR
             ADD.L   #1,A1
@@ -389,7 +395,7 @@ MODIFYREGTEST:
             
 *----------------------------USER DEFINED COMMANDS---------------------------------*
 *--------------------------------------------------------------------------------------*
-ECHO: *This command was made for fun. What terminal DOESN'T have echo?*
+ECHO: *What terminal DOESN'T have echo?*
 
         MOVE.L  A1,A2   ;setup to find end of string
 EEND:   CMP.B   #$00,(A2)+
@@ -954,6 +960,25 @@ HELP:       LEA     HTXT,A1     ;list of commands test
             TRAP    #15
             MOVE.B  #0,D1       ;newline
             TRAP    #15   
+            
+            LEA     HTXT13,A1   ;echo command text   
+            MOVE.W  #52,D1
+            MOVE.B  #0,D0
+            TRAP    #15
+            MOVE.B  #0,D1       ;newline
+            TRAP    #15
+            
+            LEA     HTXT14,A1   ;modify register command text   
+            MOVE.W  #71,D1
+            MOVE.B  #0,D0
+            TRAP    #15
+            LEA     HTXT15,A1   ;modify register command text   
+            MOVE.W  #63,D1
+            MOVE.B  #0,D0
+            TRAP    #15
+            MOVE.B  #0,D1       ;newline
+            TRAP    #15
+ 
             BRA     RESTORE  
 *--------------------------------------------------------------------------------------*
 *Fix ASCII String input? ask in lab*
@@ -1049,7 +1074,7 @@ SECONDLOOP:
 *--------------------------------------------------------------------------------------*
 
 HXDC:   LEA BUFFER,A2   ;load buffer
-        ADD.L   #5,A2   ; start of number
+        ADD.L   #6,A2   ; start of number
         MOVE.L  A2,A3   ;set up end pointer
         MOVE.L  #1,D1   ;set up 16's place
         CLR.L   D2      ;clear total
@@ -1057,8 +1082,8 @@ HXDC:   LEA BUFFER,A2   ;load buffer
         CLR.L   D6      ;Final Value in BCD
         MOVE.L  #10000,D4    ;maximum 10's place of converted number
         MOVE.L  #16,D5      ;Max number of rotates needed
-        LEA OUTPUTBUFF,A5
-        LEA OUTPUTBUFF,A4   ;set up start pointer
+        LEA $3A00,A5
+        LEA $3A00,A4   ;set up start pointer
 FINDLASTNUM:    
         CMP.B #$00,(A3)+
         BEQ     CONVERTMINUS1
@@ -2492,8 +2517,8 @@ HEXTOASCII: *Result returned in address buffer from A2 to A3, HEX number passed*
             *through D3*
             CLR.L   D4
             CLR.L   D5
-            MOVE.L  #$3900,A2
-            MOVE.L  #$3932,A3
+            MOVE.L  #$3A00,A2
+            MOVE.L  #$3A32,A3
 KEEP_CONVERTING:
             MOVE.B  D3,D4  
             MOVE.B  D3,D5 
@@ -2521,7 +2546,7 @@ RID_ZEROS:  CMP.B   #$30,(A2)
 ADD:        ADD.L   #1,A2   ;increment to find start of string
             BRA     RID_ZEROS
 HEXASCIIDONE:   
-            MOVE.L  #$3932,A3    ;end of original number
+            MOVE.L  #$3A32,A3    ;end of original number
             CMP.L   A2,A3
             BEQ     ZEROS
             BRA     NOTZEROS
@@ -2538,6 +2563,8 @@ NEXT:   ;for debugging single commands
 
 
        END    START        
+
+
 
 
 
