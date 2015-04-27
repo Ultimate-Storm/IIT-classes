@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  27 APR 2015 04:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  27 APR 2015 04:57
 entering extended mode
 **hw5.tex
 (C:\Users\Adam\classes\ECE438\HW5\hw5.tex
@@ -539,7 +539,7 @@ Here is how much of TeX's memory you used:
  16532 multiletter control sequences out of 15000+200000
  8501 words of font info for 30 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 55i,8n,67p,415b,704s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,8n,67p,416b,704s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
@@ -549,7 +549,7 @@ e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb>
-Output written on hw5.pdf (7 pages, 8567195 bytes).
+Output written on hw5.pdf (7 pages, 8567191 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
