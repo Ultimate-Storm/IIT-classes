@@ -60,7 +60,7 @@ HTXT15        DC.B      'contents of register <Register Type><Register Number> t
 
 *Error Message*
 ERROR         DC.B      'ERROR: TRY COMMAND AGAIN WITH CORRECT SYNTAX'
-
+ERROR1        DC.B      'ERROR: UNKOWN COMMAND'
 *Space*
 SPACE         DC.B      ' '
 
@@ -193,7 +193,7 @@ SHELL:
             BEQ     ECHOTEST
             CMP.B   #$2E,(A1)   ;check for modify register command
             BEQ     MODIFYREGTEST
-            BRA     ERRORSR
+            BRA     UNKNOWNCMD
 RESTORE:    MOVEM.L (SP)+,D0-D7/A0-A6
             MOVEM.L (SP)+,D0-D7/A0-A6 ;double restore because of DF hack workaround
             ADD.L   #4,SP       ;account for USP, it'll fix itself (it shouldn't be used)
@@ -209,11 +209,11 @@ RESTORE:    MOVEM.L (SP)+,D0-D7/A0-A6
 
 ECHOTEST:   ADD.L   #1,A1
             CMP.B   #$43,(A1)+   ;C?
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             CMP.B   #$48,(A1)+   ;H?
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             CMP.B   #$4F,(A1)+   ;O?
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             CMP.B   #$20,(A1)+   ;SPACE?
             BEQ     ECHO
             BRA     ERRORSR
@@ -231,15 +231,15 @@ BLCKTEST:   ADD.L   #1,A1
             BEQ     BTSTTEST
             CMP.B   #$53,(A1)   ;BSCH?
             BEQ     BSCHTEST
-            BRA     ERRORSR
+            BRA     UNKNOWNCMD
 *--------------------------------------------------------------------------------------*
 
 BSCHTEST:   ADD.L   #1,A1
             CMP.B   #$43,(A1)
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$48,(A1)
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$20,(A1)
             BNE     ERRORSR
@@ -250,10 +250,10 @@ BSCHTEST:   ADD.L   #1,A1
 BTSTTEST:   
             ADD.L   #1,A1
             CMP.B   #$53,(A1)
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$54,(A1)
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$20,(A1)
             BNE     ERRORSR
@@ -263,10 +263,10 @@ BTSTTEST:
 
 BMOVTEST:   ADD.L   #1,A1
             CMP.B   #$4F,(A1)
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$56,(A1)
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$20,(A1)
             BNE     ERRORSR
@@ -280,7 +280,7 @@ BFTEST:     ADD.L   #1,A1
 
 DFTST:      ADD.L   #1,A1
             CMP.B   #$46,(A1)
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$00,(A1)
             BNE     ERRORSR
@@ -289,16 +289,16 @@ DFTST:      ADD.L   #1,A1
 
 SORTTEST:    ADD.L   #1,A1
             CMP.B   #$4F,(A1)   ;O?
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
              ADD.L   #1,A1
             CMP.B   #$52,(A1)   ;R?
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$54,(A1)   ;T?
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$57,(A1)   ;W?
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$20,(A1)
             BNE     ERRORSR
@@ -308,7 +308,7 @@ SORTTEST:    ADD.L   #1,A1
 
 GOTST:      ADD.L   #1,A1
             CMP.B   #$4F,(A1)
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$20,(A1)+
             BNE     ERRORSR
@@ -320,16 +320,16 @@ HELPORHXDC: ADD.L   #1,A1
             BEQ     HELPTST
             CMP.B   #$58,(A1)   ;or is it hxdc
             BEQ     HXDCTEST
-            BRA     ERRORSR     
+            BRA     UNKNOWNCMD     
 *--------------------------------------------------------------------------------------*
 
 HELPTST:   
            ADD.L   #1,A1   ; check next char
            CMP.B    #$4C,(A1) ;check for L
-           BNE      ERRORSR
+           BNE      UNKNOWNCMD
            ADD.L   #1,A1
            CMP.B    #$50,(A1)   ;check for P
-           BNE      ERRORSR
+           BNE      UNKNOWNCMD
            ADD.L   #1,A1   ;check for anything else
            CMP.B    #$00,(A1)
            BNE      ERRORSR
@@ -346,7 +346,7 @@ MEMTEST:    ADD.L   #1,A1
             BEQ     MDSPCTEST
             CMP.B   #$4D,(A1)
             BEQ     MMSPCTEST
-            BRA     ERRORSR
+            BRA     UNKNOWNCMD
             
 MSSPCTEST   ADD.L   #1,A1
             CMP.B   #$20,(A1)
@@ -359,7 +359,7 @@ MDSPCTEST:
             BNE     ERRORSR
             ADD.L   #1,A1
             CMP.B   #$50,(A1)
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$20,(A1)
             BEQ     MEMDISP          
@@ -373,13 +373,13 @@ MMSPCTEST:  ADD.L   #1,A1
 HXDCTEST:   
             ADD.L   #1,A1
             CMP.B   #$44,(A1)
-            BNE     ERRORSR
+            BNE    UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$45,(A1)
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$43,(A1)
-            BNE     ERRORSR
+            BNE     UNKNOWNCMD
             ADD.L   #1,A1
             CMP.B   #$20,(A1)
             BNE     ERRORSR
@@ -391,7 +391,7 @@ MODIFYREGTEST:
             BEQ     MRD
             CMP.B   #$41,(A1)
             BEQ     MRA
-            BRA     ERRORSR
+            BRA     UNKNOWNCMD
             
 *----------------------------USER DEFINED COMMANDS---------------------------------*
 *--------------------------------------------------------------------------------------*
@@ -1286,6 +1286,11 @@ MODIFYLOOP:
         MOVE.B  (A4),D3
         JSR     HEXTOASCII
         MOVE.L  #2,D1
+        SUB.L   A2,A3
+        CMP     #2,A3
+        BEQ     FORMATGOOD
+        SUB.L   #1,A2
+FORMATGOOD:
         MOVE.L  A2,A1
         MOVE.B  #1,D0
         TRAP    #15
@@ -1364,6 +1369,12 @@ MODIFYLOOPW:
         MOVE.B  (A4),D3
         JSR     HEXTOASCII
         MOVE.L  #2,D1
+        SUB.L   A2,A3
+        CMP     #2,A3
+        BEQ     FORMATGOOD1
+        SUB.L   #1,A2     
+FORMATGOOD1:
+
         MOVE.L  A2,A1
         MOVE.B  #1,D0
         TRAP    #15
@@ -1371,6 +1382,12 @@ MODIFYLOOPW:
         MOVE.B  (A5),D3
         JSR     HEXTOASCII
         MOVE.L  #2,D1
+        SUB.L   A2,A3
+        CMP     #2,A3
+        BEQ     FORMATGOOD2
+        SUB.L   #1,A2     
+FORMATGOOD2:
+
         MOVE.L  A2,A1
         MOVE.B  #1,D0
         TRAP    #15
@@ -1451,6 +1468,12 @@ MODIFYLOOPL:
         MOVE.B  (A4),D3
         JSR     HEXTOASCII
         MOVE.L  #2,D1
+        SUB.L   A2,A3
+        CMP     #2,A3
+        BEQ     FORMATGOOD3
+        SUB.L   #1,A2     
+FORMATGOOD3:
+
         MOVE.L  A2,A1
         MOVE.B  #1,D0
         TRAP    #15
@@ -1458,6 +1481,12 @@ MODIFYLOOPL:
         MOVE.B  (A5)+,D3
         JSR     HEXTOASCII
         MOVE.L  #2,D1
+        SUB.L   A2,A3
+        CMP     #2,A3
+        BEQ     FORMATGOOD4
+        SUB.L   #1,A2     
+FORMATGOOD4:
+
         MOVE.L  A2,A1
         MOVE.B  #1,D0
         TRAP    #15
@@ -1465,12 +1494,24 @@ MODIFYLOOPL:
         MOVE.B  (A5)+,D3
         JSR     HEXTOASCII
         MOVE.L  #2,D1
+        SUB.L   A2,A3
+        CMP     #2,A3
+        BEQ     FORMATGOOD5
+        SUB.L   #1,A2     
+FORMATGOOD5:
+
         MOVE.L  A2,A1
         MOVE.B  #1,D0
         TRAP    #15
         MOVE.B  (A5)+,D3
         JSR     HEXTOASCII
         MOVE.L  #2,D1
+        SUB.L   A2,A3
+        CMP     #2,A3
+        BEQ     FORMATGOOD6
+        SUB.L   #1,A2     
+FORMATGOOD6:
+
         MOVE.L  A2,A1
         MOVE.B  #1,D0
         TRAP    #15
@@ -2553,6 +2594,11 @@ HEXASCIIDONE:
 ZEROS       SUB.L   #8,A2               
 NOTZEROS    RTS
 *--------------------------------------------------------------------------------------*
+UNKNOWNCMD:     LEA   ERROR1,A1    ;load message
+                MOVE.W  #21,D1
+                MOVE.L  #0,D0
+                TRAP    #15
+                BRA     RESTORE
 
 
 NEXT:   ;for debugging single commands
