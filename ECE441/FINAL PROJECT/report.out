@@ -1,0 +1,92 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Monitor Program}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Command Interpreter}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Algorithm and Flowchart}{subsection.2.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Assembly Code}{subsection.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.2}{Debugger Commands}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Help}{subsection.2.2}% 7
+\BOOKMARK [4][-]{paragraph.2.2.1.1}{Algorithm and Flowchart}{subsubsection.2.2.1}% 8
+\BOOKMARK [4][-]{paragraph.2.2.1.2}{Assembly Code}{subsubsection.2.2.1}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Memory Display}{subsection.2.2}% 10
+\BOOKMARK [4][-]{paragraph.2.2.2.1}{Algorithm and Flowchart}{subsubsection.2.2.2}% 11
+\BOOKMARK [4][-]{paragraph.2.2.2.2}{Assembly Code}{subsubsection.2.2.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.2.3}{HXDEC}{subsection.2.2}% 13
+\BOOKMARK [4][-]{paragraph.2.2.3.1}{Algorithm and Flowchart}{subsubsection.2.2.3}% 14
+\BOOKMARK [4][-]{paragraph.2.2.3.2}{Assembly Code}{subsubsection.2.2.3}% 15
+\BOOKMARK [3][-]{subsubsection.2.2.4}{SORTW}{subsection.2.2}% 16
+\BOOKMARK [4][-]{paragraph.2.2.4.1}{Algorithm and Flowchart}{subsubsection.2.2.4}% 17
+\BOOKMARK [4][-]{paragraph.2.2.4.2}{Assembly Code}{subsubsection.2.2.4}% 18
+\BOOKMARK [3][-]{subsubsection.2.2.5}{Memory Modify}{subsection.2.2}% 19
+\BOOKMARK [4][-]{paragraph.2.2.5.1}{Algorithm and Flowchart}{subsubsection.2.2.5}% 20
+\BOOKMARK [4][-]{paragraph.2.2.5.2}{Assembly Code}{subsubsection.2.2.5}% 21
+\BOOKMARK [3][-]{subsubsection.2.2.6}{Memory Set}{subsection.2.2}% 22
+\BOOKMARK [4][-]{paragraph.2.2.6.1}{Algorithm and Flowchart}{subsubsection.2.2.6}% 23
+\BOOKMARK [4][-]{paragraph.2.2.6.2}{Assembly Code}{subsubsection.2.2.6}% 24
+\BOOKMARK [3][-]{subsubsection.2.2.7}{Block Fill}{subsection.2.2}% 25
+\BOOKMARK [4][-]{paragraph.2.2.7.1}{Algorithm and Flowchart}{subsubsection.2.2.7}% 26
+\BOOKMARK [4][-]{paragraph.2.2.7.2}{Assembly Code}{subsubsection.2.2.7}% 27
+\BOOKMARK [3][-]{subsubsection.2.2.8}{Block Move}{subsection.2.2}% 28
+\BOOKMARK [4][-]{paragraph.2.2.8.1}{Algorithm and Flowchart}{subsubsection.2.2.8}% 29
+\BOOKMARK [4][-]{paragraph.2.2.8.2}{Assembly Code}{subsubsection.2.2.8}% 30
+\BOOKMARK [3][-]{subsubsection.2.2.9}{Block Test}{subsection.2.2}% 31
+\BOOKMARK [4][-]{paragraph.2.2.9.1}{Algorithm and Flowchart}{subsubsection.2.2.9}% 32
+\BOOKMARK [4][-]{paragraph.2.2.9.2}{Assembly Code}{subsubsection.2.2.9}% 33
+\BOOKMARK [3][-]{subsubsection.2.2.10}{Block Search}{subsection.2.2}% 34
+\BOOKMARK [4][-]{paragraph.2.2.10.1}{Algorithm and Flowchart}{subsubsection.2.2.10}% 35
+\BOOKMARK [4][-]{paragraph.2.2.10.2}{Assembly Code}{subsubsection.2.2.10}% 36
+\BOOKMARK [3][-]{subsubsection.2.2.11}{Go}{subsection.2.2}% 37
+\BOOKMARK [4][-]{paragraph.2.2.11.1}{Algorithm and Flowchart}{subsubsection.2.2.11}% 38
+\BOOKMARK [4][-]{paragraph.2.2.11.2}{Assembly Code}{subsubsection.2.2.11}% 39
+\BOOKMARK [3][-]{subsubsection.2.2.12}{Display Formatted Registers}{subsection.2.2}% 40
+\BOOKMARK [4][-]{paragraph.2.2.12.1}{Algorithm and Flowchart}{subsubsection.2.2.12}% 41
+\BOOKMARK [4][-]{paragraph.2.2.12.2}{Assembly Code}{subsubsection.2.2.12}% 42
+\BOOKMARK [3][-]{subsubsection.2.2.13}{Modify Register}{subsection.2.2}% 43
+\BOOKMARK [4][-]{paragraph.2.2.13.1}{Algorithm and Flowchart}{subsubsection.2.2.13}% 44
+\BOOKMARK [4][-]{paragraph.2.2.13.2}{Assembly Code}{subsubsection.2.2.13}% 45
+\BOOKMARK [3][-]{subsubsection.2.2.14}{Echo}{subsection.2.2}% 46
+\BOOKMARK [4][-]{paragraph.2.2.14.1}{Algorithm and Flowchart}{subsubsection.2.2.14}% 47
+\BOOKMARK [4][-]{paragraph.2.2.14.2}{Assembly Code}{subsubsection.2.2.14}% 48
+\BOOKMARK [2][-]{subsection.2.3}{Subroutines}{section.2}% 49
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Hexadecimal to ASCII}{subsection.2.3}% 50
+\BOOKMARK [4][-]{paragraph.2.3.1.1}{Algorithm}{subsubsection.2.3.1}% 51
+\BOOKMARK [4][-]{paragraph.2.3.1.2}{Assembly Code}{subsubsection.2.3.1}% 52
+\BOOKMARK [3][-]{subsubsection.2.3.2}{ASCII to Hexadecimal}{subsection.2.3}% 53
+\BOOKMARK [4][-]{paragraph.2.3.2.1}{Algorithm}{subsubsection.2.3.2}% 54
+\BOOKMARK [4][-]{paragraph.2.3.2.2}{Assembly Code}{subsubsection.2.3.2}% 55
+\BOOKMARK [3][-]{subsubsection.2.3.3}{BCD to Hexadecimal}{subsection.2.3}% 56
+\BOOKMARK [4][-]{paragraph.2.3.3.1}{Algorithm}{subsubsection.2.3.3}% 57
+\BOOKMARK [4][-]{paragraph.2.3.3.2}{Assembly Code}{subsubsection.2.3.3}% 58
+\BOOKMARK [3][-]{subsubsection.2.3.4}{ASCII to BCD}{subsection.2.3}% 59
+\BOOKMARK [4][-]{paragraph.2.3.4.1}{Algorithm}{subsubsection.2.3.4}% 60
+\BOOKMARK [4][-]{paragraph.2.3.4.2}{Assembly Code}{subsubsection.2.3.4}% 61
+\BOOKMARK [2][-]{subsection.2.4}{Exception Handlers}{section.2}% 62
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Bus Error Exception}{subsection.2.4}% 63
+\BOOKMARK [4][-]{paragraph.2.4.1.1}{Algorithm and Flowchart}{subsubsection.2.4.1}% 64
+\BOOKMARK [4][-]{paragraph.2.4.1.2}{Assembly Code}{subsubsection.2.4.1}% 65
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Address Error Exception}{subsection.2.4}% 66
+\BOOKMARK [4][-]{paragraph.2.4.2.1}{Algorithm and Flowchart}{subsubsection.2.4.2}% 67
+\BOOKMARK [4][-]{paragraph.2.4.2.2}{Assembly Code}{subsubsection.2.4.2}% 68
+\BOOKMARK [3][-]{subsubsection.2.4.3}{Illegal Instruction Error Exception}{subsection.2.4}% 69
+\BOOKMARK [4][-]{paragraph.2.4.3.1}{Algorithm and Flowchart}{subsubsection.2.4.3}% 70
+\BOOKMARK [4][-]{paragraph.2.4.3.2}{Assembly Code}{subsubsection.2.4.3}% 71
+\BOOKMARK [3][-]{subsubsection.2.4.4}{Privilege Violation Error Exception}{subsection.2.4}% 72
+\BOOKMARK [4][-]{paragraph.2.4.4.1}{Algorithm and Flowchart}{subsubsection.2.4.4}% 73
+\BOOKMARK [4][-]{paragraph.2.4.4.2}{Assembly Code}{subsubsection.2.4.4}% 74
+\BOOKMARK [3][-]{subsubsection.2.4.5}{Divide by Zero Error Exception}{subsection.2.4}% 75
+\BOOKMARK [4][-]{paragraph.2.4.5.1}{Algorithm and Flowchart}{subsubsection.2.4.5}% 76
+\BOOKMARK [4][-]{paragraph.2.4.5.2}{Assembly Code}{subsubsection.2.4.5}% 77
+\BOOKMARK [3][-]{subsubsection.2.4.6}{A Line Emulator Error Exception}{subsection.2.4}% 78
+\BOOKMARK [4][-]{paragraph.2.4.6.1}{Algorithm and Flowchart}{subsubsection.2.4.6}% 79
+\BOOKMARK [4][-]{paragraph.2.4.6.2}{Assembly Code}{subsubsection.2.4.6}% 80
+\BOOKMARK [3][-]{subsubsection.2.4.7}{F Line Emulator Error Exception}{subsection.2.4}% 81
+\BOOKMARK [4][-]{paragraph.2.4.7.1}{Algorithm and Flowchart}{subsubsection.2.4.7}% 82
+\BOOKMARK [4][-]{paragraph.2.4.7.2}{Assembly Code}{subsubsection.2.4.7}% 83
+\BOOKMARK [3][-]{subsubsection.2.4.8}{Check Instruction Error Exception}{subsection.2.4}% 84
+\BOOKMARK [4][-]{paragraph.2.4.8.1}{Algorithm and Flowchart}{subsubsection.2.4.8}% 85
+\BOOKMARK [4][-]{paragraph.2.4.8.2}{Assembly Code}{subsubsection.2.4.8}% 86
+\BOOKMARK [2][-]{subsection.2.5}{User Instruction Manual Exception Handlers}{section.2}% 87
+\BOOKMARK [3][-]{paragraph.2.5.0.3}{Algorithm and Flowchart}{subsection.2.5}% 88
+\BOOKMARK [4][-]{paragraph.2.5.0.4}{Assembly Code}{paragraph.2.5.0.3}% 89
+\BOOKMARK [1][-]{section.3}{Discussion}{}% 90
+\BOOKMARK [1][-]{section.4}{Feature Suggestions}{}% 91
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 92
