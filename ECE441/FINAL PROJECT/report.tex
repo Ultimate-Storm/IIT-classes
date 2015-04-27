@@ -1,5 +1,15 @@
 \documentclass[12pt]{article}
+\usepackage{etoolbox}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[justification=centering]{caption}
 
+\makeatletter
+\patchcmd{\l@section}
+{\hfil}
+{\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill}
+{}{}
+\makeatother
 \begin{document}
 	
 	\begin{titlepage}
@@ -62,7 +72,38 @@
 		
 		\vfill % Fill the rest of the page with whitespace
 		
+		\textbf{Acknowledgment} \\ \flushleft I acknowledge all of the work including figures and code belongs to me and/or persons who are referenced.
 	\end{titlepage}
 	
 	\tableofcontents
+	\newpage
+	\addtocontents{toc}{~\hfill\textbf{Page}\par}
+	%\chapter{...}
+	\begin{abstract}
+		This project involved designing and implementing a Monitor program using the MC68000 assembly language. The program implements twelve basic debugger functions as well as two author defined functions. It is designed to handle exceptions, and is meant to be an educational piece of software for students taking ECE 4411 at the Illinois Institute of Technology.
+	\end{abstract}
+	
+	\section{Introduction}
+	The \textsc{Sanper-1 ELU} is a Motorola MC68000 based microcomputer designed by Dr. Jafar Saniie and Mr. Stephen Perich for use in college level computer engineering courses. For user interaction, it utilizes a monitor program called TUTOR that enables users to actively interact with the microcomputer. The design objective of this project is to re-implement the functionality of TUTOR into a student written monitor program titled MONITOR441. The program should be able to perform basic debugger functions such as memory display, memory sort, memory change, etc., and must have the ability to handle exceptions. The design constraints are:
+	\begin{itemize}
+		\item Code must be smaller that 3K starting from address \$1000
+		\item Stack size must be 1K starting at memory location \$3000
+		\item Macros may not be used
+		\item Erroneous inputs should not kill the program
+	\end{itemize}
+	Twelve debugger functions must be implemented, along with two user defined debugger commands.
+	
+	\section{Monitor Program}
+	The monitor program operates in a command driven environment. It acts as a typical shell, providing a user interface to access the microcomputer's services. The main program being run is a command line interpreter. Based on the input that the user enters, the interpreter determines if the input entered is valid and subsequently executes the specified command. The structure of how this program operates is shown in Figure \ref{fig:monitor}.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{monitor.png}
+			\caption{Structure of Monitor Program}
+			\label{fig:monitor}
+		\end{figure}
+		
+		\subsection{Command Interpreter}
+			\subsubsection{Algorithm and Flowchart}
+			The algorithm for the command interpreter uses simple string matching to determine if input is correct. The algorithm begins by outputting the message \texttt{MONITOR441>} and accepting input from the user. It then checks for the ASCII value \$48 which corresponds to the letter H. This is to check for either the \texttt{HELP} command or \texttt{HXDC} command. If an H was not entered, it then checks for the ASCII value \$4D which corresponds to a memory command. If this fails, then it checks for ASCII value \$47, corresponding to the \texttt{GO} command. If this fails, the ASCII value \$44 is tested, corresponding to the \texttt{DF} command. If this fails, it checks for \$42, which signifies a \texttt{BLCK} command. If this fails, \$53 is tested for the \texttt{SORTW} command. If this fails, \$45 is tested for the \texttt{ECHO} command. If this fails \$2E is checked for the modify register command. If all of these checks fail, the user has entered incorrect input and an error message is displayed. If any of these checks succeed, the command line interpreter jumps to the respective command's helper interpreter function. These subroutines check for each character of the user input in order to verify the command the user entered was correct. These helper functions also serve to differentiate commands that start with the same character. The flowchart for this process is shown in Figure 
+			\subsubsection{68000 Assembly Code}
 \end{document}
