@@ -60,7 +60,7 @@ HTXT15        DC.B      'contents of register <Register Type><Register Number> t
 
 *Error Message*
 ERROR         DC.B      'ERROR: TRY COMMAND AGAIN WITH CORRECT SYNTAX'
-ERROR1        DC.B      'ERROR: UNKOWN COMMAND'
+ERROR1        DC.B      'ERROR: UNKNOWN COMMAND'
 *Space*
 SPACE         DC.B      ' '
 
@@ -981,7 +981,7 @@ HELP:       LEA     HTXT,A1     ;list of commands test
  
             BRA     RESTORE  
 *--------------------------------------------------------------------------------------*
-*Fix ASCII String input? ask in lab*
+
 MEMSET:     LEA     BUFFER,A2
             ADD.L   #3,A2
             MOVE.L  A2,A3   ;set up to find end
@@ -2659,7 +2659,7 @@ ZEROS       SUB.L   #8,A2
 NOTZEROS    RTS
 *--------------------------------------------------------------------------------------*
 UNKNOWNCMD:     LEA   ERROR1,A1    ;load message
-                MOVE.W  #21,D1
+                MOVE.W  #22,D1
                 MOVE.L  #0,D0
                 TRAP    #15
                 BRA     RESTORE
@@ -2673,6 +2673,7 @@ NEXT:   ;for debugging single commands
 
 
        END    START        
+
 
 
 

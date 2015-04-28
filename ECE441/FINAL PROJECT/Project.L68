@@ -1,6 +1,6 @@
 00001000 Starting Address
 Assembler used: EASy68K Editor/Assembler v5.15.02
-Created On: 4/28/2015 2:31:45 AM
+Created On: 4/28/2015 4:16:32 AM
 
 00000000                             1  *-----------------------------------------------------------
 00000000                             2  * Title      :  Monitor Project
@@ -64,66 +64,66 @@ Created On: 4/28/2015 2:31:45 AM
 0000377B                            60  
 0000377B                            61  *Error Message*
 0000377B= 45 52 52 4F 52 3A ...     62  ERROR         DC.B      'ERROR: TRY COMMAND AGAIN WITH CORRECT SYNTAX'
-000037A7= 45 52 52 4F 52 3A ...     63  ERROR1        DC.B      'ERROR: UNKOWN COMMAND'
-000037BC                            64  *Space*
-000037BC= 20                        65  SPACE         DC.B      ' '
-000037BD                            66  
-000037BD                            67  *Debugger Print Statement*
-000037BD= 57 49 4E                  68  DEBUG         DC.B      'WIN'      
-000037C0                            69  
-000037C0                            70  *BTST Text*
-000037C0= 4E 75 6D 62 65 72 ...     71  BTST1         DC.B      'Number written was: '
-000037D4= 4E 75 6D 62 65 72 ...     72  BTST2         DC.B      'Number read was: '
-000037E5= 42 6C 6F 63 6B 20 ...     73  BTST3         DC.B      'Block Test PASSES!'
-000037F7= 46 41 49 4C 55 52 ...     74  BTST4         DC.B      'FAILURE!!!!'  
-00003802= 45 72 72 6F 72 20 ...     75  BTST5         DC.B      'Error Occurred at address: '      
-0000381D                            76  
-0000381D                            77  *BSCH Text*
-0000381D= 44 61 74 61 3A 20         78  BSCH1         DC.B      'Data: '
-00003823= 46 6F 75 6E 64 20 ...     79  BSCH2         DC.B      'Found at address: '
-00003835= 50 61 74 74 65 72 ...     80  BSCH3         DC.B      'Pattern not found'
-00003846                            81  
-00003846                            82  *DF Text*
-00003846= 44 30 3A 20               83  RD0            DC.B      'D0: '
-0000384A= 44 31 3A 20               84  RD1            DC.B      'D1: '
-0000384E= 44 32 3A 20               85  RD2            DC.B      'D2: '
-00003852= 44 33 3A 20               86  RD3            DC.B      'D3: '
-00003856= 44 34 3A 20               87  RD4            DC.B      'D4: '
-0000385A= 44 35 3A 20               88  RD5            DC.B      'D5: '
-0000385E= 44 36 3A 20               89  RD6            DC.B      'D6: '
-00003862= 44 37 3A 20               90  RD7            DC.B      'D7: '
-00003866                            91  
-00003866= 41 30 3A 20               92  RA0            DC.B      'A0: '
-0000386A= 41 31 3A 20               93  RA1            DC.B      'A1: '
-0000386E= 41 32 3A 20               94  RA2            DC.B      'A2: '
-00003872= 41 33 3A 20               95  RA3            DC.B      'A3: '
-00003876= 41 34 3A 20               96  RA4            DC.B      'A4: '
-0000387A= 41 35 3A 20               97  RA5            DC.B      'A5: '
-0000387E= 41 36 3A 20               98  RA6            DC.B      'A6: '
-00003882                            99  
-00003882= 53 53 2F 41 37 3A 20     100  RSS            DC.B      'SS/A7: '
-00003889= 55 53 3A 20              101  RUS            DC.B      'US: '
-0000388D= 50 43 3A 20              102  RPC            DC.B      'PC: '
-00003891= 53 52 3A 20              103  RSR            DC.B      'SR: '
-00003895                           104  
-00003895                           105  *Exception Messages*
-00003895= 41 20 42 75 73 20 ...    106  BERR_TEXT      DC.B 'A Bus Error Occured! :(',0
-000038AD= 41 6E 20 41 64 64 ...    107  AERR_TEXT      DC.B 'An Address Error Occured! :(',0
-000038CA= 41 6E 20 49 6C 6C ...    108  IERR_TEXT      DC.B 'An Illegal Instruction Error Occured! :(',0
-000038F3= 41 20 50 72 69 76 ...    109  PERR_TEXT      DC.B 'A Privilege Error Occured! :(',0
-00003911= 41 20 44 69 76 69 ...    110  ZERR_TEXT      DC.B 'A Divide by Zero Error Occured! :(',0
-00003934= 41 6E 20 41 20 4C ...    111  ALERR_TEXT      DC.B 'An A Line Error Occured! :(',0
-00003950= 41 6E 20 46 20 4C ...    112  FLERR_TEXT      DC.B 'An F Line Error Occured! :(',0
-0000396C= 41 20 43 68 65 63 ...    113  CHKERR_TEXT      DC.B 'A Check Error Occured! :(',0
-00003986                           114  
-00003986= 53 53 57 3A 20 00        115  SSW            DC.B 'SSW: ',0
-0000398C= 42 41 3A 20 00           116  BA             DC.B 'BA: ',0
-00003991= 49 52 3A 20 00           117  IR             DC.B 'IR: ',0
-00003996                           118  
-00003996                           119  *Color definition for Font*
-00003996  =01090000                120  FONT        EQU     $01090000  
-00003996  =0000FF00                121  GREEN       EQU     $0000FF00
-00003996                           122  
+000037A7= 45 52 52 4F 52 3A ...     63  ERROR1        DC.B      'ERROR: UNKNOWN COMMAND'
+000037BD                            64  *Space*
+000037BD= 20                        65  SPACE         DC.B      ' '
+000037BE                            66  
+000037BE                            67  *Debugger Print Statement*
+000037BE= 57 49 4E                  68  DEBUG         DC.B      'WIN'      
+000037C1                            69  
+000037C1                            70  *BTST Text*
+000037C1= 4E 75 6D 62 65 72 ...     71  BTST1         DC.B      'Number written was: '
+000037D5= 4E 75 6D 62 65 72 ...     72  BTST2         DC.B      'Number read was: '
+000037E6= 42 6C 6F 63 6B 20 ...     73  BTST3         DC.B      'Block Test PASSES!'
+000037F8= 46 41 49 4C 55 52 ...     74  BTST4         DC.B      'FAILURE!!!!'  
+00003803= 45 72 72 6F 72 20 ...     75  BTST5         DC.B      'Error Occurred at address: '      
+0000381E                            76  
+0000381E                            77  *BSCH Text*
+0000381E= 44 61 74 61 3A 20         78  BSCH1         DC.B      'Data: '
+00003824= 46 6F 75 6E 64 20 ...     79  BSCH2         DC.B      'Found at address: '
+00003836= 50 61 74 74 65 72 ...     80  BSCH3         DC.B      'Pattern not found'
+00003847                            81  
+00003847                            82  *DF Text*
+00003847= 44 30 3A 20               83  RD0            DC.B      'D0: '
+0000384B= 44 31 3A 20               84  RD1            DC.B      'D1: '
+0000384F= 44 32 3A 20               85  RD2            DC.B      'D2: '
+00003853= 44 33 3A 20               86  RD3            DC.B      'D3: '
+00003857= 44 34 3A 20               87  RD4            DC.B      'D4: '
+0000385B= 44 35 3A 20               88  RD5            DC.B      'D5: '
+0000385F= 44 36 3A 20               89  RD6            DC.B      'D6: '
+00003863= 44 37 3A 20               90  RD7            DC.B      'D7: '
+00003867                            91  
+00003867= 41 30 3A 20               92  RA0            DC.B      'A0: '
+0000386B= 41 31 3A 20               93  RA1            DC.B      'A1: '
+0000386F= 41 32 3A 20               94  RA2            DC.B      'A2: '
+00003873= 41 33 3A 20               95  RA3            DC.B      'A3: '
+00003877= 41 34 3A 20               96  RA4            DC.B      'A4: '
+0000387B= 41 35 3A 20               97  RA5            DC.B      'A5: '
+0000387F= 41 36 3A 20               98  RA6            DC.B      'A6: '
+00003883                            99  
+00003883= 53 53 2F 41 37 3A 20     100  RSS            DC.B      'SS/A7: '
+0000388A= 55 53 3A 20              101  RUS            DC.B      'US: '
+0000388E= 50 43 3A 20              102  RPC            DC.B      'PC: '
+00003892= 53 52 3A 20              103  RSR            DC.B      'SR: '
+00003896                           104  
+00003896                           105  *Exception Messages*
+00003896= 41 20 42 75 73 20 ...    106  BERR_TEXT      DC.B 'A Bus Error Occured! :(',0
+000038AE= 41 6E 20 41 64 64 ...    107  AERR_TEXT      DC.B 'An Address Error Occured! :(',0
+000038CB= 41 6E 20 49 6C 6C ...    108  IERR_TEXT      DC.B 'An Illegal Instruction Error Occured! :(',0
+000038F4= 41 20 50 72 69 76 ...    109  PERR_TEXT      DC.B 'A Privilege Error Occured! :(',0
+00003912= 41 20 44 69 76 69 ...    110  ZERR_TEXT      DC.B 'A Divide by Zero Error Occured! :(',0
+00003935= 41 6E 20 41 20 4C ...    111  ALERR_TEXT      DC.B 'An A Line Error Occured! :(',0
+00003951= 41 6E 20 46 20 4C ...    112  FLERR_TEXT      DC.B 'An F Line Error Occured! :(',0
+0000396D= 41 20 43 68 65 63 ...    113  CHKERR_TEXT      DC.B 'A Check Error Occured! :(',0
+00003987                           114  
+00003987= 53 53 57 3A 20 00        115  SSW            DC.B 'SSW: ',0
+0000398D= 42 41 3A 20 00           116  BA             DC.B 'BA: ',0
+00003992= 49 52 3A 20 00           117  IR             DC.B 'IR: ',0
+00003997                           118  
+00003997                           119  *Color definition for Font*
+00003997  =01090000                120  FONT        EQU     $01090000  
+00003997  =0000FF00                121  GREEN       EQU     $0000FF00
+00003997                           122  
 00001000                           123      ORG     $1000
 00001000                           124  START:  
 00001000  48E7 E040                125          MOVEM.L D0-D2/A1,-(SP)
@@ -985,7 +985,7 @@ Created On: 4/28/2015 2:31:45 AM
 000019BC                           981   
 000019BC  6000 F738                982              BRA     RESTORE  
 000019C0                           983  *--------------------------------------------------------------------------------------*
-000019C0                           984  *Fix ASCII String input? ask in lab*
+000019C0                           984  
 000019C0  45F8 3000                985  MEMSET:     LEA     BUFFER,A2
 000019C4  568A                     986              ADD.L   #3,A2
 000019C6  264A                     987              MOVE.L  A2,A3   ;set up to find end
@@ -1067,7 +1067,7 @@ Created On: 4/28/2015 2:31:45 AM
 00001A56  224A                    1063              MOVE.L  A2,A1
 00001A58  7001                    1064              MOVE.L  #1,D0
 00001A5A  4E4F                    1065              TRAP    #15
-00001A5C  43F8 37BC               1066              LEA     SPACE,A1
+00001A5C  43F8 37BD               1066              LEA     SPACE,A1
 00001A60  7201                    1067              MOVE.L #1,D1
 00001A62  4E4F                    1068              TRAP    #15
 00001A64  4283                    1069              CLR.L   D3
@@ -1817,12 +1817,12 @@ Created On: 4/28/2015 2:31:45 AM
 000020C4  60F2                    1813          BRA     READ
 000020C6                          1814          
 000020C6                          1815  FAIL:
-000020C6  43F8 37F7               1816          LEA     BTST4,A1
+000020C6  43F8 37F8               1816          LEA     BTST4,A1
 000020CA  720B                    1817          MOVE.L  #11,D1
 000020CC  7000                    1818          MOVE.L  #0,D0
 000020CE  4E4F                    1819          TRAP    #15
 000020D0                          1820          
-000020D0  43F8 37C0               1821          LEA     BTST1,A1
+000020D0  43F8 37C1               1821          LEA     BTST1,A1
 000020D4  7001                    1822          MOVE.L  #1,D0
 000020D6  7214                    1823          MOVE.L  #20,D1
 000020D8  4E4F                    1824          TRAP    #15
@@ -1836,7 +1836,7 @@ Created On: 4/28/2015 2:31:45 AM
 000020EA  4E4F                    1832          TRAP    #15
 000020EC                          1833          
 000020EC                          1834          
-000020EC  43F8 37D4               1835          LEA     BTST2,A1
+000020EC  43F8 37D5               1835          LEA     BTST2,A1
 000020F0  7001                    1836          MOVE.L  #1,D0
 000020F2  7211                    1837          MOVE.L  #17,D1
 000020F4  4E4F                    1838          TRAP    #15
@@ -1851,7 +1851,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002106  220B                    1847          MOVE.L  A3,D1
 00002108  4E4F                    1848          TRAP    #15
 0000210A                          1849          
-0000210A  43F8 3802               1850          LEA     BTST5,A1
+0000210A  43F8 3803               1850          LEA     BTST5,A1
 0000210E  721B                    1851          MOVE.L  #27,D1
 00002110  103C 0001               1852          MOVE.B  #1,D0
 00002114  4E4F                    1853          TRAP    #15
@@ -1867,7 +1867,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002128                          1863          
 00002128                          1864  COMPLETE:
 00002128                          1865  
-00002128  43F8 37E5               1866          LEA     BTST3,A1
+00002128  43F8 37E6               1866          LEA     BTST3,A1
 0000212C  7212                    1867          MOVE.L  #18,D1
 0000212E  7000                    1868          MOVE.L  #0,D0
 00002130  4E4F                    1869          TRAP    #15
@@ -1966,7 +1966,7 @@ Created On: 4/28/2015 2:31:45 AM
 000021E0  2615                    1962          MOVE.L  (A5),D3
 000021E2                          1963          
 000021E2                          1964  SUCCESSTEXT:
-000021E2  43F8 381D               1965          LEA BSCH1,A1
+000021E2  43F8 381E               1965          LEA BSCH1,A1
 000021E6  7206                    1966          MOVE.L  #6,D1
 000021E8  7001                    1967          MOVE.L  #1,D0
 000021EA  4E4F                    1968          TRAP    #15
@@ -1978,7 +1978,7 @@ Created On: 4/28/2015 2:31:45 AM
 000021F8  7000                    1974          MOVE.L  #0,D0
 000021FA  4E4F                    1975          TRAP    #15
 000021FC                          1976          
-000021FC  43F8 3823               1977          LEA BSCH2,A1
+000021FC  43F8 3824               1977          LEA BSCH2,A1
 00002200  7212                    1978          MOVE.L  #18,D1
 00002202  7001                    1979          MOVE.L  #1,D0
 00002204  4E4F                    1980          TRAP    #15
@@ -2029,7 +2029,7 @@ Created On: 4/28/2015 2:31:45 AM
 0000223A                          2025          *Maybe fix this in the future?*
 0000223A                          2026          
 0000223A                          2027            *----------D0-----------*
-0000223A  43F8 3846               2028         LEA      RD0,A1
+0000223A  43F8 3847               2028         LEA      RD0,A1
 0000223E  7204                    2029         MOVE.L   #4,D1
 00002240  7001                    2030         MOVE.L   #1,D0
 00002242  4E4F                    2031         TRAP     #15
@@ -2049,7 +2049,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002264  4E4F                    2045         TRAP     #15
 00002266                          2046         
 00002266                          2047             *----------D1-----------*
-00002266  43F8 384A               2048         LEA      RD1,A1
+00002266  43F8 384B               2048         LEA      RD1,A1
 0000226A  7204                    2049         MOVE.L   #4,D1
 0000226C  7001                    2050         MOVE.L   #1,D0
 0000226E  4E4F                    2051         TRAP     #15
@@ -2069,7 +2069,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002290  4E4F                    2065         TRAP     #15
 00002292                          2066         
 00002292                          2067             *----------D2-----------*
-00002292  43F8 384E               2068         LEA      RD2,A1
+00002292  43F8 384F               2068         LEA      RD2,A1
 00002296  7204                    2069         MOVE.L   #4,D1
 00002298  7001                    2070         MOVE.L   #1,D0
 0000229A  4E4F                    2071         TRAP     #15
@@ -2089,7 +2089,7 @@ Created On: 4/28/2015 2:31:45 AM
 000022BC  4E4F                    2085         TRAP     #15
 000022BE                          2086         
 000022BE                          2087              *----------D3-----------*
-000022BE  43F8 3852               2088         LEA      RD3,A1
+000022BE  43F8 3853               2088         LEA      RD3,A1
 000022C2  7204                    2089         MOVE.L   #4,D1
 000022C4  7001                    2090         MOVE.L   #1,D0
 000022C6  4E4F                    2091         TRAP     #15   
@@ -2109,7 +2109,7 @@ Created On: 4/28/2015 2:31:45 AM
 000022E8  4E4F                    2105         TRAP     #15
 000022EA                          2106         
 000022EA                          2107              *----------D4-----------*
-000022EA  43F8 3856               2108         LEA      RD4,A1
+000022EA  43F8 3857               2108         LEA      RD4,A1
 000022EE  7204                    2109         MOVE.L   #4,D1
 000022F0  7001                    2110         MOVE.L   #1,D0
 000022F2  4E4F                    2111         TRAP     #15
@@ -2129,7 +2129,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002314  4E4F                    2125         TRAP     #15
 00002316                          2126         
 00002316                          2127         *----------D5-----------*
-00002316  43F8 385A               2128         LEA      RD5,A1
+00002316  43F8 385B               2128         LEA      RD5,A1
 0000231A  7204                    2129         MOVE.L   #4,D1
 0000231C  7001                    2130         MOVE.L   #1,D0
 0000231E  4E4F                    2131         TRAP     #15
@@ -2149,7 +2149,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002340  4E4F                    2145         TRAP     #15
 00002342                          2146  
 00002342                          2147          *----------D6-----------*
-00002342  43F8 385E               2148         LEA      RD6,A1
+00002342  43F8 385F               2148         LEA      RD6,A1
 00002346  7204                    2149         MOVE.L   #4,D1
 00002348  7001                    2150         MOVE.L   #1,D0
 0000234A  4E4F                    2151         TRAP     #15
@@ -2169,7 +2169,7 @@ Created On: 4/28/2015 2:31:45 AM
 0000236C  4E4F                    2165         TRAP     #15
 0000236E                          2166         
 0000236E                          2167           *----------D7-----------*
-0000236E  43F8 3862               2168         LEA      RD7,A1
+0000236E  43F8 3863               2168         LEA      RD7,A1
 00002372  7204                    2169         MOVE.L   #4,D1
 00002374  7001                    2170         MOVE.L   #1,D0
 00002376  4E4F                    2171         TRAP     #15
@@ -2189,7 +2189,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002398  4E4F                    2185         TRAP     #15
 0000239A                          2186  
 0000239A                          2187     *----------A0-----------*
-0000239A  43F8 3866               2188         LEA      RA0,A1
+0000239A  43F8 3867               2188         LEA      RA0,A1
 0000239E  7204                    2189         MOVE.L   #4,D1
 000023A0  7001                    2190         MOVE.L   #1,D0
 000023A2  4E4F                    2191         TRAP     #15
@@ -2209,7 +2209,7 @@ Created On: 4/28/2015 2:31:45 AM
 000023C4  4E4F                    2205         TRAP     #15
 000023C6                          2206         
 000023C6                          2207            *----------A1-----------*
-000023C6  43F8 386A               2208         LEA      RA1,A1
+000023C6  43F8 386B               2208         LEA      RA1,A1
 000023CA  7204                    2209         MOVE.L   #4,D1
 000023CC  7001                    2210         MOVE.L   #1,D0
 000023CE  4E4F                    2211         TRAP     #15
@@ -2229,7 +2229,7 @@ Created On: 4/28/2015 2:31:45 AM
 000023F0  4E4F                    2225         TRAP     #15
 000023F2                          2226         
 000023F2                          2227          *----------A2-----------*
-000023F2  43F8 386E               2228         LEA      RA2,A1
+000023F2  43F8 386F               2228         LEA      RA2,A1
 000023F6  7204                    2229         MOVE.L   #4,D1
 000023F8  7001                    2230         MOVE.L   #1,D0
 000023FA  4E4F                    2231         TRAP     #15
@@ -2249,7 +2249,7 @@ Created On: 4/28/2015 2:31:45 AM
 0000241C  4E4F                    2245         TRAP     #15
 0000241E                          2246         
 0000241E                          2247           *----------A3-----------*
-0000241E  43F8 3872               2248         LEA      RA3,A1
+0000241E  43F8 3873               2248         LEA      RA3,A1
 00002422  7204                    2249         MOVE.L   #4,D1
 00002424  7001                    2250         MOVE.L   #1,D0
 00002426  4E4F                    2251         TRAP     #15
@@ -2269,7 +2269,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002448  4E4F                    2265         TRAP     #15
 0000244A                          2266         
 0000244A                          2267          *----------A4-----------*
-0000244A  43F8 3872               2268         LEA      RA3,A1
+0000244A  43F8 3873               2268         LEA      RA3,A1
 0000244E  7204                    2269         MOVE.L   #4,D1
 00002450  7001                    2270         MOVE.L   #1,D0
 00002452  4E4F                    2271         TRAP     #15
@@ -2289,7 +2289,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002474  4E4F                    2285         TRAP     #15
 00002476                          2286         
 00002476                          2287         *----------A5-----------*
-00002476  43F8 3872               2288         LEA      RA3,A1
+00002476  43F8 3873               2288         LEA      RA3,A1
 0000247A  7204                    2289         MOVE.L   #4,D1
 0000247C  7001                    2290         MOVE.L   #1,D0
 0000247E  4E4F                    2291         TRAP     #15
@@ -2309,7 +2309,7 @@ Created On: 4/28/2015 2:31:45 AM
 000024A0  4E4F                    2305         TRAP     #15
 000024A2                          2306         
 000024A2                          2307         *----------A6-----------*
-000024A2  43F8 3872               2308         LEA      RA3,A1
+000024A2  43F8 3873               2308         LEA      RA3,A1
 000024A6  7204                    2309         MOVE.L   #4,D1
 000024A8  7001                    2310         MOVE.L   #1,D0
 000024AA  4E4F                    2311         TRAP     #15
@@ -2331,7 +2331,7 @@ Created On: 4/28/2015 2:31:45 AM
 000024CE  DFFC 0000003C           2327       ADD.L  #60,SP  ;should put stack in correct place
 000024D4                          2328       
 000024D4                          2329                *----------USP-----------*
-000024D4  43F8 3889               2330         LEA      RUS,A1
+000024D4  43F8 388A               2330         LEA      RUS,A1
 000024D8  7204                    2331         MOVE.L   #4,D1
 000024DA  7001                    2332         MOVE.L   #1,D0
 000024DC  4E4F                    2333         TRAP     #15
@@ -2351,7 +2351,7 @@ Created On: 4/28/2015 2:31:45 AM
 000024FE  4E4F                    2347         TRAP     #15
 00002500                          2348  
 00002500                          2349                *----------SR-----------*
-00002500  43F8 3891               2350         LEA      RSR,A1
+00002500  43F8 3892               2350         LEA      RSR,A1
 00002504  7204                    2351         MOVE.L   #4,D1
 00002506  7001                    2352         MOVE.L   #1,D0
 00002508  4E4F                    2353         TRAP     #15
@@ -2372,7 +2372,7 @@ Created On: 4/28/2015 2:31:45 AM
 0000252C  4E4F                    2368         TRAP     #15
 0000252E                          2369         
 0000252E                          2370      *----------SS/A7-----------*
-0000252E  43F8 3882               2371         LEA      RSS,A1
+0000252E  43F8 3883               2371         LEA      RSS,A1
 00002532  7207                    2372         MOVE.L   #7,D1
 00002534  7001                    2373         MOVE.L   #1,D0
 00002536  4E4F                    2374         TRAP     #15
@@ -2392,7 +2392,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002558  4E4F                    2388         TRAP     #15
 0000255A                          2389         
 0000255A                          2390      *----------PC-----------*
-0000255A  43F8 388D               2391         LEA      RPC,A1
+0000255A  43F8 388E               2391         LEA      RPC,A1
 0000255E  7204                    2392         MOVE.L   #4,D1
 00002560  7001                    2393         MOVE.L   #1,D0
 00002562  4E4F                    2394         TRAP     #15
@@ -2428,10 +2428,10 @@ Created On: 4/28/2015 2:31:45 AM
 0000259E                          2424  
 0000259E                          2425  BERR:
 0000259E  48E7 C070               2426          MOVEM.L A1-A3/D0-D1,-(SP)
-000025A2  43F8 3895               2427          LEA     BERR_TEXT,A1
+000025A2  43F8 3896               2427          LEA     BERR_TEXT,A1
 000025A6  700D                    2428          MOVE.L  #13,D0
 000025A8  4E4F                    2429          TRAP    #15
-000025AA  43F8 3986               2430          LEA     SSW,A1
+000025AA  43F8 3987               2430          LEA     SSW,A1
 000025AE  700E                    2431          MOVE.L  #14,D0
 000025B0  4E4F                    2432          TRAP    #15
 000025B2  362F 001C               2433          MOVE.W  (28,SP),D3
@@ -2441,7 +2441,7 @@ Created On: 4/28/2015 2:31:45 AM
 000025C0  7204                    2437          MOVE.L  #4,D1
 000025C2  7000                    2438          MOVE.L  #0,D0
 000025C4  4E4F                    2439          TRAP    #15
-000025C6  43F8 398C               2440          LEA     BA,A1
+000025C6  43F8 398D               2440          LEA     BA,A1
 000025CA  700E                    2441          MOVE.L  #14,D0
 000025CC  4E4F                    2442          TRAP    #15
 000025CE  262F 001E               2443          MOVE.L  (30,SP),D3
@@ -2451,7 +2451,7 @@ Created On: 4/28/2015 2:31:45 AM
 000025DC  7208                    2447          MOVE.L  #8,D1
 000025DE  7000                    2448          MOVE.L  #0,D0
 000025E0  4E4F                    2449          TRAP    #15
-000025E2  43F8 3991               2450          LEA     IR,A1
+000025E2  43F8 3992               2450          LEA     IR,A1
 000025E6  700E                    2451          MOVE.L  #14,D0
 000025E8  4E4F                    2452          TRAP    #15
 000025EA  362F 0022               2453          MOVE.W  (34,SP),D3
@@ -2467,10 +2467,10 @@ Created On: 4/28/2015 2:31:45 AM
 0000260C                          2463  
 0000260C                          2464  AERR:
 0000260C  48E7 CC70               2465          MOVEM.L A1-A3/D0-D1/D4-D5,-(SP)
-00002610  43F8 38AD               2466          LEA     AERR_TEXT,A1
+00002610  43F8 38AE               2466          LEA     AERR_TEXT,A1
 00002614  700D                    2467          MOVE.L  #13,D0
 00002616  4E4F                    2468          TRAP    #15
-00002618  43F8 3986               2469          LEA     SSW,A1
+00002618  43F8 3987               2469          LEA     SSW,A1
 0000261C  700E                    2470          MOVE.L  #14,D0
 0000261E  4E4F                    2471          TRAP    #15
 00002620  362F 001C               2472          MOVE.W  (28,SP),D3
@@ -2480,7 +2480,7 @@ Created On: 4/28/2015 2:31:45 AM
 0000262E  7204                    2476          MOVE.L  #4,D1
 00002630  7000                    2477          MOVE.L  #0,D0
 00002632  4E4F                    2478          TRAP    #15
-00002634  43F8 398C               2479          LEA     BA,A1
+00002634  43F8 398D               2479          LEA     BA,A1
 00002638  700E                    2480          MOVE.L  #14,D0
 0000263A  4E4F                    2481          TRAP    #15
 0000263C  262F 001E               2482          MOVE.L  (30,SP),D3
@@ -2490,7 +2490,7 @@ Created On: 4/28/2015 2:31:45 AM
 0000264A  7208                    2486          MOVE.L  #8,D1
 0000264C  7000                    2487          MOVE.L  #0,D0
 0000264E  4E4F                    2488          TRAP    #15
-00002650  43F8 3991               2489          LEA     IR,A1
+00002650  43F8 3992               2489          LEA     IR,A1
 00002654  700E                    2490          MOVE.L  #14,D0
 00002656  4E4F                    2491          TRAP    #15
 00002658  362F 0022               2492          MOVE.W  (34,SP),D3
@@ -2506,7 +2506,7 @@ Created On: 4/28/2015 2:31:45 AM
 0000267A                          2502  
 0000267A                          2503  IERR:
 0000267A  48E7 8040               2504      MOVEM.L A1/D0,-(SP)
-0000267E  43F8 38CA               2505      LEA IERR_TEXT,A1
+0000267E  43F8 38CB               2505      LEA IERR_TEXT,A1
 00002682  700D                    2506      MOVE.L #13,D0
 00002684  4E4F                    2507      TRAP #15
 00002686  4CDF 0201               2508      MOVEM.L (SP)+,A1/D0
@@ -2515,7 +2515,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002694                          2511  
 00002694                          2512  PERR:
 00002694  48E7 8040               2513      MOVEM.L A1/D0,-(SP)
-00002698  43F8 38F3               2514      LEA PERR_TEXT,A1
+00002698  43F8 38F4               2514      LEA PERR_TEXT,A1
 0000269C  700D                    2515      MOVE.L #13,D0
 0000269E  4E4F                    2516      TRAP #15
 000026A0  4CDF 0201               2517      MOVEM.L (SP)+,A1/D0
@@ -2524,7 +2524,7 @@ Created On: 4/28/2015 2:31:45 AM
 000026AE                          2520      
 000026AE                          2521  ZERR:
 000026AE  48E7 8040               2522      MOVEM.L A1/D0,-(SP)
-000026B2  43F8 3911               2523      LEA ZERR_TEXT,A1
+000026B2  43F8 3912               2523      LEA ZERR_TEXT,A1
 000026B6  700D                    2524      MOVE.L #13,D0
 000026B8  4E4F                    2525      TRAP #15
 000026BA  4CDF 0201               2526      MOVEM.L (SP)+,A1/D0
@@ -2533,7 +2533,7 @@ Created On: 4/28/2015 2:31:45 AM
 000026C8                          2529  
 000026C8                          2530  ALERR:
 000026C8  48E7 8040               2531      MOVEM.L A1/D0,-(SP)
-000026CC  43F8 3934               2532      LEA ALERR_TEXT,A1
+000026CC  43F8 3935               2532      LEA ALERR_TEXT,A1
 000026D0  700D                    2533      MOVE.L #13,D0
 000026D2  4E4F                    2534      TRAP #15
 000026D4  4CDF 0201               2535      MOVEM.L (SP)+,A1/D0
@@ -2542,7 +2542,7 @@ Created On: 4/28/2015 2:31:45 AM
 000026E2                          2538      
 000026E2                          2539  FLERR:
 000026E2  48E7 8040               2540      MOVEM.L A1/D0,-(SP)
-000026E6  43F8 3950               2541      LEA FLERR_TEXT,A1
+000026E6  43F8 3951               2541      LEA FLERR_TEXT,A1
 000026EA  700D                    2542      MOVE.L #13,D0
 000026EC  4E4F                    2543      TRAP #15
 000026EE  4CDF 0201               2544      MOVEM.L (SP)+,A1/D0
@@ -2551,7 +2551,7 @@ Created On: 4/28/2015 2:31:45 AM
 000026FC                          2547      
 000026FC                          2548  CHKERR:
 000026FC  48E7 8040               2549      MOVEM.L A1/D0,-(SP)
-00002700  43F8 396C               2550      LEA CHKERR_TEXT,A1
+00002700  43F8 396D               2550      LEA CHKERR_TEXT,A1
 00002704  700D                    2551      MOVE.L #13,D0
 00002706  4E4F                    2552      TRAP #15
 00002708  4CDF 0201               2553      MOVEM.L (SP)+,A1/D0
@@ -2663,7 +2663,7 @@ Created On: 4/28/2015 2:31:45 AM
 00002820  4E75                    2659  NOTZEROS    RTS
 00002822                          2660  *--------------------------------------------------------------------------------------*
 00002822  43F8 37A7               2661  UNKNOWNCMD:     LEA   ERROR1,A1    ;load message
-00002826  323C 0015               2662                  MOVE.W  #21,D1
+00002826  323C 0016               2662                  MOVE.W  #22,D1
 0000282A  7000                    2663                  MOVE.L  #0,D0
 0000282C  4E4F                    2664                  TRAP    #15
 0000282E  6000 E8C6               2665                  BRA     RESTORE
@@ -2703,12 +2703,12 @@ ACMP                1BE8
 ADD                 280A
 ADDRESSDONE         27A0
 AERR                260C
-AERR_TEXT           38AD
+AERR_TEXT           38AE
 AFADDCONV           1BC2
 AGETFIRSTADDRESS    1BB0
 AGETSECADDRESS      1BD0
 ALERR               26C8
-ALERR_TEXT          3934
+ALERR_TEXT          3935
 ARESETLOOP          1BE6
 ASADDCONV           1BDA
 ASCEND              1BA0
@@ -2717,10 +2717,10 @@ ASCII_TO_BCD        2726
 ASWAP               1BF6
 A_TO_F              27D8
 A_TO_F2             27F0
-BA                  398C
+BA                  398D
 BCD_TO_HEX          2744
 BERR                259E
-BERR_TEXT           3895
+BERR_TEXT           3896
 BF                  1F5A
 BFGETENDADDRONE     1F78
 BFGETENDDATA        1F5E
@@ -2733,9 +2733,9 @@ BMOV                1FD0
 BMOVDONE            205C
 BMOVTEST            119E
 BSCH                2136
-BSCH1               381D
-BSCH2               3823
-BSCH3               3835
+BSCH1               381E
+BSCH2               3824
+BSCH3               3836
 BSCHENDDATA         213A
 BSCHFADDEND         215A
 BSCHFIRSTADD        2144
@@ -2743,11 +2743,11 @@ BSCHSECONDADD       2164
 BSCHSECONDFIND      2172
 BSCHTEST            115A
 BTST                2060
-BTST1               37C0
-BTST2               37D4
-BTST3               37E5
-BTST4               37F7
-BTST5               3802
+BTST1               37C1
+BTST2               37D5
+BTST3               37E6
+BTST4               37F8
+BTST5               3803
 BTSTDATALOOP        20AE
 BTSTGETENDADDRONE   207E
 BTSTGETENDDATA      2064
@@ -2758,7 +2758,7 @@ BTSTTEST            117C
 BUFFER              3000
 BYTEBSCH            21A4
 CHKERR              26FC
-CHKERR_TEXT         396C
+CHKERR_TEXT         396D
 COMPLETE            2128
 COMPUTATION         1AE6
 COMPUTEFIRSTADD     1FE0
@@ -2787,7 +2787,7 @@ D7DONTWORRY         2394
 DATALOOP            1FC2
 DATATRANSFER        2052
 DCMP                1C46
-DEBUG               37BD
+DEBUG               37BE
 DEFAULT             1C96
 DEFAULTTEST         1B52
 DESCEND             1BFE
@@ -2829,7 +2829,7 @@ FINDLASTNUM         1ABE
 FINDNEXT            1A10
 FIRSTADDRESS        1FD6
 FLERR               26E2
-FLERR_TEXT          3950
+FLERR_TEXT          3951
 FONT                1090000
 FORMATGOOD          1D26
 FORMATGOOD1         1DD0
@@ -2894,8 +2894,8 @@ HTXT9A              35DE
 HXDC                1A9E
 HXDCTEST            12C8
 IERR                267A
-IERR_TEXT           38CA
-IR                  3991
+IERR_TEXT           38CB
+IR                  3992
 KEEP_CONVERTING     27B2
 LONG                1E50
 LONGBSCH            21C0
@@ -2947,44 +2947,44 @@ PARSELOOPW          1E1E
 PCACCOUNTFORZEROS   257C
 PCDONTWORRY         2580
 PERR                2694
-PERR_TEXT           38F3
+PERR_TEXT           38F4
 PLACECOUNTER        2770
 PROMPT              3058
 PUTBUFFER           27F6
-RA0                 3866
-RA1                 386A
-RA2                 386E
-RA3                 3872
-RA4                 3876
-RA5                 387A
-RA6                 387E
-RD0                 3846
-RD1                 384A
-RD2                 384E
-RD3                 3852
-RD4                 3856
-RD5                 385A
-RD6                 385E
-RD7                 3862
+RA0                 3867
+RA1                 386B
+RA2                 386F
+RA3                 3873
+RA4                 3877
+RA5                 387B
+RA6                 387F
+RD0                 3847
+RD1                 384B
+RD2                 384F
+RD3                 3853
+RD4                 3857
+RD5                 385B
+RD6                 385F
+RD7                 3863
 READ                20B8
 RESTORE             10F6
 RID_ZEROS           27FE
-RPC                 388D
-RSR                 3891
-RSS                 3882
-RUS                 3889
+RPC                 388E
+RSR                 3892
+RSS                 3883
+RUS                 388A
 SECONDADDRESS       1FEE
 SECONDLOOP          1A7C
 SHELL               1070
 SIZECHECK           1C64
 SORTTEST            11E6
 SORTW               1B2C
-SPACE               37BC
+SPACE               37BD
 SRACCOUNTFORZEROS   2524
 SRDONTWORRY         2528
 SSACCOUNTFORZEROS   2550
 SSDONTWORRY         2554
-SSW                 3986
+SSW                 3987
 START               1000
 STOREDATA           1FA8
 STOREDATABTST       20A2
@@ -2999,4 +2999,4 @@ WORD                1D86
 WORDBSCH            21B2
 ZEROS               281E
 ZERR                26AE
-ZERR_TEXT           3911
+ZERR_TEXT           3912
