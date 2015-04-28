@@ -1138,7 +1138,7 @@ OUTPUTNUM:
 
 SORTW:  ADD.L   #1,A1       ;increment to check for semicolon/dash
         CMP.B   #$2D,(A1)   ;check for default
-        BEQ     DESCEND
+        BEQ     DEFAULTTEST
         CMP.B   #$3B,(A1)+
         BNE     ERRORSR
         CMP.B   #$41,(A1)   ;is it ascending?
@@ -1146,6 +1146,29 @@ SORTW:  ADD.L   #1,A1       ;increment to check for semicolon/dash
         CMP.B   #$44,(A1)   ;or descending?
         BNE     ERRORSR
         BRA     DESCEND
+        
+DEFAULTTEST:
+                ADD.L  #1,A1   ;check for paren
+        CMP.B   #$28,(A1)+  ;(
+        BNE     ERRORSR
+        CMP.B   #$64,(A1)+  ;d
+        BNE     ERRORSR
+        CMP.B   #$65,(A1)+  ;e
+        BNE     ERRORSR
+        CMP.B   #$66,(A1)+  ;f
+        BNE     ERRORSR
+        CMP.B   #$61,(A1)+  ;a
+        BNE     ERRORSR
+        CMP.B   #$75,(A1)+  ;u
+        BNE     ERRORSR
+        CMP.B   #$6C,(A1)+  ;l
+        BNE     ERRORSR     
+        CMP.B   #$74,(A1)+  ;t
+        BNE     ERRORSR
+        CMP.B   #$29,(A1)  ;)
+        BNE     ERRORSR
+        BRA     DESCEND
+
         
 ASCEND:
        ADD.L    #1,A1   ;inc
@@ -1229,7 +1252,7 @@ DSWAP:       MOVE.L  -(A4),D0    ;start bubbling
             SWAP.W  D0
             MOVE.L  D0,(A4)
             BRA     DRESETLOOP
-x
+
 DONEASCEND:
 DONEDESCEND:
             BRA RESTORE
@@ -1258,9 +1281,29 @@ ENDPTRMM:
 
 ***************************************************
 
-DEFAULT:
+DEFAULT: 
+        ADD.L  #1,A1   ;check for paren
+        CMP.B   #$28,(A1)+  ;(
+        BNE     ERRORSR
+        CMP.B   #$64,(A1)+  ;d
+        BNE     ERRORSR
+        CMP.B   #$65,(A1)+  ;e
+        BNE     ERRORSR
+        CMP.B   #$66,(A1)+  ;f
+        BNE     ERRORSR
+        CMP.B   #$61,(A1)+  ;a
+        BNE     ERRORSR
+        CMP.B   #$75,(A1)+  ;u
+        BNE     ERRORSR
+        CMP.B   #$6C,(A1)+  ;l
+        BNE     ERRORSR     
+        CMP.B   #$74,(A1)+  ;t
+        BNE     ERRORSR
+        CMP.B   #$29,(A1)+  ;)
+        BNE     ERRORSR
         
-        ADD.L   #2,A1       ;set up for subroutine
+        
+        ADD.L   #1,A1       ;set up for subroutine
         MOVE    A1,A2       ;set up for subroutine
         MOVEM.L D1/D6/A1-A3,-(SP)
         JSR     ASCII_ADDRESS
@@ -2609,6 +2652,7 @@ NEXT:   ;for debugging single commands
 
 
        END    START        
+
 
 
 
