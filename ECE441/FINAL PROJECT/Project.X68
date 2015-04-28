@@ -24,7 +24,7 @@ PROMPT        DC.B      'MONITOR441>'   ;prompt definition
 *Help text*
 HTXT          DC.B      'List of Commands:'
 HTXT1         DC.B      'MDSP <address1> <address2> - Memory Display: Outputs the address and memory' 
-HTXT1A        DC.B      'contents from <address1> to <address2> amd from <address1> to' 
+HTXT1A        DC.B      'contents from <address1> to <address2> and from <address1> to' 
 HTXT1B        DC.B      '<address2 + 16bytes>'
 HTXT2         DC.B      'HXDEC <num> - Conversion: Converts a hexadecimal number to a decimal number'
 HTXT3         DC.B      'SORTW <option> <address1> <address2> - Sort: Sorts a block of memory.'
@@ -48,7 +48,7 @@ HTXT7         DC.B      'BMOV <address1> <address2> <address3> <address4> - Bloc
 HTXT7A        DC.B      'a duplicate block of memory from <address1> to <address2> into the block'
 HTXT7B        DC.B      '<address3> to <address4>'
 HTXT8         DC.B      'BTST <data> <address1> <address2> - Block Test: Tests a block of memory'
-HTXT8A        DC.B      'from <address1> to <address2> for <data>'
+HTXT8A        DC.B      'from <address1> to <address2> for <data>. Only accepts Byte'
 HTXT9         DC.B      'BSCH <data> <address1> <address2> - Block Search: Searches for <data> in'
 HTXT9A        DC.B      'in memory block from <address1> to <address2>'
 HTXT10        DC.B      'GO <address> - Execute Program: Executes program at <address>'
@@ -888,7 +888,7 @@ HELP:       LEA     HTXT,A1     ;list of commands test
             TRAP    #15
             
             LEA     HTXT6,A1    ;block fill command text
-            MOVE.W  #69,D1
+            MOVE.W  #70,D1
             MOVE.B  #0,D0
             TRAP    #15
             LEA     HTXT6A,A1    ;block fill command text
@@ -923,7 +923,7 @@ HELP:       LEA     HTXT,A1     ;list of commands test
             MOVE.B  #0,D0
             TRAP    #15
             LEA     HTXT8A,A1    ;block test command text
-            MOVE.W  #40,D1
+            MOVE.W  #59,D1
             MOVE.B  #0,D0
             TRAP    #15
             MOVE.B  #0,D1       ;newline
@@ -1407,11 +1407,11 @@ WORD:
        
 MODIFYLOOPW:
         *-------Display Memory First-----*
-        MOVE.L  A4,D0
-        DIVU    #2,D0
-        SWAP    D0      ;check if it's an odd address
-        CMP.W   #$00,D0
-        BNE     ERRORSR
+       ; MOVE.L  A4,D0
+       ; DIVU    #2,D0
+       ; SWAP    D0      ;check if it's an odd address
+       ; CMP.W   #$00,D0
+       ; BNE     ERRORSR
         MOVE.L  A4,D3       ;set up for subroutine
         MOVE.L  A4,A5       ;next byte of memory may not be needed
         ADD.L   #1,A5
@@ -1501,16 +1501,17 @@ LONG:
         MOVE    A1,A2       ;set up for subroutine
         MOVEM.L D1/D6/A1-A3,-(SP)
         JSR     ASCII_ADDRESS
-        MOVEM.L (SP)+,D1/D6/A1-A3
         MOVE.L  D5,A4       ;set up address to modify
+        MOVEM.L (SP)+,D1/D6/A1-A3
+        
        
 MODIFYLOOPL:
         *-------Display Memory First-----*
-        MOVE.L  A4,D0
-        DIVU    #2,D0
-        SWAP    D0      ;check if it's an odd address
-        CMP.W   #$00,D0
-        BNE     ERRORSR
+       ; MOVE.L  A4,D0
+       ; DIVU    #2,D0
+       ; SWAP    D0      ;check if it's an odd address
+       ; CMP.W   #$00,D0
+       ; BNE     ERRORSR
         MOVE.L  A4,D3       ;set up for subroutine
         MOVE.L  A4,A5       ;next byte of memory may not be needed
         ADD.L   #1,A5
@@ -1742,6 +1743,7 @@ COMPUTEFOURTHADDRESS:
         BLT     ERRORSR
         CMP.L   A5,A6
         BLT     ERRORSR
+        ADD.L   #1,A4
 
 DATATRANSFER:
         CMP.L   A0,A4
@@ -2671,6 +2673,7 @@ NEXT:   ;for debugging single commands
 
 
        END    START        
+
 
 
 
