@@ -40,7 +40,7 @@ HTXT4C        DC.B      '-(default) - Displays one byte'
 HTXT4D        DC.B      ';W - Displays one word(2 bytes)'
 HTXT4E        DC.B      ';L - Displays one long word(4 bytes)'
 HTXT5         DC.B      'MS <data> <address> - Memory Set: Alters memory by setting <data> into' 
-HTXT5A        DC.B      '<address>'
+HTXT5A        DC.B      '<address>. Only accepts byte'
 HTXT6         DC.B      'BF <data> <address1> <address2> - Block Fill: Fills memory starting at' 
 HTXT6A        DC.B      '<address1> to <address2>. Both must be even addresses. This command only'
 HTXT6B        DC.B      'works with a word-sized <data> pattern'
@@ -881,7 +881,7 @@ HELP:       LEA     HTXT,A1     ;list of commands test
             MOVE.B  #0,D0
             TRAP    #15
             LEA     HTXT5A,A1    ;memory set command text continued
-            MOVE.W  #9,D1
+            MOVE.W  #28,D1
             MOVE.B  #0,D0
             TRAP    #15
             MOVE.B  #0,D1       ;newline
@@ -985,30 +985,49 @@ HELP:       LEA     HTXT,A1     ;list of commands test
 MEMSET:     LEA     BUFFER,A2
             ADD.L   #3,A2
             MOVE.L  A2,A3   ;set up to find end
-FINDEND:    CMP.B   #$00,(A3)+
+FINDEND:    CMP.B   #$20,(A3)+
             BEQ     MEMCONT
             BRA     FINDEND
 MEMCONT:    SUB.L  #1,A3   ;get rid of off by one erro
-            MOVE.B  (A2)+,D1
-            MOVE.B  (A2),D2
-            MOVE.B  D1,D3       ;pass value to subroutine
-            JSR     ASCII_TO_BCD           
-            MOVE.B  D3,D1       ;get converted value
-            MOVE.B  D2,D3       ;pass value
-            JSR     ASCII_TO_BCD
-            MOVE.B  D3,D2       ;get returned value
-            MOVE.B  D1,D3
-            JSR     BCD_TO_HEX
-            MOVE.B  D3,D1
-            MOVE.B  D2,D3
-            JSR     BCD_TO_HEX
-            MOVE.B  D3,D2
-            ROL.L   #4,D1       ;put data in correct place
-            ADD     D1,D2       ;get combined data input
-            ADD.L   #2,A2       ;go to start of address
-            JSR     ASCII_ADDRESS  ;get address in workable form
-            MOVE.L  D5,A4       ;load target address
-            MOVE.B  D2,(A4)       ;put data in target address
+            MOVE.L  A3,A4   ;used for data length calculator
+          
+            JSR ASCII_ADDRESS
+            MOVE.L  D5,D7   ;store value to be put in mem into D7
+            ADD.L   #1,A3   ;increment to address to store it
+            MOVE.L  A3,A2
+MSFINDADDRESS:
+            CMP.B   #$00,(A3)+
+            BEQ     MOVEDATA
+            BRA     MSFINDADDRESS
+
+MOVEDATA:
+            SUB.L   #1,A3   ;off by one error
+            JSR     ASCII_ADDRESS
+            MOVE.L  D5,A3   ;setup for storage
+            MOVE.B  D7,(A3)   ;store data 
+            
+
+
+          ;  MOVE.B  (A2)+,D1
+          ;  MOVE.B  (A2),D2
+          ;  MOVE.B  D1,D3       ;pass value to subroutine
+          ;  JSR     ASCII_TO_BCD           
+          ;  MOVE.B  D3,D1       ;get converted value
+          ;  MOVE.B  D2,D3       ;pass value
+          ;  JSR     ASCII_TO_BCD
+          ;  MOVE.B  D3,D2       ;get returned value
+          ;  MOVE.B  D1,D3
+          ;  JSR     BCD_TO_HEX
+          ;  MOVE.B  D3,D1
+          ;  MOVE.B  D2,D3
+          ;  JSR     BCD_TO_HEX
+          ;  MOVE.B  D3,D2
+          ;  ROL.L   #4,D1       ;put data in correct place
+          ;  ADD     D1,D2       ;get combined data input
+          ;  ADD.L   #2,A2       ;go to start of address
+          ;  JSR     ASCII_ADDRESS  ;get address in workable form
+          ;  MOVE.L  D5,A4       ;load target address
+          ;  MOVE.B  D2,(A4)       ;put data in target address
             BRA     RESTORE                 ;return to shell
 *--------------------------------------------------------------------------------------*
 MEMDISP:    LEA     BUFFER,A2
@@ -2409,7 +2428,7 @@ BERR:
         LEA     SSW,A1
         MOVE.L  #14,D0
         TRAP    #15
-        MOVE.W  (20,SP),D3
+        MOVE.W  (28,SP),D3
         JSR     HEXTOASCII
         SUB.L   #4,A3
         MOVEA.L A3,A1
@@ -2419,7 +2438,7 @@ BERR:
         LEA     BA,A1
         MOVE.L  #14,D0
         TRAP    #15
-        MOVE.L  (22,SP),D3
+        MOVE.L  (30,SP),D3
         JSR     HEXTOASCII
         SUB.L   #8,A3
         MOVEA.L A3,A1
@@ -2429,7 +2448,7 @@ BERR:
         LEA     IR,A1
         MOVE.L  #14,D0
         TRAP    #15
-        MOVE.W  (26,SP),D3
+        MOVE.W  (34,SP),D3
         JSR     HEXTOASCII
         SUB.L   #4,A3
         MOVEA.L A3,A1
@@ -2441,14 +2460,14 @@ BERR:
         BRA     SHELL
 
 AERR:
-        MOVEM.L A1-A3/D0-D1,-(SP)
+        MOVEM.L A1-A3/D0-D1/D4-D5,-(SP)
         LEA     AERR_TEXT,A1
         MOVE.L  #13,D0
         TRAP    #15
         LEA     SSW,A1
         MOVE.L  #14,D0
         TRAP    #15
-        MOVE.W  (20,SP),D3
+        MOVE.W  (28,SP),D3
         JSR     HEXTOASCII
         SUB.L   #4,A3
         MOVEA.L A3,A1
@@ -2458,7 +2477,7 @@ AERR:
         LEA     BA,A1
         MOVE.L  #14,D0
         TRAP    #15
-        MOVE.L  (22,SP),D3
+        MOVE.L  (30,SP),D3
         JSR     HEXTOASCII
         SUB.L   #8,A3
         MOVEA.L A3,A1
@@ -2468,14 +2487,14 @@ AERR:
         LEA     IR,A1
         MOVE.L  #14,D0
         TRAP    #15
-        MOVE.W  (26,SP),D3
+        MOVE.W  (34,SP),D3
         JSR     HEXTOASCII
         SUB.L   #4,A3
         MOVEA.L A3,A1
         MOVE.L  #4,D1
         MOVE.L  #0,D0
         TRAP    #15
-        MOVEM.L (SP)+,A1-A3/D0-D1
+        MOVEM.L (SP)+,A1-A3/D0-D1/D4-D5
         MOVE.L  #$01000000,SP   ;reset stack
         BRA     SHELL
 
@@ -2652,6 +2671,7 @@ NEXT:   ;for debugging single commands
 
 
        END    START        
+
 
 
 
