@@ -52,3 +52,41 @@
 \BOOKMARK [4][-]{paragraph.2.3.1.2}{Assembly Code}{subsubsection.2.3.1}% 52
 \BOOKMARK [3][-]{subsubsection.2.3.2}{ASCII to Hexadecimal}{subsection.2.3}% 53
 \BOOKMARK [4][-]{paragraph.2.3.2.1}{Algorithm}{subsubsection.2.3.2}% 54
+\BOOKMARK [4][-]{paragraph.2.3.2.2}{Assembly Code}{subsubsection.2.3.2}% 55
+\BOOKMARK [3][-]{subsubsection.2.3.3}{BCD to Hexadecimal}{subsection.2.3}% 56
+\BOOKMARK [4][-]{paragraph.2.3.3.1}{Algorithm}{subsubsection.2.3.3}% 57
+\BOOKMARK [4][-]{paragraph.2.3.3.2}{Assembly Code}{subsubsection.2.3.3}% 58
+\BOOKMARK [3][-]{subsubsection.2.3.4}{ASCII to BCD}{subsection.2.3}% 59
+\BOOKMARK [4][-]{paragraph.2.3.4.1}{Algorithm}{subsubsection.2.3.4}% 60
+\BOOKMARK [4][-]{paragraph.2.3.4.2}{Assembly Code}{subsubsection.2.3.4}% 61
+\BOOKMARK [2][-]{subsection.2.4}{Exception Handlers}{section.2}% 62
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Bus Error Exception}{subsection.2.4}% 63
+\BOOKMARK [4][-]{paragraph.2.4.1.1}{Algorithm and Flowchart}{subsubsection.2.4.1}% 64
+\BOOKMARK [4][-]{paragraph.2.4.1.2}{Assembly Code}{subsubsection.2.4.1}% 65
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Address Error Exception}{subsection.2.4}% 66
+\BOOKMARK [4][-]{paragraph.2.4.2.1}{Algorithm and Flowchart}{subsubsection.2.4.2}% 67
+\BOOKMARK [4][-]{paragraph.2.4.2.2}{Assembly Code}{subsubsection.2.4.2}% 68
+\BOOKMARK [3][-]{subsubsection.2.4.3}{Illegal Instruction Error Exception}{subsection.2.4}% 69
+\BOOKMARK [4][-]{paragraph.2.4.3.1}{Algorithm and Flowchart}{subsubsection.2.4.3}% 70
+\BOOKMARK [4][-]{paragraph.2.4.3.2}{Assembly Code}{subsubsection.2.4.3}% 71
+\BOOKMARK [3][-]{subsubsection.2.4.4}{Privilege Violation Error Exception}{subsection.2.4}% 72
+\BOOKMARK [4][-]{paragraph.2.4.4.1}{Algorithm and Flowchart}{subsubsection.2.4.4}% 73
+\BOOKMARK [4][-]{paragraph.2.4.4.2}{Assembly Code}{subsubsection.2.4.4}% 74
+\BOOKMARK [3][-]{subsubsection.2.4.5}{Divide by Zero Error Exception}{subsection.2.4}% 75
+\BOOKMARK [4][-]{paragraph.2.4.5.1}{Algorithm and Flowchart}{subsubsection.2.4.5}% 76
+\BOOKMARK [4][-]{paragraph.2.4.5.2}{Assembly Code}{subsubsection.2.4.5}% 77
+\BOOKMARK [3][-]{subsubsection.2.4.6}{A Line Emulator Error Exception}{subsection.2.4}% 78
+\BOOKMARK [4][-]{paragraph.2.4.6.1}{Algorithm and Flowchart}{subsubsection.2.4.6}% 79
+\BOOKMARK [4][-]{paragraph.2.4.6.2}{Assembly Code}{subsubsection.2.4.6}% 80
+\BOOKMARK [3][-]{subsubsection.2.4.7}{F Line Emulator Error Exception}{subsection.2.4}% 81
+\BOOKMARK [4][-]{paragraph.2.4.7.1}{Algorithm and Flowchart}{subsubsection.2.4.7}% 82
+\BOOKMARK [4][-]{paragraph.2.4.7.2}{Assembly Code}{subsubsection.2.4.7}% 83
+\BOOKMARK [3][-]{subsubsection.2.4.8}{Check Instruction Error Exception}{subsection.2.4}% 84
+\BOOKMARK [4][-]{paragraph.2.4.8.1}{Algorithm and Flowchart}{subsubsection.2.4.8}% 85
+\BOOKMARK [4][-]{paragraph.2.4.8.2}{Assembly Code}{subsubsection.2.4.8}% 86
+\BOOKMARK [2][-]{subsection.2.5}{User Instruction Manual Exception Handlers}{section.2}% 87
+\BOOKMARK [3][-]{paragraph.2.5.0.3}{Algorithm and Flowchart}{subsection.2.5}% 88
+\BOOKMARK [4][-]{paragraph.2.5.0.4}{Assembly Code}{paragraph.2.5.0.3}% 89
+\BOOKMARK [1][-]{section.3}{Discussion}{}% 90
+\BOOKMARK [1][-]{section.4}{Feature Suggestions}{}% 91
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 92

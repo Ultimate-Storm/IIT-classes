@@ -223,12 +223,13 @@
 			\lstinputlisting[firstnumber=1522,firstline=1522,lastline=1574]{Project.X68}
 			
 			\subsubsection{Block Move}
-			This command move a block of memory from one section to another. Both block sizes must be equal. Starting from the first address of the first block, it moves data byte by byte starting from the first address of the second block until all data has been copied. Its syntax is \texttt{BMOV <address1> <address2> <address3> <address4>}.
+			This command move a block of memory from one section to another. Both block sizes must be equal. Starting from the first address of the first block and the first address of the second block, it moves data byte by byte to the respective memory locations until all data has been copied. Its syntax is \texttt{BMOV <address1> <address2> <address3> <address4>}.
 			\paragraph{Algorithm and Flowchart}~\\
 			\paragraph{Assembly Code}~\\				\lstinputlisting[firstnumber=1577,firstline=1577,lastline=1652]{Project.X68}
 			
 			\subsubsection{Block Test}
 			\paragraph{Algorithm and Flowchart}~\\
+			
 			\paragraph{Assembly Code}~\\				\lstinputlisting[firstnumber=1656,firstline=1656,lastline=1765]{Project.X68}
 			
 			\subsubsection{Block Search}
@@ -309,7 +310,7 @@
 			\paragraph{Assembly Code}~\\
 			
 			\section{Discussion}
-			
+			With such a low level programming language such as assembly, the computer engineer is in full control 
 			\section{Feature Suggestions}
 			
 			\section{Conclusion}
