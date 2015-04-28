@@ -193,32 +193,37 @@
 			
 			\subsubsection{HXDEC}
 			\paragraph{Algorithm and Flowchart}~\\
-			
+			This command will allow the user to enter a hexadecimal value (up to FFFF), and the program will return the equivalent value in decimal format. The syntax to call this function is \texttt{HXDEC <data>}. It works by extracting the ASCII values byte by byte and determining the 16's place of each byte. The value extracted is then multiplied by its respective 16's place and added to a register that stores the total. This total must then be converted into BCD for output and then into ASCII to display it on the terminal.
 			\paragraph{Assembly Code}~\\
 			\lstinputlisting[firstnumber=1076,firstline=1076,lastline=1135]{Project.X68}
 			
 			\subsubsection{SORTW}
+			This command implements the most common sort algorithm for a set of data, the bubble sort. Because the user has the choice to choose between sorting the data in ascending or descending order, it also implements a ``rock" sort. It works by first determining which option, ascending or descending, the user has selected. Once determined, the first data in the set is analyzed to the next immediate adjacent value in memory. If the current data is larger than the next data (assuming ascending order for example), the two words of data are swapped. This value is continuously checked against its immediate adjacent memory until it ``fits" in the current state of the list. This process is repeated for n elements in a list of n words. The runtime is $\mathcal{O}(n^2)$, and the syntax for this command is \texttt{SORTW <option> <address1> <address2>}, where both \texttt{<address1>} and \texttt{<address2>} are even addresses.
 			\paragraph{Algorithm and Flowchart}~\\
 			dfg
 			\paragraph{Assembly Code}~\\
 			\lstinputlisting[firstnumber=1139,firstline=1139,lastline=1235]{Project.X68}
 			
 			\subsubsection{Memory Modify}
+			This command first determines which option the user has selected. Depending on this option, it reads the address entered by the user and displays the specified amount of data currently stored in memory. The user is then prompted to enter data to store into memory. The command increments the memory location and asks for input until the user enters the '.' character. The syntax for this command is \texttt{MM <option> <address>}.
 			\paragraph{Algorithm and Flowchart}~\\
 			\paragraph{Assembly Code}~\\
 			\lstinputlisting[firstnumber=1239,firstline=1239,lastline=1517]{Project.X68}
 			
 			\subsubsection{Memory Set}
 			\paragraph{Algorithm and Flowchart}~\\
+			This command is a simpler version of Memory Modify. It parses the data the user entered and stores it at one specified address. It has the syntax \texttt{MS <data> <address>}.
 			\paragraph{Assembly Code}~\\
 			\lstinputlisting[firstnumber=985,firstline=985,lastline=1012]{Project.X68}
 			
 			\subsubsection{Block Fill}
 			\paragraph{Algorithm and Flowchart}~\\
+			This command requires two even addresses to be entered. It then parses the word sized data entered by the user and fills the block of memory from the first address to the second address. The syntax for this command is \texttt{BF <data> <address1> <address2>}.
 			\paragraph{Assembly Code}~\\
 			\lstinputlisting[firstnumber=1522,firstline=1522,lastline=1574]{Project.X68}
 			
 			\subsubsection{Block Move}
+			This command move a block of memory from one section to another. Both block sizes must be equal. Starting from the first address of the first block, it moves data byte by byte starting from the first address of the second block until all data has been copied. Its syntax is \texttt{BMOV <address1> <address2> <address3> <address4>}.
 			\paragraph{Algorithm and Flowchart}~\\
 			\paragraph{Assembly Code}~\\				\lstinputlisting[firstnumber=1577,firstline=1577,lastline=1652]{Project.X68}
 			
