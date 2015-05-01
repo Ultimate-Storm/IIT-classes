@@ -358,55 +358,130 @@
 			%\lstinputlisting[firstnumber=134,firstline=134,lastline=151]{Project.X68}
 			\subsubsection{Bus Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			
+			
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\linewidth]{BERR}
+\caption{Flowchart for Bus Error Exception}
+\label{fig:BERR}
+\end{figure}
 			\paragraph{Assembly Code}~\\				
 			%\lstinputlisting[firstnumber=2320,firstline=2320,lastline=2357]{Project.X68}
 			
+			
+		
 			\subsubsection{Address Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.3\linewidth]{BERR}
+					\caption{Flowchart for Address Error Exception}
+					\label{fig:AERR}
+				\end{figure}
 			\paragraph{Assembly Code}~\\			
 			%	\lstinputlisting[firstnumber=2359,firstline=2359,lastline=2396]{Project.X68}
 			
 			\subsubsection{Illegal Instruction Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			
+			
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\linewidth]{Exception}
+\caption{Flowchart for Illegal Instruction Exception}
+\label{fig:Exception}
+\end{figure}
 			\paragraph{Assembly Code}~\\	
 			%			\lstinputlisting[firstnumber=2398,firstline=2398,lastline=2405]{Project.X68}
 			
 			\subsubsection{Privilege Violation Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			
+			
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\linewidth]{Exception}
+\caption{Flowchart for Privilege Violation Exception}
+\label{fig:priv}
+\end{figure}
 			\paragraph{Assembly Code}~\\	
 			%			\lstinputlisting[firstnumber=2407,firstline=2407,lastline=2414]{Project.X68}
 			
 			\subsubsection{Divide by Zero Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.3\linewidth]{Exception}
+				\caption{Flowchart for Divide by Zero Exception}
+				\label{fig:zero}
+			\end{figure}
 			\paragraph{Assembly Code}~\\	
 			%			\lstinputlisting[firstnumber=2416,firstline=2416,lastline=2423]{Project.X68}
 			
 			\subsubsection{A Line Emulator Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.3\linewidth]{Exception}
+				\caption{Flowchart for A Line Emulator Error Exception}
+				\label{fig:Aline}
+			\end{figure}
 			\paragraph{Assembly Code}~\\	
 			%			\lstinputlisting[firstnumber=2425,firstline=2425,lastline=2432]{Project.X68}
 			
 			\subsubsection{F Line Emulator Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.3\linewidth]{Exception}
+				\caption{Flowchart for F Line Emulator Error Exception}
+				\label{fig:Fline}
+			\end{figure}
 			\paragraph{Assembly Code}~\\		
 			%		\lstinputlisting[firstnumber=2434,firstline=2434,lastline=2441]{Project.X68}
 			
 			\subsubsection{Check Instruction Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.3\linewidth]{Exception}
+				\caption{Flowchart for Check Instruction Error Exception}
+				\label{fig:chk}
+			\end{figure}
 			\paragraph{Assembly Code}~\\			
 			%	\lstinputlisting[firstnumber=2443,firstline=2443,lastline=2450]{Project.X68}
 			
 			\subsection{User Instruction Manual Exception Handlers}
+			
+			\subsubsection{Syntax/Unknown Command Error}
 			\paragraph{Algorithm and Flowchart}~\\
+			
+		
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{UserInst}
+\caption{Flowchart for User Instruction Manual Exception Handler}
+\label{fig:UserInst}
+\end{figure}
 			\paragraph{Assembly Code}~\\
 			
-			\section{Discussion}
-			With such a low level programming language such as assembly, the computer engineer is in full control 
+			
+			
+			\section{Discussion}\label{sec:discussion}
+			With a low level programming language such as assembly, the computer engineer is in full control of how each command is built. When building a monitor type program, assembly can be great because of its simplicity, but it also has its draw backs due to a lack of high level API. This increases the chances that erroneous input will kill the program or produce unpredictable results. This means that in order to have a flawless program, the amount of source code needed to be written per command could easily violate the design constraint of having under 3K code size. Because of this, major errors were checked, but it is still possible to break the program by producing minor errors. The program assumes the user knows how to accurately use the tools provided, and if wrong input is entered and an error message is not displayed, the user will have already known their input was invalid. Furthermore, there are some major limitations to the functionality of this program, for example, certain commands can only take in byte sized data or a hexadecimal to decimal conversion can only accept a maximum value of FFFF. Regardless, this program performs on par with Motorola's Tutor software and, with error checking aside, could replace Tutor entirely. 
+			
+			There were many engineering and design challenges encountered during the journey to construct this program. A majority of these challenges came up during the debugging of each separate command. Taking an algorithm and knowing how to code it is a simple process, but the actual implementation is the hard part. This is when things such as runtime errors must be eliminated. Overall, runtime errors accounted for 95\% of the total generated errors, and the code had to be run step by step to pinpoint the exact moment of error in order to be fixed. Furthermore, deciding on how to store and manipulate data was a huge design concern. With only 7 data registers and 7 address registers, storage ``containers" had to be carefully picked so that there were no memory leaks and registers needed to be untouched due to subroutines were not accessed accidentally.
 			\section{Feature Suggestions}
-			
+			As discussed earlier in Section \ref{sec:discussion}, complex error checking should be implemented in this program. Furthermore, more commands should be implemented to emulate not just Motorola's Tutor software, but current Operating System distributions as well. This could include commands such as , \texttt{ls} (listing files in current directory) or \texttt{cd} (change directory). If implementing an embedded system using the MC68000 processor, and the \texttt{MONITOR441} program is used as a basis, these commands could help the programmer easily analyze top layer applications such as installed files as well as low layer applications such as displaying register values.
 			\section{Conclusion}
-			
-			\begin{thebibliography}{1}
+			Overall, the monitor program was created, and it has all of the requested functionality implemented. While it is not 100\% error free, it provides the user a great MC6000 based piece of software for use with debugging the microprocessor. Further work could be done to improve the functionality to be on the level of Motorola's Tutor software, but this shouldn't be done as no modern day technology runs based on the MC68000 microprocessor. 
+			\begin{thebibliography}{1} 
 				\bibitem{tst} test
 			\end{thebibliography}
 \end{document}

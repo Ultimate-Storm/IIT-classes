@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  1 MAY 2015 06:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  1 MAY 2015 07:41
 entering extended mode
 **report.tex
 ("C:\Users\Adam\classes\ECE441\FINAL PROJECT\report.tex"
@@ -336,20 +336,20 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 136.
 
-<monitor.png, id=457, 448.67625pt x 314.17375pt>
+<monitor.png, id=480, 448.67625pt x 314.17375pt>
 File: monitor.png Graphic file (type png)
  <use monitor.png>
 Package pdftex.def Info: monitor.png used on input line 147.
 (pdftex.def)             Requested size: 272.99881pt x 191.1663pt.
  [5] [6 <C:/Users/Adam/classes/ECE441/FINAL PROJECT/monitor.png>]
-<commandint.png, id=472, 432.11438pt x 1006.51031pt>
+<commandint.png, id=495, 432.11438pt x 1006.51031pt>
 File: commandint.png Graphic file (type png)
  <use commandint.png>
 Package pdftex.def Info: commandint.png used on input line 158.
 (pdftex.def)             Requested size: 214.50119pt x 499.62941pt.
 
 [7] [8 <C:/Users/Adam/classes/ECE441/FINAL PROJECT/commandint.png>]
-<help.png, id=482, 229.85875pt x 142.5325pt>
+<help.png, id=505, 229.85875pt x 142.5325pt>
 File: help.png Graphic file (type png)
  <use help.png>
 Package pdftex.def Info: help.png used on input line 173.
@@ -359,7 +359,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--180
 
  []
 
-<memdsp.png, id=484, 430.60875pt x 302.12875pt>
+<memdsp.png, id=507, 430.60875pt x 302.12875pt>
 File: memdsp.png Graphic file (type png)
  <use memdsp.png>
 Package pdftex.def Info: memdsp.png used on input line 186.
@@ -369,7 +369,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--193
 
  []
 
-<HXDEC.png, id=490, 659.46375pt x 539.01375pt>
+<HXDEC.png, id=513, 659.46375pt x 539.01375pt>
 File: HXDEC.png Graphic file (type png)
  <use HXDEC.png>
 Package pdftex.def Info: HXDEC.png used on input line 201.
@@ -379,7 +379,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--207
 
  []
 
-<SORTW.png, id=496, 764.8575pt x 451.6875pt>
+<SORTW.png, id=519, 764.8575pt x 451.6875pt>
 File: SORTW.png Graphic file (type png)
  <use SORTW.png>
 Package pdftex.def Info: SORTW.png used on input line 216.
@@ -390,7 +390,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--222
  []
 
 [11 <C:/Users/Adam/classes/ECE441/FINAL PROJECT/HXDEC.png>]
-<MM.png, id=504, 434.62375pt x 477.785pt>
+<MM.png, id=527, 434.62375pt x 477.785pt>
 File: MM.png Graphic file (type png)
  <use MM.png>
 Package pdftex.def Info: MM.png used on input line 230.
@@ -400,7 +400,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
-<MS.png, id=511, 323.2075pt x 413.545pt>
+<MS.png, id=534, 323.2075pt x 413.545pt>
 File: MS.png Graphic file (type png)
  <use MS.png>
 Package pdftex.def Info: MS.png used on input line 244.
@@ -410,7 +410,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--250
 
  []
 
-<BF.png, id=517, 469.755pt x 452.69125pt>
+<BF.png, id=540, 469.755pt x 452.69125pt>
 File: BF.png Graphic file (type png)
  <use BF.png>
 Package pdftex.def Info: BF.png used on input line 258.
@@ -420,7 +420,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--264
 
  []
 
-<BMOV.png, id=523, 457.71pt x 417.56pt>
+<BMOV.png, id=546, 457.71pt x 417.56pt>
 File: BMOV.png Graphic file (type png)
  <use BMOV.png>
 Package pdftex.def Info: BMOV.png used on input line 274.
@@ -435,7 +435,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
  []
 
-<BTST.png, id=528, 499.8675pt x 580.1675pt>
+<BTST.png, id=551, 499.8675pt x 580.1675pt>
 File: BTST.png Graphic file (type png)
  <use BTST.png>
 Package pdftex.def Info: BTST.png used on input line 286.
@@ -450,7 +450,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 294--295
 
  []
 
-<BSearch.png, id=533, 516.93124pt x 561.09625pt>
+<BSearch.png, id=556, 516.93124pt x 561.09625pt>
 File: BSearch.png Graphic file (type png)
  <use BSearch.png>
 Package pdftex.def Info: BSearch.png used on input line 300.
@@ -465,7 +465,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
-<Go.png, id=538, 167.62625pt x 268.00125pt>
+<Go.png, id=561, 167.62625pt x 268.00125pt>
 File: Go.png Graphic file (type png)
  <use Go.png>
 Package pdftex.def Info: Go.png used on input line 312.
@@ -480,7 +480,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
-<DF.png, id=544, 424.58624pt x 345.29pt>
+<DF.png, id=567, 424.58624pt x 345.29pt>
 File: DF.png Graphic file (type png)
  <use DF.png>
 Package pdftex.def Info: DF.png used on input line 325.
@@ -496,7 +496,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
-<ModifyReg.png, id=549, 657.45625pt x 508.90125pt>
+<ModifyReg.png, id=572, 657.45625pt x 508.90125pt>
 File: ModifyReg.png Graphic file (type png)
  <use ModifyReg.png>
 Package pdftex.def Info: ModifyReg.png used on input line 338.
@@ -516,7 +516,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
 
-<Echo.png, id=550, 177.66376pt x 234.8775pt>
+<Echo.png, id=573, 177.66376pt x 234.8775pt>
 File: Echo.png Graphic file (type png)
  <use Echo.png>
 Package pdftex.def Info: Echo.png used on input line 351.
@@ -526,110 +526,146 @@ Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--363
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 366--368
+<BERR.png, id=578, 194.7275pt x 337.26pt>
+File: BERR.png Graphic file (type png)
+ <use BERR.png>
+Package pdftex.def Info: BERR.png used on input line 365.
+(pdftex.def)             Requested size: 117.00119pt x 202.6406pt.
+ [21 <C:/Users/Adam/classes/ECE441/FINAL PROJECT/Echo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 369--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--371
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 371--373
-
- []
-
-[21 <C:/Users/Adam/classes/ECE441/FINAL PROJECT/Echo.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 375--376
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 376--378
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 381--383
+File: BERR.png Graphic file (type png)
+<use BERR.png>
+Package pdftex.def Info: BERR.png used on input line 379.
+(pdftex.def)             Requested size: 117.00119pt x 202.6406pt.
+ [22 <C:/Users/Adam/classes/ECE441/FINAL PROJECT/BERR.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 386--388
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 391--393
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
-
- []
-
+<Exception.png, id=587, 194.7275pt x 235.88126pt>
+File: Exception.png Graphic file (type png)
+ <use Exception.png>
+Package pdftex.def Info: Exception.png used on input line 392.
+(pdftex.def)             Requested size: 117.00119pt x 141.7278pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 396--398
 
  []
 
-[22]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 400.
-
-
+[23 <C:/Users/Adam/classes/ECE441/FINAL PROJECT/Exception.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
+File: Exception.png Graphic file (type png)
+<use Exception.png>
+Package pdftex.def Info: Exception.png used on input line 405.
+(pdftex.def)             Requested size: 117.00119pt x 141.7278pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 409--411
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
-[23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
- ("C:\Users\Adam\classes\ECE441\FINAL PROJECT\report.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 412.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
+
+ []
+
+File: Exception.png Graphic file (type png)
+<use Exception.png>
+Package pdftex.def Info: Exception.png used on input line 417.
+(pdftex.def)             Requested size: 117.00119pt x 141.7278pt.
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 421--423
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
+
+ []
+
+File: Exception.png Graphic file (type png)
+<use Exception.png>
+Package pdftex.def Info: Exception.png used on input line 429.
+(pdftex.def)             Requested size: 117.00119pt x 141.7278pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--435
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
+
+ []
+
+File: Exception.png Graphic file (type png)
+<use Exception.png>
+Package pdftex.def Info: Exception.png used on input line 441.
+(pdftex.def)             Requested size: 117.00119pt x 141.7278pt.
+ [25]
+Underfull \hbox (badness 10000) in paragraph at lines 445--447
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
+
+ []
+
+File: Exception.png Graphic file (type png)
+<use Exception.png>
+Package pdftex.def Info: Exception.png used on input line 453.
+(pdftex.def)             Requested size: 117.00119pt x 141.7278pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--459
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
+
+ []
+
+<UserInst.png, id=605, 448.67625pt x 421.575pt>
+File: UserInst.png Graphic file (type png)
+ <use UserInst.png>
+Package pdftex.def Info: UserInst.png used on input line 468.
+(pdftex.def)             Requested size: 272.99881pt x 256.51709pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
+
+ []
+
+[27 <C:/Users/Adam/classes/ECE441/FINAL PROJECT/UserInst.png>] [28]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 487.
+ [29]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 487.
+
+("C:\Users\Adam\classes\ECE441\FINAL PROJECT\report.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 487.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 487.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 31DE91B03347CCBA4CB64289DB2F22C5;6210.
+(rerunfilecheck)             Checksum: 9729428038030CB8BE16FF76218271B7;6306.
  ) 
 Here is how much of TeX's memory you used:
- 8016 strings out of 493921
- 122394 string characters out of 3144880
+ 8058 strings out of 493921
+ 122967 string characters out of 3144880
  234510 words of memory out of 3000000
- 11110 multiletter control sequences out of 15000+200000
+ 11133 multiletter control sequences out of 15000+200000
  10527 words of font info for 37 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  36i,7n,41p,1460b,385s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -643,9 +679,9 @@ ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
 es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (24 pages, 324357 bytes).
+Output written on report.pdf (30 pages, 346847 bytes).
 PDF statistics:
- 629 PDF objects out of 1000 (max. 8388607)
- 123 named destinations out of 1000 (max. 500000)
- 713 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 684 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
+ 736 words of extra memory for PDF output out of 10000 (max. 10000000)
 

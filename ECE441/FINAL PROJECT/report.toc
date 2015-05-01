@@ -50,31 +50,32 @@
 \contentsline {subsection}{\numberline {2.3}Exception Handlers}{21}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Bus Error Exception}{21}{subsubsection.2.3.1}
 \contentsline {paragraph}{\numberline {2.3.1.1}Algorithm and Flowchart}{21}{paragraph.2.3.1.1}
-\contentsline {paragraph}{\numberline {2.3.1.2}Assembly Code}{21}{paragraph.2.3.1.2}
-\contentsline {subsubsection}{\numberline {2.3.2}Address Error Exception}{21}{subsubsection.2.3.2}
-\contentsline {paragraph}{\numberline {2.3.2.1}Algorithm and Flowchart}{21}{paragraph.2.3.2.1}
-\contentsline {paragraph}{\numberline {2.3.2.2}Assembly Code}{21}{paragraph.2.3.2.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Illegal Instruction Error Exception}{21}{subsubsection.2.3.3}
-\contentsline {paragraph}{\numberline {2.3.3.1}Algorithm and Flowchart}{21}{paragraph.2.3.3.1}
-\contentsline {paragraph}{\numberline {2.3.3.2}Assembly Code}{22}{paragraph.2.3.3.2}
-\contentsline {subsubsection}{\numberline {2.3.4}Privilege Violation Error Exception}{22}{subsubsection.2.3.4}
-\contentsline {paragraph}{\numberline {2.3.4.1}Algorithm and Flowchart}{22}{paragraph.2.3.4.1}
-\contentsline {paragraph}{\numberline {2.3.4.2}Assembly Code}{22}{paragraph.2.3.4.2}
-\contentsline {subsubsection}{\numberline {2.3.5}Divide by Zero Error Exception}{22}{subsubsection.2.3.5}
-\contentsline {paragraph}{\numberline {2.3.5.1}Algorithm and Flowchart}{22}{paragraph.2.3.5.1}
-\contentsline {paragraph}{\numberline {2.3.5.2}Assembly Code}{22}{paragraph.2.3.5.2}
-\contentsline {subsubsection}{\numberline {2.3.6}A Line Emulator Error Exception}{22}{subsubsection.2.3.6}
-\contentsline {paragraph}{\numberline {2.3.6.1}Algorithm and Flowchart}{22}{paragraph.2.3.6.1}
-\contentsline {paragraph}{\numberline {2.3.6.2}Assembly Code}{22}{paragraph.2.3.6.2}
-\contentsline {subsubsection}{\numberline {2.3.7}F Line Emulator Error Exception}{22}{subsubsection.2.3.7}
-\contentsline {paragraph}{\numberline {2.3.7.1}Algorithm and Flowchart}{22}{paragraph.2.3.7.1}
-\contentsline {paragraph}{\numberline {2.3.7.2}Assembly Code}{22}{paragraph.2.3.7.2}
-\contentsline {subsubsection}{\numberline {2.3.8}Check Instruction Error Exception}{22}{subsubsection.2.3.8}
-\contentsline {paragraph}{\numberline {2.3.8.1}Algorithm and Flowchart}{22}{paragraph.2.3.8.1}
-\contentsline {paragraph}{\numberline {2.3.8.2}Assembly Code}{23}{paragraph.2.3.8.2}
-\contentsline {subsection}{\numberline {2.4}User Instruction Manual Exception Handlers}{23}{subsection.2.4}
-\contentsline {paragraph}{\numberline {2.4.0.3}Algorithm and Flowchart}{23}{paragraph.2.4.0.3}
-\contentsline {paragraph}{\numberline {2.4.0.4}Assembly Code}{23}{paragraph.2.4.0.4}
-\contentsline {section}{\numberline {3}Discussion}{23}{section.3}
-\contentsline {section}{\numberline {4}Feature Suggestions}{23}{section.4}
-\contentsline {section}{\numberline {5}Conclusion}{23}{section.5}
+\contentsline {paragraph}{\numberline {2.3.1.2}Assembly Code}{22}{paragraph.2.3.1.2}
+\contentsline {subsubsection}{\numberline {2.3.2}Address Error Exception}{22}{subsubsection.2.3.2}
+\contentsline {paragraph}{\numberline {2.3.2.1}Algorithm and Flowchart}{22}{paragraph.2.3.2.1}
+\contentsline {paragraph}{\numberline {2.3.2.2}Assembly Code}{23}{paragraph.2.3.2.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Illegal Instruction Error Exception}{23}{subsubsection.2.3.3}
+\contentsline {paragraph}{\numberline {2.3.3.1}Algorithm and Flowchart}{23}{paragraph.2.3.3.1}
+\contentsline {paragraph}{\numberline {2.3.3.2}Assembly Code}{24}{paragraph.2.3.3.2}
+\contentsline {subsubsection}{\numberline {2.3.4}Privilege Violation Error Exception}{24}{subsubsection.2.3.4}
+\contentsline {paragraph}{\numberline {2.3.4.1}Algorithm and Flowchart}{24}{paragraph.2.3.4.1}
+\contentsline {paragraph}{\numberline {2.3.4.2}Assembly Code}{24}{paragraph.2.3.4.2}
+\contentsline {subsubsection}{\numberline {2.3.5}Divide by Zero Error Exception}{24}{subsubsection.2.3.5}
+\contentsline {paragraph}{\numberline {2.3.5.1}Algorithm and Flowchart}{24}{paragraph.2.3.5.1}
+\contentsline {paragraph}{\numberline {2.3.5.2}Assembly Code}{25}{paragraph.2.3.5.2}
+\contentsline {subsubsection}{\numberline {2.3.6}A Line Emulator Error Exception}{25}{subsubsection.2.3.6}
+\contentsline {paragraph}{\numberline {2.3.6.1}Algorithm and Flowchart}{25}{paragraph.2.3.6.1}
+\contentsline {paragraph}{\numberline {2.3.6.2}Assembly Code}{25}{paragraph.2.3.6.2}
+\contentsline {subsubsection}{\numberline {2.3.7}F Line Emulator Error Exception}{26}{subsubsection.2.3.7}
+\contentsline {paragraph}{\numberline {2.3.7.1}Algorithm and Flowchart}{26}{paragraph.2.3.7.1}
+\contentsline {paragraph}{\numberline {2.3.7.2}Assembly Code}{26}{paragraph.2.3.7.2}
+\contentsline {subsubsection}{\numberline {2.3.8}Check Instruction Error Exception}{26}{subsubsection.2.3.8}
+\contentsline {paragraph}{\numberline {2.3.8.1}Algorithm and Flowchart}{26}{paragraph.2.3.8.1}
+\contentsline {paragraph}{\numberline {2.3.8.2}Assembly Code}{27}{paragraph.2.3.8.2}
+\contentsline {subsection}{\numberline {2.4}User Instruction Manual Exception Handlers}{27}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Syntax/Unknown Command Error}{27}{subsubsection.2.4.1}
+\contentsline {paragraph}{\numberline {2.4.1.1}Algorithm and Flowchart}{27}{paragraph.2.4.1.1}
+\contentsline {paragraph}{\numberline {2.4.1.2}Assembly Code}{27}{paragraph.2.4.1.2}
+\contentsline {section}{\numberline {3}Discussion}{27}{section.3}
+\contentsline {section}{\numberline {4}Feature Suggestions}{28}{section.4}
+\contentsline {section}{\numberline {5}Conclusion}{29}{section.5}
