@@ -1,4 +1,16 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Structure of Monitor Program\relax }}{6}{figure.caption.3}
 \contentsline {figure}{\numberline {2}{\ignorespaces Flowchart for Command Line Interpreter\relax }}{8}{figure.caption.4}
-\contentsline {figure}{\numberline {3}{\ignorespaces Flowchart for Help\relax }}{16}{figure.caption.5}
-\contentsline {figure}{\numberline {4}{\ignorespaces Flowchart for Memory Display\relax }}{21}{figure.caption.6}
+\contentsline {figure}{\numberline {3}{\ignorespaces Flowchart for Help\relax }}{9}{figure.caption.5}
+\contentsline {figure}{\numberline {4}{\ignorespaces Flowchart for Memory Display\relax }}{10}{figure.caption.6}
+\contentsline {figure}{\numberline {5}{\ignorespaces Flowchart for HXDEC\relax }}{11}{figure.caption.7}
+\contentsline {figure}{\numberline {6}{\ignorespaces Flowchart for SORTW\relax }}{12}{figure.caption.8}
+\contentsline {figure}{\numberline {7}{\ignorespaces Flowchart for Memory Modify\relax }}{13}{figure.caption.9}
+\contentsline {figure}{\numberline {8}{\ignorespaces Flowchart for Memory Set\relax }}{14}{figure.caption.10}
+\contentsline {figure}{\numberline {9}{\ignorespaces Flowchart for Block Fill\relax }}{15}{figure.caption.11}
+\contentsline {figure}{\numberline {10}{\ignorespaces Flowchart for Block Move\relax }}{16}{figure.caption.12}
+\contentsline {figure}{\numberline {11}{\ignorespaces Flowchart for Block Test\relax }}{17}{figure.caption.13}
+\contentsline {figure}{\numberline {12}{\ignorespaces Flowchart for Block Search\relax }}{18}{figure.caption.14}
+\contentsline {figure}{\numberline {13}{\ignorespaces Flowchart for Go\relax }}{19}{figure.caption.15}
+\contentsline {figure}{\numberline {14}{\ignorespaces Flowchart for Display Formatted Registers\relax }}{19}{figure.caption.16}
+\contentsline {figure}{\numberline {15}{\ignorespaces Flowchart for Modify Register\relax }}{20}{figure.caption.17}
+\contentsline {figure}{\numberline {16}{\ignorespaces Flowchart for Echo\relax }}{21}{figure.caption.18}
