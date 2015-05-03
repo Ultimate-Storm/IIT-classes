@@ -131,7 +131,7 @@
 	\end{abstract}
 	
 	\section{Introduction}
-	The \textsc{Sanper-1 ELU} is a Motorola MC68000 based microcomputer designed by Dr. Jafar Saniie and Mr. Stephen Perich for use in college level computer engineering courses. For user interaction, it utilizes a monitor program called TUTOR that enables users to actively interact with the microcomputer. The design objective of this project is to re-implement the functionality of TUTOR into a student written monitor program titled MONITOR441. The program should be able to perform basic debugger functions such as memory display, memory sort, memory change, etc., and must have the ability to handle exceptions. The design constraints are:
+	The \textsc{Sanper-1 ELU} is a Motorola MC68000 based microcomputer designed by Dr. Jafar Saniie and Mr. Stephen Perich for use in college level computer engineering courses\cite{manual}. For user interaction, it utilizes a monitor program called TUTOR that enables users to actively interact with the microcomputer. The design objective of this project is to re-implement the functionality of TUTOR into a student written monitor program titled MONITOR441. The program should be able to perform basic debugger functions such as memory display, memory sort, memory change, etc., and must have the ability to handle exceptions. The design constraints are:
 	\begin{itemize}
 		\item Code must be smaller that 3K starting from address \$1000
 		\item Stack size must be 1K starting at memory location \$3000
@@ -279,7 +279,7 @@
 			
 			\subsubsection{Block Test}
 			\paragraph{Algorithm and Flowchart}~\\
-			
+			This command fills a block of memory with byte sized data, then checks each byte of the block. If any byte is not equal to the data originally written, the program outputs the data read and the address where the test failed. If no error is detected, the program outputs a message declaring the test passed. The syntax for this command is \texttt{BTST <data> <address1> <address2>}. The flowchart is shown in Figure \ref{fig:BTST}.
 			
 \begin{figure}[H]
 \centering
@@ -291,7 +291,9 @@
 			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=1656,firstline=1656,lastline=1765]{Project.X68}
 			
 			\subsubsection{Block Search}
+			
 			\paragraph{Algorithm and Flowchart}~\\
+			This command searches through a block of memory for data entered by the user. It does so by checking each value in memory byte by byte. The syntax for this command is \texttt{BSCH <data> <address1> <address2>}. The flowchart is shown in Figure \ref{fig:BSearch}.
 			
 			
 			
@@ -304,7 +306,9 @@
 			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=1769,firstline=1769,lastline=1887]{Project.X68}
 			
 			\subsubsection{Go}
+			
 			\paragraph{Algorithm and Flowchart}~\\
+			This command jumps to an address in memory and executes the machine code stored at that address. The syntax is \texttt{GO <address>}. The flowchart is shown in Figure \ref{fig:Go}.
 			
 			
 \begin{figure}[H]
@@ -316,8 +320,9 @@
 			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=1891,firstline=1891,lastline=1905]{Project.X68}
 			
 			\subsubsection{Display Formatted Registers}
+		
 			\paragraph{Algorithm and Flowchart}~\\
-			
+				This command displays the values of the registers as well as the stack pointers and program counter. It does so by first popping these values which were previously stored on stack item by item. They are then converted to ASCII for output and displayed on the terminal. The syntax is \texttt{DF}. The flowchart is shown in Figure \ref{fig:DF}.
 			
 			
 \begin{figure}[H]
@@ -329,7 +334,9 @@
 			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=1909,firstline=1909,lastline=2312]{Project.X68}
 			
 			\subsubsection{Modify Register}
+		
 			\paragraph{Algorithm and Flowchart}~\\
+				This command is used to change the value of a specific A or D register. This is done by parsing the data entered by the user, then updating the current value of the selected register. The syntax is \texttt{.<Register Type> <data>}. The flowchart is shown in Figure \ref{fig:ModifyReg}.
 			
 			
 			
@@ -343,6 +350,7 @@
 			
 			\subsubsection{Echo}
 			\paragraph{Algorithm and Flowchart}~\\
+			This is a simple command that outputs what the user inputs. This is done by parsing the data entered by the user and immediately setting up a trap I/O call that outputs what was just entered. The syntax is \texttt{ECHO <data>}. The flowchart is shown in Figure \ref{fig:Echo}.
 			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=398,firstline=398,lastline=411]{Project.X68}
 		
 			
@@ -359,6 +367,8 @@
 			\subsubsection{Bus Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
 			
+			This exception is called whenever a bus error exception occurs. It outputs the SSW, IR, and BA along with a custom string message. The register values are also printed to the screen. The flowchart is shown in Figure \ref{fig:BERR}.
+			
 			
 \begin{figure}[H]
 \centering
@@ -373,6 +383,7 @@
 		
 			\subsubsection{Address Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			This exception is called whenever an address error exception occurs. It outputs the SSW, IR, and BA along with a custom string message. The register values are also printed to the screen. The flowchart is shown in Figure \ref{fig:AERR}.
 			
 				\begin{figure}[H]
 					\centering
@@ -385,7 +396,7 @@
 			
 			\subsubsection{Illegal Instruction Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
-			
+			This exception is called whenever an illegal instruction error exception occurs. It outputs a custom string message, and the register values are also printed to the screen. The flowchart is shown in Figure \ref{fig:Exception}.
 			
 \begin{figure}[H]
 \centering
@@ -398,6 +409,7 @@
 			
 			\subsubsection{Privilege Violation Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			This exception is called whenever an privilege violation error exception occurs. It outputs a custom string message, and the register values are also printed to the screen. The flowchart is shown in Figure \ref{fig:priv}.
 			
 			
 \begin{figure}[H]
@@ -411,6 +423,7 @@
 			
 			\subsubsection{Divide by Zero Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			This exception is called whenever a divide by zero error exception occurs. It outputs a custom string message, and the register values are also printed to the screen. The flowchart is shown in Figure \ref{fig:zero}.
 			
 			\begin{figure}[H]
 				\centering
@@ -423,7 +436,7 @@
 			
 			\subsubsection{A Line Emulator Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
-			
+			This exception is called whenever an A line emulator error exception occurs. It outputs a custom string message, and the register values are also printed to the screen. The flowchart is shown in Figure \ref{fig:Aline}.
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=0.3\linewidth]{Exception}
@@ -435,6 +448,7 @@
 			
 			\subsubsection{F Line Emulator Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			This exception is called whenever an F line emulator error exception occurs. It outputs a custom string message, and the register values are also printed to the screen. The flowchart is shown in Figure \ref{fig:Fline}.
 			
 			\begin{figure}[H]
 				\centering
@@ -447,6 +461,7 @@
 			
 			\subsubsection{Check Instruction Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
+			This exception is called whenever a check instruction error exception occurs. It outputs a custom string message, and the register values are also printed to the screen. The flowchart is shown in Figure \ref{fig:chk}.
 			
 			\begin{figure}[H]
 				\centering
@@ -461,6 +476,7 @@
 			
 			\subsubsection{Syntax/Unknown Command Error}
 			\paragraph{Algorithm and Flowchart}~\\
+			This error is meant to guide the user to input the correct syntax for a command. It first checks if the command entered is valid. If not, an unknown command message is displayed. If the command entered is valid but the syntax is incorrect, an incorrect syntax message is outputted to the terminal. The flowchart is shown in Figure \ref{fig:UserInst}.
 			
 		
 \begin{figure}[H]
@@ -482,6 +498,9 @@
 			\section{Conclusion}
 			Overall, the monitor program was created, and it has all of the requested functionality implemented. While it is not 100\% error free, it provides the user a great MC6000 based piece of software for use with debugging the microprocessor. Further work could be done to improve the functionality to be on the level of Motorola's Tutor software, but this shouldn't be done as no modern day technology runs based on the MC68000 microprocessor. 
 			\begin{thebibliography}{1} 
-				\bibitem{tst} test
+				\bibitem{book}Harman, Thomas L., and Barbara Lawson. \emph{The Motorola MC68000 Microprocessor Family: Assembly Language, Interface Design, and System Design.} Englewood Cliffs, NJ: Prentice-Hall, 1985. Print. 
+				\bibitem{manual} MC68000 Microprocessor Programmer's Reference Manual
+				\bibitem{lab} SANPER-1 Lab Manuals
+				\bibitem{edu} MC68000 Educational Computer Board User's Manual
 			\end{thebibliography}
 \end{document}
