@@ -158,6 +158,7 @@ SHELL:
             ADD.L   #-8,SP      ;update Stack position
             MOVE    SR,-(SP)    ;save Status register for use with DF
             MOVE.L  A6,-(SP)    ;temp save
+            
             MOVE    USP,A6      ;for use with DF command
             MOVE.L  A6,-(SP)    ;store USP to STACK
             ADD.L   #4,SP       
@@ -1005,7 +1006,7 @@ MOVEDATA:
             JSR     ASCII_ADDRESS
             MOVE.L  D5,A3   ;setup for storage
             MOVE.B  D7,(A3)   ;store data 
-            
+            BRA     RESTORE
 
 
           ;  MOVE.B  (A2)+,D1
@@ -1028,7 +1029,7 @@ MOVEDATA:
           ;  JSR     ASCII_ADDRESS  ;get address in workable form
           ;  MOVE.L  D5,A4       ;load target address
           ;  MOVE.B  D2,(A4)       ;put data in target address
-            BRA     RESTORE                 ;return to shell
+           ; BRA     RESTORE                 ;return to shell
 *--------------------------------------------------------------------------------------*
 MEMDISP:    LEA     BUFFER,A2
             MOVE.L  #1,D6       ;counter for how many times to loop
@@ -2412,8 +2413,9 @@ PCDONTWORRY:
    ADD.L    #-72,SP
    MOVEM.L  (SP)+,D0-D7/A0-A6
    ADD.L    #12,SP  ;go back to original value
-   MOVE.W   (SP)+,SR
-        
+   ;MOVE.W   (SP)+,SR
+   ORI.W   #$2000,SR    ;easy68k simulator is always in supervisor mode
+   MOVE.L  #$01000000,SP   ;reset stack
        BRA SHELL
 
 *--------------------------------------------------------------------------------------*
@@ -2458,7 +2460,8 @@ BERR:
         MOVE.L  #0,D0
         TRAP    #15
         MOVEM.L (SP)+,A1-A3/D0-D1
-        MOVE.L  #$01000000,SP   ;reset stack
+       
+        JSR     DF
         BRA     SHELL
 
 AERR:
@@ -2497,7 +2500,8 @@ AERR:
         MOVE.L  #0,D0
         TRAP    #15
         MOVEM.L (SP)+,A1-A3/D0-D1/D4-D5
-        MOVE.L  #$01000000,SP   ;reset stack
+     
+        JSR     DF
         BRA     SHELL
 
 IERR:
@@ -2506,7 +2510,7 @@ IERR:
     MOVE.L #13,D0
     TRAP #15
     MOVEM.L (SP)+,A1/D0
-    MOVE.L #$01000000,SP
+    JSR DF
     BRA SHELL
 
 PERR:
@@ -2515,7 +2519,7 @@ PERR:
     MOVE.L #13,D0
     TRAP #15
     MOVEM.L (SP)+,A1/D0
-    MOVE.L #$01000000,SP
+    JSR DF
     BRA SHELL
     
 ZERR:
@@ -2524,7 +2528,7 @@ ZERR:
     MOVE.L #13,D0
     TRAP #15
     MOVEM.L (SP)+,A1/D0
-    MOVE.L #$01000000,SP
+    JSR DF
     BRA SHELL
 
 ALERR:
@@ -2533,7 +2537,7 @@ ALERR:
     MOVE.L #13,D0
     TRAP #15
     MOVEM.L (SP)+,A1/D0
-    MOVE.L #$01000000,SP
+    JSR DF
     BRA SHELL
     
 FLERR:
@@ -2542,7 +2546,8 @@ FLERR:
     MOVE.L #13,D0
     TRAP #15
     MOVEM.L (SP)+,A1/D0
-    MOVE.L #$01000000,SP
+
+    JSR DF
     BRA SHELL
     
 CHKERR:
@@ -2551,7 +2556,8 @@ CHKERR:
     MOVE.L #13,D0
     TRAP #15
     MOVEM.L (SP)+,A1/D0
-    MOVE.L #$01000000,SP
+    
+    JSR DF
     BRA SHELL
 
 
@@ -2673,6 +2679,8 @@ NEXT:   ;for debugging single commands
 
 
        END    START        
+
+
 
 
 

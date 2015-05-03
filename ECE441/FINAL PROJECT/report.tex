@@ -161,7 +161,7 @@
 			\end{figure}
 			
 			\subsubsection{Assembly Code}
-			%\lstinputlisting[firstline=154,lastline=411,firstnumber=154]{Project.X68}
+			\lstinputlisting[firstline=154,lastline=412,firstnumber=154]{Project.X68}
 			
 			\subsection{Debugger Commands}
 			\subsubsection{Help}
@@ -176,7 +176,7 @@
 			\end{figure}
 			
 			\paragraph{Assembly Code}~\\
-			%\lstinputlisting[firstnumber=796,firstline=796,lastline=982]{Project.X68}
+			\lstinputlisting[firstnumber=797,firstline=797,lastline=983]{Project.X68}
 			\subsubsection{Memory Display}
 			\paragraph{Algorithm and Flowchart}~\\
 			Memory display is an extremely useful tool to look at blocks of memory. The syntax to call this function is \texttt{MDSP <address1> <address2}, where \texttt{<address1>} is the starting address and \texttt{<address2>} is the ending address of the memory contents to be shown. This command also displays the block of memory from \texttt{<address1>} to \texttt{<address2 +16bytes>}. The flowchart for this command is shown in Figure \ref{fig:memdsp}.
@@ -189,7 +189,7 @@
 			\end{figure}
 			
 			\paragraph{Assembly Code}~\\
-			%\lstinputlisting[firstnumber=1014,firstline=1014,lastline=1072]{Project.X68}
+			\lstinputlisting[firstnumber=1034,firstline=1034,lastline=1092]{Project.X68}
 			
 			\subsubsection{HXDEC}
 			\paragraph{Algorithm and Flowchart}~\\
@@ -203,7 +203,7 @@
 \label{fig:HXDEC}
 \end{figure}
 			\paragraph{Assembly Code}~\\
-			%\lstinputlisting[firstnumber=1076,firstline=1076,lastline=1135]{Project.X68}
+			\lstinputlisting[firstnumber=1096,firstline=1096,lastline=1155]{Project.X68}
 			
 			\subsubsection{SORTW}
 			
@@ -211,14 +211,14 @@
 			This command implements the most common sort algorithm for a set of data, the bubble sort. Because the user has the choice to choose between sorting the data in ascending or descending order, it also implements a ``rock" sort. It works by first determining which option, ascending or descending, the user has selected. Once determined, the first data in the set is analyzed to the next immediate adjacent value in memory. If the current data is larger than the next data (assuming ascending order for example), the two words of data are swapped. This value is continuously checked against its immediate adjacent memory until it ``fits" in the current state of the list. This process is repeated for n elements in a list of n words. The runtime is $\mathcal{O}(n^2)$, and the syntax for this command is \texttt{SORTW <option> <address1> <address2>}, where both \texttt{<address1>} and \texttt{<address2>} are even addresses. The flowchart is shown in Figure \ref{fig:SORTW}.
 			
 			
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.7\linewidth]{SORTW}
 \caption{Flowchart for SORTW}
 \label{fig:SORTW}
 \end{figure}
 			\paragraph{Assembly Code}~\\
-			%\lstinputlisting[firstnumber=1139,firstline=1139,lastline=1235]{Project.X68}
+			\lstinputlisting[firstnumber=1159,firstline=1159,lastline=1278]{Project.X68}
 			
 			\subsubsection{Memory Modify}
 			
@@ -232,7 +232,7 @@
 \label{fig:MM}
 \end{figure}
 			\paragraph{Assembly Code}~\\
-			%\lstinputlisting[firstnumber=1239,firstline=1239,lastline=1517]{Project.X68}
+			\lstinputlisting[firstnumber=1282,firstline=1282,lastline=1622]{Project.X68}
 			
 			\subsubsection{Memory Set}
 			\paragraph{Algorithm and Flowchart}~\\
@@ -246,7 +246,7 @@
 \label{fig:MS}
 \end{figure}
 			\paragraph{Assembly Code}~\\
-			%\lstinputlisting[firstnumber=985,firstline=985,lastline=1012]{Project.X68}
+			\lstinputlisting[firstnumber=986,firstline=986,lastline=1009]{Project.X68}
 			
 			\subsubsection{Block Fill}
 			\paragraph{Algorithm and Flowchart}~\\
@@ -260,7 +260,7 @@
 \label{fig:BF}
 \end{figure}
 			\paragraph{Assembly Code}~\\
-		%	\lstinputlisting[firstnumber=1522,firstline=1522,lastline=1574]{Project.X68}
+			\lstinputlisting[firstnumber=1627,firstline=1627,lastline=1679]{Project.X68}
 			
 			\subsubsection{Block Move}
 			
@@ -275,7 +275,7 @@
 \caption{Flowchart for Block Move}
 \label{fig:BMOV}
 \end{figure}
-			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=1577,firstline=1577,lastline=1652]{Project.X68}
+			\paragraph{Assembly Code}~\\				\lstinputlisting[firstnumber=1682,firstline=1682,lastline=1758]{Project.X68}
 			
 			\subsubsection{Block Test}
 			\paragraph{Algorithm and Flowchart}~\\
@@ -288,7 +288,7 @@
 \label{fig:BTST}
 \end{figure}
 			
-			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=1656,firstline=1656,lastline=1765]{Project.X68}
+			\paragraph{Assembly Code}~\\				\lstinputlisting[firstnumber=1762,firstline=1762,lastline=1871]{Project.X68}
 			
 			\subsubsection{Block Search}
 			
@@ -303,7 +303,7 @@
 \caption{Flowchart for Block Search}
 \label{fig:BSearch}
 \end{figure}
-			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=1769,firstline=1769,lastline=1887]{Project.X68}
+			\paragraph{Assembly Code}~\\				\lstinputlisting[firstnumber=1875,firstline=1875,lastline=1993]{Project.X68}
 			
 			\subsubsection{Go}
 			
@@ -317,7 +317,7 @@
 \caption{Flowchart for Go}
 \label{fig:Go}
 \end{figure}
-			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=1891,firstline=1891,lastline=1905]{Project.X68}
+			\paragraph{Assembly Code}~\\				\lstinputlisting[firstnumber=1997,firstline=1997,lastline=2011]{Project.X68}
 			
 			\subsubsection{Display Formatted Registers}
 		
@@ -331,7 +331,7 @@
 \caption{Flowchart for Display Formatted Registers}
 \label{fig:DF}
 \end{figure}
-			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=1909,firstline=1909,lastline=2312]{Project.X68}
+			\paragraph{Assembly Code}~\\				\lstinputlisting[firstnumber=2015,firstline=2015,lastline=2419]{Project.X68}
 			
 			\subsubsection{Modify Register}
 		
@@ -346,12 +346,12 @@
 \caption{Flowchart for Modify Register}
 \label{fig:ModifyReg}
 \end{figure}
-			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=413,firstline=413,lastline=793]{Project.X68}
+			\paragraph{Assembly Code}~\\				\lstinputlisting[firstnumber=414,firstline=414,lastline=794]{Project.X68}
 			
 			\subsubsection{Echo}
 			\paragraph{Algorithm and Flowchart}~\\
 			This is a simple command that outputs what the user inputs. This is done by parsing the data entered by the user and immediately setting up a trap I/O call that outputs what was just entered. The syntax is \texttt{ECHO <data>}. The flowchart is shown in Figure \ref{fig:Echo}.
-			\paragraph{Assembly Code}~\\				%\lstinputlisting[firstnumber=398,firstline=398,lastline=411]{Project.X68}
+			\paragraph{Assembly Code}~\\				\lstinputlisting[firstnumber=399,firstline=399,lastline=412]{Project.X68}
 		
 			
 \begin{figure}[H]
@@ -363,7 +363,7 @@
 			
 			\subsection{Exception Handlers}
 			The Monitor441 program uses custom exception handlers. They are loaded using the source code:
-			%\lstinputlisting[firstnumber=134,firstline=134,lastline=151]{Project.X68}
+			\lstinputlisting[firstnumber=134,firstline=134,lastline=151]{Project.X68}
 			\subsubsection{Bus Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
 			
@@ -377,7 +377,7 @@
 \label{fig:BERR}
 \end{figure}
 			\paragraph{Assembly Code}~\\				
-			%\lstinputlisting[firstnumber=2320,firstline=2320,lastline=2357]{Project.X68}
+			\lstinputlisting[firstnumber=2427,firstline=2427,lastline=2465]{Project.X68}
 			
 			
 		
@@ -392,7 +392,7 @@
 					\label{fig:AERR}
 				\end{figure}
 			\paragraph{Assembly Code}~\\			
-			%	\lstinputlisting[firstnumber=2359,firstline=2359,lastline=2396]{Project.X68}
+				\lstinputlisting[firstnumber=2467,firstline=2467,lastline=2505]{Project.X68}
 			
 			\subsubsection{Illegal Instruction Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
@@ -405,7 +405,7 @@
 \label{fig:Exception}
 \end{figure}
 			\paragraph{Assembly Code}~\\	
-			%			\lstinputlisting[firstnumber=2398,firstline=2398,lastline=2405]{Project.X68}
+						\lstinputlisting[firstnumber=2507,firstline=2507,lastline=2514]{Project.X68}
 			
 			\subsubsection{Privilege Violation Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
@@ -419,7 +419,7 @@
 \label{fig:priv}
 \end{figure}
 			\paragraph{Assembly Code}~\\	
-			%			\lstinputlisting[firstnumber=2407,firstline=2407,lastline=2414]{Project.X68}
+						\lstinputlisting[firstnumber=2516,firstline=2516,lastline=2523]{Project.X68}
 			
 			\subsubsection{Divide by Zero Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
@@ -432,7 +432,7 @@
 				\label{fig:zero}
 			\end{figure}
 			\paragraph{Assembly Code}~\\	
-			%			\lstinputlisting[firstnumber=2416,firstline=2416,lastline=2423]{Project.X68}
+						\lstinputlisting[firstnumber=2525,firstline=2525,lastline=2532]{Project.X68}
 			
 			\subsubsection{A Line Emulator Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
@@ -444,7 +444,7 @@
 				\label{fig:Aline}
 			\end{figure}
 			\paragraph{Assembly Code}~\\	
-			%			\lstinputlisting[firstnumber=2425,firstline=2425,lastline=2432]{Project.X68}
+						\lstinputlisting[firstnumber=2534,firstline=2534,lastline=2541]{Project.X68}
 			
 			\subsubsection{F Line Emulator Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
@@ -457,7 +457,7 @@
 				\label{fig:Fline}
 			\end{figure}
 			\paragraph{Assembly Code}~\\		
-			%		\lstinputlisting[firstnumber=2434,firstline=2434,lastline=2441]{Project.X68}
+					\lstinputlisting[firstnumber=2543,firstline=2543,lastline=2551]{Project.X68}
 			
 			\subsubsection{Check Instruction Error Exception}
 			\paragraph{Algorithm and Flowchart}~\\
@@ -470,7 +470,7 @@
 				\label{fig:chk}
 			\end{figure}
 			\paragraph{Assembly Code}~\\			
-			%	\lstinputlisting[firstnumber=2443,firstline=2443,lastline=2450]{Project.X68}
+				\lstinputlisting[firstnumber=2553,firstline=2553,lastline=2561]{Project.X68}
 			
 			\subsection{User Instruction Manual Exception Handlers}
 			
@@ -486,7 +486,9 @@
 \label{fig:UserInst}
 \end{figure}
 			\paragraph{Assembly Code}~\\
+			\lstinputlisting[firstnumber=2569,firstline=2569,lastline=2573]{Project.X68}
 			
+			\lstinputlisting[firstnumber=2667,firstline=2667,lastline=2671]{Project.X68}
 			
 			
 			\section{Discussion}\label{sec:discussion}

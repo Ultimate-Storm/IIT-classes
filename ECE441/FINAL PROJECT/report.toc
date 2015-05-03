@@ -4,78 +4,78 @@
 \contentsline {subsection}{\numberline {2.1}Command Interpreter}{6}{subsection.2.1}
 \contentsline {subsubsection}{\numberline {2.1.1}Algorithm and Flowchart}{6}{subsubsection.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.2}Assembly Code}{9}{subsubsection.2.1.2}
-\contentsline {subsection}{\numberline {2.2}Debugger Commands}{9}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Help}{9}{subsubsection.2.2.1}
-\contentsline {paragraph}{\numberline {2.2.1.1}Algorithm and Flowchart}{9}{paragraph.2.2.1.1}
-\contentsline {paragraph}{\numberline {2.2.1.2}Assembly Code}{9}{paragraph.2.2.1.2}
-\contentsline {subsubsection}{\numberline {2.2.2}Memory Display}{9}{subsubsection.2.2.2}
-\contentsline {paragraph}{\numberline {2.2.2.1}Algorithm and Flowchart}{9}{paragraph.2.2.2.1}
-\contentsline {paragraph}{\numberline {2.2.2.2}Assembly Code}{10}{paragraph.2.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}HXDEC}{10}{subsubsection.2.2.3}
-\contentsline {paragraph}{\numberline {2.2.3.1}Algorithm and Flowchart}{10}{paragraph.2.2.3.1}
-\contentsline {paragraph}{\numberline {2.2.3.2}Assembly Code}{11}{paragraph.2.2.3.2}
-\contentsline {subsubsection}{\numberline {2.2.4}SORTW}{11}{subsubsection.2.2.4}
-\contentsline {paragraph}{\numberline {2.2.4.1}Algorithm and Flowchart}{11}{paragraph.2.2.4.1}
-\contentsline {paragraph}{\numberline {2.2.4.2}Assembly Code}{12}{paragraph.2.2.4.2}
-\contentsline {subsubsection}{\numberline {2.2.5}Memory Modify}{12}{subsubsection.2.2.5}
-\contentsline {paragraph}{\numberline {2.2.5.1}Algorithm and Flowchart}{12}{paragraph.2.2.5.1}
-\contentsline {paragraph}{\numberline {2.2.5.2}Assembly Code}{13}{paragraph.2.2.5.2}
-\contentsline {subsubsection}{\numberline {2.2.6}Memory Set}{13}{subsubsection.2.2.6}
-\contentsline {paragraph}{\numberline {2.2.6.1}Algorithm and Flowchart}{13}{paragraph.2.2.6.1}
-\contentsline {paragraph}{\numberline {2.2.6.2}Assembly Code}{14}{paragraph.2.2.6.2}
-\contentsline {subsubsection}{\numberline {2.2.7}Block Fill}{14}{subsubsection.2.2.7}
-\contentsline {paragraph}{\numberline {2.2.7.1}Algorithm and Flowchart}{14}{paragraph.2.2.7.1}
-\contentsline {paragraph}{\numberline {2.2.7.2}Assembly Code}{15}{paragraph.2.2.7.2}
-\contentsline {subsubsection}{\numberline {2.2.8}Block Move}{15}{subsubsection.2.2.8}
-\contentsline {paragraph}{\numberline {2.2.8.1}Algorithm and Flowchart}{15}{paragraph.2.2.8.1}
-\contentsline {paragraph}{\numberline {2.2.8.2}Assembly Code}{16}{paragraph.2.2.8.2}
-\contentsline {subsubsection}{\numberline {2.2.9}Block Test}{16}{subsubsection.2.2.9}
-\contentsline {paragraph}{\numberline {2.2.9.1}Algorithm and Flowchart}{16}{paragraph.2.2.9.1}
-\contentsline {paragraph}{\numberline {2.2.9.2}Assembly Code}{17}{paragraph.2.2.9.2}
-\contentsline {subsubsection}{\numberline {2.2.10}Block Search}{17}{subsubsection.2.2.10}
-\contentsline {paragraph}{\numberline {2.2.10.1}Algorithm and Flowchart}{17}{paragraph.2.2.10.1}
-\contentsline {paragraph}{\numberline {2.2.10.2}Assembly Code}{18}{paragraph.2.2.10.2}
-\contentsline {subsubsection}{\numberline {2.2.11}Go}{18}{subsubsection.2.2.11}
-\contentsline {paragraph}{\numberline {2.2.11.1}Algorithm and Flowchart}{18}{paragraph.2.2.11.1}
-\contentsline {paragraph}{\numberline {2.2.11.2}Assembly Code}{19}{paragraph.2.2.11.2}
-\contentsline {subsubsection}{\numberline {2.2.12}Display Formatted Registers}{19}{subsubsection.2.2.12}
-\contentsline {paragraph}{\numberline {2.2.12.1}Algorithm and Flowchart}{19}{paragraph.2.2.12.1}
-\contentsline {paragraph}{\numberline {2.2.12.2}Assembly Code}{20}{paragraph.2.2.12.2}
-\contentsline {subsubsection}{\numberline {2.2.13}Modify Register}{20}{subsubsection.2.2.13}
-\contentsline {paragraph}{\numberline {2.2.13.1}Algorithm and Flowchart}{20}{paragraph.2.2.13.1}
-\contentsline {paragraph}{\numberline {2.2.13.2}Assembly Code}{21}{paragraph.2.2.13.2}
-\contentsline {subsubsection}{\numberline {2.2.14}Echo}{21}{subsubsection.2.2.14}
-\contentsline {paragraph}{\numberline {2.2.14.1}Algorithm and Flowchart}{21}{paragraph.2.2.14.1}
-\contentsline {paragraph}{\numberline {2.2.14.2}Assembly Code}{21}{paragraph.2.2.14.2}
-\contentsline {subsection}{\numberline {2.3}Exception Handlers}{22}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Bus Error Exception}{22}{subsubsection.2.3.1}
-\contentsline {paragraph}{\numberline {2.3.1.1}Algorithm and Flowchart}{22}{paragraph.2.3.1.1}
-\contentsline {paragraph}{\numberline {2.3.1.2}Assembly Code}{23}{paragraph.2.3.1.2}
-\contentsline {subsubsection}{\numberline {2.3.2}Address Error Exception}{23}{subsubsection.2.3.2}
-\contentsline {paragraph}{\numberline {2.3.2.1}Algorithm and Flowchart}{23}{paragraph.2.3.2.1}
-\contentsline {paragraph}{\numberline {2.3.2.2}Assembly Code}{24}{paragraph.2.3.2.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Illegal Instruction Error Exception}{24}{subsubsection.2.3.3}
-\contentsline {paragraph}{\numberline {2.3.3.1}Algorithm and Flowchart}{24}{paragraph.2.3.3.1}
-\contentsline {paragraph}{\numberline {2.3.3.2}Assembly Code}{25}{paragraph.2.3.3.2}
-\contentsline {subsubsection}{\numberline {2.3.4}Privilege Violation Error Exception}{25}{subsubsection.2.3.4}
-\contentsline {paragraph}{\numberline {2.3.4.1}Algorithm and Flowchart}{25}{paragraph.2.3.4.1}
-\contentsline {paragraph}{\numberline {2.3.4.2}Assembly Code}{25}{paragraph.2.3.4.2}
-\contentsline {subsubsection}{\numberline {2.3.5}Divide by Zero Error Exception}{25}{subsubsection.2.3.5}
-\contentsline {paragraph}{\numberline {2.3.5.1}Algorithm and Flowchart}{25}{paragraph.2.3.5.1}
-\contentsline {paragraph}{\numberline {2.3.5.2}Assembly Code}{26}{paragraph.2.3.5.2}
-\contentsline {subsubsection}{\numberline {2.3.6}A Line Emulator Error Exception}{26}{subsubsection.2.3.6}
-\contentsline {paragraph}{\numberline {2.3.6.1}Algorithm and Flowchart}{26}{paragraph.2.3.6.1}
-\contentsline {paragraph}{\numberline {2.3.6.2}Assembly Code}{26}{paragraph.2.3.6.2}
-\contentsline {subsubsection}{\numberline {2.3.7}F Line Emulator Error Exception}{27}{subsubsection.2.3.7}
-\contentsline {paragraph}{\numberline {2.3.7.1}Algorithm and Flowchart}{27}{paragraph.2.3.7.1}
-\contentsline {paragraph}{\numberline {2.3.7.2}Assembly Code}{27}{paragraph.2.3.7.2}
-\contentsline {subsubsection}{\numberline {2.3.8}Check Instruction Error Exception}{27}{subsubsection.2.3.8}
-\contentsline {paragraph}{\numberline {2.3.8.1}Algorithm and Flowchart}{27}{paragraph.2.3.8.1}
-\contentsline {paragraph}{\numberline {2.3.8.2}Assembly Code}{28}{paragraph.2.3.8.2}
-\contentsline {subsection}{\numberline {2.4}User Instruction Manual Exception Handlers}{28}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Syntax/Unknown Command Error}{28}{subsubsection.2.4.1}
-\contentsline {paragraph}{\numberline {2.4.1.1}Algorithm and Flowchart}{28}{paragraph.2.4.1.1}
-\contentsline {paragraph}{\numberline {2.4.1.2}Assembly Code}{29}{paragraph.2.4.1.2}
-\contentsline {section}{\numberline {3}Discussion}{29}{section.3}
-\contentsline {section}{\numberline {4}Feature Suggestions}{30}{section.4}
-\contentsline {section}{\numberline {5}Conclusion}{30}{section.5}
+\contentsline {subsection}{\numberline {2.2}Debugger Commands}{15}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Help}{15}{subsubsection.2.2.1}
+\contentsline {paragraph}{\numberline {2.2.1.1}Algorithm and Flowchart}{15}{paragraph.2.2.1.1}
+\contentsline {paragraph}{\numberline {2.2.1.2}Assembly Code}{16}{paragraph.2.2.1.2}
+\contentsline {subsubsection}{\numberline {2.2.2}Memory Display}{20}{subsubsection.2.2.2}
+\contentsline {paragraph}{\numberline {2.2.2.1}Algorithm and Flowchart}{20}{paragraph.2.2.2.1}
+\contentsline {paragraph}{\numberline {2.2.2.2}Assembly Code}{21}{paragraph.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}HXDEC}{22}{subsubsection.2.2.3}
+\contentsline {paragraph}{\numberline {2.2.3.1}Algorithm and Flowchart}{22}{paragraph.2.2.3.1}
+\contentsline {paragraph}{\numberline {2.2.3.2}Assembly Code}{23}{paragraph.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.4}SORTW}{25}{subsubsection.2.2.4}
+\contentsline {paragraph}{\numberline {2.2.4.1}Algorithm and Flowchart}{25}{paragraph.2.2.4.1}
+\contentsline {paragraph}{\numberline {2.2.4.2}Assembly Code}{26}{paragraph.2.2.4.2}
+\contentsline {subsubsection}{\numberline {2.2.5}Memory Modify}{28}{subsubsection.2.2.5}
+\contentsline {paragraph}{\numberline {2.2.5.1}Algorithm and Flowchart}{28}{paragraph.2.2.5.1}
+\contentsline {paragraph}{\numberline {2.2.5.2}Assembly Code}{29}{paragraph.2.2.5.2}
+\contentsline {subsubsection}{\numberline {2.2.6}Memory Set}{37}{subsubsection.2.2.6}
+\contentsline {paragraph}{\numberline {2.2.6.1}Algorithm and Flowchart}{37}{paragraph.2.2.6.1}
+\contentsline {paragraph}{\numberline {2.2.6.2}Assembly Code}{38}{paragraph.2.2.6.2}
+\contentsline {subsubsection}{\numberline {2.2.7}Block Fill}{39}{subsubsection.2.2.7}
+\contentsline {paragraph}{\numberline {2.2.7.1}Algorithm and Flowchart}{39}{paragraph.2.2.7.1}
+\contentsline {paragraph}{\numberline {2.2.7.2}Assembly Code}{40}{paragraph.2.2.7.2}
+\contentsline {subsubsection}{\numberline {2.2.8}Block Move}{41}{subsubsection.2.2.8}
+\contentsline {paragraph}{\numberline {2.2.8.1}Algorithm and Flowchart}{41}{paragraph.2.2.8.1}
+\contentsline {paragraph}{\numberline {2.2.8.2}Assembly Code}{42}{paragraph.2.2.8.2}
+\contentsline {subsubsection}{\numberline {2.2.9}Block Test}{44}{subsubsection.2.2.9}
+\contentsline {paragraph}{\numberline {2.2.9.1}Algorithm and Flowchart}{44}{paragraph.2.2.9.1}
+\contentsline {paragraph}{\numberline {2.2.9.2}Assembly Code}{45}{paragraph.2.2.9.2}
+\contentsline {subsubsection}{\numberline {2.2.10}Block Search}{48}{subsubsection.2.2.10}
+\contentsline {paragraph}{\numberline {2.2.10.1}Algorithm and Flowchart}{48}{paragraph.2.2.10.1}
+\contentsline {paragraph}{\numberline {2.2.10.2}Assembly Code}{49}{paragraph.2.2.10.2}
+\contentsline {subsubsection}{\numberline {2.2.11}Go}{51}{subsubsection.2.2.11}
+\contentsline {paragraph}{\numberline {2.2.11.1}Algorithm and Flowchart}{51}{paragraph.2.2.11.1}
+\contentsline {paragraph}{\numberline {2.2.11.2}Assembly Code}{52}{paragraph.2.2.11.2}
+\contentsline {subsubsection}{\numberline {2.2.12}Display Formatted Registers}{52}{subsubsection.2.2.12}
+\contentsline {paragraph}{\numberline {2.2.12.1}Algorithm and Flowchart}{52}{paragraph.2.2.12.1}
+\contentsline {paragraph}{\numberline {2.2.12.2}Assembly Code}{53}{paragraph.2.2.12.2}
+\contentsline {subsubsection}{\numberline {2.2.13}Modify Register}{62}{subsubsection.2.2.13}
+\contentsline {paragraph}{\numberline {2.2.13.1}Algorithm and Flowchart}{62}{paragraph.2.2.13.1}
+\contentsline {paragraph}{\numberline {2.2.13.2}Assembly Code}{63}{paragraph.2.2.13.2}
+\contentsline {subsubsection}{\numberline {2.2.14}Echo}{73}{subsubsection.2.2.14}
+\contentsline {paragraph}{\numberline {2.2.14.1}Algorithm and Flowchart}{73}{paragraph.2.2.14.1}
+\contentsline {paragraph}{\numberline {2.2.14.2}Assembly Code}{73}{paragraph.2.2.14.2}
+\contentsline {subsection}{\numberline {2.3}Exception Handlers}{74}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Bus Error Exception}{74}{subsubsection.2.3.1}
+\contentsline {paragraph}{\numberline {2.3.1.1}Algorithm and Flowchart}{74}{paragraph.2.3.1.1}
+\contentsline {paragraph}{\numberline {2.3.1.2}Assembly Code}{75}{paragraph.2.3.1.2}
+\contentsline {subsubsection}{\numberline {2.3.2}Address Error Exception}{76}{subsubsection.2.3.2}
+\contentsline {paragraph}{\numberline {2.3.2.1}Algorithm and Flowchart}{76}{paragraph.2.3.2.1}
+\contentsline {paragraph}{\numberline {2.3.2.2}Assembly Code}{77}{paragraph.2.3.2.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Illegal Instruction Error Exception}{78}{subsubsection.2.3.3}
+\contentsline {paragraph}{\numberline {2.3.3.1}Algorithm and Flowchart}{78}{paragraph.2.3.3.1}
+\contentsline {paragraph}{\numberline {2.3.3.2}Assembly Code}{78}{paragraph.2.3.3.2}
+\contentsline {subsubsection}{\numberline {2.3.4}Privilege Violation Error Exception}{79}{subsubsection.2.3.4}
+\contentsline {paragraph}{\numberline {2.3.4.1}Algorithm and Flowchart}{79}{paragraph.2.3.4.1}
+\contentsline {paragraph}{\numberline {2.3.4.2}Assembly Code}{79}{paragraph.2.3.4.2}
+\contentsline {subsubsection}{\numberline {2.3.5}Divide by Zero Error Exception}{80}{subsubsection.2.3.5}
+\contentsline {paragraph}{\numberline {2.3.5.1}Algorithm and Flowchart}{80}{paragraph.2.3.5.1}
+\contentsline {paragraph}{\numberline {2.3.5.2}Assembly Code}{80}{paragraph.2.3.5.2}
+\contentsline {subsubsection}{\numberline {2.3.6}A Line Emulator Error Exception}{80}{subsubsection.2.3.6}
+\contentsline {paragraph}{\numberline {2.3.6.1}Algorithm and Flowchart}{80}{paragraph.2.3.6.1}
+\contentsline {paragraph}{\numberline {2.3.6.2}Assembly Code}{81}{paragraph.2.3.6.2}
+\contentsline {subsubsection}{\numberline {2.3.7}F Line Emulator Error Exception}{81}{subsubsection.2.3.7}
+\contentsline {paragraph}{\numberline {2.3.7.1}Algorithm and Flowchart}{81}{paragraph.2.3.7.1}
+\contentsline {paragraph}{\numberline {2.3.7.2}Assembly Code}{82}{paragraph.2.3.7.2}
+\contentsline {subsubsection}{\numberline {2.3.8}Check Instruction Error Exception}{82}{subsubsection.2.3.8}
+\contentsline {paragraph}{\numberline {2.3.8.1}Algorithm and Flowchart}{82}{paragraph.2.3.8.1}
+\contentsline {paragraph}{\numberline {2.3.8.2}Assembly Code}{83}{paragraph.2.3.8.2}
+\contentsline {subsection}{\numberline {2.4}User Instruction Manual Exception Handlers}{83}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Syntax/Unknown Command Error}{83}{subsubsection.2.4.1}
+\contentsline {paragraph}{\numberline {2.4.1.1}Algorithm and Flowchart}{83}{paragraph.2.4.1.1}
+\contentsline {paragraph}{\numberline {2.4.1.2}Assembly Code}{84}{paragraph.2.4.1.2}
+\contentsline {section}{\numberline {3}Discussion}{84}{section.3}
+\contentsline {section}{\numberline {4}Feature Suggestions}{85}{section.4}
+\contentsline {section}{\numberline {5}Conclusion}{86}{section.5}

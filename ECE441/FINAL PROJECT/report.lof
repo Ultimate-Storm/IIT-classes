@@ -1,25 +1,25 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Structure of Monitor Program\relax }}{6}{figure.caption.3}
 \contentsline {figure}{\numberline {2}{\ignorespaces Flowchart for Command Line Interpreter\relax }}{8}{figure.caption.4}
-\contentsline {figure}{\numberline {3}{\ignorespaces Flowchart for Help\relax }}{9}{figure.caption.5}
-\contentsline {figure}{\numberline {4}{\ignorespaces Flowchart for Memory Display\relax }}{10}{figure.caption.6}
-\contentsline {figure}{\numberline {5}{\ignorespaces Flowchart for HXDEC\relax }}{11}{figure.caption.7}
-\contentsline {figure}{\numberline {6}{\ignorespaces Flowchart for SORTW\relax }}{12}{figure.caption.8}
-\contentsline {figure}{\numberline {7}{\ignorespaces Flowchart for Memory Modify\relax }}{13}{figure.caption.9}
-\contentsline {figure}{\numberline {8}{\ignorespaces Flowchart for Memory Set\relax }}{14}{figure.caption.10}
-\contentsline {figure}{\numberline {9}{\ignorespaces Flowchart for Block Fill\relax }}{15}{figure.caption.11}
-\contentsline {figure}{\numberline {10}{\ignorespaces Flowchart for Block Move\relax }}{16}{figure.caption.12}
-\contentsline {figure}{\numberline {11}{\ignorespaces Flowchart for Block Test\relax }}{17}{figure.caption.13}
-\contentsline {figure}{\numberline {12}{\ignorespaces Flowchart for Block Search\relax }}{18}{figure.caption.14}
-\contentsline {figure}{\numberline {13}{\ignorespaces Flowchart for Go\relax }}{19}{figure.caption.15}
-\contentsline {figure}{\numberline {14}{\ignorespaces Flowchart for Display Formatted Registers\relax }}{20}{figure.caption.16}
-\contentsline {figure}{\numberline {15}{\ignorespaces Flowchart for Modify Register\relax }}{21}{figure.caption.17}
-\contentsline {figure}{\numberline {16}{\ignorespaces Flowchart for Echo\relax }}{22}{figure.caption.18}
-\contentsline {figure}{\numberline {17}{\ignorespaces Flowchart for Bus Error Exception\relax }}{23}{figure.caption.19}
-\contentsline {figure}{\numberline {18}{\ignorespaces Flowchart for Address Error Exception\relax }}{24}{figure.caption.20}
-\contentsline {figure}{\numberline {19}{\ignorespaces Flowchart for Illegal Instruction Exception\relax }}{24}{figure.caption.21}
-\contentsline {figure}{\numberline {20}{\ignorespaces Flowchart for Privilege Violation Exception\relax }}{25}{figure.caption.22}
-\contentsline {figure}{\numberline {21}{\ignorespaces Flowchart for Divide by Zero Exception\relax }}{26}{figure.caption.23}
-\contentsline {figure}{\numberline {22}{\ignorespaces Flowchart for A Line Emulator Error Exception\relax }}{26}{figure.caption.24}
-\contentsline {figure}{\numberline {23}{\ignorespaces Flowchart for F Line Emulator Error Exception\relax }}{27}{figure.caption.25}
-\contentsline {figure}{\numberline {24}{\ignorespaces Flowchart for Check Instruction Error Exception\relax }}{28}{figure.caption.26}
-\contentsline {figure}{\numberline {25}{\ignorespaces Flowchart for User Instruction Manual Exception Handler\relax }}{29}{figure.caption.27}
+\contentsline {figure}{\numberline {3}{\ignorespaces Flowchart for Help\relax }}{16}{figure.caption.5}
+\contentsline {figure}{\numberline {4}{\ignorespaces Flowchart for Memory Display\relax }}{21}{figure.caption.6}
+\contentsline {figure}{\numberline {5}{\ignorespaces Flowchart for HXDEC\relax }}{23}{figure.caption.7}
+\contentsline {figure}{\numberline {6}{\ignorespaces Flowchart for SORTW\relax }}{25}{figure.caption.8}
+\contentsline {figure}{\numberline {7}{\ignorespaces Flowchart for Memory Modify\relax }}{29}{figure.caption.9}
+\contentsline {figure}{\numberline {8}{\ignorespaces Flowchart for Memory Set\relax }}{38}{figure.caption.10}
+\contentsline {figure}{\numberline {9}{\ignorespaces Flowchart for Block Fill\relax }}{40}{figure.caption.11}
+\contentsline {figure}{\numberline {10}{\ignorespaces Flowchart for Block Move\relax }}{42}{figure.caption.12}
+\contentsline {figure}{\numberline {11}{\ignorespaces Flowchart for Block Test\relax }}{45}{figure.caption.13}
+\contentsline {figure}{\numberline {12}{\ignorespaces Flowchart for Block Search\relax }}{48}{figure.caption.14}
+\contentsline {figure}{\numberline {13}{\ignorespaces Flowchart for Go\relax }}{52}{figure.caption.15}
+\contentsline {figure}{\numberline {14}{\ignorespaces Flowchart for Display Formatted Registers\relax }}{53}{figure.caption.16}
+\contentsline {figure}{\numberline {15}{\ignorespaces Flowchart for Modify Register\relax }}{63}{figure.caption.17}
+\contentsline {figure}{\numberline {16}{\ignorespaces Flowchart for Echo\relax }}{74}{figure.caption.18}
+\contentsline {figure}{\numberline {17}{\ignorespaces Flowchart for Bus Error Exception\relax }}{75}{figure.caption.19}
+\contentsline {figure}{\numberline {18}{\ignorespaces Flowchart for Address Error Exception\relax }}{77}{figure.caption.20}
+\contentsline {figure}{\numberline {19}{\ignorespaces Flowchart for Illegal Instruction Exception\relax }}{78}{figure.caption.21}
+\contentsline {figure}{\numberline {20}{\ignorespaces Flowchart for Privilege Violation Exception\relax }}{79}{figure.caption.22}
+\contentsline {figure}{\numberline {21}{\ignorespaces Flowchart for Divide by Zero Exception\relax }}{80}{figure.caption.23}
+\contentsline {figure}{\numberline {22}{\ignorespaces Flowchart for A Line Emulator Error Exception\relax }}{81}{figure.caption.24}
+\contentsline {figure}{\numberline {23}{\ignorespaces Flowchart for F Line Emulator Error Exception\relax }}{82}{figure.caption.25}
+\contentsline {figure}{\numberline {24}{\ignorespaces Flowchart for Check Instruction Error Exception\relax }}{83}{figure.caption.26}
+\contentsline {figure}{\numberline {25}{\ignorespaces Flowchart for User Instruction Manual Exception Handler\relax }}{84}{figure.caption.27}
