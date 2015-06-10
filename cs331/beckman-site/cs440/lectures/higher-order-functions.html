@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CS 440 &mdash; Higher Order Functions</title>
+    <link rel="stylesheet" href="../css/concourse-c2.css">
+    <link rel="stylesheet" href="../css/concourse-t2.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="../css/hl.css">
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc 3.8.0">
+  </head>
+  <body>
+    <div id="main">
+      <h2> Higher Order Functions </h2>
+<p> Thursday, June 04, 2015 </p>
+
+<p>A higher order function allows you to pass a function as an
+argument to another function.  Sure, you could do this with
+function pointers in C, but HOFs also allow you to have functions
+create new functions and return them, store them in variables, and
+call them at will.</p>
+
+<p>Before watching the videos, consider the three functions below.
+The first two have a lot of code duplication.  Most languages give
+you no mechanism to avoid this.  Then consider the third function.
+How could you call this function to provide the functionality of the
+first two functions?</p>
+
+<pre><code class="language-haskell"><span class="nf">incList</span> <span class="kt">[]</span> <span class="ow">=</span> <span class="kt">[]</span>
+<span class="nf">incList</span> <span class="p">(</span><span class="n">x</span><span class="kt">:</span><span class="n">xs</span><span class="p">)</span> <span class="ow">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="kt">:</span> <span class="n">incList</span> <span class="n">xs</span>
+
+<span class="nf">decList</span> <span class="kt">[]</span> <span class="ow">=</span> <span class="kt">[]</span>
+<span class="nf">decList</span> <span class="p">(</span><span class="n">x</span><span class="kt">:</span><span class="n">xs</span><span class="p">)</span> <span class="ow">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span> <span class="kt">:</span> <span class="n">decList</span> <span class="n">xs</span>
+
+<span class="nf">map</span> <span class="n">f</span> <span class="kt">[]</span> <span class="ow">=</span> <span class="kt">[]</span>
+<span class="nf">map</span> <span class="n">f</span> <span class="p">(</span><span class="n">x</span><span class="kt">:</span><span class="n">xs</span><span class="p">)</span> <span class="ow">=</span> <span class="n">f</span> <span class="n">x</span> <span class="kt">:</span> <span class="n">map</span> <span class="n">f</span> <span class="n">xs</span></code></pre>
+
+
+
+<h3> Videos </h3>
+<ul>
+  
+  <li> <a href="../videos/basic-hofs.html"> Basic Higher Order Functions</a> </li>
+  
+  <li> <a href="../videos/map-and-foldr.html"> map and foldr</a> </li>
+  
+</ul>
+
+
+
+
+
+
+
+
+    </div>
+    <div id="sidebar">
+      <h2>Main Content</h2>
+      <ul>
+        <li><a href="../../cs440.1.html">Home</li>
+        <li><a href="../schedule.html">Schedule</li>
+        <li><a href="../syllabus.html">Syllabus</a></li>
+        <li>Policies</li>
+      </ul>
+      <h2>Getting Started</h2>
+      <ul>
+        <li>Resources</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+  </body>
+</html>

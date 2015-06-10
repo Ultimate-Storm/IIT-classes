@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CS 440 &mdash; Syllabus</title>
+    <link rel="stylesheet" href="/cs440/css/concourse-c2.css">
+    <link rel="stylesheet" href="/cs440/css/concourse-t2.css">
+    <link rel="stylesheet" href="/cs440/css/stylesheet.css">
+    <link rel="stylesheet" href="/cs440/css/hl.css">
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc 3.8.0">
+  </head>
+  <body>
+    <div id="main">
+      
+<h2 id="location-and-times">Location and Times</h2>
+
+<ul>
+  <li>Course Title: Programming Languages</li>
+  <li>Dates: June 2, 2015 – July 23, 2015</li>
+  <li>Time: 12:10 – 14:50</li>
+  <li>Location: Stuart Building 220</li>
+  <li>Instructor: Mattox Beckman</li>
+  <li>Textbook: Course notes</li>
+  <li>Office Hours: T,R; 16:00 – 17:00, Stuart Building 110</li>
+</ul>
+
+<h2 id="course-objectives">Course Objectives</h2>
+
+<p>The purpose of this course is to give you a working knowledge of the
+fundamentals of programming languages.  Programming languages are mathematical
+objects, and implementations of different models of computation.  By the end
+of the course, you will understand these models and how to turn them into
+languages.</p>
+
+<ul>
+  <li>Compare the major classes of programming languages, describing their
+techniques, features, and styles.</li>
+  <li>Demonstrate how to select an apporpriate programming language for a
+particular task.</li>
+  <li>Read a formal specification of a language and implement it.</li>
+  <li>Use four powerful ideas:
+    <ul>
+      <li>Recursion</li>
+      <li>Abstraction</li>
+      <li>Transformation</li>
+      <li>Unification</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The emphasis is on learning the theory, and using it in an implementation.</p>
+
+<h2 id="assignments">Assignments</h2>
+
+<p>Typically there will be between six and eight programming assignments,
+called <em>machine problems</em> (MPs). They will be released approximately one
+every two weeks.</p>
+
+<p>There will also be in-class assignments / activities. These will not be
+graded, but will be checked for adequate participation. These activities
+collectively will be worth 10% of your final grade. They are expected to
+be done in class, but will be accepted by the beginning of class one
+week later.</p>
+
+<p>Note that the particulars of the assignments (such as due dates, and
+even number) may change as course circumstances dictate.</p>
+
+<p>The MPs, regardless of number, are collectively worth 20% of the course
+grade.</p>
+
+<p><strong>Late assignments are not accepted under any circumstances.</strong> If you have a
+legitimate reason for missing an assignment, it is possible to have it
+excused. Occasionally the instructor may extend the due date of an
+assignment for the entire class, but this is rare.</p>
+
+<h2 id="exams">Exams</h2>
+
+<p>We will have one midterm (Thursday, June 25)
+and one final exam (Thursday, July 23). They are
+each worth 25%.</p>
+
+<p>The final exam is cumulative. If the final exam score is better than a
+particular midterm score, then the final exam will replace your midterm
+score as well. So if you get 50% on exam 1, a 75% on exam 2, and 70% on
+the final, we will grade it as if you got 70% on exam 1. But, if you got
+70% on each midterm and 50% on the final, then the scores stand as-is.</p>
+
+<p>We can implement the algorithm in <sc>Haskell</sc> like this:</p>
+
+<p><code>
+exam_1_score = max exam_1 final_exam
+exam_2_score = max exam_2 final_exam
+</code></p>
+
+<h2 id="disability-resources">Disability Resources</h2>
+
+<p>Reasonable accommodations will be made for students with documented
+disabilities. In order to receive accommodations, students must obtain a
+letter of accommodation from the Center for Disability Resources and
+make an appointment to speak with me as soon as possible. The Center for
+Disability Resources is located in the Life Sciences Building, room 218,
+312-567-5744 or <a href="disabilities@iit.edu">disabilities@iit.edu</a>.</p>
+
+    </div>
+    <div id="sidebar">
+      <h2>Main Content</h2>
+      <ul>
+        <li><a href="/cs440/">Home</li>
+        <li><a href="/cs440/schedule/">Schedule</li>
+        <li><a href="/cs440/syllabus/">Syllabus</a></li>
+        <li>Policies</li>
+      </ul>
+      <h2>Getting Started</h2>
+      <ul>
+        <li>Resources</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+  </body>
+</html>

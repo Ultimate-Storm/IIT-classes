@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CS 440 &mdash; Schedule</title>
+    <link rel="stylesheet" href="/cs440/css/concourse-c2.css">
+    <link rel="stylesheet" href="/cs440/css/concourse-t2.css">
+    <link rel="stylesheet" href="/cs440/css/stylesheet.css">
+    <link rel="stylesheet" href="/cs440/css/hl.css">
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc 3.8.0">
+  </head>
+  <body>
+    <div id="main">
+      
+<h2 id="cs-440-lecture-schedule">CS 440 Lecture Schedule</h2>
+
+<p>Here is the schedule as I have written it so far.  Not all the lectuers are up yet, but they will
+be by the time the class officially starts.</p>
+
+<table>
+  <header>
+  <tr>
+  <th> Date/Time </th>
+  <th> Lecture </th>
+  </tr>
+  </header>
+  
+
+<tr>
+<td> 2015-06-02 </td>
+    <td> <a href="/cs440/lectures/course-introduction/">Course Introduction</a> </td> </tr>
+
+<tr>
+<td> 2015-06-02 13:30 </td>
+    <td> <a href="/cs440/lectures/recursion/">Recursion</a> </td> </tr>
+
+<tr>
+<td> 2015-06-04 </td>
+    <td> <a href="/cs440/lectures/higher-order-functions/">Higher Order Functions</a> </td> </tr>
+
+<tr>
+<td> 2015-06-04 13:30 </td>
+    <td> <a href="/cs440/lectures/disjoint-types/">Disjoint Types</a> </td> </tr>
+
+<tr>
+<td> 2015-06-06 23:59 </td>
+    <td> <a href="/cs440/lectures/drop-date/">Drop Date</a> </td> </tr>
+
+<tr>
+<td> 2015-06-09 </td>
+    <td> <a href="/cs440/lectures/lambda-calculus/">Lambda Calculus</a> </td> </tr>
+
+<tr>
+<td> 2015-06-09 13:30 </td>
+    <td> <a href="/cs440/lectures/interpreters/">Interpreters</a> </td> </tr>
+
+<tr>
+<td> 2015-06-11 </td>
+    <td> <a href="/cs440/lectures/continuations/">Continuations</a> </td> </tr>
+
+<tr>
+<td> 2015-06-11 13:30 </td>
+    <td> <a href="/cs440/lectures/type-classes/">Type Classes</a> </td> </tr>
+
+<tr>
+<td> 2015-06-16 </td>
+    <td> <a href="/cs440/lectures/monads/">Monads</a> </td> </tr>
+
+<tr>
+<td> 2015-06-16 13:30 </td>
+    <td> <a href="/cs440/lectures/regular-languages/">Regular Languages</a> </td> </tr>
+
+<tr>
+<td> 2015-06-18 </td>
+    <td> <a href="/cs440/lectures/introduction-to-grammars/">Introduction to Grammars</a> </td> </tr>
+
+<tr>
+<td> 2015-06-18 13:30 </td>
+    <td> <a href="/cs440/lectures/ll-parsing/">LL Parsing</a> </td> </tr>
+
+<tr>
+<td> 2015-06-23 </td>
+    <td> <a href="/cs440/lectures/lr-parsing/">LR Parsing</a> </td> </tr>
+
+<tr>
+<td> 2015-06-23 13:30 </td>
+    <td> <a href="/cs440/lectures/combinator-parsing/">Combinator Parsing</a> </td> </tr>
+
+<tr>
+<td> 2015-06-25 </td>
+    <td> <a href="/cs440/lectures/exam-1/">Exam 1</a> </td> </tr>
+
+<tr>
+<td> 2015-06-30 </td>
+    <td> <a href="/cs440/lectures/unification/">Unification</a> </td> </tr>
+
+<tr>
+<td> 2015-06-30 13:30 </td>
+    <td> <a href="/cs440/lectures/operational-semantics/">Operational Semantics</a> </td> </tr>
+
+<tr>
+<td> 2015-07-02 </td>
+    <td> <a href="/cs440/lectures/forth-of-july/">Forth of July</a> </td> </tr>
+
+<tr>
+<td> 2015-07-07 </td>
+    <td> <a href="/cs440/lectures/denotational-semantics/">Denotational Semantics</a> </td> </tr>
+
+<tr>
+<td> 2015-07-07 13:30 </td>
+    <td> <a href="/cs440/lectures/typing-semantics/">Typing Semantics</a> </td> </tr>
+
+<tr>
+<td> 2015-07-09 </td>
+    <td> <a href="/cs440/lectures/state/">State</a> </td> </tr>
+
+<tr>
+<td> 2015-07-09 13:30 </td>
+    <td> <a href="/cs440/lectures/objects/">Objects</a> </td> </tr>
+
+<tr>
+<td> 2015-07-14 </td>
+    <td> <a href="/cs440/lectures/variables/">Variables</a> </td> </tr>
+
+<tr>
+<td> 2015-07-14 13:30 </td>
+    <td> <a href="/cs440/lectures/parameters/">Parameters</a> </td> </tr>
+
+<tr>
+<td> 2015-07-16 </td>
+    <td> <a href="/cs440/lectures/prolog/"><sc>Prolog</sc></a> </td> </tr>
+
+<tr>
+<td> 2015-07-16 13:30 </td>
+    <td> <a href="/cs440/lectures/prolog-cut/"><sc>Prolog</sc> Cut</a> </td> </tr>
+
+<tr>
+<td> 2015-07-21 </td>
+    <td> <a href="/cs440/lectures/dynamic-prolog/">Dynamic <sc>Prolog</sc></a> </td> </tr>
+
+<tr>
+<td> 2015-07-21 13:30 </td>
+    <td> <a href="/cs440/lectures/prolog-applications/"><sc>Prolog</sc> Applications</a> </td> </tr>
+
+<tr>
+<td> 2015-07-23 </td>
+    <td> <a href="/cs440/lectures/final-exam/">Final Exam</a> </td> </tr>
+
+</table>
+
+    </div>
+    <div id="sidebar">
+      <h2>Main Content</h2>
+      <ul>
+        <li><a href="/cs440/">Home</li>
+        <li><a href="/cs440/schedule/">Schedule</li>
+        <li><a href="/cs440/syllabus/">Syllabus</a></li>
+        <li>Policies</li>
+      </ul>
+      <h2>Getting Started</h2>
+      <ul>
+        <li>Resources</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+  </body>
+</html>

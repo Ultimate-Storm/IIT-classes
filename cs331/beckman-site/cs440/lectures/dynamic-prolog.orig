@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CS 440 &mdash; Dynamic <sc>Prolog</sc></title>
+    <link rel="stylesheet" href="/cs440/css/concourse-c2.css">
+    <link rel="stylesheet" href="/cs440/css/concourse-t2.css">
+    <link rel="stylesheet" href="/cs440/css/stylesheet.css">
+    <link rel="stylesheet" href="/cs440/css/hl.css">
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc 3.8.0">
+  </head>
+  <body>
+    <div id="main">
+      <h2> Dynamic <sc>Prolog</sc> </h2>
+<p> Tuesday, July 21, 2015 </p>
+
+
+<p>One powerful feature of <sc>Prolog</sc> is its ability to modify its own
+database.  This is includes the ability to insert new rules, not just
+facts.  This allows Prolog to be a very good language for programs that
+learn.</p>
+
+<h2 id="videos">Videos</h2>
+<ul>
+  <li><a href="/cs440/static/videos/dynamic-prolog">Dynamic Prolog</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div id="sidebar">
+      <h2>Main Content</h2>
+      <ul>
+        <li><a href="/cs440/">Home</li>
+        <li><a href="/cs440/schedule/">Schedule</li>
+        <li><a href="/cs440/syllabus/">Syllabus</a></li>
+        <li>Policies</li>
+      </ul>
+      <h2>Getting Started</h2>
+      <ul>
+        <li>Resources</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+  </body>
+</html>

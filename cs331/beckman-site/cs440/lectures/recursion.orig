@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CS 440 &mdash; Recursion</title>
+    <link rel="stylesheet" href="/cs440/css/concourse-c2.css">
+    <link rel="stylesheet" href="/cs440/css/concourse-t2.css">
+    <link rel="stylesheet" href="/cs440/css/stylesheet.css">
+    <link rel="stylesheet" href="/cs440/css/hl.css">
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc 3.8.0">
+  </head>
+  <body>
+    <div id="main">
+      <h2> Recursion </h2>
+<p> Tuesday, June 02, 2015 </p>
+
+<p>We will talk about recursion, the second most powerful idea of
+computer science.  You have likely seen recursion before, as well as
+proofs by induction.  Before watching the videos, think about these
+questions for five minutes or so.</p>
+
+<ul>
+  <li>Did you know that if you take the first \(n\) odd numbers and
+ sum them, that the result is \(n^2\) (i.e., \(\Sigma_{i=1}^n
+ 2n-1 = n^2\))?  Try to prove this by induction; remember you need
+ a base case (when \(n=1\)) and an induction case (when \(n &gt;
+ 1\)).  <strong>Try this even if you have completely forgotten how to do induction.</strong>
+</li>
+  <li>In your favorite language, try to write a recursive function that
+ computes \(n^2\) in the same way, by summing the first \(n\) odd numbers.</li>
+  <li>Imagine that you had a recursive function that never made use
+ of the result of its recursive call.  Would such a function even
+ be useful? (Hint: the answer is “yes.”) What kinds of things could
+ you do if you could guarantee to the compiler that this would be
+ the case?</li>
+</ul>
+
+
+
+
+<h3> Videos </h3>
+<ul>
+  
+  <li> <a href="/cs440/videos/induction"> Induction</a> </li>
+  
+  <li> <a href="/cs440/videos/basic-recursion"> Basic Recursion</a> </li>
+  
+  <li> <a href="/cs440/videos/tail-recursion"> Tail Recursion</a> </li>
+  
+</ul>
+
+
+
+
+
+<h3> Handouts </h3>
+<ul>
+  
+  <li> <a href="/cs440/handouts/recursion-activity.pdf">
+      Recursion Activity</a> </li>
+  
+</ul>
+
+
+
+
+    </div>
+    <div id="sidebar">
+      <h2>Main Content</h2>
+      <ul>
+        <li><a href="/cs440/">Home</li>
+        <li><a href="/cs440/schedule/">Schedule</li>
+        <li><a href="/cs440/syllabus/">Syllabus</a></li>
+        <li>Policies</li>
+      </ul>
+      <h2>Getting Started</h2>
+      <ul>
+        <li>Resources</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+  </body>
+</html>

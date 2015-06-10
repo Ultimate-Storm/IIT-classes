@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mattox Beckman</title>
+    <description>Contact Info, Schedule, Useful(?) information, and Random Musings</description>
+    <link>http://mccarthy.cs.iit.edu/mattox/</link>
+    <atom:link href="http://mccarthy.cs.iit.edu/mattox/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 11 Jan 2015 18:11:57 -0600</pubDate>
+    <lastBuildDate>Sun, 11 Jan 2015 18:11:57 -0600</lastBuildDate>
+    <generator>Jekyll v2.5.2</generator>
+    
+      <item>
+        <title>AMB #0 &amp;mdash; On Dijkstra and Writing</title>
+        <description>&lt;p&gt;I have long admired E.W. Dijkstra for his contributions to computer science, and his very precise
+thinking and communication.  A while back I discovered that Dijkstra’s works are all online.&lt;/p&gt;
+
+&lt;p&gt;I found that he had a habit that will benefit me in two ways.  The habit was to write a series of
+papers called “EWD’s” which often were unpublished, but instead were circulated to
+various colleagues.  Some of these writings were theorems, some became papers, some were just
+refections on things he had seen recently.  It reminds me of a blog, except that many of them were
+hand-written.&lt;/p&gt;
+
+&lt;p&gt;Dijkstra explained the benefit he derived from doing this in his
+&lt;a href=&quot;https://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1000.html&quot;&gt;thousandth entry&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;On a more contented note: I am reasonably pleased with life, about as pleased as we poor mortals
+may be allowed to be, and in this contentment the EWD-series plays a major role. If there is one
+“scientific” discovery I am proud of, it is the discovery of the habit of writing
+without publication in mind. I experience it as a liberating habit: without it, doing the work
+becomes one thing and writing it down becomes another one, which is often viewed as an unpleasant
+burden. When working and writing have merged, that burden has been taken away.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The habit is also liberating in a much more profound sense. I consider, for instance,
+&lt;a href=&quot;https://www.cs.utexas.edu/users/EWD/ewd09xx/EWD975.PDF&quot;&gt;EWD975 (pdf)&lt;/a&gt; on
+the Theorem of Pythagoras—of all theorems!—a major achievement of the last
+semester. It was an unadulterated pleasure to write it; one of its recipients called it
+“absolutely bloody marvellous.” Had I only written with publication in mind, it would
+never have seen the light of day.  Not only would aforementioned recipient have been denied his
+enjoyment, I would have been so too: what I sent out was Sunday’s version, which I could
+only write after the discovery that I could still improve on Saturday’s version, The only way to
+discover that a neglected or ignored topic is worth writing about is to write about it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The first benefit I will gain from this series is that I now have a mentor.  A long time ago I
+learned that if one wanted to learn to write well, then one should read things that were written
+well.  I now have a large collection of well-written essays to read.  Further, the topics themselves
+are very interesting in their own right (such as the above-mentioned Theorem of Pythagoras)!&lt;/p&gt;
+
+&lt;p&gt;The second benefit is that I can emulate this habit.  I have thought before that writing just for
+its own sake was an important habit, but rarely had I seen it done before now.  With this
+encouragement, I will start my own series.  This will help me sharpen my thinking and communicate my
+ideas with my colleagues.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 09 Dec 2014 08:30:00 -0600</pubDate>
+        <link>http://mccarthy.cs.iit.edu/mattox/amb/2014/12/09/on-dijkstra-and-writing/</link>
+        <guid isPermaLink="true">http://mccarthy.cs.iit.edu/mattox/amb/2014/12/09/on-dijkstra-and-writing/</guid>
+        
+        
+        <category>amb</category>
+        
+      </item>
+    
+  </channel>
+</rss>

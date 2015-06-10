@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CS 440 &mdash; <sc>Prolog</sc></title>
+    <link rel="stylesheet" href="/cs440/css/concourse-c2.css">
+    <link rel="stylesheet" href="/cs440/css/concourse-t2.css">
+    <link rel="stylesheet" href="/cs440/css/stylesheet.css">
+    <link rel="stylesheet" href="/cs440/css/hl.css">
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc 3.8.0">
+  </head>
+  <body>
+    <div id="main">
+      <h2> <sc>Prolog</sc> </h2>
+<p> Thursday, July 16, 2015 </p>
+
+
+<p>One of the strangest languages we will see in this course is <sc>Prolog</sc>.  It is
+incredibly useful for solving certain kinds of problems, so you should be
+familiar with it in case you meet such problems in the future.</p>
+
+<h2 id="videos">Videos</h2>
+<ul>
+  <li><a href="/cs440/videos/prolog/">Prolog</a></li>
+</ul>
+
+<h2 id="activities">Activities</h2>
+<ul>
+  <li><a href="/cs440/static/handouts/prolog-activity.pdf">Prolog</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div id="sidebar">
+      <h2>Main Content</h2>
+      <ul>
+        <li><a href="/cs440/">Home</li>
+        <li><a href="/cs440/schedule/">Schedule</li>
+        <li><a href="/cs440/syllabus/">Syllabus</a></li>
+        <li>Policies</li>
+      </ul>
+      <h2>Getting Started</h2>
+      <ul>
+        <li>Resources</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+  </body>
+</html>

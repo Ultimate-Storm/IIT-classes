@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS 331 &amp;mdash; Data Structures</title>
+    <description>How you structure your data changes the questions you can ask about it.</description>
+    <link>http://mccarthy.cs.iit.edu/cs331/</link>
+    <atom:link href="http://mccarthy.cs.iit.edu/cs331/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 04 May 2015 11:19:22 -0500</pubDate>
+    <lastBuildDate>Mon, 04 May 2015 11:19:22 -0500</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Vagrant box is ready.</title>
+        <description>&lt;p&gt;The pre-built machine is ready.  Here’s what you need to do:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Get &lt;a href=&quot;http://vagrantup.com&quot;&gt;vagrant&lt;/a&gt; and install it on your system.&lt;/li&gt;
+  &lt;li&gt;Install &lt;a href=&quot;https://www.virtualbox.org/&quot;&gt;virtualbox&lt;/a&gt; on your system.
+It needs permission to run as administrator.&lt;/li&gt;
+  &lt;li&gt;Make sure your BIOS (the setup screen you get when you hit F12 during boot) is set to
+allow virtualization.&lt;/li&gt;
+  &lt;li&gt;From the command line, run this command&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant box add --name vcs331 http://mccarthy.cs.iit.edu/cs331/static/package.box
+mkdir vcs331
+
+vagrant init vcs331
+vagrant up
+vagrant ssh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can get a command line by running &lt;code&gt;cmd&lt;/code&gt;, or better yet by &lt;a href=&quot;http://git-scm.org&quot;&gt;installing Git&lt;/a&gt; and
+running &lt;code&gt;git-bash&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once you’ve done this, you will be logged into your new machine!  If you need them,
+the username and password are both &lt;code&gt;vagrant&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To set things up, run the command&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;setup&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It will ask you for your name and email address, and the configure a few
+things for your machine.&lt;/p&gt;
+
+&lt;p&gt;Next you should read the &lt;a href=&quot;/cs331/static/handouts/linux-account.pdf&quot;&gt;linux account guide&lt;/a&gt; to learn more about Linux and Git.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 Jan 2015 11:20:00 -0600</pubDate>
+        <link>http://mccarthy.cs.iit.edu/cs331/linux/2015/01/26/linux-box-ready/</link>
+        <guid isPermaLink="true">http://mccarthy.cs.iit.edu/cs331/linux/2015/01/26/linux-box-ready/</guid>
+        
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>&lt;sc&gt;Clojure&lt;/sc&gt; guide ready.</title>
+        <description>&lt;p&gt;The guide to &lt;sc&gt;Clojure&lt;/sc&gt; is now ready.  There are two versions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/cs331/static/handouts/clojure-guide-color.pdf&quot;&gt;color&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/cs331/static/handouts/clojure-guide-bw.pdf&quot;&gt;black/white&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 14 Jan 2015 19:20:00 -0600</pubDate>
+        <link>http://mccarthy.cs.iit.edu/cs331/clojure/2015/01/14/clojure-guide-ready/</link>
+        <guid isPermaLink="true">http://mccarthy.cs.iit.edu/cs331/clojure/2015/01/14/clojure-guide-ready/</guid>
+        
+        
+        <category>clojure</category>
+        
+      </item>
+    
+      <item>
+        <title>What&#39;s Going On?</title>
+        <description>&lt;p&gt;On the off chance that you are looking at the CS 331 site during the break, you will notice that a bunch of things
+have changed.  Instead of using my custom-written CMS code, I am migrating everything to &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; so I can
+spend more time on content and less on administration.&lt;/p&gt;
+
+&lt;p&gt;Looking for the grading script status page?  It’s &lt;a href=&quot;http://mccarthy.cs.iit.edu/cs331/grading&quot;&gt;over here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-clojure&quot; data-lang=&quot;clojure&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;defn &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;inc &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;+ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 11 Dec 2014 15:30:00 -0600</pubDate>
+        <link>http://mccarthy.cs.iit.edu/cs331/jekyll/update/2014/12/11/whats-going-on/</link>
+        <guid isPermaLink="true">http://mccarthy.cs.iit.edu/cs331/jekyll/update/2014/12/11/whats-going-on/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>

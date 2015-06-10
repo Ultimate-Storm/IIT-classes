@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CS 440 &mdash; Course Introduction</title>
+    <link rel="stylesheet" href="/cs440/css/concourse-c2.css">
+    <link rel="stylesheet" href="/cs440/css/concourse-t2.css">
+    <link rel="stylesheet" href="/cs440/css/stylesheet.css">
+    <link rel="stylesheet" href="/cs440/css/hl.css">
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc 3.8.0">
+  </head>
+  <body>
+    <div id="main">
+      <h2> Course Introduction </h2>
+<p> Tuesday, June 02, 2015 </p>
+
+<p><strong>Welcome to CS 440!</strong></p>
+
+<p>In this lecture the professor will introduce the course.  In this
+  lecture, you will learn:</p>
+
+<ul>
+  <li>
+<strong>Why</strong> we study languages.  What does a knowledge
+of programming languages do for you?</li>
+  <li>
+<strong>How</strong> the course is organized.  We will discuss flipped
+lectures, lab sections, in-class activities, and exams.</li>
+  <li>
+<strong>What</strong> tools you will need to set up your environment.
+    <ul>
+</ul>
+    <ul>
+      <li>The language (<sc>Haskell</sc>).</li>
+      <li>A good editor (Emacs, or others).</li>
+      <li>Version control software (git)</li>
+      <li>Secure shell (if you want to use the server instead of your
+own machine).</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+<h3> Slides </h3>
+<ul>
+  
+  <li> <a href="/cs440/slides/course-introduction-slides.pdf">
+      Course Introduction Slides</a> </li>
+  
+  <li> <a href="/cs440/slides/course-introduction-slides-4up.pdf">
+      Course Introduction Slides (4up)</a> </li>
+  
+</ul>
+
+
+
+<h3> Handouts </h3>
+<ul>
+  
+  <li> <a href="/cs440/handouts/pre-course-assessment-activity.pdf">
+      Pre-course Assessment</a> </li>
+  
+</ul>
+
+
+
+
+    </div>
+    <div id="sidebar">
+      <h2>Main Content</h2>
+      <ul>
+        <li><a href="/cs440/">Home</li>
+        <li><a href="/cs440/schedule/">Schedule</li>
+        <li><a href="/cs440/syllabus/">Syllabus</a></li>
+        <li>Policies</li>
+      </ul>
+      <h2>Getting Started</h2>
+      <ul>
+        <li>Resources</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+  </body>
+</html>
