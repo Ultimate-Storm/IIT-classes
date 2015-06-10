@@ -1,0 +1,7 @@
+Goodbye Beckman,
+
+        I wish I would've had you for this course. For those
+        reading and who also know of Mattox Beckman, he left IIT 
+        after the summer term of 2015. The CS department will 
+        truly never be the same. Luckily, I preserved his website
+        for anyone who stumbles upon this repsository.
