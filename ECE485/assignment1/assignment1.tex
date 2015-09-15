@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 \usepackage{fullpage}
 \usepackage{listings}
 \usepackage{color}
@@ -89,13 +89,13 @@ After this, the assembler takes the translation and converts these statement int
 \begin{align*}
 \textrm{CPI for A} & = \frac{\textrm{Clock Cycles}}{\textrm{Instruction}} \\
 & = \frac{1.1E9}{1.0E9}\\
-& = \textbf{1.1}
+& = \boldsymbol{1.1}
 \end{align*}
 
 \begin{align*}
 \textrm{CPI for B} & = \frac{\textrm{Clock Cycles}}{\textrm{Instruction}} \\
 & = \frac{1.5E9}{1.2E9}\\
-& = \textbf{1.25}
+& = \boldsymbol{1.25}
 \end{align*}
 
 \subsection*{\small b. Assume the compiled program run on two different processors. If the execution times on the two processors are the same, how much faster is the clock of the processor running compiler A's code versus the clock of the processor running compiler B's code?}
@@ -105,7 +105,7 @@ After this, the assembler takes the translation and converts these statement int
 \textrm{AInstr.} \times \textrm{A CPI} \times \textmd{A CCT} & =  \textrm{BInstr.} \times \textrm{B CPI} \times \textmd{B CCT}\\
 1.0E9 \times 1.1 \times A CCT & = 1.2E9 \times 1.25 \times B CCT\\
 \frac{\textrm{A CCT}}{\textrm{B CCT}} & = \frac{1.5E9}{1.1E9}\\
-& \approx \textbf{1.363 \textrm{ times faster}}
+& \approx \boldsymbol{1.363 \textrm{ times faster}}
 \end{align*}
 
 \subsection*{\small c. A new compiler is developed that uses only 6.0E8 instructions and has an average CPI of 1.1. What is the speedup of using the new compiler versus using compiler A or B on the original processor?}
@@ -121,17 +121,98 @@ After this, the assembler takes the translation and converts these statement int
 
 \begin{align*}
 \frac{\textrm{Execution time of A}}{\textrm{Execution time of C}} & = \frac{1.1}{0.66}\\
-& \approx \textbf{1.67 \textrm{ times faster than A}}
+& \approx \boldsymbol{1.67 \textrm{ times faster than A}}
 \end{align*}
 
 \begin{align*}
 \frac{\textrm{Execution time of B}}{\textrm{Execution time of C}} & = \frac{1.5}{0.66}\\
-& \approx \textbf{2.27 \textrm{ times faster than B}}
+& \approx \boldsymbol{2.27 \textrm{ times faster than B}}
 \end{align*}
 \section*{Problem 1.8}
+\textbf{The Pentium 4 Prescott processor, released in 2004, had a clock rate of 3.6 GHz and voltage of 1.25V. Assume that, on average, it consumed 10W of static power and 90W of dynamic power.}\\
 
+\noindent\textbf{The Core i5 Ivy Bridge, released in 2012, had a clock rate of 3.4 GHz and voltage of 0.9V. Assume that on average, it consumed 30W of static power and 40W of dynamic power.}
+
+\subsection*{\small 1. For each processor find the average capactive loads}
+
+\begin{align*}
+\textrm{Capacitive Load of Pentium 4} & = \frac{\textrm{Power}}{{\textrm{Voltage}}^2 \times Clock Rate} \\
+& = \frac{ 90 }{{1.25}^2 \times 3.6 \times 10^9}\\
+& = \boldsymbol{1.6 \times 10^{-8} W} 
+\end{align*}
+
+\begin{align*}
+\textrm{Capacitive Load of i5} & = \frac{\textrm{Power}}{{\textrm{Voltage}}^2 \times Clock Rate} \\
+& = \frac{40}{{0.9}^2 \times 3.4 \times 10^9}\\
+& = \boldsymbol{1.4524 \times 10^{-8} W} 
+\end{align*}
+
+\subsection*{\small 2. Find the percentage of the total dissipated power comprised by static power and the ratio of static power to dynamic power for each technology.}
+
+\begin{align*}
+\textrm{Total Power for Pentium 4} & = 10W + 90W = 100W\\
+\textrm{Total Power for i5} & = 30W + 40W = 70W\\
+\textrm{Pentium 4 Static Power Percent} & = \frac{10}{100} \times 100 = \boldsymbol{10\%} \\
+\textrm{i5 Static Power Percent} & = \frac{30}{70} \times 100 \approx \boldsymbol{42.86\%} \\
+\textrm{Pentium 4 ratio} & = \frac{\textrm{Static Power}}{\textrm{Dynamic Power}} \\
+& = \frac{10W}{90W} = \boldsymbol{1:9}\\
+\textrm{i5 ratio} & = \frac{\textrm{Static Power}}{\textrm{Dynamic Power}} \\
+& = \frac{30W}{40W} = \boldsymbol{3:4}
+\end{align*}
+
+\subsection*{\small 3. If the total dissipated power is to be reduced by 10\%, how much should the voltage be reduced to maintain the same leakage current? Note: power is defined as the product of voltage and current.}
+\begin{align*}
+\textrm{Power} & = \textrm{Voltage} \times \textrm{Current}\\
+\textrm{Current}_{\textrm{old}} & = \textrm{Current}_{\textrm{new}}\\
+\textrm{Reduced Power Pentium 4} & = 90W\\
+\textrm{Reduced Power i5} & = 63W\\
+\frac{\textrm{Power}_{\textrm{old}}}{\textrm{Voltage}_{\textrm{old}}} & = \frac{\textrm{Power}_{\textrm{new}}}{\textrm{Voltage}_{\textrm{new}}}\\
+\textrm{Voltage}_{\textrm{new}} & = \frac{90 \times 1.25}{100}\\
+& = 1.125V\\
+\frac{1.25V}{1.125} & \approx \boldsymbol{1.1} \textrm{ times reduction}\\
+\end{align*}
 \section*{Problem 1.10}
+\textbf{Assume a 15cm diameter wafer has a cost of 12, contains 84 dies, and has 0.020 defects/cm$^2$. Assume a 20cm diameter wafer has a cost of 15, contains 100 dies, and has 0.031 defects/cm$^2$.}
 
+\subsection*{\small 1. Find the yield for both wafers.}
+\begin{align*}
+\textrm{Wafer Area} & = \pi \times r^2\\
+\textrm{Wafer Area 1} & = \pi \times 7.5^2\\
+& \approx 176.71 \textrm{cm}^2\\
+\textrm{Wafer Area 2} & = \pi \times 10^2\\
+& \approx 314.159 \textrm{cm}^2\\
+\textrm{Die Area 1} & = \frac{\textrm{Wafer Area 1}}{\textrm{Dies per Wafer 1}}\\
+& \approx 2.1 \textrm{cm}^2\\
+\textrm{Die Area 2} & = \frac{\textrm{Wafer Area 2}}{\textrm{Dies per Wafer 2}}\\
+& \approx 3.14 \textrm{cm}^2\\
+\textrm{Yield} & = \frac{1}{(1 + (\textrm{Defects per area} \times \textrm{Die area}/2))^2}\\
+\textrm{Yield 1} & = \frac{1}{(1 + (0.020 \times 2.1/2))^2}\\
+& = \frac{1}{1.021^2}\\
+& \approx \boldsymbol{0.959}\\
+\textrm{Yield 2} & = \frac{1}{(1 + (0.031 \times 3.14/2))^2}\\
+& = \frac{1}{1.04867^2}\\
+& \approx \boldsymbol{0.909}
+\end{align*}
+
+\subsection*{\small 2. Find the cost per die for both wafers}
+\begin{align*}
+\textrm{Cost per die} & = \frac{\textrm{Cost per wafer}}{\textrm{Dies per wafer} \times \textrm{yield}}\\
+\textrm{Cost per die 1} & = \frac{12}{84 \times 0.959}\\
+& \approx \boldsymbol{0.1489} \\ 
+\textrm{Cost per die 2} & = \frac{15}{100 \times 0.909}\\
+& \approx \boldsymbol{0.165}
+\end{align*}
+
+\subsection*{\small 3. If the number of dies per wafer is increased by 10\% and the defects per area unit increases by 15\%, find the die area and yield.}
+\begin{align*}
+\textrm{New Dies per Wafer 1} & = 1.1 \times 84 = 92.4\\
+\textrm{New Dies per Wafer 2} & = 1.1 \times 100 = 110\\
+\textrm{New defects/cm}^2 1 & = 1.15 \times 0.020 = 0.23 \textrm{ defects/cm}^2\\
+\textrm{New defects/cm}^2 2 & = 1.15 \times 0.031 = 0.03565 \textrm{ defects/cm}^2\\
+\textrm{New Die Area 1} & = \frac{176.71}{92.4} = \boldsymbol{1.912} \textrm{cm}^2\\
+\textrm{New Die Area 2} & = \frac{314.159}{110} = \boldsymbol{2.855} \textrm{cm}^2
+\textrm{New Yield 1} &= \frac{1}{}
+\end{align*}
 \section*{Problem 1.14}
 
 \end{document}
