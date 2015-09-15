@@ -10,9 +10,22 @@
 \maketitle
 
 \section{Initial Release}
+The features implemented in the initial release included:
+\begin{itemize}
+	\item Line Parser Loop
+	\item Character Parser Loop
+	\item Comment Recognition
+	\item Space Recognition
+	\item \textbf{SINGLE} token Recognition
+	\item \textbf{NAME} token Recognition
+	\item File Output
+	\item Error Handling
+\end{itemize}
+These features were mostly chosen because they are the basis of the Lexical Analysis functionality in the simulator. The two main loops involved in the parser provided a solid skeletal structure so that detail specific recognition, such as recognizing comments, name tokens, etc., could be included later. Subsequently, once the basis was created, the \textbf{SINGLE} and \textbf{NAME} tokens were easily implemented using if statements within the character parser loop. As stated previously, these features provided the backbone of the lexical analysis functionality, so it was crucial to design this portion of the simulator for the initial release.
 
 \section{Test Cases}
-
+When designing the test cases, it was critical that the \texttt{*.evl} test files accurately represented proper examples of real circuits. This means that in all test cases, \textbf{NAME} tokens, \textbf{SINGLE} tokens, and comments were a must to include in each file. Furthermore, the structure of each \texttt{*.evl} test file had to differ from each other to make sure the lexical analysis functionality could handle general case circuits, and not only be able to tokenize certain circuits. A variety of structures were used in the \texttt{*.evl} test files to ensure that tokenization was being properly processed. 
 \section{Final Release}
+The final release involved implementing the recognition of \textbf{NUMBER} tokens. Because so much structure was designed and implemented during the initial release, this feature was easily able to be added to the character parser loop and file output functionality. Using the \texttt{cctype} library, the function \texttt{isdigit(int c)} was used to check for numbers in the file. Because of the modularity of the \texttt{if} statements within the character parser loop, the required code to recognize \textbf{NUMBER} tokens was easily injected into the previously developed initial release code, and passed all 10 EasyVL test cases, along with the 5 custom test cases designed for the initial release.
 
 \end{document}
