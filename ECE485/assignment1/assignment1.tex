@@ -40,7 +40,7 @@
 
 \section*{Problem 1.3}
 
-\textbf{Describe the steps that transform a program written in a high-level language such as C into a representation that is directly executed by a computer processor.}\\
+\small\textbf{Describe the steps that transform a program written in a high-level language such as C into a representation that is directly executed by a computer processor.}\\
 
 We can thank compilers for allowing computer programmers to be as productive as they are today. The compiler will look at the syntax of a high-level language and translate the statement into the corresponding assembly code that will produce the same functionality. For example the compiler would translate this C code: \\ 
 
@@ -71,7 +71,7 @@ swap:
 After this, the assembler takes the translation and converts these statement into binary, or machine code, so that the operations can be executed in the hardware.
 
 \section*{Problem 1.7}
-\textbf{Compilers can have a profound impact on the performance of an pllication. Assume that for a program , compiler A results in a dynamic instruction count of 1.0E9 and has an execution time of 1.1 s, while compiler B results in a dynamic instruction count of 1.2E9 and an execution time of 1.5 s.}
+\small\textbf{Compilers can have a profound impact on the performance of an pllication. Assume that for a program , compiler A results in a dynamic instruction count of 1.0E9 and has an execution time of 1.1 s, while compiler B results in a dynamic instruction count of 1.2E9 and an execution time of 1.5 s.}
 \subsection*{\small 1a. Find the average CPI for each program given that the processor has a clock cycle time of 1 ns}
 
 \begin{align*}
@@ -129,7 +129,7 @@ After this, the assembler takes the translation and converts these statement int
 & \approx \boldsymbol{2.27 \textrm{ times faster than B}}
 \end{align*}
 \section*{Problem 1.8}
-\textbf{The Pentium 4 Prescott processor, released in 2004, had a clock rate of 3.6 GHz and voltage of 1.25V. Assume that, on average, it consumed 10W of static power and 90W of dynamic power.}\\
+\small\textbf{The Pentium 4 Prescott processor, released in 2004, had a clock rate of 3.6 GHz and voltage of 1.25V. Assume that, on average, it consumed 10W of static power and 90W of dynamic power.}\\
 
 \noindent\textbf{The Core i5 Ivy Bridge, released in 2012, had a clock rate of 3.4 GHz and voltage of 0.9V. Assume that on average, it consumed 30W of static power and 40W of dynamic power.}
 
@@ -172,7 +172,7 @@ After this, the assembler takes the translation and converts these statement int
 \frac{1.25V}{1.125} & \approx \boldsymbol{1.1} \textrm{ times reduction}\\
 \end{align*}
 \section*{Problem 1.10}
-\textbf{Assume a 15cm diameter wafer has a cost of 12, contains 84 dies, and has 0.020 defects/cm$^2$. Assume a 20cm diameter wafer has a cost of 15, contains 100 dies, and has 0.031 defects/cm$^2$.}
+\small\textbf{Assume a 15cm diameter wafer has a cost of 12, contains 84 dies, and has 0.020 defects/cm$^2$. Assume a 20cm diameter wafer has a cost of 15, contains 100 dies, and has 0.031 defects/cm$^2$.}
 
 \subsection*{\small 1. Find the yield for both wafers.}
 \begin{align*}
@@ -207,12 +207,59 @@ After this, the assembler takes the translation and converts these statement int
 \begin{align*}
 \textrm{New Dies per Wafer 1} & = 1.1 \times 84 = 92.4\\
 \textrm{New Dies per Wafer 2} & = 1.1 \times 100 = 110\\
-\textrm{New defects/cm}^2 1 & = 1.15 \times 0.020 = 0.23 \textrm{ defects/cm}^2\\
+\textrm{New defects/cm}^2 1 & = 1.15 \times 0.020 = 0.023 \textrm{ defects/cm}^2\\
 \textrm{New defects/cm}^2 2 & = 1.15 \times 0.031 = 0.03565 \textrm{ defects/cm}^2\\
 \textrm{New Die Area 1} & = \frac{176.71}{92.4} = \boldsymbol{1.912} \textrm{cm}^2\\
-\textrm{New Die Area 2} & = \frac{314.159}{110} = \boldsymbol{2.855} \textrm{cm}^2
-\textrm{New Yield 1} &= \frac{1}{}
+\textrm{New Die Area 2} & = \frac{314.159}{110} = \boldsymbol{2.855} \textrm{cm}^2\\
+\textrm{New Yield 1} &= \frac{1}{{(1 + (0.023 \times 1.912/2))^2}}\\
+& = \frac{1}{{1.0219}^2} \approx \boldsymbol{.9574}\\
+\textrm{New Yield 2} &= \frac{1}{{(1 + (0.03565 \times 2.855/2))^2}}\\
+& = \frac{1}{{1.05}^2} \approx \boldsymbol{.9054}
+\end{align*}
+
+\subsection*{\small 4. Assume a fabrication process improves the yield from 0.92 to 0.95. Find the defects per area unit for each version of the technology given a die area of 200 mm$^2$.}
+\begin{align*}
+\textrm{Yield}^{1/2} & = \frac{1}{(1 + \textrm{defects per area} \times \textrm{die area}/2)}\\
+(1 + \textrm{defects per area} \times \textrm{die area}/2) & = \textrm{Yield}^{-1/2}\\
+\textrm{Defects per area} & = \frac{(\textrm{Yield}^{-1/2}-1) \times 2}{\textrm{Die area}}\\
+\textrm{Defects per area Version 1} & = \frac{0.92^{-1/2}-1 \times 2}{200 \textrm{mm}^2} = \boldsymbol{0.000425} \textrm{ defects}/\textrm{mm}^2\\
+\textrm{Defects per area Version 2} & = \frac{0.95^{-1/2}-1 \times 2}{200 \textrm{mm}^2} = \boldsymbol{0.000259} \textrm{ defects}/\textrm{mm}^2
 \end{align*}
 \section*{Problem 1.14}
+\small\textbf{Assume a program requires the execution of $50 \times 10^6$ FP instructions, $110 \times 10^6$ INT instructions, $80 \times 10^6$ L/S instructions, and $16 \times 10^6$ branch instructions. The CPI for each type of instructions is 1, 1, 4, and 2, respectively. Assume that the processor has a 2 GHz clock rate.}
+
+\subsection*{\small 1. By how much must we improve the CPI of FP instructions if we want the program to run two times faster?}
+\begin{align*}
+\Sigma \textrm{Clock Cycles} & = (50 \times 10^6 \cdot 1) + (110 \times 10^6 \cdot 1) + (80 \times 10^6 \cdot 4) + (16 \times 10^6 \cdot 2)\\
+& = 512 \times 10^6
+\end{align*}
+\begin{align*}
+\textrm{Desired clock cycles} & = 256 \times 10^6\\
+256 \times 10^6 & = (50 \times 10^6 \cdot \textrm{Desired CPI}) + (110 \times 10^6 \cdot 1) + (80 \times 10^6 \cdot 4) + (16 \times 10^6 \cdot 2)\\
+\textrm{Desired CPI} & = \frac{256 \times 10^6 - 462 \times 10^6}{50 \times 10^6} = {-4.12}\\
+& \textbf{\textrm{This improvement is IMPOSSIBLE!}}
+\end{align*}
+
+\subsection*{\small 2. By how much must we improve the CPI of L/S instructions if we want the program to run two times faster?}
+\begin{align*}
+\textrm{Desired clock cycles} & = 256 \times 10^6\\
+256 \times 10^6 & = (50 \times 10^6 \cdot 1) + (110 \times 10^6 \cdot 1) + (80 \times 10^6 \cdot \textrm{Desired CPI}) + (16 \times 10^6 \cdot 2)\\
+\textrm{Desired CPI} & = \frac{256 \times 10^6 - 192 \times 10^6}{80 \times 10^6} = \boldsymbol{0.8}\\
+& \textrm{CPI must be reduced by 1/5}
+\end{align*}
+
+\subsection*{\small 3. By how much is the execution time of the program improved if the CPI of INT and FP instructions is reduced by 40\% and the CPI of L/S and Branch is reduced by 30\%?}
+\begin{align*}
+\textrm{CPI}_{\textrm{INT}} & = 0.4\\
+\textrm{CPI}_{\textrm{FP}} & = 0.4\\
+\textrm{CPI}_{\textrm{L/S}} & = 1.2\\
+\textrm{CPI}_{\textrm{Branch}} & = 0.6\\
+\textrm{Execution time} & = \frac{\textrm{Clock cycles}}{\textrm{Clock rate}}\\
+& = \frac{512 \times 10^6}{2 \times 10^9} = 0.256 s\\
+\Sigma \textrm{Clock Cycles} & = (50 \times 10^6 \cdot 0.4) + (110 \times 10^6 \cdot 0.4) + (80 \times 10^6 \cdot 1.2) + (16 \times 10^6 \cdot 0.6)\\
+& = 169.6 \times 10^6\\
+\textrm{New Execution Time} & = \frac{169.6 \times 10^6}{2 \times 10^9} = \textbf{0.0848 s}\\
+& \textrm{Execution time reduced to} \approx \textrm{1/3 original time}
+\end{align*}
 
 \end{document}
