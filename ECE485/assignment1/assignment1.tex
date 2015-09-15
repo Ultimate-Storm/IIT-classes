@@ -72,7 +72,7 @@ After this, the assembler takes the translation and converts these statement int
 
 \section*{Problem 1.7}
 \small\textbf{Compilers can have a profound impact on the performance of an pllication. Assume that for a program , compiler A results in a dynamic instruction count of 1.0E9 and has an execution time of 1.1 s, while compiler B results in a dynamic instruction count of 1.2E9 and an execution time of 1.5 s.}
-\subsection*{\small 1a. Find the average CPI for each program given that the processor has a clock cycle time of 1 ns}
+\subsection*{\small a. Find the average CPI for each program given that the processor has a clock cycle time of 1 ns}
 
 \begin{align*}
 \textrm{Clock Cycles for A} & = \frac{\textrm{Execution time}}{\textrm{Clock Cycle Time}} \\
@@ -245,7 +245,7 @@ After this, the assembler takes the translation and converts these statement int
 \textrm{Desired clock cycles} & = 256 \times 10^6\\
 256 \times 10^6 & = (50 \times 10^6 \cdot 1) + (110 \times 10^6 \cdot 1) + (80 \times 10^6 \cdot \textrm{Desired CPI}) + (16 \times 10^6 \cdot 2)\\
 \textrm{Desired CPI} & = \frac{256 \times 10^6 - 192 \times 10^6}{80 \times 10^6} = \boldsymbol{0.8}\\
-& \textrm{CPI must be reduced by 1/5}
+& \textrm{CPI must be reduced to 1/5 original CPI}
 \end{align*}
 
 \subsection*{\small 3. By how much is the execution time of the program improved if the CPI of INT and FP instructions is reduced by 40\% and the CPI of L/S and Branch is reduced by 30\%?}
