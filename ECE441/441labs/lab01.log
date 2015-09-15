@@ -1,0 +1,740 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.1.20)  26 JAN 2015 19:32
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**lab01.tex
+(./lab01.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 79 languages loaded.
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count90
+\lst@gtempboxa=\box26
+\lst@token=\toks16
+\lst@length=\count91
+\lst@currlwidth=\dimen111
+\lst@column=\count92
+\lst@pos=\count93
+\lst@lostspace=\dimen112
+\lst@width=\dimen113
+\lst@newlines=\count94
+\lst@lineno=\count95
+\lst@maxwidth=\dimen114
+
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count96
+\lst@skipnumbers=\count97
+\lst@framebox=\box27
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count98
+))
+\Gin@req@height=\dimen115
+\Gin@req@width=\dimen116
+) (./lab01.aux)
+\openout1 = `lab01.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 624.25346pt, 85.35826pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=443.57848pt
+* \textheight=624.25346pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count99
+(/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count100
+\scratchdimen=\dimen117
+\scratchbox=\box28
+\nofMPsegments=\count101
+\nofMParguments=\count102
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count103
+\MPscratchDim=\dimen118
+\MPnumerator=\count104
+\makeMPintoPDFobject=\count105
+\everyMPtoPDFconversion=\toks18
+) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)) [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 2922) in paragraph at lines 40--41
+\OT1/cmr/m/n/12 The \OT1/cmr/m/sc/12 SANPER-1 Ed-u-ca-tional Lab
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 42.
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
+ [1
+
+]
+Overfull \hbox (2.40062pt too wide) in paragraph at lines 76--76
+[]\OT1/cmr/bx/n/17.28 Equipment/Procedure 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+[]\OT1/cmr/m/sc/12 SANPER-1 Ed-u-ca-tional Lab
+ []
+
+
+Underfull \hbox (badness 2368) in paragraph at lines 110--110
+[]\OT1/cmr/bx/n/14.4 Answers to Fol-low Up
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+[]|  \OT1/cmr/bx/n/12 An-swer: \OT1/cmr/m/n/12 Ac-cord-ing to the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+\OT1/cmr/m/sc/12 SANPER-1 \OT1/cmr/m/n/12 User Man-ual, User
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 120--121
+\OT1/cmr/m/n/12 face your hard-ware de-sign to the
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 121--122
+[]|  \OT1/cmr/bx/n/12 An-swer: \OT1/cmr/m/n/12 You can in-ter-face your
+ []
+
+
+Underfull \hbox (badness 2512) in paragraph at lines 121--122
+\OT1/cmr/m/n/12 Con-verter, D/A con-verter, speech
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 122--123
+[]\OT1/cmr/m/n/12 When the MC68K con-trol sig-nals
+ []
+
+[3] [4
+
+] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+(/usr/share/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2014/03/04 1.5c listings language file
+)
+(/usr/share/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2014/03/04 1.5c listings language file
+)
+Overfull \hbox (7.62074pt too wide) in paragraph at lines 142--143
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (42.87068pt too wide) in paragraph at lines 144--145
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.67073pt too wide) in paragraph at lines 153--154
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.67073pt too wide) in paragraph at lines 162--163
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.67073pt too wide) in paragraph at lines 171--172
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (71.07063pt too wide) in paragraph at lines 173--174
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[5
+
+] <Lab1/20150120_093554.jpg, id=27, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093554.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093554.jpg>
+Package pdftex.def Info: Lab1/20150120_093554.jpg used on input line 182.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_093559.jpg, id=28, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093559.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093559.jpg>
+Package pdftex.def Info: Lab1/20150120_093559.jpg used on input line 185.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_093601.jpg, id=29, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093601.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093601.jpg>
+Package pdftex.def Info: Lab1/20150120_093601.jpg used on input line 188.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_093603.jpg, id=30, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093603.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093603.jpg>
+Package pdftex.def Info: Lab1/20150120_093603.jpg used on input line 191.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_093605.jpg, id=31, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093605.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093605.jpg>
+Package pdftex.def Info: Lab1/20150120_093605.jpg used on input line 194.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+Underfull \vbox (badness 2990) has occurred while \output is active []
+
+
+<Lab1/20150120_093608.jpg, id=32, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093608.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093608.jpg>
+Package pdftex.def Info: Lab1/20150120_093608.jpg used on input line 197.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_093610.jpg, id=33, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093610.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093610.jpg>
+Package pdftex.def Info: Lab1/20150120_093610.jpg used on input line 200.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_093612.jpg, id=34, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093612.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093612.jpg>
+Package pdftex.def Info: Lab1/20150120_093612.jpg used on input line 203.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_093614.jpg, id=35, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093614.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093614.jpg>
+Package pdftex.def Info: Lab1/20150120_093614.jpg used on input line 206.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6
+
+ <./Lab1/20150120_093554.jpg> <./Lab1/20150120_093559.jpg> <./Lab1/20150120_093
+601.jpg> <./Lab1/20150120_093603.jpg> <./Lab1/20150120_093605.jpg> <./Lab1/2015
+0120_093608.jpg> <./Lab1/20150120_093610.jpg> <./Lab1/20150120_093612.jpg>]
+<Lab1/20150120_093616.jpg, id=40, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093616.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093616.jpg>
+Package pdftex.def Info: Lab1/20150120_093616.jpg used on input line 209.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_093618.jpg, id=41, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093618.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093618.jpg>
+Package pdftex.def Info: Lab1/20150120_093618.jpg used on input line 212.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_093620.jpg, id=42, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093620.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093620.jpg>
+Package pdftex.def Info: Lab1/20150120_093620.jpg used on input line 215.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_093621.jpg, id=43, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_093621.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_093621.jpg>
+Package pdftex.def Info: Lab1/20150120_093621.jpg used on input line 218.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+<Lab1/20150120_094136.jpg, id=44, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094136.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094136.jpg>
+Package pdftex.def Info: Lab1/20150120_094136.jpg used on input line 222.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094138.jpg, id=45, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094138.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094138.jpg>
+Package pdftex.def Info: Lab1/20150120_094138.jpg used on input line 225.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094140.jpg, id=46, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094140.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094140.jpg>
+Package pdftex.def Info: Lab1/20150120_094140.jpg used on input line 228.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094142.jpg, id=47, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094142.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094142.jpg>
+Package pdftex.def Info: Lab1/20150120_094142.jpg used on input line 231.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+Underfull \vbox (badness 2644) has occurred while \output is active []
+
+ [7 <./Lab1/20150120_093614.jpg> <./Lab1/20150120_093616.jpg> <./Lab1/20150120_
+093618.jpg> <./Lab1/20150120_093620.jpg> <./Lab1/20150120_093621.jpg> <./Lab1/2
+0150120_094136.jpg> <./Lab1/20150120_094138.jpg> <./Lab1/20150120_094140.jpg>]
+<Lab1/20150120_094143.jpg, id=51, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094143.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094143.jpg>
+Package pdftex.def Info: Lab1/20150120_094143.jpg used on input line 234.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094147.jpg, id=52, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094147.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094147.jpg>
+Package pdftex.def Info: Lab1/20150120_094147.jpg used on input line 237.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094151.jpg, id=53, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094151.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094151.jpg>
+Package pdftex.def Info: Lab1/20150120_094151.jpg used on input line 240.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094154.jpg, id=54, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094154.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094154.jpg>
+Package pdftex.def Info: Lab1/20150120_094154.jpg used on input line 243.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+<Lab1/20150120_094638.jpg, id=55, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094638.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094638.jpg>
+Package pdftex.def Info: Lab1/20150120_094638.jpg used on input line 247.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094640.jpg, id=56, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094640.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094640.jpg>
+Package pdftex.def Info: Lab1/20150120_094640.jpg used on input line 250.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094642.jpg, id=57, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094642.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094642.jpg>
+Package pdftex.def Info: Lab1/20150120_094642.jpg used on input line 253.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094644.jpg, id=58, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094644.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094644.jpg>
+Package pdftex.def Info: Lab1/20150120_094644.jpg used on input line 256.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+Underfull \vbox (badness 2644) has occurred while \output is active []
+
+ [8 <./Lab1/20150120_094142.jpg> <./Lab1/20150120_094143.jpg> <./Lab1/20150120_
+094147.jpg> <./Lab1/20150120_094151.jpg> <./Lab1/20150120_094154.jpg> <./Lab1/2
+0150120_094638.jpg> <./Lab1/20150120_094640.jpg> <./Lab1/20150120_094642.jpg>]
+<Lab1/20150120_094646.jpg, id=62, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094646.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094646.jpg>
+Package pdftex.def Info: Lab1/20150120_094646.jpg used on input line 259.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094648.jpg, id=63, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094648.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094648.jpg>
+Package pdftex.def Info: Lab1/20150120_094648.jpg used on input line 262.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094649.jpg, id=64, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094649.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094649.jpg>
+Package pdftex.def Info: Lab1/20150120_094649.jpg used on input line 265.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094651.jpg, id=65, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094651.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094651.jpg>
+Package pdftex.def Info: Lab1/20150120_094651.jpg used on input line 268.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+<Lab1/20150120_094835.jpg, id=66, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094835.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094835.jpg>
+Package pdftex.def Info: Lab1/20150120_094835.jpg used on input line 273.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094837.jpg, id=67, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094837.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094837.jpg>
+Package pdftex.def Info: Lab1/20150120_094837.jpg used on input line 276.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094838.jpg, id=68, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094838.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094838.jpg>
+Package pdftex.def Info: Lab1/20150120_094838.jpg used on input line 279.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094840.jpg, id=69, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094840.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094840.jpg>
+Package pdftex.def Info: Lab1/20150120_094840.jpg used on input line 282.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+Underfull \vbox (badness 2644) has occurred while \output is active []
+
+ [9 <./Lab1/20150120_094644.jpg> <./Lab1/20150120_094646.jpg> <./Lab1/20150120_
+094648.jpg> <./Lab1/20150120_094649.jpg> <./Lab1/20150120_094651.jpg> <./Lab1/2
+0150120_094835.jpg> <./Lab1/20150120_094837.jpg> <./Lab1/20150120_094838.jpg>]
+<Lab1/20150120_094841.jpg, id=73, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094841.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094841.jpg>
+Package pdftex.def Info: Lab1/20150120_094841.jpg used on input line 285.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094843.jpg, id=74, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094843.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094843.jpg>
+Package pdftex.def Info: Lab1/20150120_094843.jpg used on input line 288.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094845.jpg, id=75, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094845.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094845.jpg>
+Package pdftex.def Info: Lab1/20150120_094845.jpg used on input line 291.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094847.jpg, id=76, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094847.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094847.jpg>
+Package pdftex.def Info: Lab1/20150120_094847.jpg used on input line 294.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+<Lab1/20150120_094849.jpg, id=77, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094849.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094849.jpg>
+Package pdftex.def Info: Lab1/20150120_094849.jpg used on input line 297.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094935.jpg, id=78, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094935.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094935.jpg>
+Package pdftex.def Info: Lab1/20150120_094935.jpg used on input line 302.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_094945.jpg, id=79, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_094945.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_094945.jpg>
+Package pdftex.def Info: Lab1/20150120_094945.jpg used on input line 305.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_095003.jpg, id=80, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_095003.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_095003.jpg>
+Package pdftex.def Info: Lab1/20150120_095003.jpg used on input line 308.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+Underfull \vbox (badness 1442) has occurred while \output is active []
+
+ [10 <./Lab1/20150120_094840.jpg> <./Lab1/20150120_094841.jpg> <./Lab1/20150120
+_094843.jpg> <./Lab1/20150120_094845.jpg> <./Lab1/20150120_094847.jpg> <./Lab1/
+20150120_094849.jpg> <./Lab1/20150120_094935.jpg> <./Lab1/20150120_094945.jpg>]
+
+<Lab1/20150120_095005.jpg, id=84, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_095005.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_095005.jpg>
+Package pdftex.def Info: Lab1/20150120_095005.jpg used on input line 311.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_095007.jpg, id=85, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_095007.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_095007.jpg>
+Package pdftex.def Info: Lab1/20150120_095007.jpg used on input line 314.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_095009.jpg, id=86, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_095009.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_095009.jpg>
+Package pdftex.def Info: Lab1/20150120_095009.jpg used on input line 317.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_095011.jpg, id=87, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_095011.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_095011.jpg>
+Package pdftex.def Info: Lab1/20150120_095011.jpg used on input line 320.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+<Lab1/20150120_095012.jpg, id=88, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_095012.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_095012.jpg>
+Package pdftex.def Info: Lab1/20150120_095012.jpg used on input line 323.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_095014.jpg, id=89, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_095014.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_095014.jpg>
+Package pdftex.def Info: Lab1/20150120_095014.jpg used on input line 326.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/20150120_095016.jpg, id=90, 5331.92pt x 2999.205pt>
+File: Lab1/20150120_095016.jpg Graphic file (type jpg)
+
+<use Lab1/20150120_095016.jpg>
+Package pdftex.def Info: Lab1/20150120_095016.jpg used on input line 329.
+(pdftex.def)             Requested size: 216.78923pt x 121.91562pt.
+
+<Lab1/ABORT1.PNG, id=91, 689.57625pt x 350.81062pt>
+File: Lab1/ABORT1.PNG Graphic file (type png)
+ <use Lab1/ABORT1.PNG>
+Package pdftex.def Info: Lab1/ABORT1.PNG used on input line 334.
+(pdftex.def)             Requested size: 433.57846pt x 220.57826pt.
+
+Overfull \hbox (216.78923pt too wide) in paragraph at lines 334--335
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./Lab1/20150120_095003.jpg> <./Lab1/20150120_095005.jpg> <./Lab1/20150120
+_095007.jpg> <./Lab1/20150120_095009.jpg> <./Lab1/20150120_095011.jpg> <./Lab1/
+20150120_095012.jpg> <./Lab1/20150120_095014.jpg> <./Lab1/20150120_095016.jpg>]
+ [12
+
+ <./Lab1/ABORT1.PNG>] (./lab01.aux) ) 
+Here is how much of TeX's memory you used:
+ 3678 strings out of 493108
+ 55142 string characters out of 6140725
+ 153530 words of memory out of 5000000
+ 7063 multiletter control sequences out of 15000+600000
+ 6662 words of font info for 24 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,4n,41p,627b,1034s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+csc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti12.pfb>
+Output written on lab01.pdf (13 pages, 186440336 bytes).
+PDF statistics:
+ 122 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+

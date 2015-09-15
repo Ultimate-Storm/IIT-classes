@@ -1,0 +1,26 @@
+00001000 Starting Address
+Assembler used: EASy68K Editor/Assembler v5.12.29
+Created On: 2/3/2015 9:37:58 AM
+
+00000000                             1  *-----------------------------------------------------------
+00000000                             2  * Title      :  Program 3.3
+00000000                             3  * Written by :  Adam Sumner and Ryan Jenkins
+00000000                             4  * Date       :  2/3/2015
+00000000                             5  * Description:  Simulates a HALTED state
+00000000                             6  *-----------------------------------------------------------
+00001000                             7      ORG    $1000
+00001000                             8  START:                  ; first instruction of program
+00001000                             9  
+00001000  1039 00050000             10      MOVE.B  $50000,D0
+00001006  60F8                      11      BRA     $1000
+00001008                            12  
+00001008                            13      END    START        ; last line of source
+
+No errors detected
+No warnings generated
+
+
+SYMBOL TABLE INFORMATION
+Symbol-name         Value
+-------------------------
+START               1000

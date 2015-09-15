@@ -1,0 +1,40 @@
+00000950 Starting Address
+Assembler used: EASy68K Editor/Assembler v5.12.29
+Created On: 2/3/2015 9:22:54 AM
+
+00000000                             1  *-----------------------------------------------------------
+00000000                             2  * Title      : Program 3.2 Original
+00000000                             3  * Written by :  Adam Sumner and Ryan Jenkins
+00000000                             4  * Date       :  2/3/2015
+00000000                             5  * Description:  Implements an exception routine
+00000000                             6  *-----------------------------------------------------------
+00002000                             7      ORG $2000
+00002000                             8      
+00002000= 41 20 42 55 53 20 ...      9      DC.B 'A BUS ERROR JUST OCCURRED!'
+0000201A                            10  
+0000201A                            11  
+0000201A                            12  
+0000201A                            13  
+0000201A                            14  
+0000201A                            15  
+00000950                            16      ORG    $950
+00000950                            17  START:                  ; first instruction of program
+00000950                            18  
+00000950                            19  
+00000950  2A7C 00002000             20          MOVE.L  #$2000,A5
+00000956  2C7C 0000201A             21          MOVE.L  #$201A,A6
+0000095C  1E3C 00E3                 22          MOVE.B  #227,D7
+00000960  4E4E                      23          TRAP    #14
+00000962  1E3C 00E4                 24          MOVE.B  #228,D7
+00000966  4E4E                      25          TRAP    #14
+00000968                            26  
+00000968                            27      END    START        ; last line of source
+
+No errors detected
+No warnings generated
+
+
+SYMBOL TABLE INFORMATION
+Symbol-name         Value
+-------------------------
+START               950

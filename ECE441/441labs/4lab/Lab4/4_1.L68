@@ -1,0 +1,47 @@
+00001000 Starting Address
+Assembler used: EASy68K Editor/Assembler v5.12.29
+Created On: 2/10/2015 9:10:29 AM
+
+00000000                             1  *-----------------------------------------------------------
+00000000                             2  * Title      :  Sample Program 4-1
+00000000                             3  * Written by :  Adam Sumner and Ryan Jenkins
+00000000                             4  * Date       :  2/10/2015
+00000000                             5  * Description:  sends IT WORKS repeatedly to the terminal
+00000000                             6  *-----------------------------------------------------------
+00000900                             7          ORG    $900
+00000900                             8          
+00000900= 49 54 20 57 4F 52 ...      9  MSGSTR  DC.B    'IT WORKS!'
+00000909= 01                        10  MSGEND  DC.B    1
+0000090A                            11  
+0000090A                            12  
+00001000                            13          ORG     $1000    
+00001000                            14  START:                  
+00001000                            15  
+00001000                            16         
+00001000                            17          
+00001000                            18      ;   LEA     $2FFF,A7
+00001000  4BF8 0900                 19  LOOP:   LEA     MSGSTR,A5
+00001004  4DF8 0909                 20          LEA     MSGEND,A6
+00001008  1E3C 00F3                 21          MOVE.B  #243,D7
+0000100C  4E4E                      22          TRAP    #14
+0000100E  1E3C 00F1                 23          MOVE.B  #241,D7
+00001012  4E4E                      24          TRAP    #14
+00001014  1E3C 00E3                 25          MOVE.B  #227,D7
+00001018  4E4E                      26          TRAP    #14
+0000101A  60E4                      27          BRA     LOOP 
+0000101C                            28      
+0000101C                            29  
+0000101C                            30  
+0000101C                            31      END    START        ; last line of source
+
+No errors detected
+No warnings generated
+
+
+SYMBOL TABLE INFORMATION
+Symbol-name         Value
+-------------------------
+LOOP                1000
+MSGEND              909
+MSGSTR              900
+START               1000

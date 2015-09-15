@@ -1,0 +1,24 @@
+00002000 Starting Address
+Assembler used: EASy68K Editor/Assembler v5.12.29
+Created On: 2/3/2015 8:54:48 AM
+
+00000000                             1  *-----------------------------------------------------------
+00000000                             2  * Title      :  Program 3.1B
+00000000                             3  * Written by :  Adam Sumner and Ryan Jenkins    
+00000000                             4  * Date       :  2/3 2015
+00000000                             5  * Description:  Generates a Bus Error Exception
+00000000                             6  *-----------------------------------------------------------
+00002000                             7      ORG    $2000
+00002000                             8  START:                  ; first instruction of program
+00002000  1039 00FFFFFF              9          move.b  $ffffff,d0
+00002006  60F8                      10          BRA $2000
+00002008                            11          END START
+
+No errors detected
+No warnings generated
+
+
+SYMBOL TABLE INFORMATION
+Symbol-name         Value
+-------------------------
+START               2000

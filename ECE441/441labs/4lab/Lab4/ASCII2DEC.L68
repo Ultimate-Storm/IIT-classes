@@ -1,0 +1,217 @@
+00001000 Starting Address
+Assembler used: EASy68K Editor/Assembler v5.12.29
+Created On: 2/10/2015 10:33:11 AM
+
+00000000                             1  *-----------------------------------------------------------
+00000000                             2  * Title      :  Program B
+00000000                             3  * Written by :  Adam Sumner and Ryan Jenkins
+00000000                             4  * Date       :  2/10/2015
+00000000                             5  * Description:  Performs a series of bit manipulations
+00000000                             6  *               and outputs it to the terminal and Sanper
+00000000                             7  *               user display
+00000000                             8  *-----------------------------------------------------------
+00000800                             9      ORG    $800
+00000800                            10      
+00000800= 50 6C 65 61 73 65 ...     11  PRMPT           DC.B    'Please input a number from 0-255 or type ',$22,'.',$22,' to exit: '
+00000836= 01                        12  ENDPRMPT        DC.B    1
+00000837                            13  
+00000837= 59 6F 75 72 20 66 ...     14  TWOPRMPT          DC.B    'Your formatted number is: '
+00000851= 01                        15  TWOENDPRMPT       DC.B    1
+00000852                            16  
+00000852                            17  
+00000852                            18  
+00000852                            19  
+00000852                            20  
+00001000                            21      ORG    $1000
+00001000                            22  START:
+00001000  4280                      23          CLR.L   D0
+00001002  4281                      24          CLR.L   D1
+00001004  4282                      25          CLR.L   D2          ;holds binary digit
+00001006  4283                      26          CLR.L   D3
+00001008                            27  *Output display text
+00001008  4BF8 0800                 28          LEA     PRMPT,A5
+0000100C  4DF8 0836                 29          LEA     ENDPRMPT,A6
+00001010  1E3C 00F3                 30          MOVE.B  #243,D7
+00001014  4E4E                      31          TRAP    #14
+00001016                            32  *Prompt input for number
+00001016  4BF8 3000                 33          LEA     $3000,A5    ;set up buffer
+0000101A  4DF8 3000                 34          LEA     $3000,A6    
+0000101E  1E3C 00F1                 35          MOVE.B  #241, D7    ;set up trap call to input string
+00001022  4E4E                      36          TRAP    #14
+00001024                            37          
+00001024                            38  *Convert from ASCII to decimal
+00001024  284D                      39          MOVEA.L A5,A4       ;load beginning of string to A4
+00001026                            40                              ;to save starting space of string
+00001026  B8CE                      41  LOOP:   CMPA    A6,A4       ;A4 >A6?
+00001028  6C00 0008                 42          BGE     NEXT        ;if done go to next
+0000102C  041C 0030                 43          SUB.B   #$30,(A4)+  ;covnert value then go to next address
+00001030  60F4                      44          BRA     LOOP
+00001032                            45  NEXT:
+00001032  1C15                      46          MOVE.B  (A5),D6     ;exiting on typing of '.'
+00001034  1A3C 00FE                 47          MOVE.B  #$FE,D5     ;character
+00001038  BC45                      48          CMP     D5,D6
+0000103A  6700 00F0                 49          BEQ     EXIT
+0000103E                            50  *Convert from decimal to binary
+0000103E  284E                      51          MOVEA.L A6,A4       ;ending of decimal number
+00001040  103C 0001                 52          MOVE.B  #1,D0       ;move multiplier to D0
+00001044                            53   
+00001044                            54      
+00001044  534C                      55  DtoB:   SUBA    #1,A4       ;decrement by a byte
+00001046  B8CD                      56          CMPA    A5,A4       ;A4<A5?
+00001048  6D00 0010                 57          BLT     DONE
+0000104C  1214                      58          MOVE.B  (A4),D1
+0000104E  C2C0                      59          MULU    D0,D1       ;multiply D1 byte by its ten's place
+00001050  D441                      60          ADD.W   D1,D2       ;Add 10's place value to total
+00001052  4281                      61          CLR.L   D1          ;Clear D1 for next byte
+00001054  C0FC 000A                 62          MULU    #10,D0      ;multiply D0 to next ten's place
+00001058  60EA                      63          BRA     DtoB
+0000105A                            64  DONE:              
+0000105A                            65        ;  MOVE.B  D0,$950
+0000105A                            66        ;  MOVE.B  D2,$900
+0000105A                            67        
+0000105A                            68        
+0000105A                            69        
+0000105A                            70  *--------------Bit Manipulation Time-----------------------*
+0000105A                            71  *---Decimal value is stored in D2-----*
+0000105A                            72  *D0 is the output
+0000105A                            73  *D2 holds binary value
+0000105A                            74  *D1 is temp manipulation
+0000105A                            75  *D3 is temp manipulation
+0000105A  4283                      76          CLR.L   D3      ;clear temp registers
+0000105C  4281                      77          CLR.L   D1
+0000105E  4280                      78          CLR.L   D0      ;clear output
+00001060                            79          
+00001060  2602                      80  OUT_1:  MOVE.L  D2,D3   ;move value for temp manipulation   
+00001062  EC5B                      81          ROR     #6,D3   ;get IN_7 to IN_1 position
+00001064  2202                      82          MOVE.L  D2,D1   ;get copy of value to D1
+00001066  C641                      83          AND     D1,D3   ;and all bits store in D3
+00001068  4643                      84          NOT     D3      ;complement for nand gate
+0000106A  0243 0002                 85          ANDI    #$2,D3  ;only receive IN_1 bit
+0000106E  8043                      86          OR      D3,D0   ; store in the ouput register
+00001070                            87  
+00001070                            88  OUT_0:  *---Depends on OUT_1---*
+00001070                            89          *---D3 holds OUT_1-----*
+00001070  E25B                      90          ROR     #1,D3   ;move IN_1 bit to IN_0 location
+00001072  2202                      91          MOVE.L  D2,D1   ;copy original value for manipulation
+00001074  B343                      92          EOR     D1,D3   ;exclusive or the two
+00001076  4643                      93          NOT     D3      ;complement it
+00001078  0243 0001                 94          ANDI    #$1,D3  ;single out the bit
+0000107C  8043                      95          OR      D3,D0   ;store result in output
+0000107E                            96  
+0000107E                            97  OUT_2:  
+0000107E  2202                      98          MOVE.L  D2,D1   ;set up temp registers
+00001080  2602                      99          MOVE.L  D2,D3     
+00001082  E659                     100          ROR     #3,D1   ;get bit 5 to 2's place
+00001084  E55B                     101          ROL     #2,D3   ;get bit 0 to 2's place
+00001086  B343                     102          EOR     D1,D3   ;store exclusive-or in D3
+00001088  0243 0004                103          ANDI    #$4,D3  ;single out bit
+0000108C  8043                     104          OR      D3,D0   ;add to output
+0000108E                           105          
+0000108E                           106          *---D3 holds value used in OUT_6 computation---*
+0000108E                           107  OUT_6:
+0000108E  2202                     108          MOVE.L  D2,D1   ;set up temp register
+00001090  E95B                     109          ROL     #4,D3   ;move D3 bit to OUT_6 position
+00001092  C243                     110          AND     D3,D1   ;And the bits
+00001094  0241 0040                111          ANDI    #$40,D1 ;isolate bit
+00001098  8041                     112          OR      D1,D0   ;addto output
+0000109A                           113          
+0000109A                           114  OUT_3:  *---3 is same as 6---*
+0000109A  E659                     115          ROR     #3,D1   ;move to 3 position
+0000109C  8041                     116          OR      D1,D0   ;add to output
+0000109E                           117  
+0000109E                           118  OUT_5:  *---Complement of 6/3---*
+0000109E                           119  
+0000109E  E559                     120          ROL     #2,D1   ;move bit to 5 position
+000010A0  4641                     121          NOT     D1      ;complement it
+000010A2  0241 0020                122          ANDI    #$20,D1 ;single out the bit
+000010A6  8041                     123          OR      D1,D0   ;add to output  
+000010A8                           124  OUT_4:
+000010A8                           125  
+000010A8  2202                     126          MOVE.L  D2,D1   ;set up temp registers
+000010AA  2602                     127          MOVE.L  D2,D3    
+000010AC  E559                     128          ROL     #2,D1   ;move IN_2 to 4th bit
+000010AE  E35B                     129          ROL     #1,D3   ;move IN_3 to 4th bit
+000010B0  C641                     130          AND     D1,D3   ;and the bits
+000010B2  0243 0010                131          ANDI    #$10,D3 ;isolate bit
+000010B6  8043                     132          OR      D3,D0   ;add to output
+000010B8                           133          
+000010B8                           134  OUT_7:
+000010B8  2202                     135          MOVE.L  D2,D1   ;set up temp register
+000010BA  E759                     136          ROL     #3,D1   ;move bit to 7th bit
+000010BC  4641                     137          NOT     D1      ;complement it
+000010BE  0241 0080                138          ANDI    #$80,D1 ;isolate bit
+000010C2  8041                     139          OR      D1,D0   ;add to output
+000010C4                           140        
+000010C4                           141        
+000010C4                           142         ; MOVE.B  D0,$900
+000010C4                           143  *------Binary to BCD Converter------*
+000010C4                           144  
+000010C4  4241                     145          CLR D1
+000010C6  4243                     146          CLR D3
+000010C8  4244                     147          CLR D4
+000010CA                           148         ; CLR
+000010CA                           149          
+000010CA  2200                     150          MOVE.L  D0,D1   ;copy output to D1
+000010CC  82FC 0064                151          DIVU    #100,D1 ;get 100's place byte
+000010D0  1A01                     152          MOVE.B  D1,D5   ;store it in D5
+000010D2  4241                     153          CLR.W   D1      ;clear quotient
+000010D4  4841                     154          SWAP    D1      ;get remainder
+000010D6  82FC 000A                155          DIVU    #10,D1  ;get 10's place byte
+000010DA  1801                     156          MOVE.B  D1,D4   ;store it in D4
+000010DC  4841                     157          SWAP    D1      ;get 1's place byte
+000010DE  1601                     158          MOVE.B  D1,D3   ;store it in D3
+000010E0                           159   *-----Convert to ASCII/output to terminal-------*     
+000010E0  11C5 0900                160          MOVE.B  D5,$900
+000010E4  11C4 0901                161          MOVE.B  D4,$901
+000010E8  11C3 0902                162          MOVE.B  D3,$902
+000010EC  4BF8 0837                163          LEA     TWOPRMPT,A5
+000010F0  4DF8 0851                164          LEA     TWOENDPRMPT,A6
+000010F4  1E3C 00F3                165          MOVE.B  #243,D7
+000010F8  4E4E                     166          TRAP    #14
+000010FA  2C7C 00000900            167          MOVEA.L #$900,A6
+00001100  2A7C 00000900            168          MOVEA.L #$900,A5
+00001106  061E 0030                169          ADD.B   #$30,(A6)+
+0000110A  061E 0030                170          ADD.B   #$30,(A6)+
+0000110E  061E 0030                171          ADD.B   #$30,(A6)+
+00001112  1E3C 00E3                172          MOVE.B  #227,D7
+00001116  4E4E                     173          TRAP    #14
+00001118                           174  *----Output to User Data Display---*
+00001118                           175     ; MOVE.B  D5,$A0000   ;put BCD digits in location
+00001118  13C5 00090000            176      MOVE.B  D5,$90000   ;for data display
+0000111E  E95C                     177      ROL     #4,D4
+00001120  D644                     178      ADD.W   D4,D3
+00001122  13C3 00090001            179      MOVE.B  D3,$90001
+00001128                           180         
+00001128                           181  
+00001128  6000 FED6                182      BRA     START
+0000112C                           183         
+0000112C                           184         
+0000112C  1E3C 00E4                185  EXIT:       MOVE.B  #228,D7
+00001130  4E4E                     186              TRAP    #14
+00001132                           187      END    START        ; last line of source
+
+No errors detected
+No warnings generated
+
+
+SYMBOL TABLE INFORMATION
+Symbol-name         Value
+-------------------------
+DONE                105A
+DTOB                1044
+ENDPRMPT            836
+EXIT                112C
+LOOP                1026
+NEXT                1032
+OUT_0               1070
+OUT_1               1060
+OUT_2               107E
+OUT_3               109A
+OUT_4               10A8
+OUT_5               109E
+OUT_6               108E
+OUT_7               10B8
+PRMPT               800
+START               1000
+TWOENDPRMPT         851
+TWOPRMPT            837
