@@ -1,14 +1,137 @@
-\documentclass[]{article}
+\documentclass[12pt]{article}
 \usepackage{fullpage}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsmath}
 %opening
 \title{\textbf{Assignment 1}}
 \author{Adam Sumner\\ECE 485}
 \date{September 15th, 2015}
+
+
+
+\lstdefinestyle{customc}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+%	frame=L,
+	xleftmargin=-32pt,
+	language=C,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{blue},
+	commentstyle=\itshape\color{purple},
+%	identifierstyle=\color{blue},
+	stringstyle=\color{orange},
+}
+
+\lstdefinestyle{customasm}{
+	belowcaptionskip=1\baselineskip,
+%	frame=L,
+	xleftmargin=\parindent,
+	language=[x86masm]Assembler,
+	basicstyle=\footnotesize\ttfamily,
+	commentstyle=\itshape\color{purple}
+}
+
 
 \begin{document}
 
 \maketitle
 
 \section*{Problem 1.3}
+
+\textbf{Describe the steps that transform a program written in a high-level language such as C into a representation that is directly executed by a computer processor.}\\
+
+We can thank compilers for allowing computer programmers to be as productive as they are today. The compiler will look at the syntax of a high-level language and translate the statement into the corresponding assembly code that will produce the same functionality. For example the compiler would translate this C code: \\ 
+
+\begin{lstlisting}[style = customc]
+
+	swap(int v[], int k){
+	    int temp;
+	    temp = v[k];
+	    v[k] = v[k+1];
+	    v[k+1] = temp;
+	}
+\end{lstlisting}
+~\\
+into:
+
+\begin{lstlisting}[style=customasm]
+swap:
+    multi $2, $5,4
+    add   $2, $4,$2
+    lw    $15, 0($2)
+    lw    $16, 4($2)
+    sw    $16, 0($2)
+    sw    $15, 4($2)
+    jr    $31
+\end{lstlisting}
+~\\
+
+After this, the assembler takes the translation and converts these statement into binary, or machine code, so that the operations can be executed in the hardware.
+
+\section*{Problem 1.7}
+\textbf{Compilers can have a profound impact on the performance of an pllication. Assume that for a program , compiler A results in a dynamic instruction count of 1.0E9 and has an execution time of 1.1 s, while compiler B results in a dynamic instruction count of 1.2E9 and an execution time of 1.5 s.}
+\subsection*{\small 1a. Find the average CPI for each program given that the processor has a clock cycle time of 1 ns}
+
+\begin{align*}
+\textrm{Clock Cycles for A} & = \frac{\textrm{Execution time}}{\textrm{Clock Cycle Time}} \\
+& = \frac{1.1s}{1.0E{-9}s}\\
+& = 1.1E9
+\end{align*}
+
+\begin{align*}
+\textrm{Clock Cycles for B} & = \frac{\textrm{Execution time}}{\textrm{Clock Cycle Time}} \\
+& = \frac{1.5s}{1.0E{-9}s}\\
+& = 1.5E9
+\end{align*}
+
+\begin{align*}
+\textrm{CPI for A} & = \frac{\textrm{Clock Cycles}}{\textrm{Instruction}} \\
+& = \frac{1.1E9}{1.0E9}\\
+& = \textbf{1.1}
+\end{align*}
+
+\begin{align*}
+\textrm{CPI for B} & = \frac{\textrm{Clock Cycles}}{\textrm{Instruction}} \\
+& = \frac{1.5E9}{1.2E9}\\
+& = \textbf{1.25}
+\end{align*}
+
+\subsection*{\small b. Assume the compiled program run on two different processors. If the execution times on the two processors are the same, how much faster is the clock of the processor running compiler A's code versus the clock of the processor running compiler B's code?}
+
+\begin{align*}
+\textrm{Execution time} & = \textrm{Instructions} \times \textrm{CPI} \times \textmd{Clock Cycle Time}\\
+\textrm{AInstr.} \times \textrm{A CPI} \times \textmd{A CCT} & =  \textrm{BInstr.} \times \textrm{B CPI} \times \textmd{B CCT}\\
+1.0E9 \times 1.1 \times A CCT & = 1.2E9 \times 1.25 \times B CCT\\
+\frac{\textrm{A CCT}}{\textrm{B CCT}} & = \frac{1.5E9}{1.1E9}\\
+& \approx \textbf{1.363 \textrm{ times faster}}
+\end{align*}
+
+\subsection*{\small c. A new compiler is developed that uses only 6.0E8 instructions and has an average CPI of 1.1. What is the speedup of using the new compiler versus using compiler A or B on the original processor?}
+
+\begin{align*}
+\textrm{C Clock Cycles} & = \textrm{Instructions} \times \textrm{C CPI}\\
+& = 6.0E8 \times 1.1\\
+& = 6.6E8 \textrm{ clock cycles}\\
+\textrm{Execution time} & = \textrm{Clock Cycles} \times \textmd{Clock Cycle Time}\\
+& = 6.6E8 \times 1.0E{-9}\\
+& = 0.66 s
+\end{align*}
+
+\begin{align*}
+\frac{\textrm{Execution time of A}}{\textrm{Execution time of C}} & = \frac{1.1}{0.66}\\
+& \approx \textbf{1.67 \textrm{ times faster than A}}
+\end{align*}
+
+\begin{align*}
+\frac{\textrm{Execution time of B}}{\textrm{Execution time of C}} & = \frac{1.5}{0.66}\\
+& \approx \textbf{2.27 \textrm{ times faster than B}}
+\end{align*}
+\section*{Problem 1.8}
+
+\section*{Problem 1.10}
+
+\section*{Problem 1.14}
 
 \end{document}
