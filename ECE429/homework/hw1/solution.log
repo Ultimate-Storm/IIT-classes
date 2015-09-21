@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  19 SEP 2015 19:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  21 SEP 2015 01:09
 entering extended mode
 **solution.tex
 (C:\Users\Adam\classes\ECE429\homework\hw1\solution.tex
@@ -388,115 +388,187 @@ File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.0 (rcs-revision 1.4)
 braries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks29
+\ex@=\dimen151
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen152
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count108
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count109
+\leftroot@=\count110
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count111
+\DOTSCASE@=\count112
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box39
+\strutbox@=\box40
+\big@size=\dimen153
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count113
+\c@MaxMatrixCols=\count114
+\dotsspace@=\muskip10
+\c@parentequation=\count115
+\dspbrk@lvl=\count116
+\tag@help=\toks30
+\row@=\count117
+\column@=\count118
+\maxfields@=\count119
+\andhelp@=\toks31
+\eqnshift@=\dimen154
+\alignsep@=\dimen155
+\tagshift@=\dimen156
+\tagwidth@=\dimen157
+\totwidth@=\dimen158
+\lineht@=\dimen159
+\@envbody=\toks32
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
 (C:\Users\Adam\classes\ECE429\homework\hw1\solution.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 (C:\Users\Adam\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count108
-\scratchdimen=\dimen151
-\scratchbox=\box39
-\nofMPsegments=\count109
-\nofMParguments=\count110
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count111
-\MPscratchDim=\dimen152
-\MPnumerator=\count112
-\makeMPintoPDFobject=\count113
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count120
+\scratchdimen=\dimen160
+\scratchbox=\box41
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen161
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
+\everyMPtoPDFconversion=\toks35
 ) ABD: EveryShipout initializing macros
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 14.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 14.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 14.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
  [1
 
 {C:/Users/Adam/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 <1-5.jpg, id=13, 491.8375pt x 874.26625pt>
 File: 1-5.jpg Graphic file (type jpg)
  <use 1-5.jpg>
-Package pdftex.def Info: 1-5.jpg used on input line 38.
+Package pdftex.def Info: 1-5.jpg used on input line 39.
 (pdftex.def)             Requested size: 234.8775pt x 417.50859pt.
 
 <1-6a.jpg, id=14, 466.74374pt x 830.10126pt>
 File: 1-6a.jpg Graphic file (type jpg)
  <use 1-6a.jpg>
-Package pdftex.def Info: 1-6a.jpg used on input line 47.
+Package pdftex.def Info: 1-6a.jpg used on input line 48.
 (pdftex.def)             Requested size: 234.8775pt x 417.73488pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 48.
  [2 <C:/Users/Adam/classes/ECE429/homework/hw1/1-5.jpg>]
 <1-6b.jpg, id=18, 466.74374pt x 830.10126pt>
 File: 1-6b.jpg Graphic file (type jpg)
  <use 1-6b.jpg>
-Package pdftex.def Info: 1-6b.jpg used on input line 54.
+Package pdftex.def Info: 1-6b.jpg used on input line 55.
 (pdftex.def)             Requested size: 234.8775pt x 417.73488pt.
  [3 <C:/Users/Adam/classes/ECE429/homework/hw1/1-6a.jpg>]
 <1-6c.jpg, id=23, 466.74374pt x 830.10126pt>
 File: 1-6c.jpg Graphic file (type jpg)
  <use 1-6c.jpg>
-Package pdftex.def Info: 1-6c.jpg used on input line 61.
+Package pdftex.def Info: 1-6c.jpg used on input line 62.
 (pdftex.def)             Requested size: 234.8775pt x 417.73488pt.
  [4 <C:/Users/Adam/classes/ECE429/homework/hw1/1-6b.jpg>]
 <1-10.jpg, id=27, 622.57594pt x 350.05782pt>
 File: 1-10.jpg Graphic file (type jpg)
  <use 1-10.jpg>
-Package pdftex.def Info: 1-10.jpg used on input line 68.
+Package pdftex.def Info: 1-10.jpg used on input line 69.
 (pdftex.def)             Requested size: 469.75502pt x 264.13445pt.
  [5 <C:/Users/Adam/classes/ECE429/homework/hw1/1-6c.jpg>] [6 <C:/Users/Adam/cla
-sses/ECE429/homework/hw1/1-10.jpg>] <nand.jpg, id=34, 622.57594pt x 350.05782pt
->
+sses/ECE429/homework/hw1/1-10.jpg>] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 126--162
+
+ []
+
+<nand.jpg, id=42, 622.57594pt x 350.05782pt>
 File: nand.jpg Graphic file (type jpg)
  <use nand.jpg>
-Package pdftex.def Info: nand.jpg used on input line 117.
+Package pdftex.def Info: nand.jpg used on input line 166.
 (pdftex.def)             Requested size: 469.75502pt x 264.13445pt.
-
-<nor.jpg, id=35, 929.4725pt x 522.95375pt>
+ [8]
+<nor.jpg, id=46, 929.4725pt x 522.95375pt>
 File: nor.jpg Graphic file (type jpg)
  <use nor.jpg>
-Package pdftex.def Info: nor.jpg used on input line 125.
-(pdftex.def)             Requested size: 469.75502pt x 264.30101pt.
- [7 <C:/Users/Adam/classes/ECE429/homework/hw1/nand.jpg>] [8 <C:/Users/Adam/cla
-sses/ECE429/homework/hw1/nor.jpg>] (C:\Users\Adam\classes\ECE429\homework\hw1\s
-olution.aux) ) 
+Package pdftex.def Info: nor.jpg used on input line 174.
+(pdftex.def)             Requested size: 422.77664pt x 237.86453pt.
+ [9 <C:/Users/Adam/classes/ECE429/homework/hw1/nand.jpg>]
+<compound-cmos.jpg, id=50, 1202.99437pt x 676.77844pt>
+File: compound-cmos.jpg Graphic file (type jpg)
+ <use compound-cmos.jpg>
+Package pdftex.def Info: compound-cmos.jpg used on input line 183.
+(pdftex.def)             Requested size: 422.77664pt x 237.84673pt.
+
+<compound-stick.jpg, id=51, 643.6547pt x 362.10281pt>
+File: compound-stick.jpg Graphic file (type jpg)
+ <use compound-stick.jpg>
+Package pdftex.def Info: compound-stick.jpg used on input line 191.
+(pdftex.def)             Requested size: 422.77664pt x 237.85039pt.
+
+[10 <C:/Users/Adam/classes/ECE429/homework/hw1/nor.jpg> <C:/Users/Adam/classes/
+ECE429/homework/hw1/compound-cmos.jpg>] [11 <C:/Users/Adam/classes/ECE429/homew
+ork/hw1/compound-stick.jpg>]
+(C:\Users\Adam\classes\ECE429\homework\hw1\solution.aux) ) 
 Here is how much of TeX's memory you used:
- 11357 strings out of 493921
- 233518 string characters out of 3144880
- 259472 words of memory out of 3000000
- 14459 multiletter control sequences out of 15000+200000
- 8811 words of font info for 31 fonts, out of 3000000 for 9000
+ 11970 strings out of 493921
+ 240590 string characters out of 3144880
+ 269859 words of memory out of 3000000
+ 15052 multiletter control sequences out of 15000+200000
+ 9709 words of font info for 35 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  55i,15n,69p,418b,838s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on solution.pdf (8 pages, 292550 bytes).
+<C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb>
+Output written on solution.pdf (11 pages, 496199 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
