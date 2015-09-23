@@ -1,0 +1,21 @@
+\documentclass[12pt]{article}
+
+%opening
+\title{\textbf{Homework 2}}
+\author{Adam Sumner \\ ECE 449}
+\date{September 24th, 2015}
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+	\item Exercises (1-1) and (1-2)
+	\begin{enumerate}
+		\item The following definitions are valid because the constants are declared and instantiated correctly. This will compile and run without errors.
+		\item The declaration is not valid. It will produce a compiler error saying \texttt{invalid operands of types `const char [6]' and `const char [8]' to binary 'operator+'}
+	\end{enumerate}
+	\item The associativity is from right to left. In this case, d would be assigned to c, which then c is assigned to b, which then b is assigned to a. This will produce a result of 3 3 3 3. The side effects of this is that the original values of a, b, and c do not matter; only the original value of d does, since that is what is assigned to each variable.
+	\item We can infer that it returns a double
+\end{enumerate}
+
+\end{document}
