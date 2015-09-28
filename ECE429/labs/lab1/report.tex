@@ -98,14 +98,14 @@ This lab first involved creating an inverter with the PMOS component width of 18
 \end{figure}
 
 \subsection{Discussion}
-This lab primarily served as an introduction to the tools that will be used throughout the semester. Because of this, the results obtained in this lab were easily produced with the guide of the Lab 2 Tutorial document. The expected waveforms were produced, along with the expected time delay associated with the specifications of this inverter schematic. It is clear in Figure \ref{fig:graph} that $V_{in}$ has the proper waveform specified in the schematic. It is clear that  $V_{out}$ is not an exact inverse representation of $V_{in}$, but this is due to propogation delay, an unavoidable side effect of digital circuit design.
+This lab primarily served as an introduction to the tools that will be used throughout the semester. Because of this, the results obtained in this lab were easily produced with the guide of the Lab 2 Tutorial document. The expected waveforms were produced, along with the expected time delay associated with the specifications of this inverter schematic. It is clear in Figure \ref{fig:graph} that $V_{in}$ has the proper waveform specified in the schematic. It is also clear that  $V_{out}$ is not an exact inverse representation of $V_{in}$, but this is due to propogation delay, an unavoidable side effect of digital circuit design.
 \subsection{Questions}
 \begin{enumerate}
 	\item \textbf{Where are the bodies of the transistors in your schematic?} \\
-	They body of the PMOs transistor is located in the middle right and is connected to $V_{dd}$. The body of the NMOS transistor is located in the middle right and is connected to GND. These can easily be seen in Figure \ref{fig:custom_inverter}
+	The body of the PMOS transistor is located in the middle right and is connected to $V_{dd}$. The body of the NMOS transistor is located in the middle right and is connected to GND. These can easily be seen in Figure \ref{fig:custom_inverter}
 	
 	\item \textbf{What are the widths and lengths of your transistors?}\\
-	For PMOS, the width is 180 nm and the length is 50nm. For NMOS, the width is 90 nm and the length is 50nm.
+	For PMOS, the width is 180nm and the length is 50nm. For NMOS, the width is 90nm and the length is 50nm.
 	
 	\item \textbf{How much is the supply voltage?}\\
 	1.1V
@@ -115,9 +115,9 @@ This lab primarily served as an introduction to the tools that will be used thro
 	
 	\item \textbf{Tutorial I shows a maximum rising delay of 7.1892p. How long is that in seconds?}\\
 	7.1892p is equivalent to $7.1892 \times 10^{-12}$ seconds
-	text
+	
 	\item \textbf{To obtain an inverter design with equal rising and falling delays, will you make the PMOS transistor larger or smaller?}\\
-	The PMOs transistor should be larger than the NMOS transistor by roughly 2 or 3 times because this will result in the rise and fall time being equivalent 
+	The PMOS transistor should be larger than the NMOS transistor by roughly 2 or 3 times because this will result in the rise and fall time being equivalent 
 \end{enumerate}
 %\subsection{Bonus Work}
 \section{Conclusions}
