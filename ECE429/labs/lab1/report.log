@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  28 SEP 2015 00:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  28 SEP 2015 01:41
 entering extended mode
 **report.tex
 (C:\Users\Adam\classes\ECE429\labs\lab1\report.tex
@@ -177,26 +177,92 @@ Package pdftex.def Info: inverter.png used on input line 44.
 File: prelab.jpg Graphic file (type jpg)
  <use prelab.jpg>
 Package pdftex.def Info: prelab.jpg used on input line 54.
-(pdftex.def)             Requested size: 443.57848pt x 249.55142pt.
- [1 <C:/Users/Adam/classes/ECE429/labs/lab1/inverter.png>] [2 <C:/Users/Adam/cl
-asses/ECE429/labs/lab1/prelab.jpg>] (C:\Users\Adam\classes\ECE429\labs\lab1\rep
-ort.aux) ) 
+(pdftex.def)             Requested size: 221.78923pt x 124.77351pt.
+ [1 <C:/Users/Adam/classes/ECE429/labs/lab1/inverter.png>]
+<custom_inverter.png, id=17, 362.85562pt x 381.67593pt>
+File: custom_inverter.png Graphic file (type png)
+
+<use custom_inverter.png>
+Package pdftex.def Info: custom_inverter.png used on input line 63.
+(pdftex.def)             Requested size: 221.78923pt x 233.29953pt.
+ <custom_symbol.png, id=18, 496.85625pt x 156.585pt>
+File: custom_symbol.png Graphic file (type png)
+
+<use custom_symbol.png>
+Package pdftex.def Info: custom_symbol.png used on input line 70.
+(pdftex.def)             Requested size: 310.50357pt x 97.85582pt.
+ [2 <C:/Users/Adam/classes/ECE429/labs/lab1/prelab.jpg> <C:/Users/Adam/classes/
+ECE429/labs/lab1/custom_inverter.png>]
+<lab2_schematic.png, id=23, 433.62pt x 238.64156pt>
+File: lab2_schematic.png Graphic file (type png)
+ <use lab2_schematic.png>
+Package pdftex.def Info: lab2_schematic.png used on input line 77.
+(pdftex.def)             Requested size: 310.50357pt x 170.89322pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 83.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 83.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 83.
+
+<graph.png, id=24, 668.4975pt x 398.23781pt>
+File: graph.png Graphic file (type png)
+ <use graph.png>
+Package pdftex.def Info: graph.png used on input line 88.
+(pdftex.def)             Requested size: 310.50357pt x 184.97813pt.
+ [3 <C:/Users/Adam/classes/ECE429/labs/lab1/custom_symbol.png> <C:/Users/Adam/c
+lasses/ECE429/labs/lab1/lab2_schematic.png>] <delay.png, id=32, 676.02562pt x 3
+92.96812pt>
+File: delay.png Graphic file (type png)
+
+<use delay.png>
+Package pdftex.def Info: delay.png used on input line 95.
+(pdftex.def)             Requested size: 310.50357pt x 180.4977pt.
+ [4 <C:/Users/Adam/classes/ECE429/labs/lab1/graph.png> <C:/Users/Adam/classes/E
+CE429/labs/lab1/delay.png>]
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ˜ in font cmbx12!
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ™ in font cmbx12!
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ˜ in font cmbx12!
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ™ in font cmbx12!
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ˜ in font cmbx12!
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ™ in font cmbx12!
+ [5]
+(C:\Users\Adam\classes\ECE429\labs\lab1\report.aux) ) 
 Here is how much of TeX's memory you used:
- 1686 strings out of 493921
- 23276 string characters out of 3144880
- 81484 words of memory out of 3000000
- 5004 multiletter control sequences out of 15000+200000
- 6366 words of font info for 23 fonts, out of 3000000 for 9000
+ 1736 strings out of 493921
+ 24032 string characters out of 3144880
+ 81524 words of memory out of 3000000
+ 5042 multiletter control sequences out of 15000+200000
+ 9280 words of font info for 33 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,32p,718b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on report.pdf (3 pages, 128684 bytes).
+ 27i,6n,32p,891b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (6 pages, 211536 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
