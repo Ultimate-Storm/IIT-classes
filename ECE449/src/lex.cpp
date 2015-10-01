@@ -1,7 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include<cctype>
+#include <cctype>
+#include "syn.h"
 
 int main(int argc, char *argv[])
 {
@@ -31,8 +32,6 @@ int main(int argc, char *argv[])
     {
         for (size_t i = 0; i < line.size();)
         {
-
-
             //Numbers
             if(isdigit(line[i])){
                 output_file << "NUMBER " << line[i];
@@ -41,8 +40,7 @@ int main(int argc, char *argv[])
                     output_file << line[i];
                     ++i;
                 }
-                output_file << std::endl;
-                
+                output_file << std::endl;       
                 continue;
             }
             // comments
@@ -105,5 +103,10 @@ int main(int argc, char *argv[])
         }
     }
 
+    std::ifstream syntactic_input_file(output_file_name.c_str());
+    //output file from lex.cpp is input to syn.cpp
+    if(syntactic_analysis(syntactic_input_file, argv[1])){
+        return -1; 
+    }
     return 0;
 }
