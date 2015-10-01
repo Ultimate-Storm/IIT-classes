@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic1164.all;
+use ieee.numeric_std.all;
+
+entity register is
+	port(
+		outReg1			: out	std_logic_vector(15 downto 0);
+		outReg2			: out	std_logic_vector(15 downto 0); 
+		writeReg		: in 	std_logic_vector(2 downto 0);		
+		writeData		: in 	std_logic_vector(15 downto 0);
+		inReg1			: in 	std_logic_vector(2 downto 0);
+		inReg2			: in 	std_logic_vector(2 downto 0);
+		writeEnable		: in 	std_logic;
+		clk				: in 	std_logic;	
+		
+	)
