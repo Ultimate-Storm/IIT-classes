@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage[margin=3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{url}
+
+\begin{document}
+
+\begin{titlepage}
+	\begin{center}
+		
+		
+		% Upper part of the page. The '~' is needed because \\
+		% only works if a paragraph has started.
+		\vfill
+		
+		\textsc{\LARGE Lab 3: Inverter Layout}\\[1.5cm]
+		
+		\Large Adam Sumner\\[0.5cm]
+		
+		\Large Illinois Insititute of Technology\\[0.5cm]
+		
+		\Large ECE 429-01\\[0.5cm]	
+		
+		\noindent
+		\vfill
+		\large \textbf{Lab Date:} September 21\textsuperscript{st}, 2015\hfill
+		\large \textbf{Due Date:} October 5\textsuperscript{th}, 2015
+		% Bottom of the page
+	
+		
+	\end{center}
+\end{titlepage}
+
+\section{Introduction}
+The purpose of this experiment is to design the physical layout of an inverter using the Cadence Virtuoso Platform. The objectives are to implement the inverter layout design following industry standard design rules, and to validate the design using simulation software.
+\section{Theory/Pre-Lab}
+\subsection{Theory}
+Layout design is often referred to as the ``Grunt work" of VLSI design. Regardless of its tedious nature, it is considered the most important part of the VLSI design process. This work is done through the use of a layout editor.
+
+The underlying idea of a layout editor can be compared to a simple paint program, where individual pixels are modified. However, in a layout editor, the pixels are actually grid points, and ``paint operations" assign rectangular regions to layers that represent layout objects such as metal, polysilicon, contacts, etc. Using the FreePDK45 library, the minimum manufacturing grid is 2.5nm, however, this can require a lot of time fine tuning the design. While this size is preferred by experienced layout designers, this lab will use a minimum size of 10nm, since wasting small amounts of silicon area is not of this lab's concern. 
+
+The FreePDK45 library has a list of design rules that need to be followed to ensure a proper layout. They are listed here: \url{http://www.eda.ncsu.edu/wiki/FreePDK45:} Because they can be quite complex, it is a silly thing to memorize them. Instead, design rule checking is a common practice used in industry. By frequently using DRC, violations of these design rules can be detected early to make the process go as smoothly as possible.
+
+Because Layout designs and Schematics are created separately, there is a need to be able to easily compare the two. Luckily, Calibre is prepared with this functionality knwon as Layout vs. Schematic (LVS). Calibre LVS extracts a SPICE netlist from both the layout and the schematic, and then they are compared to see if they have the same set of transistors/connections.
+
+Once the comparison is complete and the famous smiley face has been generated (no errors), a simulation can be be run. Because all layout related parasistics can be considered in the simulation, this is a more accurate representation of the functionality of the circuit in the real world. 
+\subsection{Pre-Lab}
+
+\section{Implementation}
+\subsection{Schematics}
+%todo
+\subsection{Procedure}
+
+\subsection{Results}
+
+
+\subsection{Discussion}
+
+\subsection{Questions}
+\begin{enumerate}
+	\item \textbf{What determines the minimum transistor width and length for a specific technology?} \\
+
+	\item \textbf{Why should well-taps connect to implanted regions instead of the wells directly?}\\
+	
+	\item \textbf{What are the benefits of a twin-well process?} \\
+	
+	\item \textbf{How do the delays of your inverter layout compare to that of the schematic in Lab 2? Do you expect them to be larger or smaller? Why?}\\
+	
+\end{enumerate}
+%\subsection{Bonus Work}
+\section{Conclusions}
+
+\end{document}
