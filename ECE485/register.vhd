@@ -27,12 +27,6 @@ begin
 			outReg2 <= registers(to_integer(unsigned(inReg2)));
 			if writeEnable = '1' then
 				registers(to_integer(unsigned(writeReg))) <= writeData;
-				if inReg1 = writeReg then
-					outReg1 <= writeData;
-				end if;
-				if inReg2 = writeReg then
-					outReg2 <= writeData;
-				end if;
 			end if;
 		end if;
 				
