@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/Adam/vhdl-practice
 Eregister_16
-Z0 w1444113401
+Z0 w1444126249
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -18,13 +18,13 @@ Z5 8C:/Users/Adam/classes/ECE485/vhdl-project-1/register.vhd
 Z6 FC:/Users/Adam/classes/ECE485/vhdl-project-1/register.vhd
 l0
 L5
-VG:XJ[?YT02[0jFlF^]aCo3
-!s100 c6Ke734[IZB7BTmBm?CW@2
+VNB2[3jFa5mE@>_@>cfA`N2
+!s100 Tcz<NZg`RYFPMSC@zRLdc2
 Z7 OP;C;10.4a;61
 32
-Z8 !s110 1444114107
+Z8 !s110 1444126284
 !i10b 1
-Z9 !s108 1444114107.000000
+Z9 !s108 1444126284.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Adam/classes/ECE485/vhdl-project-1/register.vhd|
 Z11 !s107 C:/Users/Adam/classes/ECE485/vhdl-project-1/register.vhd|
 !i113 1
@@ -34,11 +34,11 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 11 register_16 0 22 G:XJ[?YT02[0jFlF^]aCo3
+Z14 DEx4 work 11 register_16 0 22 NB2[3jFa5mE@>_@>cfA`N2
 l22
 L19
-VQM9[f`=ZLfCmmT5Nb@HO;3
-!s100 XjkS0dHZ`6RGCOK?V1MlR2
+V2jQbg<>ZozjDQCLNbJc4h3
+!s100 ^U`>GnX4;I2zI:=]l2F`D1
 R7
 32
 R8

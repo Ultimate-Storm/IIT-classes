@@ -10,8 +10,8 @@ entity register_16 is
 		writeData		: in 	std_logic_vector(15 downto 0);
 		inReg1			: in 	std_logic_vector(2 downto 0);
 		inReg2			: in 	std_logic_vector(2 downto 0);
-		writeEnable		: in 	std_logic;
-		clk				: in 	std_logic	
+		writeEnable : in 	std_logic;
+		clk					: in 	std_logic	
 	);
 end register_16;
 
@@ -27,9 +27,7 @@ begin
 			outReg2 <= registers(to_integer(unsigned(inReg2)));
 			if writeEnable = '1' then
 				registers(to_integer(unsigned(writeReg))) <= writeData;
-			end if;
-		end if;
-				
+			end if;			
+		end if;				
 	end process;
-
 end behavioral;
