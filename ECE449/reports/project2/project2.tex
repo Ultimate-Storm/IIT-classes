@@ -1,0 +1,21 @@
+\documentclass[12pt]{article}
+
+%opening
+\title{\textbf{Project 2: Syntactic Analysis}}
+\author{Adam Sumner\\ECE 449}
+\date{\textit{Initial Release Due: 10/02/2015}\\ \textit{Final Release Due: 10/09/2015}}
+
+\begin{document}
+
+\maketitle
+
+\section{Initial Release}
+The features implemented in the initial release included recognition of the MODULE and ENDMODULE statements along with support for WIRE statements. Structs were designed to house the data extracted from the \texttt{*.evl.tokens} file for  a component, pin, and wire. This allowed for an easy way to store the data, and push these objects into a vector for easy parsing.
+
+
+\section{Test Cases}
+The test cases were designed to check the parsing of the basic tokens in the \texttt{*.evl.tokens} file. As a consequence, BUS functionality was not tested as well as things like wire size. They simply verified that the initial release could handle a generic \texttt{*.evl.tokens} file for conversion into wires and components. To test the full functionality of the parser, the golden test files were mainly used. Runtime issues were encountered, which resulted in a lot of code refactoring to optimize the runtime.
+\section{Final Release}
+The final release implemented all of the requested features that were not included in the initial release. A looping algorithm was used to parse the \texttt{*.evl.tokens} file to extract and build the syntactic analysis file. Going forward into project 3, there are plans to refactor class design, and to implement a more straightforward and organized finite state machine system. Performance must be optimized, and at this stage of the project, it accomplishes the requested tasks successfully, but with a non optimal performance rate.
+
+\end{document}
