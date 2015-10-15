@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+%opening
+\title{\textbf{Homework 3}}
+\author{Adam Sumner \\ ECE 449}
+\date{October 15\textsuperscript{th}, 2015}
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+	\item Exercises (6-3) and (6-4)
+	\begin{enumerate}
+		\item The destination container needs to be as big as the source container
+		\item 
+		\texttt{vector<int> u(10,100);}\\
+		\texttt{vector<int> v(u.size());}\\
+		\texttt{copy(u.begin(), u.end(), v.begin());}
+	\end{enumerate}
+	\item \texttt{//Precondition: Iterator points to a valid list}\\
+			\texttt{assert(l != NULL);}
+	\item 
+	
+\end{enumerate}
+\begin{lstlisting}[language=C,basicstyle=\footnotesize]
+bool is_sorted_alphabetically(vector<evl_wire> &evl_wires){
+	for(size_t i=0;i< vector.size();i++){
+		if(evl_wires[i]->name.compare(evl_wires[i+1]->name)==1){
+			return false; 
+		}
+		//otherwise the two names are either equal or in order
+	}
+	return true;
+}
+\end{lstlisting}
+
+\end{document}
