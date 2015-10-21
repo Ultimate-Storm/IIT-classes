@@ -10,7 +10,7 @@
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
 \lstset{ %
-	xleftmargin=2em,
+	xleftmargin=15em,
 	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
 	basicstyle=\small,%\footnotesize,        % the size of the fonts that are used for the code
 	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
@@ -51,7 +51,7 @@
 		
 		\Large Adam Sumner\\[0.5cm]
 		
-		\Large Illinois Insititute of Technology\\[0.5cm]
+		\Large Illinois Institute of Technology\\[0.5cm]
 		
 		\Large ECE 429-01\\[0.5cm]	
 		
@@ -74,14 +74,14 @@ Since chip fabrication can be incredibly costly, it is a must to verify that the
 A stick diagram for a 2-input static CMOS NAND gate and a 2-input AND gate design were both sketched. They are shown in Figures \ref{fig:prelab-stick} and \ref{fig:prelab-design}.
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{prelab-stick}
+\includegraphics[width=0.5\linewidth]{prelab-stick}
 \caption{Stick Digram for Static CMOS 2-input NAND Gate}
 \label{fig:prelab-stick}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{prelab-design}
+\includegraphics[width=0.5\linewidth]{prelab-design}
 \caption{2-input AND Gate Design}
 \label{fig:prelab-design}
 \end{figure}
@@ -90,7 +90,7 @@ A stick diagram for a 2-input static CMOS NAND gate and a 2-input AND gate desig
 \subsection{Schematics}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{nand2-layout}
+	\includegraphics[width=0.7\linewidth]{nand2-layout}
 	\caption{2-input NAND Gate Layout}
 	\label{fig:nand2-layout}
 \end{figure}
@@ -110,14 +110,26 @@ A stick diagram for a 2-input static CMOS NAND gate and a 2-input AND gate desig
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{and2-test-circuit}
 \caption{Test Circuit for 2-input AND Gate}
 \label{fig:and2-test-circuit}
 \end{figure}
 
-
+\begin{figure}[H]
+\centering
+\lstset{language=Verilog}
+\begin{lstlisting}
+module and2(a,b,f);
+	input a,b;
+	output f;
+	assign f=a&b;
+endmodule
+\end{lstlisting}
+\caption{Verilog Model Code}
+\label{fig:verilog-model}
+\end{figure}
 
 \subsection{Procedure}
 A NAND gate  layout was created in Virtuoso and was verified using LVS. After this, a 2-input AND gate was designed using both the schematic and layout view. This was then verified using LVS, and it was also verified against the verilog model. Delay was then calculated for the AND gate design.
@@ -159,7 +171,7 @@ A NAND gate  layout was created in Virtuoso and was verified using LVS. After th
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{10-11-delay}
 \caption{10 $\to$ 11 Delay Measurements}
@@ -174,7 +186,7 @@ A NAND gate  layout was created in Virtuoso and was verified using LVS. After th
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{00-11-delay}
 \caption{00 $\to$ 11 Delay Measurements}
@@ -189,9 +201,9 @@ A NAND gate  layout was created in Virtuoso and was verified using LVS. After th
 			\multicolumn{3}{|c|}{Transition} \\
 			\cline{2-4} l=50nm & 10$\to$11 & 01$\to$11 & 00$\to$11 \\
 			\hline
-			Rising Propogation Delay & 17.656e-12 s & 19.095e-12 s & 18.665e-11 s  \\
+			Rising Propogation Delay & 17.656e-12 s & 19.095e-12 s & 18.665e-12 s  \\
 			\hline
-			Falling Propogation Delay & 19.615e-11 s& 22.491e-11 s& 14.797e-11 s\\
+			Falling Propogation Delay & 19.615e-12 s& 22.491e-12 s& 14.797e-12 s\\
 			\hline
 			Average Power Consumption & 3.17-05 W& 3.26e-05 W& 3.23e-05 W\\
 			\hline
@@ -202,10 +214,20 @@ A NAND gate  layout was created in Virtuoso and was verified using LVS. After th
 \end{table}
 
 \subsection{Discussion}
-
+Upon analysis of the results, it is clear that both a 2-input NAND Gate layout was successfully constructed, along with a 2-input AND Gate layout and schematic. Figures \ref{fig:drc-nand2}-\ref{fig:verilog-verified} show the validity of the equivalence checks while Figures \ref{fig:10-11-delay}-\ref{fig:00-11-delay} show the measurements of the delay. The results obtained are accurate and show that using previously created schematics, AND gate functionality was successfully obtained.
 \subsection{Questions}
+\begin{enumerate}
+	\item \textbf{Is there any other way to design an AND gate than combining an inverter with a NAND gate? Which one will you prefer?} Yes, it is possible to design an AND gate by using a 2-input NAND gate and then connecting its output to both inputs of another 2-input NAND Gate. This essentially turns the functionality of the second NAND gate into an inverter, producing the AND functionality desired. The preferred method is to use a NAND gate and an inverter since it utilizes less transistors.
+	
+	\item \textbf{Do the input transitions leading to the propagation delays match your expectations? Why or why not?} Yes, it was expected that the delays would be much longer than that of a regular NAND gate due to the complexity of this circuit.
+	
+	\item \textbf{Is there any relationship between the propagation delays you measured in this lab for the AND gate and those you measured in Lab 2 for the inverter and in Lab 4 for the NAND gate?} Yes it seems that the delays were additive, which makes sense since the two logic gates are daisy chained together.
+	
+	\item \textbf{What is the difference between a schematic and a Verilog model?} A Verilog model is a way to represent a circuit purely with code. This makes it incredibly easy to quickly construct and simulate circuits. A schematic physically shows the layout of the circuit, requiring some sort of gui design software to lay the gates out.
+\end{enumerate}
 	
 %\subsection{Bonus Work}
 \section{Conclusions}
+Overall the lab was a success. A 2-input NAND gate layout was successfully created, and it was used in conjunction with a previously created Inverter schematic to design AND Gate functionality. Furthermore, the design was successfully verified using both LVS and Verilog equivalence checking. The AND gate may now be used in future designs. 
 
 \end{document}

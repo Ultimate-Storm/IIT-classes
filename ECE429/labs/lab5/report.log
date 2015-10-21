@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  21 OCT 2015 04:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  21 OCT 2015 05:12
 entering extended mode
 **report.tex
 (C:\Users\Adam\classes\ECE429\labs\lab5\report.tex
@@ -215,126 +215,132 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: prelab-stick.jpg Graphic file (type jpg)
  <use prelab-stick.jpg>
 Package pdftex.def Info: prelab-stick.jpg used on input line 77.
-(pdftex.def)             Requested size: 310.50357pt x 174.68626pt.
+(pdftex.def)             Requested size: 221.78923pt x 124.76804pt.
 
-[1] <prelab-design.jpg, id=14, 508.14844pt x 286.06876pt>
+<prelab-design.jpg, id=11, 508.14844pt x 286.06876pt>
 File: prelab-design.jpg Graphic file (type jpg)
-
-<use prelab-design.jpg>
+ <use prelab-design.jpg>
 Package pdftex.def Info: prelab-design.jpg used on input line 84.
-(pdftex.def)             Requested size: 310.50357pt x 174.80724pt.
- <nand2-layout.png, id=15, 333.49594pt x 372.64218pt>
-File: nand2-layout.png Graphic file (type png)
+(pdftex.def)             Requested size: 221.78923pt x 124.85794pt.
 
-<use nand2-layout.png>
+[1 <C:/Users/Adam/classes/ECE429/labs/lab5/prelab-stick.jpg>]
+<nand2-layout.png, id=15, 333.49594pt x 372.64218pt>
+File: nand2-layout.png Graphic file (type png)
+ <use nand2-layout.png>
 Package pdftex.def Info: nand2-layout.png used on input line 93.
-(pdftex.def)             Requested size: 443.57848pt x 495.6818pt.
- [2 <C:/Users/Adam/classes/ECE429/labs/lab5/prelab-stick.jpg> <C:/Users/Adam/cl
-asses/ECE429/labs/lab5/prelab-design.jpg>]
-<and2-schematic.png, id=20, 415.5525pt x 99.37125pt>
+(pdftex.def)             Requested size: 310.50357pt x 346.97441pt.
+
+<and2-schematic.png, id=17, 415.5525pt x 99.37125pt>
 File: and2-schematic.png Graphic file (type png)
  <use and2-schematic.png>
 Package pdftex.def Info: and2-schematic.png used on input line 100.
 (pdftex.def)             Requested size: 443.57848pt x 106.0775pt.
 
-[3 <C:/Users/Adam/classes/ECE429/labs/lab5/nand2-layout.png>]
-<and2-layout.png, id=25, 448.67625pt x 292.84406pt>
+[2 <C:/Users/Adam/classes/ECE429/labs/lab5/prelab-design.jpg> <C:/Users/Adam/cl
+asses/ECE429/labs/lab5/nand2-layout.png>]
+<and2-layout.png, id=22, 448.67625pt x 292.84406pt>
 File: and2-layout.png Graphic file (type png)
  <use and2-layout.png>
 Package pdftex.def Info: and2-layout.png used on input line 107.
 (pdftex.def)             Requested size: 443.57848pt x 289.52776pt.
 
-<and2-test-circuit.png, id=26, 485.56406pt x 274.77657pt>
+<and2-test-circuit.png, id=23, 485.56406pt x 274.77657pt>
 File: and2-test-circuit.png Graphic file (type png)
 
 <use and2-test-circuit.png>
 Package pdftex.def Info: and2-test-circuit.png used on input line 115.
 (pdftex.def)             Requested size: 443.57848pt x 251.01558pt.
- <drc-nand2.png, id=27, 352.31625pt x 389.20406pt>
-File: drc-nand2.png Graphic file (type png)
-
-<use drc-nand2.png>
-Package pdftex.def Info: drc-nand2.png used on input line 127.
-(pdftex.def)             Requested size: 310.50357pt x 343.01137pt.
- [4 <C:/Users/Adam/classes/ECE429/labs/lab5/and2-schematic.png> <C:/Users/Adam/
+ [3 <C:/Users/Adam/classes/ECE429/labs/lab5/and2-schematic.png> <C:/Users/Adam/
 classes/ECE429/labs/lab5/and2-layout.png>]
-Overfull \vbox (70.19011pt too high) has occurred while \output is active []
-
-
-[5 <C:/Users/Adam/classes/ECE429/labs/lab5/and2-test-circuit.png> <C:/Users/Ada
-m/classes/ECE429/labs/lab5/drc-nand2.png>]
-<nand2-lvs.png, id=38, 616.55344pt x 341.77687pt>
+(C:\Users\Adam\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(C:\Users\Adam\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang2.sty
+File: lstlang2.sty 2014/09/06 1.5e listings language file
+)
+(C:\Users\Adam\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang3.sty
+File: lstlang3.sty 2014/09/06 1.5e listings language file
+)
+<drc-nand2.png, id=29, 352.31625pt x 389.20406pt>
+File: drc-nand2.png Graphic file (type png)
+ <use drc-nand2.png>
+Package pdftex.def Info: drc-nand2.png used on input line 139.
+(pdftex.def)             Requested size: 310.50357pt x 343.01137pt.
+ [4 <C:/Users/Adam/classes/ECE429/labs/lab5/and2-test-circuit.png>]
+<nand2-lvs.png, id=34, 616.55344pt x 341.77687pt>
 File: nand2-lvs.png Graphic file (type png)
  <use nand2-lvs.png>
-Package pdftex.def Info: nand2-lvs.png used on input line 134.
+Package pdftex.def Info: nand2-lvs.png used on input line 146.
 (pdftex.def)             Requested size: 310.50357pt x 172.12398pt.
 
-<and2-drc.png, id=39, 390.70969pt x 237.13594pt>
+<and2-drc.png, id=35, 390.70969pt x 237.13594pt>
 File: and2-drc.png Graphic file (type png)
  <use and2-drc.png>
-Package pdftex.def Info: and2-drc.png used on input line 141.
+Package pdftex.def Info: and2-drc.png used on input line 153.
 (pdftex.def)             Requested size: 310.50357pt x 188.46426pt.
-
-<and2-lvs.png, id=40, 389.20406pt x 339.51843pt>
+ [5 <C:/Users/Adam/classes/ECE429/labs/lab5/drc-nand2.png> <C:/Users/Adam/class
+es/ECE429/labs/lab5/nand2-lvs.png>] <and2-lvs.png, id=41, 389.20406pt x 339.518
+43pt>
 File: and2-lvs.png Graphic file (type png)
- <use and2-lvs.png>
-Package pdftex.def Info: and2-lvs.png used on input line 148.
+
+<use and2-lvs.png>
+Package pdftex.def Info: and2-lvs.png used on input line 160.
 (pdftex.def)             Requested size: 310.50357pt x 270.87427pt.
- [6 <C:/Users/Adam/classes/ECE429/labs/lab5/nand2-lvs.png> <C:/Users/Adam/class
-es/ECE429/labs/lab5/and2-drc.png>]
-<verilog-verified.png, id=47, 599.99156pt x 237.13594pt>
+ <verilog-verified.png, id=42, 599.99156pt x 237.13594pt>
 File: verilog-verified.png Graphic file (type png)
 
 <use verilog-verified.png>
-Package pdftex.def Info: verilog-verified.png used on input line 156.
+Package pdftex.def Info: verilog-verified.png used on input line 168.
 (pdftex.def)             Requested size: 310.50357pt x 122.7252pt.
- <10-11-delay.png, id=48, 676.77844pt x 413.29407pt>
+ [6 <C:/Users/Adam/classes/ECE429/labs/lab5/and2-drc.png> <C:/Users/Adam/classe
+s/ECE429/labs/lab5/and2-lvs.png>]
+<10-11-delay.png, id=49, 676.77844pt x 413.29407pt>
 File: 10-11-delay.png Graphic file (type png)
-
-<use 10-11-delay.png>
-Package pdftex.def Info: 10-11-delay.png used on input line 164.
+ <use 10-11-delay.png>
+Package pdftex.def Info: 10-11-delay.png used on input line 176.
 (pdftex.def)             Requested size: 443.57848pt x 270.88931pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 165.
+(Font)              <12> on input line 177.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 165.
+(Font)              <8> on input line 177.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 165.
- <01-11-delay.png, id=49, 673.76718pt x 414.04688pt>
-File: 01-11-delay.png Graphic file (type png)
+(Font)              <6> on input line 177.
 
-<use 01-11-delay.png>
-Package pdftex.def Info: 01-11-delay.png used on input line 171.
+<01-11-delay.png, id=50, 673.76718pt x 414.04688pt>
+File: 01-11-delay.png Graphic file (type png)
+ <use 01-11-delay.png>
+Package pdftex.def Info: 01-11-delay.png used on input line 183.
 (pdftex.def)             Requested size: 443.57848pt x 272.59576pt.
- [7 <C:/Users/Adam/classes/ECE429/labs/lab5/and2-lvs.png> <C:/Users/Adam/classe
-s/ECE429/labs/lab5/verilog-verified.png>]
-<00-11-delay.png, id=55, 666.23906pt x 414.04688pt>
+
+[7 <C:/Users/Adam/classes/ECE429/labs/lab5/verilog-verified.png> <C:/Users/Adam
+/classes/ECE429/labs/lab5/10-11-delay.png>]
+<00-11-delay.png, id=57, 666.23906pt x 414.04688pt>
 File: 00-11-delay.png Graphic file (type png)
  <use 00-11-delay.png>
-Package pdftex.def Info: 00-11-delay.png used on input line 179.
+Package pdftex.def Info: 00-11-delay.png used on input line 191.
 (pdftex.def)             Requested size: 443.57848pt x 275.67255pt.
 
-[8 <C:/Users/Adam/classes/ECE429/labs/lab5/10-11-delay.png> <C:/Users/Adam/clas
-ses/ECE429/labs/lab5/01-11-delay.png>] [9 <C:/Users/Adam/classes/ECE429/labs/la
-b5/00-11-delay.png>] (C:\Users\Adam\classes\ECE429\labs\lab5\report.aux) ) 
+[8 <C:/Users/Adam/classes/ECE429/labs/lab5/01-11-delay.png> <C:/Users/Adam/clas
+ses/ECE429/labs/lab5/00-11-delay.png>] [9] [10]
+(C:\Users\Adam\classes\ECE429\labs\lab5\report.aux) ) 
 Here is how much of TeX's memory you used:
- 3139 strings out of 493921
- 45229 string characters out of 3144880
- 131769 words of memory out of 3000000
- 6413 multiletter control sequences out of 15000+200000
- 8804 words of font info for 31 fonts, out of 3000000 for 9000
+ 3442 strings out of 493921
+ 49563 string characters out of 3144880
+ 133772 words of memory out of 3000000
+ 6708 multiletter control sequences out of 15000+200000
+ 9411 words of font info for 33 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,9n,49p,1187b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (10 pages, 358104 bytes).
+ 27i,9n,49p,1187b,1308s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report.pdf (11 pages, 356602 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
