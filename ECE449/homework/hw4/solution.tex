@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+%opening
+\title{\textbf{Homework 4}}
+\author{Adam Sumner \\ ECE 449}
+\date{November 5\textsuperscript{th}, 2015}
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+	\item 
+	\begin{enumerate}
+		\item The vector v could be less than or greater than size 100 so there could be potential issues in the for loop
+		\item The function does not return the address of the string
+		\item We don't know what the \texttt{some\_function(T *a)} function does so before the class goes out of scope, we would want to call delete. We can't assume that all memory leaks will be taken care of if we delete after the object has gone out of scope.
+		\item Delete will deallocate all of the memory of the individual items of the vector, but not of the vector itself
+		\item Delete should be called rather than the destructor
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item No error
+		\item Error: the constant value was never initialized
+		\item Error: the destructor is private
+		\item Error: no default constructor for B defined when there is a specific constructor defined
+		\item Error: the reference is not initialized
+	\end{enumerate} 
+	\item Implement constructor
+\end{enumerate}
+
+
+\end{document}
