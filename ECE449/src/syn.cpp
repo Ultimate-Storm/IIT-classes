@@ -6,14 +6,14 @@
 #include <sstream>
 #include <map>
 #include <utility>
-# include "syn.h"
+#include "net.h"
 
 using namespace std;
 int syntactic_analysis(ifstream& input_file, string filename){
-    if(!input_file){
+   /* if(!input_file){
         cerr <<"I can't read the .tokens file" << endl;
-        return -1;
-    }
+        return NULL;
+    }*/
     cout << "Reading file for syntactic analysis!" << endl;
     //Now we parse the *.tokens file
     string line;
@@ -217,8 +217,9 @@ int syntactic_analysis(ifstream& input_file, string filename){
             }
        }
     }
-
-
+    input_file.clear();
+    input_file.seekg(0,input_file.beg);
+    netlist_creation(component_list, wire_list, filename, input_file);
     
     return 0;
 }

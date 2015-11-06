@@ -1,8 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include<vector>
 #include <cctype>
-#include "syn.h"
+#include "net.h"
 
 int main(int argc, char *argv[])
 {
@@ -105,8 +106,16 @@ int main(int argc, char *argv[])
 
     std::ifstream syntactic_input_file(output_file_name.c_str());
     //output file from lex.cpp is input to syn.cpp
-    if(syntactic_analysis(syntactic_input_file, argv[1])){
+   /* if(syntactic_analysis(syntactic_input_file, argv[1])){
         return -1; 
-    }
+    }*/
+    syntactic_analysis(syntactic_input_file, argv[1]);
+    //std::ifstream netlist_input_file(output_file_name.c_str());
+    //netlist_input_file.clear();
+    //netlist_input_file.seekg(0,netlist_input_file.beg);
+   // netlist_creation(component_list, argv[1], netlist_input_file);
+  /*  std::ofstream netlist_input_file((std::string(argv[1])+".netlist").c_str()); 
+    netlist_input_file << "module top" << std::endl;
+    netlist_input_file << "endmodule";*/
     return 0;
 }
