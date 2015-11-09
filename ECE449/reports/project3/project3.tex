@@ -1,0 +1,22 @@
+\documentclass[12pt]{article}
+
+%opening
+\title{\textbf{Project 3: Netlist Construction}}
+\author{Adam Sumner\\ECE 449}
+\date{\textit{Initial Release Due: 10/23/2015}\\ \textit{Final Release Due: 11/06/2015}}
+
+\begin{document}
+
+\maketitle
+
+\section{Initial Release}
+The features implemented in the initial release included recognition of the MODULE statement along with support for the components. Because structs for these components already existed from the syntactic analysis, it was easy to implement extracting and formatting this data into the initial release.
+
+
+\section{Test Cases}
+The test cases were designed to include things from a circuit consisting of a simple AND gate with two inputs, to an extremely complex logic circuit with more than ten gates and wires that included buses. From using these test cases, it ensured that the initial release of the program would be able to find all of the components and output everything correctly. To test the full functionality of the project, the golden test files were mainly used. During testing, runtime became a big issue so optimizations in the code became a priority.
+
+\section{Final Release}
+The final release implemented all of the requested features. Once all of the data was extracted from syntactic analysis, using the data structures created, they were parsed to construct a vector of \texttt{Netlist} data structures which house a vector of both nets and components. For large files, runtime can be somewhat long due to the overhead of file parsing from the syntactic analysis portion of the simulator, so future plans before the next part of the project include optimizing this section to truly produce an efficient simulator. 
+
+\end{document}
