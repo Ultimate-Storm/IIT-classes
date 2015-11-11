@@ -173,31 +173,77 @@ Once this was done, ESP was run to check that the schematic functionality was th
 \subsection{Results}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{verilog_verification}
+\includegraphics[width=0.7\linewidth]{verilog_verification}
 \caption{Verilog Verification}
 \label{fig:verilog_verification}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{LVS}
+\includegraphics[width=0.7\linewidth]{LVS}
 \caption{LVS Verification}
 \label{fig:LVS}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{esp}
+\includegraphics[width=0.7\linewidth]{esp}
 \caption{Equivalence Checking using ESP}
 \label{fig:esp}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{a0}
+\caption{S0 Delay}
+\label{fig:a0}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{a1}
+\caption{S1 Delay}
+\label{fig:a1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{a2}
+\caption{S2 Delay}
+\label{fig:a2}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{a3}
+\caption{S3 Delay}
+\label{fig:a3}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{a1-co}
+\caption{A0 and A1 CO Delay}
+\label{fig:a1-co}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{a2-co}
+\caption{A2 and A3 CO Delay}
+\label{fig:a2-co}
+\end{figure}
 
 
 \subsection{Discussion}
+As seen in Figures \ref{fig:verilog_verification} to \ref{fig:esp}, all of the verification techniques performed were successful. The delay between A0-A3 and S0-S3 were also successfully measured and are shown in Figures \ref{fig:a0} to \ref{fig:a3}. It should be noted that in the delay of S0, there is some noise generated when the DC pulse changes. The output of S0 should always be 0. Furthermore, the delay in CO was also measured successfully and is shown in Figures \ref{fig:a1-co} and \ref{fig:a2-co}. On top of this data that was gathered, the results all verified that a 4 bit adder was successfully constructed.\\
 
+\noindent\textbf{How is the functionality of your adder design validated/verified at various abstraction levels?}\\
+\noindent The design is verified at three levels. First the code describing a 4 bit adder was written and verified by outputting the results of sample inputs. This is shown in Figure \ref{fig:verilog_verification}. The next level of the design that was verified is the Layout and Schematic level. This verified that both the layout designed and the schematic designed have the same functionality. This is shown in Figure \ref{fig:LVS}. The last level that was checked was the verilog code vs the schematic. Since the verilog code was already verified to ensure the numbers were being added correctly, this checks that the schematic functions with the intended result. This is shown in Figure \ref{fig:esp}.
 %\subsection{Bonus Work}
 \section{Conclusions}
-
+Overall this lab was a success. Over the course of three separate labs, a 4 bit adder was designed, tested, and can now be used in future designs.
 
 \end{document}
