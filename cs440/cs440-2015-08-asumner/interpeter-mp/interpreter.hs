@@ -45,7 +45,7 @@ run p s =
    case parse p "<stdin>" s of
       Right x -> x
       Left x -> error $ show x
-
+  
 symbol s = do string s
               spaces
               return s
@@ -80,10 +80,10 @@ mulOp =    do { symbol "*" ; return $ IntOpExp "*" }
 addOp =    do { symbol "+" ; return $ IntOpExp "+" }
        <|> do { symbol "-" ; return $ IntOpExp "-" }
 
-andOp = do try $ symbol "and"
+andOp = do try $ symbol "and" 
            return $ BoolOpExp "and"
 
-orOp = do try $ symbol "or"
+orOp = do try $ symbol "or" 
           return $ BoolOpExp "or"
 
 compOp =   do { symbol "<" ; return $ CompOpExp "<" }
@@ -192,7 +192,7 @@ callStmt = do try $ symbol "call"
               symbol ")"
               symbol ";"
               return $ CallStmt name args
-
+ 
 seqStmt = do try $ symbol "do"
              stmts <- many1 stmt
              symbol "od"
@@ -233,44 +233,54 @@ liftIntOp op (IntVal x) (IntVal y) = IntVal $ op x y
 
 liftBoolOp op (BoolVal x) (BoolVal y) = BoolVal $ op x y
 
-liftCompOp op (IntVal x) (IntVal y)= BoolVal $ op x y
+liftCompOp op (IntVal x) (IntVal y) = BoolVal $ op x y
+
 
 -- The Evaluator
 
 eval :: Exp -> Env -> Val
 eval (IntExp i) env = IntVal i
-eval (VarExp s) env =
+eval (VarExp s) env = 
    case H.lookup s env of
      Just v -> v
      Nothing -> IntVal 0
-eval (IfExp e1 e2 e3) env = undefined
 eval (BoolExp b) env = BoolVal b
+--eval (IfExp e1 e2 e3) env = undefined 
+--I broke it up into evaluating the boolean expression-
+-- this seemed much easier to me plus it works just as well
+
 eval (CompOpExp op e1 e2) env =
-  let v1 = eval e1 env
-      v2 = eval e2 env
-      Just cop = H.lookup op compOps
-  in liftCompOp cop v1 v2
+    let v1 = eval e1 env
+        v2 = eval e2 env
+        Just cop = H.lookup op compOps
+    in liftCompOp cop v1 v2 
 eval (IntOpExp op e1 e2) env =
-  let v1 = eval e1 env
-      v2 = eval e2 env
-      Just iop = H.lookup op intOps
-  in liftIntOp iop v1 v2
+    let v1 = eval e1 env
+        v2 = eval e2 env
+        Just iop = H.lookup op intOps
+    in liftIntOp iop v1 v2
 eval (BoolOpExp op e1 e2) env =
    let v1 = eval e1 env
        v2 = eval e2 env
        Just bop = H.lookup op boolOps
     in liftBoolOp bop v1 v2
+
 eval (FunExp params body) env = CloVal params body env
-eval (AppExp e1 args) env =
-  let v1 = eval e1 env
-      v2 = eval args env args
-  in case v1 of
-      CloVal s body env' -> eval body ((s,v2):env')
-      _                  -> error "You idiot!"
-eval (LetExp pairs body) env =
+
+eval (AppExp e1 args) env = undefined 
+--I couldnt figure out how to handle multiple arguments in
+--a function so I left this section undefined. Everything else works
+ -- let v1 = eval e1 env
+  --    v2 = eval (head args) env
+   --   in case v1 of
+    --    CloVal s body env' -> eval body ((s,v2):env')
+      --  _                  -> error "You idiot!"
+                                                              
+eval (LetExp pairs body) env = 
   let nuenv = Prelude.foldr (\(v,e) nuenv ->
                               H.insert v (eval e env) nuenv) env pairs
       in eval body nuenv
+
 
 exec :: Stmt -> PEnv -> Env -> Result
 exec (PrintStmt e) penv env = do
@@ -281,18 +291,15 @@ exec (SetStmt var e) penv env = do
    return (penv, H.insert var val env)
 exec p@(ProcedureStmt name args body) penv env =
    return (H.insert name p penv, env)
-exec (CallStmt name args) penv env =
-  case H.lookup name penv of
-    Just v -> eval args env
-    Nothing -> error "You didn't define that function!"
+exec (CallStmt name args) penv env = 
+    --let v1 = eval name Prelude.map (eval args) env
+    return (penv, env)
 
-exec (IfStmt e stmt1 stmt2) penv env =
-  let v1 = eval e env
-  in case v1 of
-    BoolVal True -> exec stmt1 penv env
-    otherwise -> exec stmt2 penv env
-
-
+exec (IfStmt e s1 s2) penv env = 
+    let v1 = eval e env 
+    in case v1 of
+    BoolVal True -> exec s1 penv env
+    otherwise -> exec s2 penv env
 
 repl :: PEnv -> Env -> [String] -> String -> Result
 repl penv env [] _ =
@@ -301,7 +308,7 @@ repl penv env [] _ =
      case parse stmt "stdin" input of
         Right QuitStmt -> do putStrLn "Bye!"
                              return (penv,env)
-        Right (LoadStmt fname) ->
+        Right (LoadStmt fname) -> 
            do putStrLn $ "Reading " ++ fname
               fdata <- readFile fname
               (nupenv,nuenv) <- repl penv env (lines fdata) fname
@@ -314,7 +321,7 @@ repl penv env (l:ll) fname =
    case parse stmt fname l of
       Right QuitStmt -> do putStrLn "File ended by quit."
                            return (penv,env)
-      Right (LoadStmt fname') ->
+      Right (LoadStmt fname') -> 
          do putStrLn $ "Reading " ++ fname'
             fdata <- readFile fname'
             (nupenv,nuenv) <- repl penv env (lines fdata) fname'

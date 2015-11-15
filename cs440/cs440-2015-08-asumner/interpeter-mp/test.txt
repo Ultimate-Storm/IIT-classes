@@ -1,0 +1,33 @@
+This is a text file that shows the input and output of the interpreter for different commands.
+
+please enter these tests into the interpreter to verify these results
+
+
+#IntVal
+print 45; -> 45
+
+#BoolVal
+print true -> True
+
+#Variable
+x:=5;
+print x; -> 5
+
+#ifStmt
+if true then print 5; else print 6; fi -> 5
+if false then print 5; else print 6; fi -> 6
+
+#CompOpExp
+print 1<6; -> True
+print 1>5; -> False
+
+#IntOpExp
+print 5*5; -> 25
+print 10-5; -> 5
+print 1+1; -> 2
+
+
+#BoolOpExp
+print true and false; -> False
+print true or false; -> True
+
