@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  15 NOV 2015 02:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  15 NOV 2015 03:25
 entering extended mode
 **report.tex
 (C:\Users\Adam\classes\ECE429\labs\lab9\report.tex
@@ -211,24 +211,24 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {C:/Users/Adam/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [1]
-(C:\Users\Adam\classes\ECE429\labs\lab9\report.aux) ) 
+[2] (C:\Users\Adam\classes\ECE429\labs\lab9\report.aux) ) 
 Here is how much of TeX's memory you used:
  3030 strings out of 493921
  43382 string characters out of 3144880
- 130772 words of memory out of 3000000
+ 132772 words of memory out of 3000000
  6326 multiletter control sequences out of 15000+200000
  6673 words of font info for 24 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,5n,49p,758b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on report.pdf (2 pages, 65520 bytes).
+<C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on report.pdf (3 pages, 68982 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
+ 32 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
