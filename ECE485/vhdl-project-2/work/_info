@@ -1,0 +1,51 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+Ealu8
+Z0 w1447661307
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/Adam/classes/ECE485/vhdl-project-2
+Z5 8C:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd
+Z6 FC:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd
+l0
+L5
+V6MeH>1X18UakP6OV7zono0
+!s100 Hg:XDa`Y;Q4G[b>d>FVmz1
+Z7 OP;C;10.4a;61
+32
+Z8 !s110 1447661327
+!i10b 1
+Z9 !s108 1447661327.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd|
+Z11 !s107 C:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+Abehavioral
+R1
+R2
+R3
+Z14 DEx4 work 4 alu8 0 22 6MeH>1X18UakP6OV7zono0
+l18
+L16
+V>2CazTkPTUMEN>9:;N`mD2
+!s100 PliQUokj[cBAZHNiOzLbL3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
