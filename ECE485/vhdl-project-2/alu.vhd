@@ -27,14 +27,20 @@ begin
 			when "000" =>
 				temp <= a AND b;
 			when "001" =>
-				temp <= a OR b;
+				if s = '1' then
+					temp <= NOT a;
+				else 
+					temp <= NOT b;
+				end if;
 			when "010" =>
 				temp9 <= (a(7)& a) + (b(7) & b);
 				if temp9(8) /= temp9(7) then
 					ov <= '1'; --overflow!
+				else
+					ov <= '0';
 				end if;
 				--unsigned on temp so resize doesn't save the sign
-				temp <= signed(resize(unsigned(temp), y'length)); 
+				temp <= signed(resize(unsigned(temp9), temp'length)); 
 			when "011" =>
 				if(a < b) then
 					temp <= "11111111";
@@ -45,6 +51,7 @@ begin
 				temp9 <= (a(7)& a) - (b(7) & b);
 				if temp9(8) /= temp9(7) then
 					ov <= '1'; --underflow!
+				else ov <= '0';
 				end if;
 				--unsigned on temp so resize doesn't save the sign
 				temp <= signed(resize(unsigned(temp9), y'length));

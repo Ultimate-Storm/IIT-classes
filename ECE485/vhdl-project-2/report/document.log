@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  16 NOV 2015 04:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  16 NOV 2015 07:25
 entering extended mode
 **document.tex
 (C:\Users\Adam\classes\ECE485\vhdl-project-2\report\document.tex
@@ -156,7 +156,21 @@ Package pdftex.def Info: high-level-overview.png used on input line 65.
 (pdftex.def)             Requested size: 272.99881pt x 147.29073pt.
  [2 <C:/Users/Adam/classes/ECE485/vhdl-project-2/report/high-level-overview.png
 >]
-(C:\Users\Adam\classes\ECE485\vhdl-project-2\alu.vhd
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 75.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 75.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 75.
+
+<block-dia.jpg, id=17, 1211.52625pt x 681.54625pt>
+File: block-dia.jpg Graphic file (type jpg)
+ <use block-dia.jpg>
+Package pdftex.def Info: block-dia.jpg used on input line 104.
+(pdftex.def)             Requested size: 390.0pt x 219.3992pt.
+ [3]
+[4] (C:\Users\Adam\classes\ECE485\vhdl-project-2\alu.vhd [5 <C:/Users/Adam/clas
+ses/ECE485/vhdl-project-2/report/block-dia.jpg>]
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 27.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
@@ -164,55 +178,132 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 27.
- [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 34.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 34.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 34.
+(Font)              <10.95> on input line 38.
 
-Overfull \hbox (12.96402pt too wide) in paragraph at lines 36--37
+Overfull \hbox (12.96402pt too wide) in paragraph at lines 42--43
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (6.39395pt too wide) in paragraph at lines 37--38
+Overfull \hbox (32.67422pt too wide) in paragraph at lines 43--44
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (12.96402pt too wide) in paragraph at lines 49--50
+Overfull \hbox (12.96402pt too wide) in paragraph at lines 56--57
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (12.96402pt too wide) in paragraph at lines 50--51
+Overfull \hbox (12.96402pt too wide) in paragraph at lines 57--58
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[4]) [5] (C:\Users\Adam\classes\ECE485\vhdl-project-2\report\document.aux) ) 
+[6]) [7] <and.png, id=36, 381.67593pt x 166.37157pt>
+File: and.png Graphic file (type png)
+ <use and.png>
+Package pdftex.def Info: and.png used on input line 124.
+(pdftex.def)             Requested size: 390.0pt x 170.00644pt.
+ [8 <C:/Users/Adam/classes/ECE485/vhdl-project-2/report/and.png>]
+<not-a.png, id=42, 414.04688pt x 151.3153pt>
+File: not-a.png Graphic file (type png)
+ <use not-a.png>
+Package pdftex.def Info: not-a.png used on input line 133.
+(pdftex.def)             Requested size: 390.0pt x 142.53194pt.
+
+<not-b.png, id=43, 390.70969pt x 155.07938pt>
+File: not-b.png Graphic file (type png)
+ <use not-b.png>
+Package pdftex.def Info: not-b.png used on input line 141.
+(pdftex.def)             Requested size: 390.0pt x 154.80447pt.
+
+<addition.png, id=44, 408.02437pt x 156.585pt>
+File: addition.png Graphic file (type png)
+ <use addition.png>
+Package pdftex.def Info: addition.png used on input line 150.
+(pdftex.def)             Requested size: 390.0pt x 149.67477pt.
+ [9 <C:/Users/Adam/classes/ECE485/vhdl-project-2/report/not-a.png> <C:/Users/Ad
+am/classes/ECE485/vhdl-project-2/report/not-b.png>]
+<addition-no-overflow.png, id=50, 400.49625pt x 160.34906pt>
+File: addition-no-overflow.png Graphic file (type png)
+
+<use addition-no-overflow.png>
+Package pdftex.def Info: addition-no-overflow.png used on input line 159.
+(pdftex.def)             Requested size: 390.0pt x 156.15497pt.
+
+<less-than.png, id=51, 417.81094pt x 159.59625pt>
+File: less-than.png Graphic file (type png)
+ <use less-than.png>
+Package pdftex.def Info: less-than.png used on input line 168.
+(pdftex.def)             Requested size: 390.0pt x 148.98306pt.
+ [10 <C:/Users/Adam/classes/ECE485/vhdl-project-2/report/addition.png> <C:/User
+s/Adam/classes/ECE485/vhdl-project-2/report/addition-no-overflow.png>]
+<subtract.png, id=57, 400.49625pt x 158.84344pt>
+File: subtract.png Graphic file (type png)
+ <use subtract.png>
+Package pdftex.def Info: subtract.png used on input line 177.
+(pdftex.def)             Requested size: 390.0pt x 154.68874pt.
+
+<XOR.png, id=58, 408.77719pt x 161.85469pt>
+File: XOR.png Graphic file (type png)
+ <use XOR.png>
+Package pdftex.def Info: XOR.png used on input line 186.
+(pdftex.def)             Requested size: 390.0pt x 154.42789pt.
+ [11 <C:/Users/Adam/classes/ECE485/vhdl-project-2/report/less-than.png> <C:/Use
+rs/Adam/classes/ECE485/vhdl-project-2/report/subtract.png>]
+<sll-a.png, id=64, 405.76593pt x 167.12437pt>
+File: sll-a.png Graphic file (type png)
+ <use sll-a.png>
+Package pdftex.def Info: sll-a.png used on input line 194.
+(pdftex.def)             Requested size: 390.0pt x 160.63646pt.
+
+<sll-b.png, id=65, 390.70969pt x 164.11313pt>
+File: sll-b.png Graphic file (type png)
+ <use sll-b.png>
+Package pdftex.def Info: sll-b.png used on input line 203.
+(pdftex.def)             Requested size: 390.0pt x 163.82222pt.
+ [12 <C:/Users/Adam/classes/ECE485/vhdl-project-2/report/XOR.png> <C:/Users/Ada
+m/classes/ECE485/vhdl-project-2/report/sll-a.png>] <sra-a.png, id=71, 412.54124
+pt x 170.88844pt>
+File: sra-a.png Graphic file (type png)
+
+<use sra-a.png>
+Package pdftex.def Info: sra-a.png used on input line 211.
+(pdftex.def)             Requested size: 390.0pt x 161.553pt.
+ <sra-b.png, id=72, 411.78844pt x 161.10187pt>
+File: sra-b.png Graphic file (type png)
+ <use sra-b.png>
+Package pdftex.def Info: sra-b.png used on input line 221.
+(pdftex.def)             Requested size: 390.0pt x 152.57884pt.
+
+[13 <C:/Users/Adam/classes/ECE485/vhdl-project-2/report/sll-b.png> <C:/Users/Ad
+am/classes/ECE485/vhdl-project-2/report/sra-a.png>] [14 <C:/Users/Adam/classes/
+ECE485/vhdl-project-2/report/sra-b.png>]
+(C:\Users\Adam\classes\ECE485\vhdl-project-2\report\document.aux) ) 
 Here is how much of TeX's memory you used:
- 2638 strings out of 493921
- 37118 string characters out of 3144880
- 148175 words of memory out of 3000000
- 5937 multiletter control sequences out of 15000+200000
- 9228 words of font info for 33 fonts, out of 3000000 for 9000
+ 2722 strings out of 493921
+ 38319 string characters out of 3144880
+ 146175 words of memory out of 3000000
+ 6008 multiletter control sequences out of 15000+200000
+ 9586 words of font info for 34 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 32i,6n,36p,1631b,1557s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on document.pdf (5 pages, 103046 bytes).
+ 32i,11n,36p,2971b,1557s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on document.pdf (14 pages, 362610 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
+ 112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
