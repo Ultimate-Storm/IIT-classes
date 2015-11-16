@@ -6,6 +6,7 @@ entity alu8 is
 port(
 		clk : in std_logic;
 		s	: in std_logic;
+		ov, zero	: out std_logic;
 		a,b : in signed(7 downto 0);
 		op  : in unsigned(2 downto 0);
 		y	: out signed(7 downto 0)
@@ -15,42 +16,61 @@ end alu8;
 
 architecture Behavioral of alu8 is
 
+signal temp9: signed(8 downto 0);
+signal temp: signed(7 downto 0);
+
 begin
 process(clk)
 begin
 	if(rising_edge(clk)) then
 		case op is 
 			when "000" =>
-				y <= a AND b;
+				temp <= a AND b;
 			when "001" =>
-				y <= a OR b;
+				temp <= a OR b;
 			when "010" =>
-				y <= a+ b;
+				temp9 <= (a(7)& a) + (b(7) & b);
+				if temp9(8) /= temp9(7) then
+					ov <= '1'; --overflow!
+				end if;
+				--unsigned on temp so resize doesn't save the sign
+				temp <= signed(resize(unsigned(temp), y'length)); 
 			when "011" =>
 				if(a < b) then
-					y <= "11111111";
+					temp <= "11111111";
 				else
-					y <= "00000000";
+					temp <= "00000000";
 				end if;
 			when "100" =>
-				y <= a-b;
+				temp9 <= (a(7)& a) - (b(7) & b);
+				if temp9(8) /= temp9(7) then
+					ov <= '1'; --underflow!
+				end if;
+				--unsigned on temp so resize doesn't save the sign
+				temp <= signed(resize(unsigned(temp9), y'length));
 			when "101" =>
-				y <= a XOR b;
+				temp <= a XOR b;
 			when "110" =>
 				if s = '1' then
-					y <= SHIFT_LEFT(a,1);
+					temp <= SHIFT_LEFT(a,1);
 				else 
-					y <= SHIFT_LEFT(b,1);
+					temp <= SHIFT_LEFT(b,1);
 				end if;
 			when "111" =>
 				if s = '1' then
-					y <= SHIFT_RIGHT(a,1);
+					temp <= SHIFT_RIGHT(a,1);
 				else 
-					y <= SHIFT_RIGHT(b,1);
+					temp <= SHIFT_RIGHT(b,1);
 				end if;
 			when others =>
 				NULL; --default case
 		end case;
+		if temp = "00000000" then
+			zero <= '1';
+		else
+			zero <= '0';
+		end if;
+		y <= temp;
 	end if;
 end process;
 

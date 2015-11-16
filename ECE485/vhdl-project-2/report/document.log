@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  16 NOV 2015 01:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  16 NOV 2015 04:46
 entering extended mode
 **document.tex
 (C:\Users\Adam\classes\ECE485\vhdl-project-2\report\document.tex
@@ -147,25 +147,72 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
  [1
 
-{C:/Users/Adam/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(C:\Users\Adam\classes\ECE485\vhdl-project-2\report\document.aux) ) 
+{C:/Users/Adam/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<high-level-overview.png, id=10, 485.56406pt x 261.97874pt>
+File: high-level-overview.png Graphic file (type png)
+
+<use high-level-overview.png>
+Package pdftex.def Info: high-level-overview.png used on input line 65.
+(pdftex.def)             Requested size: 272.99881pt x 147.29073pt.
+ [2 <C:/Users/Adam/classes/ECE485/vhdl-project-2/report/high-level-overview.png
+>]
+(C:\Users\Adam\classes\ECE485\vhdl-project-2\alu.vhd
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 27.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 27.
+ [3]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 34.
+
+Overfull \hbox (12.96402pt too wide) in paragraph at lines 36--37
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (6.39395pt too wide) in paragraph at lines 37--38
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (12.96402pt too wide) in paragraph at lines 49--50
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (12.96402pt too wide) in paragraph at lines 50--51
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[4]) [5] (C:\Users\Adam\classes\ECE485\vhdl-project-2\report\document.aux) ) 
 Here is how much of TeX's memory you used:
- 2455 strings out of 493921
- 34918 string characters out of 3144880
- 117175 words of memory out of 3000000
- 5772 multiletter control sequences out of 15000+200000
- 6320 words of font info for 23 fonts, out of 3000000 for 9000
+ 2638 strings out of 493921
+ 37118 string characters out of 3144880
+ 148175 words of memory out of 3000000
+ 5937 multiletter control sequences out of 15000+200000
+ 9228 words of font info for 33 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 26i,6n,36p,217b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on document.pdf (2 pages, 58074 bytes).
+ 32i,6n,36p,1631b,1557s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on document.pdf (5 pages, 103046 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
+ 49 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
