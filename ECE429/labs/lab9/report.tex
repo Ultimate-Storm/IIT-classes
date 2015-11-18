@@ -58,7 +58,7 @@
 		\noindent
 		\vfill
 		\large \textbf{Lab Date:} November 9\textsuperscript{th}, 2015\hfill
-		\large \textbf{Due Date:} November 16\textsuperscript{th}, 2015
+		\large \textbf{Due Date:} November 18\textsuperscript{th}, 2015
 		% Bottom of the page
 	
 		
@@ -83,17 +83,99 @@ The pre-lab involved familiarizing with Tutorial IV and the verilog code and tes
 
 \section{Implementation}
 \subsection{Schematics}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{layout-1}
+\caption{Generated Layout Overview}
+\label{fig:layout-1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{layou-2}
+\caption{Generated Layout Closeup}
+\label{fig:layou-2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{layout-3}
+\caption{Generated Layout Closeup 2}
+\label{fig:layout-3}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{layout-4}
+\caption{Detailed Layout}
+\label{fig:layout-4}
+\end{figure}
+
 
 \subsection{Procedure}
-
+This lab involved following the instructions in Tutorial IV. This entailed checking verilog files for equivalence, generating a layout of the design, and then checking the layout for equivalence using Formality.
 
 \subsection{Results}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{verilog}
+\caption{Initial Verilog Verfication}
+\label{fig:verilog}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{waveform-intial}
+\caption{Initial Waveform Verification of Verilog}
+\label{fig:waveform-intial}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{area-report}
+\caption{Area Report}
+\label{fig:area-report}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{power-report}
+\caption{Power Report}
+\label{fig:power-report}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{fm-verification}
+\caption{Formality Verification}
+\label{fig:fm-verification}
+\end{figure}
+
 \subsection{Discussion}
+Figures \ref{fig:layout-1}-\ref{fig:layout-4} show the generated layout design from the accumulator verilog file. From the results gathered in Figures \ref{fig:verilog}-\ref{fig:fm-verification}, it is clear that the layout was successfully generated and has equivalent functionality to the verilog file.
 
+\subsubsection{Questions}
+\textbf{What is a standard cell?}\\
+It's a group of transistors and interconnects that provide boolean logic functions or storage functions. They are used in conjunction with one another to produce complex circuits such as adders or registers.
 
+~\\
+\textbf{What are the differences among ‘accu.v’, ‘accu.vh’, and ‘final.v’ ?}\\
+\texttt{accu.v} is the original verilog file, \texttt{accu.vh} is the generated logic synthesis netlist, and \texttt{final.v} is the generated verilog file from the layout created in Encounter.
+
+~\\
+\textbf{How does the area of your design change after place \& route?}\\
+This information is shown in Figure \ref{fig:area-report}. It lists the gate area, how many gates there are, how many cells there are, and the total area. The area is optimized to be as small as possible.
+
+~\\
+\textbf{How does the timing of your design change after place \& route?}\\
+Because the area of the design was optimized to take up the minimum amount of space, the timing of the design is also optimized to be as fast as possible.
+
+\newpage
+\noindent\textbf{Why do we need to use Virtuoso to generate the final layout for fabrication? What information is available from ‘final.gds2’?}\\
+\texttt{final.gds2} only contains the placement of the cells and metal interconnects. It doesn't contain any layout details inside the cells, for example, wells and poly. This is why it's necessary to use Virtuoso to generate the final layout.
 %\subsection{Bonus Work}
 \section{Conclusions}
-
+Overall this lab was a success. Tutorial IV was successfully followed, the layout of an accumulator was generated, and its functionality was checked for accuracy. Standard Cell Based ASIC Design Flow was successfully explored.
 
 \end{document}

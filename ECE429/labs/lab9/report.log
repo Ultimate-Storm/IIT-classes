@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  15 NOV 2015 04:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  17 NOV 2015 23:44
 entering extended mode
 **report.tex
 (C:\Users\Adam\classes\ECE429\labs\lab9\report.tex
@@ -211,24 +211,110 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {C:/Users/Adam/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [1]
-[2] (C:\Users\Adam\classes\ECE429\labs\lab9\report.aux) ) 
+<layout-1.png, id=13, 380.92313pt x 389.20406pt>
+File: layout-1.png Graphic file (type png)
+ <use layout-1.png>
+Package pdftex.def Info: layout-1.png used on input line 88.
+(pdftex.def)             Requested size: 443.57848pt x 453.2349pt.
+
+<layou-2.png, id=15, 384.6872pt x 341.02406pt>
+File: layou-2.png Graphic file (type png)
+ <use layou-2.png>
+Package pdftex.def Info: layou-2.png used on input line 95.
+(pdftex.def)             Requested size: 443.57848pt x 393.25697pt.
+ [2 <C:/Users/Adam/classes/ECE429/labs/lab9/layout-1.png>]
+<layout-3.png, id=20, 541.27219pt x 411.03563pt>
+File: layout-3.png Graphic file (type png)
+ <use layout-3.png>
+Package pdftex.def Info: layout-3.png used on input line 102.
+(pdftex.def)             Requested size: 443.57848pt x 336.85696pt.
+ [3 <C:/Users/Adam/classes/ECE429/labs/lab9/layou-2.png>]
+<layout-4.png, id=25, 671.50874pt x 450.18187pt>
+File: layout-4.png Graphic file (type png)
+ <use layout-4.png>
+Package pdftex.def Info: layout-4.png used on input line 109.
+(pdftex.def)             Requested size: 443.57848pt x 297.3751pt.
+ [4 <C:/Users/Adam/classes/ECE429/labs/lab9/layout-3.png>]
+<verilog.png, id=30, 343.2825pt x 182.93344pt>
+File: verilog.png Graphic file (type png)
+ <use verilog.png>
+Package pdftex.def Info: verilog.png used on input line 122.
+(pdftex.def)             Requested size: 221.78923pt x 118.18794pt.
+
+<waveform-intial.png, id=31, 717.43031pt x 149.8097pt>
+File: waveform-intial.png Graphic file (type png)
+
+<use waveform-intial.png>
+Package pdftex.def Info: waveform-intial.png used on input line 129.
+(pdftex.def)             Requested size: 443.57848pt x 92.6273pt.
+ [5 <C:/Users/Adam/classes/ECE429/labs/lab9/layout-4.png> <C:/Users/Adam/classe
+s/ECE429/labs/lab9/verilog.png>]
+<area-report.png, id=37, 210.7875pt x 48.18pt>
+File: area-report.png Graphic file (type png)
+ <use area-report.png>
+Package pdftex.def Info: area-report.png used on input line 136.
+(pdftex.def)             Requested size: 221.78923pt x 50.69559pt.
+
+<power-report.png, id=38, 424.58624pt x 485.56406pt>
+File: power-report.png Graphic file (type png)
+ <use power-report.png>
+Package pdftex.def Info: power-report.png used on input line 143.
+(pdftex.def)             Requested size: 310.50357pt x 355.11081pt.
+
+<fm-verification.png, id=39, 751.30687pt x 431.36156pt>
+File: fm-verification.png Graphic file (type png)
+
+<use fm-verification.png>
+Package pdftex.def Info: fm-verification.png used on input line 150.
+(pdftex.def)             Requested size: 310.50357pt x 178.27452pt.
+ [6 <C:/Users/Adam/classes/ECE429/labs/lab9/waveform-intial.png> <C:/Users/Adam
+/classes/ECE429/labs/lab9/area-report.png> <C:/Users/Adam/classes/ECE429/labs/l
+ab9/power-report.png>]
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ˜ in font cmbx12!
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ™ in font cmbx12!
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ˜ in font cmbx12!
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ™ in font cmbx12!
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ˜ in font cmbx12!
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ™ in font cmbx12!
+ [7 <C:/Users/Adam/classes/ECE429/labs/lab9/fm-verification.png>]
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ˜ in font cmbx12!
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ™ in font cmbx12!
+ [8]
+(C:\Users\Adam\classes\ECE429\labs\lab9\report.aux) ) 
 Here is how much of TeX's memory you used:
- 3030 strings out of 493921
- 43382 string characters out of 3144880
+ 3090 strings out of 493921
+ 44389 string characters out of 3144880
  132772 words of memory out of 3000000
- 6326 multiletter control sequences out of 15000+200000
- 6673 words of font info for 24 fonts, out of 3000000 for 9000
+ 6375 multiletter control sequences out of 15000+200000
+ 6842 words of font info for 25 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,5n,49p,758b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on report.pdf (3 pages, 68982 bytes).
+ 27i,6n,49p,758b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (9 pages, 289403 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
