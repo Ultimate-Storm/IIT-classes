@@ -43,7 +43,20 @@ wrap2a f _ = error "Value stack underflow!"
 dup xx =  [head xx] ++ xx
 drop1 (x:xs) = xs
 swap (x:y:xs) = [y] ++ [x] ++ xs
-rot (x:y:z:xs) = [z] ++ [y] ++ [x] ++ xs
+rot (x:y:z:xs) = [z] ++ [x] ++ [y] ++ xs
+
+notf (x:xs)
+  | x == -1 = 0:xs
+  | x == 0 = -1:xs
+  | otherwise = error "You didn't use boolean values!"
+
+compbool f (x:y:xs)
+  | x == -1 && y == -1 = if((f) True True) then -1:xs else 0:xs
+  | x == -1 && y == 0 = if((f) True False) then -1:xs else 0:xs
+  | x == 0 && y == -1 = if((f) False True) then -1:xs else 0:xs
+  |x == 0 && y == 0 = if((f) False False) then -1:xs else 0:xs
+  | otherwise = error "You didn't use boolean values!"
+
 
 comp f (x:y:xs) =
   if((f) y x)
@@ -76,8 +89,12 @@ dictionary = dinsert "+" (Prim $ wrap2 (+))
               (dinsert "/" (Prim $ wrap2a (quot))
               (dinsert "<" (Prim $ comp (<))
               (dinsert ">" (Prim $ comp (>))
-              (dinsert "==" (Prim $ comp (==)) H.empty))) ) ) ) ) ) ) )
---dictionary1 = dinsert "dup" (Prim $ dup) dictionary
+              (dinsert "==" (Prim $ comp (==))
+              (dinsert "<=" (Prim $ comp (<=))
+              (dinsert ">=" (Prim $ comp (>=))
+              (dinsert "&&" (Prim $ compbool (&&))
+              (dinsert "||" (Prim $ compbool (||))
+              (dinsert "not" (Prim $ notf) H.empty ) )))) ) ) ) ) ) ) ))))
 
 getTrueStmt [] = []
 getTrueStmt (x:xs) =
