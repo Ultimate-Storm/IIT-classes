@@ -1,5 +1,2 @@
-module
-   evl_dff(s0, s1, clk);
-   //Comment
-
-   endmodule
+module top;
+endmodule

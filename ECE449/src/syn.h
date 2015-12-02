@@ -1,6 +1,7 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
+#include "lex.h"
 
 using namespace std;
 
@@ -38,4 +39,4 @@ typedef struct Component{
 };
 
 
-int syntactic_analysis(ifstream& input_file, string filename);
+int syntactic_analysis(std::vector<Token> &token_list, string filename);

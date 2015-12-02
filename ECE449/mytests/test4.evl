@@ -1,5 +1,2 @@
-module
-
-   wire s0, s1, clk;
-
+module top;
 endmodule

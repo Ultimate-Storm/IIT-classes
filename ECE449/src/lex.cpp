@@ -29,19 +29,25 @@ int main(int argc, char *argv[])
     }
 
     std::string line;
+    std::vector<Token> tokens;
     for (int line_no = 1; std::getline(input_file, line); ++line_no)
     {
         for (size_t i = 0; i < line.size();)
         {
+            Token token;
             //Numbers
             if(isdigit(line[i])){
-                output_file << "NUMBER " << line[i];
+                token.type = NUMBER;
+                int num = line[i]-'0';
                 ++i;
                 while(isdigit(line[i])){
-                    output_file << line[i];
+                    num *= 10; //shift place
+                    num += line[i]-'0';
                     ++i;
                 }
-                output_file << std::endl;       
+                token.number = num;
+                token.value = "";
+                tokens.push_back(token);
                 continue;
             }
             // comments
@@ -71,7 +77,10 @@ int main(int argc, char *argv[])
                 || (line[i] == ':') || (line[i] == ';')
                 || (line[i] == ','))
             {
-                output_file << "SINGLE " << line[i] << std::endl;
+                token.type = SINGLE;
+                token.value = line[i];
+                token.number = -1;
+                tokens.push_back(token);
                 ++i; // we consumed this character
                 continue; // skip the rest of the iteration
             }
@@ -92,8 +101,10 @@ int main(int argc, char *argv[])
                         break; // [name_begin, i) is the range for the token
                     }
                 }
-                output_file << "NAME "
-                    << line.substr(name_begin, i-name_begin) << std::endl;
+                token.type = NAME;
+                token.value = line.substr(name_begin, i-name_begin);
+                token.number = -1;
+                tokens.push_back(token);
             }
             else
             {
@@ -103,19 +114,6 @@ int main(int argc, char *argv[])
             }
         }
     }
-
-    std::ifstream syntactic_input_file(output_file_name.c_str());
-    //output file from lex.cpp is input to syn.cpp
-   /* if(syntactic_analysis(syntactic_input_file, argv[1])){
-        return -1; 
-    }*/
-    syntactic_analysis(syntactic_input_file, argv[1]);
-    //std::ifstream netlist_input_file(output_file_name.c_str());
-    //netlist_input_file.clear();
-    //netlist_input_file.seekg(0,netlist_input_file.beg);
-   // netlist_creation(component_list, argv[1], netlist_input_file);
-  /*  std::ofstream netlist_input_file((std::string(argv[1])+".netlist").c_str()); 
-    netlist_input_file << "module top" << std::endl;
-    netlist_input_file << "endmodule";*/
+      syntactic_analysis(tokens, argv[1]);
     return 0;
 }

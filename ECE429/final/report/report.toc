@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {subsection}{\numberline {1.1}Circuit Description}{2}
+\contentsline {subsection}{\numberline {1.2}Memory File}{3}
+\contentsline {subsection}{\numberline {1.3}ALU}{3}
+\contentsline {subsection}{\numberline {1.4}Synchronization}{4}
+\contentsline {section}{\numberline {2}32-Bit CPU Design with Different Adders}{5}
+\contentsline {subsection}{\numberline {2.1}Introduction}{5}
+\contentsline {subsection}{\numberline {2.2}Carry Ripple Adder}{5}
+\contentsline {subsubsection}{\numberline {2.2.1}RTL Simulation}{6}
+\contentsline {subsubsection}{\numberline {2.2.2}Logic Synthesis and Post-Synthesis Simulation}{7}
+\contentsline {subsubsection}{\numberline {2.2.3}Place \& Route and Post-P\&R Simulation}{8}
+\contentsline {subsubsection}{\numberline {2.2.4}Test Bench}{9}
+\contentsline {subsection}{\numberline {2.3}Carry Lookahead Adder}{10}
+\contentsline {subsubsection}{\numberline {2.3.1}RTL Simulation}{11}
+\contentsline {subsubsection}{\numberline {2.3.2}Logic Synthesis and Post-Synthesis Simulation}{11}
+\contentsline {subsubsection}{\numberline {2.3.3}Place \& Route and Post-P\&R Simulation}{11}
+\contentsline {subsubsection}{\numberline {2.3.4}Test Bench}{11}
+\contentsline {subsection}{\numberline {2.4}Carry Skip Adder}{11}
+\contentsline {subsubsection}{\numberline {2.4.1}RTL Simulation}{12}
+\contentsline {subsubsection}{\numberline {2.4.2}Logic Synthesis and Post-Synthesis Simulation}{12}
+\contentsline {subsubsection}{\numberline {2.4.3}Place \& Route and Post-P\&R Simulation}{12}
+\contentsline {subsubsection}{\numberline {2.4.4}Test Bench}{12}
+\contentsline {subsection}{\numberline {2.5}Carry Select Adder}{12}
+\contentsline {subsubsection}{\numberline {2.5.1}RTL Simulation}{12}
+\contentsline {subsubsection}{\numberline {2.5.2}Logic Synthesis and Post-Synthesis Simulation}{12}
+\contentsline {subsubsection}{\numberline {2.5.3}Place \& Route and Post-P\&R Simulation}{12}
+\contentsline {subsubsection}{\numberline {2.5.4}Test Bench}{12}
+\contentsline {section}{\numberline {3}32-Bit CPU Design with New ALU Architecture}{12}
+\contentsline {section}{\numberline {4}Conclusions}{12}

@@ -1,0 +1,268 @@
+\documentclass[12pt]{article}
+\usepackage[margin=3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{ %
+	xleftmargin=2em,
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+	basicstyle=\small,%\footnotesize,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	%	frame=single,                    % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	language=C, % the language of the code
+	morekeywords={*,...},            % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\small\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2                  % sets default tabsize to 2 spac                  % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\begin{document}
+
+\begin{titlepage}
+	\begin{center}
+		
+		
+		% Upper part of the page. The '~' is needed because \\
+		% only works if a paragraph has started.
+		\vfill
+		
+		\textsc{\LARGE Case Study for 32-Bit Pipelined CPU\\[0.2cm] Design with New ALU Architecture}\\[1.5cm]
+		
+		\Large Adam Sumner\\[0.5cm]
+		
+		\Large Illinois Institute of Technology\\[0.5cm]
+		
+		\Large ECE 429-01\\[0.5cm]
+		
+		\Large December 4\textsuperscript{th}, 2015	
+		
+		\noindent
+		\vfill
+		%\large \textbf{Lab Date:} November 9\textsuperscript{th}, 2015\hfill
+		%\large \textbf{Due Date:} November 18\textsuperscript{th}, 2015
+		% Bottom of the page
+	
+		
+	\end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+\section{Introduction}
+The objective of this project is to understand how a 32-bit pipelined Central Processing Unit (CPU) functions and how it is both physically and logically constructed. As the name suggests, the length of a word is 32 bits wide. Furthermore, due to the wonderful invention of pipelining, multiple instructions can be executed simultaneously. A CPU's normal processes (excluding interrupts) are synchronized, therefore the CPU will be in sync using an external clock signal. The instruction signals for addressing the memory file, Arithmetic Logic Unit (ALU) operands, and the ALU operation are also external. 
+
+\subsection{Circuit Description}
+The complete overview of the primary building blocks and signals of the CPU are shown in Figure \ref{fig:overview}. The two main components are the memory file and the ALU. The external clock signal synchronizes the capture and release of data within the 32 x 32 memory file block. Because of pipelining, each instruction executed can be performed in 2 clock cycles. The first cycle involves the two decoders translating the external address selection signals used for specifying the contents of the memory file that should be read. In addition to this, the multiplexer blocks are used to select the operands for the ALU. In the second clock cycle, the ALU performs the specified operation. The output of the ALU can then be read from outside the CPU through a tri-state buffer, and they can also be written back into the memory file in the word specified by Address B.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{overview}
+\caption{Circuit Overview}
+\label{fig:overview}
+\end{figure}
+
+\subsection{Memory File}
+The memory file stores 32 32-bit words. There are two read ports and one write port. The words that are read in each clock cycle are specified in Address A and Address B from Figure \ref{fig:overview}. The primary storage element used in this design is a D-register. The output of each register is connected to the two output read ports through tri-state buffers. The buffers are enabled through the decoded address A and address B. The value of address B specifies the word address in the memory file where the results of the ALU will be stored after the computation is complete in the second clock cycle.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{memory-file}
+	\caption{Memory File}
+	\label{fig:memory-file}
+\end{figure}
+\subsection{ALU}
+The ALU of the circuit has two operands A and B, and it implements the following functions:
+\begin{itemize}
+	\item A * B : multiplication
+	\item A + B : addition
+	\item A - B : subtraction
+	\item B - A : subtraction
+	\item A or B : logic OR function
+	\item A and B : logic AND function
+	\item A xor B: exclusive XOR function
+	\item A xnor B : logic XNOR function
+\end{itemize}
+
+The ALU has three primary operation blocks: the multiplier, the adder, and the logic function block. This is shown in figure \ref{fig:alu-overview}. The multiplier carries out the multiplication function. Because multiplication results in a 64-bit result, 2 clock cycles are used to store the result. This means that to execute the multiply instruction, 3 cycles instead of 2 are used in total.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{alu-overview}
+\caption{ALU Overview}
+\label{fig:alu-overview}
+\end{figure}
+The adder circuit within the ALU is a 32-bit adder/subtractor circuit. It executes the addition and subtraction operations. The selection of the operation is done by the two externally defined operation select signals OPSEL. The same signals are used to specify the operation executed within the logic function of the ALU. The final output select signal OUTSEL specifies the result of the ALU for output using the 4-to-1 multiplexer.
+
+\subsection{Synchronization}
+Each instruction executed by the CPU is determined by the external control signals. An instruction word is shown in Figure \ref{fig:instruc}. Once the clock signals high, the instruction is applied to the signals that control the CPU operation. Since each instruction is executed in two steps, some control signals need to be stored at the internal registers of the CPU. In the first step of the instruction, the instruction specifies the contents of the memory file that will be read from the read ports A and B, and the operands of the ALU. In the second cycle, the control signals determine the operation to be executed internally in the ALU and the ALU output. The results of the ALU will be available if the OEN signal is set, and the result will also be written back into the memory file. This address is specified by address B. Data is written at the next positive edge of the clock. The period of the clock signal is determined by the longest data path delay in the circuit.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{instruc}
+\caption{Instruction Word Contents}
+\label{fig:instruc}
+\end{figure}
+
+\section{32-Bit CPU Design with Different Adders}
+
+\subsection{Introduction}
+The objective of this project is to carry out the logical and physical synthesis of a 32-bit cpu using 4 separate types of adder circuits. 
+\subsection{Carry Ripple Adder}
+An n-bit CRA is formed by concatenating n full adders in cascade with the carry output from one adder connected to the carry input of the next. This is shown in Figure \ref{fig:carry-ripple}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{carry-ripple}
+\caption{Carry Ripple Adder}
+\label{fig:carry-ripple}
+\end{figure}
+
+\subsubsection{RTL Simulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CRA/CRA-text}
+\caption{Display}
+\label{fig:CRA-text}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CRA/CRA-test}
+\caption{Simvision}
+\label{fig:CRA-test}
+\end{figure}
+
+\subsubsection{Logic Synthesis and Post-Synthesis Simulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CRA/synth-text}
+\caption{Display}
+\label{fig:synth-text}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CRA/synth-test}
+\caption{Simvision}
+\label{fig:synth-test}
+\end{figure}
+
+\subsubsection{Place \& Route and Post-P\&R Simulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{../CRA/encounter-text}
+\caption{Display}
+\label{fig:encounter-text}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{../CRA/encounter-test}
+\caption{Simvision}
+\label{fig:encounter-test}
+\end{figure}
+
+\subsubsection{Test Bench}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{../CRA/test-text}
+\caption{RTL Display}
+\label{fig:test-text}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{../CRA/test-test}
+\caption{RTL Simvision}
+\label{fig:test-test}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{../CRA/alu1-test}
+\caption{ALU Operations}
+\label{fig:alu1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{../CRA/alu2-test}
+\caption{ALU Operations}
+\label{fig:alu2}
+\end{figure}
+
+\subsection{Carry Lookahead Adder}
+Carry Lookahead circuits are special logic circuits that can dramatically reduce the time to perform addition at the price of more complex hardware. This is done by transforming the ripple carry design so that the carry logic over a fixed group of bits are reduced to two-level logic. This is shown in Figure \ref{fig:carry-lookahead}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{carry-lookahead}
+\caption{Carry Lookahead Adder}
+\label{fig:carry-lookahead}
+\end{figure}
+
+\subsubsection{RTL Simulation}
+
+\subsubsection{Logic Synthesis and Post-Synthesis Simulation}
+
+\subsubsection{Place \& Route and Post-P\&R Simulation}
+
+\subsubsection{Test Bench}
+
+\subsection{Carry Skip Adder}
+In the Carry Skip Adder, the operands are divided into blocked of r bits blocks. In each block, a ripple carry adder can be utilized to produce the sum bits and a carryout bit for the block. This is shown in Figure \ref{fig:carry-skip}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{carry-skip}
+\caption{Carry Skip Adder}
+\label{fig:carry-skip}
+\end{figure}
+
+\subsubsection{RTL Simulation}
+
+\subsubsection{Logic Synthesis and Post-Synthesis Simulation}
+
+\subsubsection{Place \& Route and Post-P\&R Simulation}
+
+\subsubsection{Test Bench}
+
+\subsection{Carry Select Adder}
+The Carry Select Adder divides the operands to be added into r bit blocks similar to the Carry Skip Adder. For each block, two r-bit Ripple Carry Adders operate in parallel to form two sets of sum bits and carry out signals. Each Ripple Carry Adder has two sets of hard-coded carry-in signals. One Ripple Carry Adder has a carry-in of 0, while the other has a carry-in of 1. This is shown in Figure \ref{fig:carry-select}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{carry-select}
+\caption{Carry Select Adder}
+\label{fig:carry-select}
+\end{figure}
+
+\subsubsection{RTL Simulation}
+
+\subsubsection{Logic Synthesis and Post-Synthesis Simulation}
+
+\subsubsection{Place \& Route and Post-P\&R Simulation}
+
+\subsubsection{Test Bench}
+
+%\subsection{Bonus Work}
+\section{32-Bit CPU Design with New ALU Architecture}
+\section{Conclusions}
+
+
+
+
+\end{document}
