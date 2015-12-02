@@ -1,0 +1,174 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'cpu' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cpu
+Version: G-2012.06
+Date   : Tue Dec  1 15:25:18 2015
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: mOpd/aa/me1/qout_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mb/ram/mer12/ll/me31/qout_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  mOpd/aa/me1/qout_reg/CLK (DFFPOSX1)                     0.00 #     0.00 r
+  mOpd/aa/me1/qout_reg/Q (DFFPOSX1)                       0.20       0.20 r
+  U1949/Y (AND2X1)                                        0.05       0.25 r
+  U1856/Y (AND2X1)                                        0.04       0.29 r
+  U1855/Y (INVX1)                                         0.03       0.32 f
+  a/l3/f02/U3/Y (OAI21X1)                                 0.04       0.36 r
+  U1423/Y (INVX1)                                         0.04       0.40 f
+  a/l3/f03/U3/Y (OAI21X1)                                 0.04       0.44 r
+  U1424/Y (INVX1)                                         0.04       0.48 f
+  a/l3/f04/U3/Y (OAI21X1)                                 0.04       0.52 r
+  U1425/Y (INVX1)                                         0.04       0.55 f
+  a/l3/f05/U3/Y (OAI21X1)                                 0.04       0.59 r
+  U1426/Y (INVX1)                                         0.04       0.63 f
+  a/l3/f06/U3/Y (OAI21X1)                                 0.04       0.67 r
+  U1427/Y (INVX1)                                         0.04       0.71 f
+  a/l3/f07/U3/Y (OAI21X1)                                 0.04       0.75 r
+  U1428/Y (INVX1)                                         0.04       0.78 f
+  a/l3/f08/U3/Y (OAI21X1)                                 0.04       0.83 r
+  U1429/Y (INVX1)                                         0.04       0.86 f
+  a/l3/f09/U3/Y (OAI21X1)                                 0.04       0.90 r
+  U1430/Y (INVX1)                                         0.04       0.94 f
+  a/l3/f010/U3/Y (OAI21X1)                                0.04       0.98 r
+  U1431/Y (INVX1)                                         0.04       1.01 f
+  a/l3/f011/U3/Y (OAI21X1)                                0.04       1.06 r
+  U1432/Y (INVX1)                                         0.04       1.09 f
+  a/l3/f012/U3/Y (OAI21X1)                                0.04       1.13 r
+  U1433/Y (INVX1)                                         0.04       1.17 f
+  a/l3/f013/U3/Y (OAI21X1)                                0.04       1.21 r
+  U1434/Y (INVX1)                                         0.04       1.25 f
+  a/l3/f014/U3/Y (OAI21X1)                                0.04       1.29 r
+  U1435/Y (INVX1)                                         0.04       1.32 f
+  a/l3/f015/U3/Y (OAI21X1)                                0.04       1.36 r
+  U1436/Y (INVX1)                                         0.04       1.40 f
+  a/l3/f016/U3/Y (OAI21X1)                                0.04       1.44 r
+  U1437/Y (INVX1)                                         0.04       1.48 f
+  a/l3/f017/U3/Y (OAI21X1)                                0.04       1.52 r
+  U1438/Y (INVX1)                                         0.04       1.55 f
+  a/l3/f018/U3/Y (OAI21X1)                                0.04       1.60 r
+  U1439/Y (INVX1)                                         0.04       1.63 f
+  a/l3/f019/U3/Y (OAI21X1)                                0.04       1.67 r
+  U1440/Y (INVX1)                                         0.04       1.71 f
+  a/l3/f020/U3/Y (OAI21X1)                                0.04       1.75 r
+  U1441/Y (INVX1)                                         0.04       1.79 f
+  a/l3/f021/U3/Y (OAI21X1)                                0.04       1.83 r
+  U1442/Y (INVX1)                                         0.04       1.86 f
+  a/l3/f022/U3/Y (OAI21X1)                                0.04       1.90 r
+  U1443/Y (INVX1)                                         0.04       1.94 f
+  a/l3/f023/U3/Y (OAI21X1)                                0.04       1.98 r
+  U1444/Y (INVX1)                                         0.04       2.02 f
+  a/l3/f024/U3/Y (OAI21X1)                                0.04       2.06 r
+  U1445/Y (INVX1)                                         0.04       2.09 f
+  a/l3/f025/U3/Y (OAI21X1)                                0.04       2.13 r
+  U1446/Y (INVX1)                                         0.04       2.17 f
+  a/l3/f026/U3/Y (OAI21X1)                                0.04       2.21 r
+  U1447/Y (INVX1)                                         0.04       2.25 f
+  a/l3/f027/U3/Y (OAI21X1)                                0.04       2.29 r
+  U1448/Y (INVX1)                                         0.04       2.32 f
+  a/l3/f028/U3/Y (OAI21X1)                                0.04       2.37 r
+  U1449/Y (INVX1)                                         0.04       2.40 f
+  a/l3/f029/U3/Y (OAI21X1)                                0.04       2.44 r
+  U1450/Y (INVX1)                                         0.04       2.48 f
+  a/l3/f030/U3/Y (OAI21X1)                                0.04       2.52 r
+  U1451/Y (INVX1)                                         0.04       2.56 f
+  a/l3/f031/U2/Y (XOR2X1)                                 0.05       2.61 r
+  a/l3/f130/U5/Y (XNOR2X1)                                0.06       2.67 r
+  a/l3/f130/U2/Y (XOR2X1)                                 0.07       2.74 r
+  a/l3/f229/U5/Y (XNOR2X1)                                0.06       2.80 r
+  a/l3/f229/U2/Y (XOR2X1)                                 0.07       2.87 r
+  a/l3/f328/U5/Y (XNOR2X1)                                0.06       2.93 r
+  a/l3/f328/U2/Y (XOR2X1)                                 0.07       3.01 r
+  a/l3/f427/U5/Y (XNOR2X1)                                0.06       3.07 r
+  a/l3/f427/U2/Y (XOR2X1)                                 0.07       3.14 r
+  a/l3/f526/U5/Y (XNOR2X1)                                0.06       3.20 r
+  a/l3/f526/U2/Y (XOR2X1)                                 0.07       3.27 r
+  a/l3/f625/U5/Y (XNOR2X1)                                0.06       3.33 r
+  a/l3/f625/U2/Y (XOR2X1)                                 0.07       3.40 r
+  a/l3/f724/U5/Y (XNOR2X1)                                0.06       3.47 r
+  a/l3/f724/U2/Y (XOR2X1)                                 0.07       3.54 r
+  a/l3/f823/U5/Y (XNOR2X1)                                0.06       3.60 r
+  a/l3/f823/U2/Y (XOR2X1)                                 0.07       3.67 r
+  a/l3/f922/U5/Y (XNOR2X1)                                0.06       3.73 r
+  a/l3/f922/U2/Y (XOR2X1)                                 0.07       3.80 r
+  a/l3/f1021/U5/Y (XNOR2X1)                               0.06       3.86 r
+  a/l3/f1021/U2/Y (XOR2X1)                                0.07       3.94 r
+  a/l3/f1120/U5/Y (XNOR2X1)                               0.06       4.00 r
+  a/l3/f1120/U2/Y (XOR2X1)                                0.07       4.07 r
+  a/l3/f1219/U5/Y (XNOR2X1)                               0.06       4.13 r
+  a/l3/f1219/U2/Y (XOR2X1)                                0.07       4.20 r
+  a/l3/f1318/U5/Y (XNOR2X1)                               0.06       4.26 r
+  a/l3/f1318/U2/Y (XOR2X1)                                0.07       4.33 r
+  a/l3/f1417/U5/Y (XNOR2X1)                               0.06       4.40 r
+  a/l3/f1417/U2/Y (XOR2X1)                                0.07       4.47 r
+  a/l3/f1516/U5/Y (XNOR2X1)                               0.06       4.53 r
+  a/l3/f1516/U2/Y (XOR2X1)                                0.07       4.60 r
+  a/l3/f1615/U5/Y (XNOR2X1)                               0.06       4.66 r
+  a/l3/f1615/U2/Y (XOR2X1)                                0.07       4.73 r
+  a/l3/f1714/U5/Y (XNOR2X1)                               0.06       4.79 r
+  a/l3/f1714/U2/Y (XOR2X1)                                0.07       4.87 r
+  a/l3/f1813/U5/Y (XNOR2X1)                               0.06       4.93 r
+  a/l3/f1813/U2/Y (XOR2X1)                                0.07       5.00 r
+  a/l3/f1912/U5/Y (XNOR2X1)                               0.06       5.06 r
+  a/l3/f1912/U2/Y (XOR2X1)                                0.07       5.13 r
+  a/l3/f2011/U5/Y (XNOR2X1)                               0.06       5.19 r
+  a/l3/f2011/U2/Y (XOR2X1)                                0.07       5.26 r
+  a/l3/f2110/U5/Y (XNOR2X1)                               0.06       5.33 r
+  a/l3/f2110/U2/Y (XOR2X1)                                0.06       5.39 r
+  U1359/Y (XOR2X1)                                        0.05       5.44 r
+  U1358/Y (XOR2X1)                                        0.07       5.51 r
+  a/l3/f2308/U5/Y (XNOR2X1)                               0.06       5.57 r
+  a/l3/f2308/U2/Y (XOR2X1)                                0.07       5.64 r
+  a/l3/f247/U5/Y (XNOR2X1)                                0.06       5.71 r
+  a/l3/f247/U2/Y (XOR2X1)                                 0.07       5.78 r
+  a/l3/f256/U5/Y (XNOR2X1)                                0.06       5.84 r
+  a/l3/f256/U2/Y (XOR2X1)                                 0.07       5.91 r
+  a/l3/f265/U5/Y (XNOR2X1)                                0.06       5.97 r
+  a/l3/f265/U2/Y (XOR2X1)                                 0.07       6.04 r
+  a/l3/f274/U5/Y (XNOR2X1)                                0.06       6.11 r
+  a/l3/f274/U2/Y (XOR2X1)                                 0.07       6.18 r
+  a/l3/f283/U5/Y (XNOR2X1)                                0.06       6.24 r
+  a/l3/f283/U2/Y (XOR2X1)                                 0.07       6.31 r
+  a/l3/f292/U5/Y (XNOR2X1)                                0.06       6.37 r
+  a/l3/f292/U2/Y (XOR2X1)                                 0.07       6.44 r
+  a/l3/h301/U2/Y (XOR2X1)                                 0.04       6.48 f
+  a/U26/Y (AOI22X1)                                       0.03       6.52 r
+  U220/Y (BUFX2)                                          0.04       6.56 r
+  U65/Y (AND2X1)                                          0.07       6.62 r
+  U1794/Y (INVX1)                                         0.10       6.73 f
+  mb/ram/mer12/m0/m31/U3/Y (AOI22X1)                      0.05       6.78 r
+  U3794/Y (INVX1)                                         0.02       6.80 f
+  mb/ram/mer12/ll/me31/qout_reg/D (DFFPOSX1)              0.00       6.80 f
+  data arrival time                                                  6.80
+
+  clock clk (rise edge)                                  33.00      33.00
+  clock network delay (ideal)                             0.00      33.00
+  mb/ram/mer12/ll/me31/qout_reg/CLK (DFFPOSX1)            0.00      33.00 r
+  library setup time                                     -0.06      32.94
+  data required time                                                32.94
+  --------------------------------------------------------------------------
+  data required time                                                32.94
+  data arrival time                                                 -6.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                       26.14
+
+
+1
