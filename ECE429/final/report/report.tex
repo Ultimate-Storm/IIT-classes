@@ -136,7 +136,7 @@ An n-bit CRA is formed by concatenating n full adders in cascade with the carry 
 \subsubsection{RTL Simulation}
 \begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{../CRA/CRA-text}
+\includegraphics[width=.7\linewidth]{../CRA/CRA-text}
 \caption{Display}
 \label{fig:CRA-text}
 \end{figure}
@@ -150,7 +150,7 @@ An n-bit CRA is formed by concatenating n full adders in cascade with the carry 
 \subsubsection{Logic Synthesis and Post-Synthesis Simulation}
 \begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{../CRA/synth-text}
+\includegraphics[width=.7\linewidth]{../CRA/synth-text}
 \caption{Display}
 \label{fig:synth-text}
 \end{figure}
@@ -164,7 +164,7 @@ An n-bit CRA is formed by concatenating n full adders in cascade with the carry 
 \subsubsection{Place \& Route and Post-P\&R Simulation}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{../CRA/encounter-text}
+\includegraphics[width=.7\linewidth]{../CRA/encounter-text}
 \caption{Display}
 \label{fig:encounter-text}
 \end{figure}
@@ -178,7 +178,7 @@ An n-bit CRA is formed by concatenating n full adders in cascade with the carry 
 \subsubsection{Test Bench}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{../CRA/test-text}
+\includegraphics[width=.7\linewidth]{../CRA/test-text}
 \caption{RTL Display}
 \label{fig:test-text}
 \end{figure}
@@ -193,7 +193,7 @@ An n-bit CRA is formed by concatenating n full adders in cascade with the carry 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{../CRA/alu1-test}
+\includegraphics[width=\linewidth]{../CRA/alu1-test}
 \caption{ALU Operations}
 \label{fig:alu1}
 \end{figure}
@@ -215,12 +215,60 @@ Carry Lookahead circuits are special logic circuits that can dramatically reduce
 \end{figure}
 
 \subsubsection{RTL Simulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CLA/CLA-test}
+\caption{Simvision}
+\label{fig:CLA-test}
+\end{figure}
 
 \subsubsection{Logic Synthesis and Post-Synthesis Simulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{../CLA/synth-text}
+\caption{Display}
+\label{fig:synth-text}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CLA/synth-test}
+\caption{Simvision}
+\label{fig:synth-test}
+\end{figure}
+
 
 \subsubsection{Place \& Route and Post-P\&R Simulation}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{../CLA/encounter-text}
+\caption{Display}
+\label{fig:encounter-text}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CLA/encounter-test}
+\caption{Simvision}
+\label{fig:encounter-test}
+\end{figure}
+
 \subsubsection{Test Bench}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{../CLA/test-text}
+\caption{RTL Display}
+\label{fig:test-text}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CLA/test-test}
+\caption{RTL Simvision}
+\label{fig:test-test}
+\end{figure}
 
 \subsection{Carry Skip Adder}
 In the Carry Skip Adder, the operands are divided into blocked of r bits blocks. In each block, a ripple carry adder can be utilized to produce the sum bits and a carryout bit for the block. This is shown in Figure \ref{fig:carry-skip}.
@@ -233,12 +281,55 @@ In the Carry Skip Adder, the operands are divided into blocked of r bits blocks.
 \end{figure}
 
 \subsubsection{RTL Simulation}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\linewidth]{../CSA/RTL-text}
+	\caption{Display}
+	\label{fig:RTL-text}
+\end{figure}
 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{../CSA/CSA-test}
+	\caption{Simvision}
+	\label{fig:CSA-test}
+\end{figure}
 \subsubsection{Logic Synthesis and Post-Synthesis Simulation}
 
 \subsubsection{Place \& Route and Post-P\&R Simulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{../CSA/EC-text}
+\caption{Display}
+\label{fig:EC-text}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{../CSA/EC}
+\caption{Simvision}
+\label{fig:EC}
+\end{figure}
 
 \subsubsection{Test Bench}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{../CSA/tbtest-text}
+\caption{Display}
+\label{fig:tbtest-text}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CSA/test1}
+\caption{Simvision 1}
+\label{fig:test1}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CSA/test2}
+\caption{Simvision 2}
+\label{fig:test2}
+\end{figure}
 
 \subsection{Carry Select Adder}
 The Carry Select Adder divides the operands to be added into r bit blocks similar to the Carry Skip Adder. For each block, two r-bit Ripple Carry Adders operate in parallel to form two sets of sum bits and carry out signals. Each Ripple Carry Adder has two sets of hard-coded carry-in signals. One Ripple Carry Adder has a carry-in of 0, while the other has a carry-in of 1. This is shown in Figure \ref{fig:carry-select}.
@@ -251,17 +342,203 @@ The Carry Select Adder divides the operands to be added into r bit blocks simila
 \end{figure}
 
 \subsubsection{RTL Simulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{../CSeA/CSeA-text}
+\caption{Display}
+\label{fig:CSeA-text}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CSeA/CSeA-test}
+\caption{Simvision}
+\label{fig:CSeA-test}
+\end{figure}
+
+\subsubsection{Logic Synthesis and Post-Synthesis Simulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{../CSeA/synth-text}
+\caption{Display}
+\label{fig:synth-text}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CSeA/synth-test}
+\caption{Simvision}
+\label{fig:synth-test}
+\end{figure}
+
+\subsubsection{Place \& Route and Post-P\&R Simulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{../CSeA/encounter-text}
+\caption{Display}
+\label{fig:encounter-text}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CSeA/encounter-test}
+\caption{Simvision}
+\label{fig:encounter-test}
+\end{figure}
+
+\subsubsection{Test Bench}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{../CSeA/test-text}
+\caption{Display}
+\label{fig:test-text}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CSeA/test-test}
+\caption{Simvision}
+\label{fig:test-test}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CSeA/alu1}
+\caption{ALU Operations 1}
+\label{fig:alu1}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CSeA/alu2}
+\caption{ALU Operations 2}
+\label{fig:alu2}
+\end{figure}
+
+\subsection{Delay Comparison}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c|c| }
+			\hline
+			Operation & CRA & CLA & CSA & CSeA \\
+
+			\hline
+			5555\_5555 + 0000\_0005 & 23.1ns & 23.2ns & 23.6ns & 23.6ns \\
+			\hline
+			AAAA\_AAAA + 5555\_5555 & 25.2ns & 40.2ns& 28.1ns& 23.9ns \\
+			\hline
+			0000\_00C8 + 0000\_012C & 22.9ns & 22.5ns &  23.4ns& 23.4ns \\
+			\hline
+			5555\_555A + 0000\_000A & 23.1ns & 22.8ns & 22.9ns & 23.7ns \\
+			\hline
+			FFFF\_FFFF - 0000\_0001 & 22.9ns & 22.8ns & 23.3ns & 28.5ns \\
+			\hline
+			FFFF\_FFFF + 0000\_0001 & 40.8ns & 22.9ns & 30.4ns & 23.1ns \\
+			\hline
+			FFFF\_FFFF - 5555\_555A & 24.1ns & 22.2ns & 24.6ns & 30.1ns \\
+			\hline
+			AAAA\_AAAB + 5555\_5555 & 22.1ns & 22.1ns & 25.2ns & find it \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Width of 180nm}
+	\label{tab:2nd}
+\end{table}
+
+
+\section{32-Bit CPU Design with New ALU Architecture}
+\subsection{Code}
+\lstinputlisting[firstnumber=1935,firstline=1935, lastline=2076]{cpu_comp.v}
+
+\subsection{Test Bench}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/rtl-results1}
+\caption{Test Bench 1}
+\label{fig:rtl-results1}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/rtl-results2}
+\caption{Test Bench 2}
+\label{fig:rtl-results2}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/rtl-results3}
+\caption{Test Bench 3}
+\label{fig:rtl-results3}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/rtl-results4}
+\caption{Test Bench 4}
+\label{fig:rtl-results4}
+\end{figure}
+
 
 \subsubsection{Logic Synthesis and Post-Synthesis Simulation}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/synth1}
+\caption{Synthesis Simulation 1}
+\label{fig:synth1}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/synth2}
+\caption{Synthesis Simulation 2}
+\label{fig:synth2}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/synth3}
+\caption{Synthesis Simulation 3}
+\label{fig:synth3}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/synth4}
+\caption{Synthesis Simulation 4}
+\label{fig:synth4}
+\end{figure}
+
+
 \subsubsection{Place \& Route and Post-P\&R Simulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{../case2/power}
+\caption{Power Consumption}
+\label{fig:power}
+\end{figure}
 
-\subsubsection{Test Bench}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/enc1}
+\caption{Layout Simulation 1}
+\label{fig:enc1}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/enc2}
+\caption{Layout Simulation 2}
+\label{fig:enc2}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/enc3}
+\caption{Layout Simulation 3}
+\label{fig:enc3}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../case2/enc4}
+\caption{Layout Simulation 4}
+\label{fig:enc4}
+\end{figure}
 
-%\subsection{Bonus Work}
-\section{32-Bit CPU Design with New ALU Architecture}
 \section{Conclusions}
-
+Overall a 32-bit pipelined CPU was successfully studied. Through the simulation and analysis of the code, it is clear how a CPU is both physically and logically constructed. Different adder types were adequately analyzed and it is apparent that each configuration affects the power and delay of the CPU as a whole. Furthermore, a comparator was successfully added to the ALU of the CPU. The goals of this project were all achieved successfully.
 
 
 

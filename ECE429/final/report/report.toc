@@ -13,17 +13,22 @@
 \contentsline {subsection}{\numberline {2.3}Carry Lookahead Adder}{10}
 \contentsline {subsubsection}{\numberline {2.3.1}RTL Simulation}{11}
 \contentsline {subsubsection}{\numberline {2.3.2}Logic Synthesis and Post-Synthesis Simulation}{11}
-\contentsline {subsubsection}{\numberline {2.3.3}Place \& Route and Post-P\&R Simulation}{11}
-\contentsline {subsubsection}{\numberline {2.3.4}Test Bench}{11}
-\contentsline {subsection}{\numberline {2.4}Carry Skip Adder}{11}
-\contentsline {subsubsection}{\numberline {2.4.1}RTL Simulation}{12}
-\contentsline {subsubsection}{\numberline {2.4.2}Logic Synthesis and Post-Synthesis Simulation}{12}
-\contentsline {subsubsection}{\numberline {2.4.3}Place \& Route and Post-P\&R Simulation}{12}
-\contentsline {subsubsection}{\numberline {2.4.4}Test Bench}{12}
-\contentsline {subsection}{\numberline {2.5}Carry Select Adder}{12}
-\contentsline {subsubsection}{\numberline {2.5.1}RTL Simulation}{12}
-\contentsline {subsubsection}{\numberline {2.5.2}Logic Synthesis and Post-Synthesis Simulation}{12}
-\contentsline {subsubsection}{\numberline {2.5.3}Place \& Route and Post-P\&R Simulation}{12}
-\contentsline {subsubsection}{\numberline {2.5.4}Test Bench}{12}
-\contentsline {section}{\numberline {3}32-Bit CPU Design with New ALU Architecture}{12}
-\contentsline {section}{\numberline {4}Conclusions}{12}
+\contentsline {subsubsection}{\numberline {2.3.3}Place \& Route and Post-P\&R Simulation}{12}
+\contentsline {subsubsection}{\numberline {2.3.4}Test Bench}{13}
+\contentsline {subsection}{\numberline {2.4}Carry Skip Adder}{14}
+\contentsline {subsubsection}{\numberline {2.4.1}RTL Simulation}{15}
+\contentsline {subsubsection}{\numberline {2.4.2}Logic Synthesis and Post-Synthesis Simulation}{16}
+\contentsline {subsubsection}{\numberline {2.4.3}Place \& Route and Post-P\&R Simulation}{16}
+\contentsline {subsubsection}{\numberline {2.4.4}Test Bench}{17}
+\contentsline {subsection}{\numberline {2.5}Carry Select Adder}{18}
+\contentsline {subsubsection}{\numberline {2.5.1}RTL Simulation}{19}
+\contentsline {subsubsection}{\numberline {2.5.2}Logic Synthesis and Post-Synthesis Simulation}{20}
+\contentsline {subsubsection}{\numberline {2.5.3}Place \& Route and Post-P\&R Simulation}{21}
+\contentsline {subsubsection}{\numberline {2.5.4}Test Bench}{22}
+\contentsline {subsection}{\numberline {2.6}Delay Comparison}{24}
+\contentsline {section}{\numberline {3}32-Bit CPU Design with New ALU Architecture}{24}
+\contentsline {subsection}{\numberline {3.1}Code}{24}
+\contentsline {subsection}{\numberline {3.2}Test Bench}{28}
+\contentsline {subsubsection}{\numberline {3.2.1}Logic Synthesis and Post-Synthesis Simulation}{29}
+\contentsline {subsubsection}{\numberline {3.2.2}Place \& Route and Post-P\&R Simulation}{31}
+\contentsline {section}{\numberline {4}Conclusions}{33}

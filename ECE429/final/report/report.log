@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  1 DEC 2015 23:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  2 DEC 2015 20:35
 entering extended mode
 **report.tex
 (C:\Users\Adam\classes\ECE429\final\report\report.tex
@@ -141,7 +141,50 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 (C:\Users\Adam\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 )
-(C:\Users\Adam\classes\ECE429\final\report\report.aux)
+(C:\Users\Adam\classes\ECE429\final\report\report.aux
+
+LaTeX Warning: Label `fig:synth-text' multiply defined.
+
+
+LaTeX Warning: Label `fig:synth-test' multiply defined.
+
+
+LaTeX Warning: Label `fig:encounter-text' multiply defined.
+
+
+LaTeX Warning: Label `fig:encounter-test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test-text' multiply defined.
+
+
+LaTeX Warning: Label `fig:test-test' multiply defined.
+
+
+LaTeX Warning: Label `fig:synth-text' multiply defined.
+
+
+LaTeX Warning: Label `fig:synth-test' multiply defined.
+
+
+LaTeX Warning: Label `fig:encounter-text' multiply defined.
+
+
+LaTeX Warning: Label `fig:encounter-test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test-text' multiply defined.
+
+
+LaTeX Warning: Label `fig:test-test' multiply defined.
+
+
+LaTeX Warning: Label `fig:alu1' multiply defined.
+
+
+LaTeX Warning: Label `fig:alu2' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
 LaTeX Font Info:    ... okay on input line 40.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
@@ -261,7 +304,7 @@ File: ../CRA/CRA-text.png Graphic file (type png)
 
 <use ../CRA/CRA-text.png>
 Package pdftex.def Info: ../CRA/CRA-text.png used on input line 139.
-(pdftex.def)             Requested size: 443.57848pt x 231.9095pt.
+(pdftex.def)             Requested size: 310.50357pt x 162.3346pt.
 
 <../CRA/CRA-test.png, id=32, 734.745pt x 347.79938pt>
 File: ../CRA/CRA-test.png Graphic file (type png)
@@ -276,7 +319,7 @@ File: ../CRA/synth-text.png Graphic file (type png)
 
 <use ../CRA/synth-text.png>
 Package pdftex.def Info: ../CRA/synth-text.png used on input line 153.
-(pdftex.def)             Requested size: 443.57848pt x 256.02397pt.
+(pdftex.def)             Requested size: 310.50357pt x 179.21628pt.
 
 <../CRA/synth-test.png, id=39, 718.93594pt x 256.70906pt>
 File: ../CRA/synth-test.png Graphic file (type png)
@@ -291,7 +334,7 @@ File: ../CRA/encounter-text.png Graphic file (type png)
 
 <use ../CRA/encounter-text.png>
 Package pdftex.def Info: ../CRA/encounter-text.png used on input line 167.
-(pdftex.def)             Requested size: 443.57848pt x 251.03069pt.
+(pdftex.def)             Requested size: 310.50357pt x 175.72148pt.
 
 <../CRA/encounter-test.png, id=47, 715.92468pt x 255.95625pt>
 File: ../CRA/encounter-test.png Graphic file (type png)
@@ -306,7 +349,7 @@ File: ../CRA/test-text.png Graphic file (type png)
 
 <use ../CRA/test-text.png>
 Package pdftex.def Info: ../CRA/test-text.png used on input line 181.
-(pdftex.def)             Requested size: 443.57848pt x 227.63597pt.
+(pdftex.def)             Requested size: 310.50357pt x 159.3445pt.
  [8 <C:/Users/Adam/classes/ECE429/final/CRA/encounter-text.png> <C:/Users/Adam/
 classes/ECE429/final/CRA/encounter-test.png>]
 <../CRA/test-test.png, id=59, 699.36281pt x 220.57407pt>
@@ -322,56 +365,349 @@ File: ../CRA/alu1-test.png Graphic file (type png)
 <use ../CRA/alu1-test.png>
 Package pdftex.def Info: ../CRA/alu1-test.png used on input line 196.
 (pdftex.def)             Requested size: 443.57848pt x 129.10059pt.
- [9 <C:/Users/Adam/classes/ECE429/final/CRA/test-text.png> <C:/Users/Adam/class
-es/ECE429/final/CRA/test-test.png>]
-<../CRA/alu2-test.png, id=66, 706.13812pt x 210.7875pt>
+
+<../CRA/alu2-test.png, id=61, 706.13812pt x 210.7875pt>
 File: ../CRA/alu2-test.png Graphic file (type png)
 
 <use ../CRA/alu2-test.png>
 Package pdftex.def Info: ../CRA/alu2-test.png used on input line 203.
 (pdftex.def)             Requested size: 443.57848pt x 132.41086pt.
-
-<carry-lookahead.png, id=67, 337.26pt x 177.66376pt>
+ [9 <C:/Users/Adam/classes/ECE429/final/CRA/test-text.png> <C:/Users/Adam/class
+es/ECE429/final/CRA/test-test.png> <C:/Users/Adam/classes/ECE429/final/CRA/alu1
+-test.png>]
+<carry-lookahead.png, id=68, 337.26pt x 177.66376pt>
 File: carry-lookahead.png Graphic file (type png)
  <use carry-lookahead.png>
 Package pdftex.def Info: carry-lookahead.png used on input line 212.
 (pdftex.def)             Requested size: 310.50357pt x 163.57191pt.
 
-[10 <C:/Users/Adam/classes/ECE429/final/CRA/alu1-test.png> <C:/Users/Adam/class
-es/ECE429/final/CRA/alu2-test.png>]
-<carry-skip.png, id=73, 398.23781pt x 170.88844pt>
+<../CLA/CLA-test.png, id=69, 734.745pt x 360.59718pt>
+File: ../CLA/CLA-test.png Graphic file (type png)
+
+<use ../CLA/CLA-test.png>
+Package pdftex.def Info: ../CLA/CLA-test.png used on input line 220.
+(pdftex.def)             Requested size: 443.57848pt x 217.70253pt.
+ [10 <C:/Users/Adam/classes/ECE429/final/CRA/alu2-test.png> <C:/Users/Adam/clas
+ses/ECE429/final/report/carry-lookahead.png>]
+<../CLA/synth-text.png, id=75, 563.85657pt x 314.67563pt>
+File: ../CLA/synth-text.png Graphic file (type png)
+
+<use ../CLA/synth-text.png>
+Package pdftex.def Info: ../CLA/synth-text.png used on input line 228.
+(pdftex.def)             Requested size: 310.50357pt x 173.2882pt.
+
+<../CLA/synth-test.png, id=76, 721.94719pt x 329.73187pt>
+File: ../CLA/synth-test.png Graphic file (type png)
+
+<use ../CLA/synth-test.png>
+Package pdftex.def Info: ../CLA/synth-test.png used on input line 235.
+(pdftex.def)             Requested size: 443.57848pt x 202.59521pt.
+ [11 <C:/Users/Adam/classes/ECE429/final/CLA/CLA-test.png> <C:/Users/Adam/class
+es/ECE429/final/CLA/synth-text.png>]
+<../CLA/encounter-text.png, id=82, 570.63188pt x 303.38344pt>
+File: ../CLA/encounter-text.png Graphic file (type png)
+
+<use ../CLA/encounter-text.png>
+Package pdftex.def Info: ../CLA/encounter-text.png used on input line 245.
+(pdftex.def)             Requested size: 310.50357pt x 165.08377pt.
+
+<../CLA/encounter-test.png, id=83, 723.45282pt x 282.30469pt>
+File: ../CLA/encounter-test.png Graphic file (type png)
+
+<use ../CLA/encounter-test.png>
+Package pdftex.def Info: ../CLA/encounter-test.png used on input line 252.
+(pdftex.def)             Requested size: 443.57848pt x 173.09297pt.
+ [12 <C:/Users/Adam/classes/ECE429/final/CLA/synth-test.png> <C:/Users/Adam/cla
+sses/ECE429/final/CLA/encounter-text.png>]
+<../CLA/test-text.png, id=90, 440.39531pt x 448.67625pt>
+File: ../CLA/test-text.png Graphic file (type png)
+
+<use ../CLA/test-text.png>
+Package pdftex.def Info: ../CLA/test-text.png used on input line 260.
+(pdftex.def)             Requested size: 310.50357pt x 316.35103pt.
+
+<../CLA/test-test.png, id=91, 724.20563pt x 330.48468pt>
+File: ../CLA/test-test.png Graphic file (type png)
+
+<use ../CLA/test-test.png>
+Package pdftex.def Info: ../CLA/test-test.png used on input line 268.
+(pdftex.def)             Requested size: 443.57848pt x 202.42741pt.
+ [13 <C:/Users/Adam/classes/ECE429/final/CLA/encounter-test.png> <C:/Users/Adam
+/classes/ECE429/final/CLA/test-text.png>]
+<carry-skip.png, id=97, 398.23781pt x 170.88844pt>
 File: carry-skip.png Graphic file (type png)
  <use carry-skip.png>
-Package pdftex.def Info: carry-skip.png used on input line 230.
+Package pdftex.def Info: carry-skip.png used on input line 278.
 (pdftex.def)             Requested size: 310.50357pt x 133.2455pt.
 
-[11 <C:/Users/Adam/classes/ECE429/final/report/carry-lookahead.png> <C:/Users/A
-dam/classes/ECE429/final/report/carry-skip.png>]
-<carry-select.png, id=79, 477.28313pt x 285.31593pt>
+<../CSA/RTL-text.png, id=98, 388.45125pt x 384.6872pt>
+File: ../CSA/RTL-text.png Graphic file (type png)
+
+<use ../CSA/RTL-text.png>
+Package pdftex.def Info: ../CSA/RTL-text.png used on input line 286.
+(pdftex.def)             Requested size: 310.50357pt x 307.50363pt.
+ [14 <C:/Users/Adam/classes/ECE429/final/CLA/test-test.png> <C:/Users/Adam/clas
+ses/ECE429/final/report/carry-skip.png>]
+<../CSA/CSA-test.png, id=104, 733.99219pt x 340.27126pt>
+File: ../CSA/CSA-test.png Graphic file (type png)
+
+<use ../CSA/CSA-test.png>
+Package pdftex.def Info: ../CSA/CSA-test.png used on input line 294.
+(pdftex.def)             Requested size: 443.57848pt x 205.64407pt.
+
+<../CSA/EC-text.png, id=105, 369.63094pt x 320.69812pt>
+File: ../CSA/EC-text.png Graphic file (type png)
+
+<use ../CSA/EC-text.png>
+Package pdftex.def Info: ../CSA/EC-text.png used on input line 303.
+(pdftex.def)             Requested size: 310.50357pt x 269.39925pt.
+ <../CSA/EC.png, id=106, 746.03719pt x 339.51843pt>
+File: ../CSA/EC.png Graphic file (type png)
+
+<use ../CSA/EC.png>
+Package pdftex.def Info: ../CSA/EC.png used on input line 309.
+(pdftex.def)             Requested size: 310.50357pt x 141.30678pt.
+ [15 <C:/Users/Adam/classes/ECE429/final/CSA/RTL-text.png> <C:/Users/Adam/class
+es/ECE429/final/CSA/CSA-test.png>]
+<../CSA/tbtest-text.png, id=112, 422.32782pt x 380.92313pt>
+File: ../CSA/tbtest-text.png Graphic file (type png)
+
+<use ../CSA/tbtest-text.png>
+Package pdftex.def Info: ../CSA/tbtest-text.png used on input line 317.
+(pdftex.def)             Requested size: 310.50357pt x 280.07103pt.
+
+<../CSA/test1.png, id=113, 743.77875pt x 403.5075pt>
+File: ../CSA/test1.png Graphic file (type png)
+ <use ../CSA/test1.png>
+Package pdftex.def Info: ../CSA/test1.png used on input line 323.
+(pdftex.def)             Requested size: 443.57848pt x 240.6533pt.
+
+[16 <C:/Users/Adam/classes/ECE429/final/CSA/EC-text.png> <C:/Users/Adam/classes
+/ECE429/final/CSA/EC.png>]
+<../CSA/test2.png, id=119, 737.75626pt x 350.81062pt>
+File: ../CSA/test2.png Graphic file (type png)
+ <use ../CSA/test2.png>
+Package pdftex.def Info: ../CSA/test2.png used on input line 329.
+(pdftex.def)             Requested size: 443.57848pt x 210.92693pt.
+
+[17 <C:/Users/Adam/classes/ECE429/final/CSA/tbtest-text.png>]
+<carry-select.png, id=124, 477.28313pt x 285.31593pt>
 File: carry-select.png Graphic file (type png)
  <use carry-select.png>
-Package pdftex.def Info: carry-select.png used on input line 248.
+Package pdftex.def Info: carry-select.png used on input line 339.
 (pdftex.def)             Requested size: 310.50357pt x 185.61423pt.
 
-[12 <C:/Users/Adam/classes/ECE429/final/report/carry-select.png>]
-(C:\Users\Adam\classes\ECE429\final\report\report.aux) ) 
+[18 <C:/Users/Adam/classes/ECE429/final/CSA/test1.png> <C:/Users/Adam/classes/E
+CE429/final/CSA/test2.png>]
+<../CSeA/CSeA-text.png, id=131, 436.63126pt x 373.395pt>
+File: ../CSeA/CSeA-text.png Graphic file (type png)
+
+<use ../CSeA/CSeA-text.png>
+Package pdftex.def Info: ../CSeA/CSeA-text.png used on input line 347.
+(pdftex.def)             Requested size: 310.50357pt x 265.53392pt.
+
+<../CSeA/CSeA-test.png, id=132, 737.75626pt x 347.04657pt>
+File: ../CSeA/CSeA-test.png Graphic file (type png)
+
+<use ../CSeA/CSeA-test.png>
+Package pdftex.def Info: ../CSeA/CSeA-test.png used on input line 354.
+(pdftex.def)             Requested size: 443.57848pt x 208.66377pt.
+ [19 <C:/Users/Adam/classes/ECE429/final/report/carry-select.png> <C:/Users/Ada
+m/classes/ECE429/final/CSeA/CSeA-text.png>]
+<../CSeA/synth-text.png, id=138, 567.62062pt x 328.97906pt>
+File: ../CSeA/synth-text.png Graphic file (type png)
+
+<use ../CSeA/synth-text.png>
+Package pdftex.def Info: ../CSeA/synth-text.png used on input line 362.
+(pdftex.def)             Requested size: 310.50357pt x 179.9652pt.
+
+<../CSeA/synth-test.png, id=139, 713.66624pt x 236.38312pt>
+File: ../CSeA/synth-test.png Graphic file (type png)
+
+<use ../CSeA/synth-test.png>
+Package pdftex.def Info: ../CSeA/synth-test.png used on input line 368.
+(pdftex.def)             Requested size: 443.57848pt x 146.92392pt.
+ [20 <C:/Users/Adam/classes/ECE429/final/CSeA/CSeA-test.png> <C:/Users/Adam/cla
+sses/ECE429/final/CSeA/synth-text.png>]
+<../CSeA/encounter-text.png, id=145, 562.35094pt x 315.42844pt>
+File: ../CSeA/encounter-text.png Graphic file (type png)
+
+<use ../CSeA/encounter-text.png>
+Package pdftex.def Info: ../CSeA/encounter-text.png used on input line 376.
+(pdftex.def)             Requested size: 310.50357pt x 174.16481pt.
+
+<../CSeA/encounter-test.png, id=146, 705.38531pt x 272.51813pt>
+File: ../CSeA/encounter-test.png Graphic file (type png)
+
+<use ../CSeA/encounter-test.png>
+Package pdftex.def Info: ../CSeA/encounter-test.png used on input line 382.
+(pdftex.def)             Requested size: 443.57848pt x 171.37129pt.
+ [21 <C:/Users/Adam/classes/ECE429/final/CSeA/synth-test.png> <C:/Users/Adam/cl
+asses/ECE429/final/CSeA/encounter-text.png>]
+<../CSeA/test-text.png, id=152, 455.45157pt x 379.4175pt>
+File: ../CSeA/test-text.png Graphic file (type png)
+
+<use ../CSeA/test-text.png>
+Package pdftex.def Info: ../CSeA/test-text.png used on input line 390.
+(pdftex.def)             Requested size: 310.50357pt x 258.67206pt.
+
+<../CSeA/test-test.png, id=153, 701.62125pt x 258.9675pt>
+File: ../CSeA/test-test.png Graphic file (type png)
+
+<use ../CSeA/test-test.png>
+Package pdftex.def Info: ../CSeA/test-test.png used on input line 396.
+(pdftex.def)             Requested size: 443.57848pt x 163.7273pt.
+ [22 <C:/Users/Adam/classes/ECE429/final/CSeA/encounter-test.png> <C:/Users/Ada
+m/classes/ECE429/final/CSeA/test-text.png>]
+<../CSeA/alu1.png, id=159, 712.16063pt x 234.1247pt>
+File: ../CSeA/alu1.png Graphic file (type png)
+ <use ../CSeA/alu1.png>
+Package pdftex.def Info: ../CSeA/alu1.png used on input line 404.
+(pdftex.def)             Requested size: 443.57848pt x 145.82742pt.
+
+<../CSeA/alu2.png, id=160, 689.57625pt x 220.57407pt>
+File: ../CSeA/alu2.png Graphic file (type png)
+ <use ../CSeA/alu2.png>
+Package pdftex.def Info: ../CSeA/alu2.png used on input line 410.
+(pdftex.def)             Requested size: 443.57848pt x 141.88716pt.
+
+[23 <C:/Users/Adam/classes/ECE429/final/CSeA/test-test.png> <C:/Users/Adam/clas
+ses/ECE429/final/CSeA/alu1.png> <C:/Users/Adam/classes/ECE429/final/CSeA/alu2.p
+ng>] (C:\Users\Adam\classes\ECE429\final\report\cpu_comp.v
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 1940
+.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1940.
+
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1940.
+
+ [24]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 1989.
+ [25]
+[26] [27]) <../case2/rtl-results1.png, id=182, 731.73375pt x 248.42813pt>
+File: ../case2/rtl-results1.png Graphic file (type png)
+
+<use ../case2/rtl-results1.png>
+Package pdftex.def Info: ../case2/rtl-results1.png used on input line 455.
+(pdftex.def)             Requested size: 443.57848pt x 150.59705pt.
+
+<../case2/rtl-results2.png, id=183, 704.6325pt x 264.23718pt>
+File: ../case2/rtl-results2.png Graphic file (type png)
+
+<use ../case2/rtl-results2.png>
+Package pdftex.def Info: ../case2/rtl-results2.png used on input line 461.
+(pdftex.def)             Requested size: 443.57848pt x 166.34128pt.
+
+<../case2/rtl-results3.png, id=184, 721.19438pt x 252.19218pt>
+File: ../case2/rtl-results3.png Graphic file (type png)
+
+<use ../case2/rtl-results3.png>
+Package pdftex.def Info: ../case2/rtl-results3.png used on input line 467.
+(pdftex.def)             Requested size: 443.57848pt x 155.11458pt.
+
+<../case2/rtl-results4.png, id=185, 708.39656pt x 246.9225pt>
+File: ../case2/rtl-results4.png Graphic file (type png)
+
+<use ../case2/rtl-results4.png>
+Package pdftex.def Info: ../case2/rtl-results4.png used on input line 473.
+(pdftex.def)             Requested size: 443.57848pt x 154.62004pt.
+ [28 <C:/Users/Adam/classes/ECE429/final/case2/rtl-results1.png> <C:/Users/Adam
+/classes/ECE429/final/case2/rtl-results2.png>]
+<../case2/synth1.png, id=191, 715.92468pt x 244.66406pt>
+File: ../case2/synth1.png Graphic file (type png)
+
+<use ../case2/synth1.png>
+Package pdftex.def Info: ../case2/synth1.png used on input line 483.
+(pdftex.def)             Requested size: 443.57848pt x 151.59308pt.
+
+<../case2/synth2.png, id=192, 712.16063pt x 264.23718pt>
+File: ../case2/synth2.png Graphic file (type png)
+
+<use ../case2/synth2.png>
+Package pdftex.def Info: ../case2/synth2.png used on input line 489.
+(pdftex.def)             Requested size: 443.57848pt x 164.58336pt.
+
+<../case2/synth3.png, id=193, 712.16063pt x 272.51813pt>
+File: ../case2/synth3.png Graphic file (type png)
+
+<use ../case2/synth3.png>
+Package pdftex.def Info: ../case2/synth3.png used on input line 495.
+(pdftex.def)             Requested size: 443.57848pt x 169.74124pt.
+ [29 <C:/Users/Adam/classes/ECE429/final/case2/rtl-results3.png> <C:/Users/Adam
+/classes/ECE429/final/case2/rtl-results4.png> <C:/Users/Adam/classes/ECE429/fin
+al/case2/synth1.png>]
+<../case2/synth4.png, id=200, 687.31781pt x 269.50688pt>
+File: ../case2/synth4.png Graphic file (type png)
+
+<use ../case2/synth4.png>
+Package pdftex.def Info: ../case2/synth4.png used on input line 501.
+(pdftex.def)             Requested size: 443.57848pt x 173.93135pt.
+ [30 <C:/Users/Adam/classes/ECE429/final/case2/synth2.png> <C:/Users/Adam/class
+es/ECE429/final/case2/synth3.png>]
+<../case2/power.png, id=207, 344.03531pt x 289.83281pt>
+File: ../case2/power.png Graphic file (type png)
+
+<use ../case2/power.png>
+Package pdftex.def Info: ../case2/power.png used on input line 510.
+(pdftex.def)             Requested size: 310.50357pt x 261.58566pt.
+ <../case2/enc1.png, id=208, 697.8572pt x 266.49562pt>
+File: ../case2/enc1.png Graphic file (type png)
+
+<use ../case2/enc1.png>
+Package pdftex.def Info: ../case2/enc1.png used on input line 517.
+(pdftex.def)             Requested size: 443.57848pt x 169.39362pt.
+ <../case2/enc2.png, id=209, 667.74469pt x 293.59688pt>
+File: ../case2/enc2.png Graphic file (type png)
+
+<use ../case2/enc2.png>
+Package pdftex.def Info: ../case2/enc2.png used on input line 523.
+(pdftex.def)             Requested size: 443.57848pt x 195.03786pt.
+ [31 <C:/Users/Adam/classes/ECE429/final/case2/synth4.png> <C:/Users/Adam/class
+es/ECE429/final/case2/power.png>]
+<../case2/enc3.png, id=215, 705.38531pt x 237.88875pt>
+File: ../case2/enc3.png Graphic file (type png)
+ <use ../case2/enc3.png>
+Package pdftex.def Info: ../case2/enc3.png used on input line 529.
+(pdftex.def)             Requested size: 443.57848pt x 149.59482pt.
+
+<../case2/enc4.png, id=216, 701.62125pt x 247.67531pt>
+File: ../case2/enc4.png Graphic file (type png)
+ <use ../case2/enc4.png>
+Package pdftex.def Info: ../case2/enc4.png used on input line 535.
+(pdftex.def)             Requested size: 443.57848pt x 156.58803pt.
+
+[32 <C:/Users/Adam/classes/ECE429/final/case2/enc1.png> <C:/Users/Adam/classes/
+ECE429/final/case2/enc2.png>] [33 <C:/Users/Adam/classes/ECE429/final/case2/enc
+3.png> <C:/Users/Adam/classes/ECE429/final/case2/enc4.png>]
+(C:\Users\Adam\classes\ECE429\final\report\report.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3179 strings out of 493921
- 46227 string characters out of 3144880
- 134767 words of memory out of 3000000
- 6443 multiletter control sequences out of 15000+200000
- 9111 words of font info for 32 fonts, out of 3000000 for 9000
+ 3674 strings out of 493921
+ 53733 string characters out of 3144880
+ 330767 words of memory out of 3000000
+ 6902 multiletter control sequences out of 15000+200000
+ 10027 words of font info for 35 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,7n,49p,1009b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (13 pages, 491968 bytes).
+ 29i,9n,49p,1009b,1534s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report.pdf (34 pages, 994012 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
+ 250 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 276 words of extra memory for PDF output out of 10000 (max. 10000000)
 
