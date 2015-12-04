@@ -220,7 +220,7 @@ Carry Lookahead circuits are special logic circuits that can dramatically reduce
 \end{figure}
 
 \subsubsection{RTL Simulation}
-Figures \ref{fig:CLA-text} and \ref{fig:CLA-test} show the display and simvision results of the RTL simulation. The detailed results are included with this report under the CRA directory in the file \texttt{stim\_proj.out}.
+Figures \ref{fig:CLA-text} and \ref{fig:CLA-test} show the display and simvision results of the RTL simulation. The detailed results are included with this report under the CLA directory in the file \texttt{stim\_proj.out}.
 
 \begin{figure}[H]
 \centering
@@ -409,7 +409,7 @@ Figures \ref{fig:CSeA-text} and \ref{fig:CSeA-test} show the display and simvisi
 \end{figure}
 
 \subsubsection{Logic Synthesis and Post-Synthesis Simulation}
-Figures \ref{fig:synth-text-CSeA} and \ref{fig:synth-test-CSeA} show the display and simvision results of the simulation. The results are included under the CSA directory under the files \texttt{timing.rep} and \texttt{cell.rep}. They show that this design uses 49150.726672nm of area and has a slack time of 26.14 meaning that the clock rate can be increased.
+Figures \ref{fig:synth-text-CSeA} and \ref{fig:synth-test-CSeA} show the display and simvision results of the simulation. The results are included under the CSeA directory under the files \texttt{timing.rep} and \texttt{cell.rep}. They show that this design uses 49150.726672nm of area and has a slack time of 26.14 meaning that the clock rate can be increased.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CSeA/synth-text}
@@ -498,7 +498,7 @@ Figures \ref{fig:test-text-CSeA} and \ref{fig:test-test-CSeA} show the display a
 	\label{tab:2nd}
 \end{table}
 
-Overall each adder performed reasonably well. It should be noted that some adders had longer delays on some operations than others. This has to due with how they each algorithmically perform operations. It should be noted that the Carry Select Adder performed the best on average.
+Overall each adder performed reasonably well. It should be noted that some adders had longer delays on some operations than others. This has to due with how they each algorithmically perform operations. It should be noted that the Carry Skip Adder and Carry Select Adder performed the best on average.
 \subsection{New Test Bench Code}
 This code for \texttt{tb\_test.v} is displayed below and is also included under the directory code included with this report.
 \lstinputlisting{tb_test.v}

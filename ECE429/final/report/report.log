@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  3 DEC 2015 18:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  3 DEC 2015 18:36
 entering extended mode
 **report.tex
 (C:\Users\Adam\classes\ECE429\final\report\report.tex
@@ -685,7 +685,7 @@ ECE429/final/case2/enc2.png>] [47 <C:/Users/Adam/classes/ECE429/final/case2/enc
 Here is how much of TeX's memory you used:
  3864 strings out of 493921
  57256 string characters out of 3144880
- 311372 words of memory out of 3000000
+ 312372 words of memory out of 3000000
  7081 multiletter control sequences out of 15000+200000
  10196 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -699,7 +699,7 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (48 pages, 1096479 bytes).
+Output written on report.pdf (48 pages, 1096495 bytes).
 PDF statistics:
  310 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
