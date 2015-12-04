@@ -23,7 +23,7 @@
 	%	frame=single,                    % adds a frame around the code
 	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
 	keywordstyle=\color{blue},       % keyword style
-	language=C, % the language of the code
+	language=verilog, % the language of the code
 	morekeywords={*,...},            % if you want to add more keywords to the set
 	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
 	numbersep=5pt,                   % how far the line-numbers are from the code
@@ -134,6 +134,7 @@ An n-bit CRA is formed by concatenating n full adders in cascade with the carry 
 \end{figure}
 
 \subsubsection{RTL Simulation}
+Figures \ref{fig:CRA-text} and \ref{fig:CRA-test} show the display and simvision results of the RTL simulation. The detailed results are included with this report under the CRA directory in the file \texttt{stim\_proj.out}.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CRA/CRA-text}
@@ -148,46 +149,50 @@ An n-bit CRA is formed by concatenating n full adders in cascade with the carry 
 \end{figure}
 
 \subsubsection{Logic Synthesis and Post-Synthesis Simulation}
+Figures \ref{fig:synth-text-CRA} and \ref{fig:synth-test-CRA} show the display and simvision results of the simulation. The results are included under the CRA directory under the files \texttt{timing.rep} and \texttt{cell.rep}. They show that this design uses 48610.093084nm of area and has a slack time of 26.14 meaning that the clock rate can be increased.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CRA/synth-text}
 \caption{Display}
-\label{fig:synth-text}
+\label{fig:synth-text-CRA}
 \end{figure}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../CRA/synth-test}
 \caption{Simvision}
-\label{fig:synth-test}
+\label{fig:synth-test-CRA}
 \end{figure}
 
 \subsubsection{Place \& Route and Post-P\&R Simulation}
+Figures \ref{fig:encounter-text-CRA} and \ref{fig:encounter-test-CRA} show the display and simvision results. The file \texttt{timing.rep.5.final} is located under the CRA directory included with this report. It shows that the slack time is about 17.458 which is an improvement from the post-synthesis design, but the clock can still be increased. The max clock rate was found to be $\approx$ 62 MHz.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CRA/encounter-text}
 \caption{Display}
-\label{fig:encounter-text}
+\label{fig:encounter-text-CRA}
 \end{figure}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{../CRA/encounter-test}
 \caption{Simvision}
-\label{fig:encounter-test}
+\label{fig:encounter-test-CRA}
 \end{figure}
 
 \subsubsection{Test Bench}
+Figures \ref{fig:test-text-CRA} and \ref{fig:test-test-CRA} show the display and simvision results. For a detailed analysis of the output please refer to the file \texttt{stim\_proj\_CRA.out} located under the CRA directory included with this report. Figures  \ref{fig:alu1-CRA} and \ref{fig:alu2-CRA} show a detailed view of the ALU results.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CRA/test-text}
 \caption{RTL Display}
-\label{fig:test-text}
+\label{fig:test-text-CRA}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{../CRA/test-test}
 \caption{RTL Simvision}
-\label{fig:test-test}
+\label{fig:test-test-CRA}
 \end{figure}
 
 
@@ -195,14 +200,14 @@ An n-bit CRA is formed by concatenating n full adders in cascade with the carry 
 \centering
 \includegraphics[width=\linewidth]{../CRA/alu1-test}
 \caption{ALU Operations}
-\label{fig:alu1}
+\label{fig:alu1-CRA}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{../CRA/alu2-test}
 \caption{ALU Operations}
-\label{fig:alu2}
+\label{fig:alu2-CRA}
 \end{figure}
 
 \subsection{Carry Lookahead Adder}
@@ -215,6 +220,15 @@ Carry Lookahead circuits are special logic circuits that can dramatically reduce
 \end{figure}
 
 \subsubsection{RTL Simulation}
+Figures \ref{fig:CLA-text} and \ref{fig:CLA-test} show the display and simvision results of the RTL simulation. The detailed results are included with this report under the CRA directory in the file \texttt{stim\_proj.out}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{../CLA/CLA-text}
+\caption{Display}
+\label{fig:CLA-text}
+\end{figure}
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../CLA/CLA-test}
@@ -223,43 +237,45 @@ Carry Lookahead circuits are special logic circuits that can dramatically reduce
 \end{figure}
 
 \subsubsection{Logic Synthesis and Post-Synthesis Simulation}
+Figures \ref{fig:synth-text-CRA} and \ref{fig:synth-test-CRA} show the display and simvision results of the simulation. The results are included under the CLA directory under the files \texttt{timing.rep} and \texttt{cell.rep}. They show that this design uses 48610.093084nm of area and has a slack time of 26.14 meaning that the clock rate can be increased.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CLA/synth-text}
 \caption{Display}
-\label{fig:synth-text}
+\label{fig:synth-text-CLA}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../CLA/synth-test}
 \caption{Simvision}
-\label{fig:synth-test}
+\label{fig:synth-test-CLA}
 \end{figure}
 
 
 \subsubsection{Place \& Route and Post-P\&R Simulation}
-
+Figures \ref{fig:encounter-text-CLA} and \ref{fig:encounter-test-CLA} show the display and simvision results. The file \texttt{timing.rep.5.final} is located under the CLA directory included with this report. It shows that the slack time is about 17.921 which is an improvement from the post-synthesis design, but the clock can still be increased. The max clock rate was found to be $\approx$ 66 MHz.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CLA/encounter-text}
 \caption{Display}
-\label{fig:encounter-text}
+\label{fig:encounter-text-CLA}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../CLA/encounter-test}
 \caption{Simvision}
-\label{fig:encounter-test}
+\label{fig:encounter-test-CLA}
 \end{figure}
 
 \subsubsection{Test Bench}
+Figures \ref{fig:test-text-CLA} and \ref{fig:test-test-CLA} show the display and simvision results. For a detailed analysis of the output please refer to the file \texttt{stim\_proj\_CLA.out} located under the CRA directory included with this report. Figures  \ref{fig:alu1-CLA} and \ref{fig:alu2-CLA} show a detailed view of the ALU results.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CLA/test-text}
 \caption{RTL Display}
-\label{fig:test-text}
+\label{fig:test-text-CLA}
 \end{figure}
 
 
@@ -267,8 +283,24 @@ Carry Lookahead circuits are special logic circuits that can dramatically reduce
 \centering
 \includegraphics[width=\linewidth]{../CLA/test-test}
 \caption{RTL Simvision}
-\label{fig:test-test}
+\label{fig:test-test-CLA}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CLA/alu1}
+\caption{ALU 1}
+\label{fig:alu1-CLA}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CLA/alu2}
+\caption{ALU 2}
+\label{fig:alu2-CLA}
+\end{figure}
+
+
 
 \subsection{Carry Skip Adder}
 In the Carry Skip Adder, the operands are divided into blocked of r bits blocks. In each block, a ripple carry adder can be utilized to produce the sum bits and a carryout bit for the block. This is shown in Figure \ref{fig:carry-skip}.
@@ -281,11 +313,12 @@ In the Carry Skip Adder, the operands are divided into blocked of r bits blocks.
 \end{figure}
 
 \subsubsection{RTL Simulation}
+Figures \ref{fig:RTL-text-CSA} and \ref{fig:CSA-test} show the display and simvision results of the RTL simulation. The detailed results are included with this report under the CSA directory in the file \texttt{stim\_proj.out}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.7\linewidth]{../CSA/RTL-text}
 	\caption{Display}
-	\label{fig:RTL-text}
+	\label{fig:RTL-text-CSA}
 \end{figure}
 
 
@@ -296,39 +329,57 @@ In the Carry Skip Adder, the operands are divided into blocked of r bits blocks.
 	\label{fig:CSA-test}
 \end{figure}
 \subsubsection{Logic Synthesis and Post-Synthesis Simulation}
+Figures \ref{fig:synth-text-CSA} and \ref{fig:synth-test-CSA} show the display and simvision results of the simulation. The results are included under the CSA directory under the files \texttt{timing.rep} and \texttt{cell.rep}. They show that this design uses 48878.063377nm of area and has a slack time of 26.14 meaning that the clock rate can be increased.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CSA/synth-text-CSA}
+\caption{Display}
+\label{fig:synth-text-CSA}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../CSA/synth-test-CSA}
+\caption{Simvision}
+\label{fig:synth-test-CSA}
+\end{figure}
 
 \subsubsection{Place \& Route and Post-P\&R Simulation}
+Figures \ref{fig:EC-text-CSA} and \ref{fig:EC-test-CSA} show the display and simvision results. The file \texttt{timing.rep.5.final} is located under the CSA directory included with this report. It shows that the slack time is about 18.318 which is an improvement from the post-synthesis design, but the clock can still be increased. The max clock rate was found to be $\approx$ 66 MHz.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CSA/EC-text}
 \caption{Display}
-\label{fig:EC-text}
+\label{fig:EC-text-CSA}
 \end{figure}
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CSA/EC}
 \caption{Simvision}
-\label{fig:EC}
+\label{fig:EC-test-CSA}
 \end{figure}
 
 \subsubsection{Test Bench}
+Figures \ref{fig:test-text-CSA} - \ref{fig:test2-test-CSA} show the display and simvision results. For a detailed analysis of the output please refer to the file \texttt{stim\_proj\_CSA.out} located under the CSA directory included with this report.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CSA/tbtest-text}
 \caption{Display}
-\label{fig:tbtest-text}
+\label{fig:test-text-CSA}
 \end{figure}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../CSA/test1}
 \caption{Simvision 1}
-\label{fig:test1}
+\label{fig:test1-test-CS}
 \end{figure}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../CSA/test2}
 \caption{Simvision 2}
-\label{fig:test2}
+\label{fig:test2-test-CSA}
 \end{figure}
 
 \subsection{Carry Select Adder}
@@ -342,6 +393,7 @@ The Carry Select Adder divides the operands to be added into r bit blocks simila
 \end{figure}
 
 \subsubsection{RTL Simulation}
+Figures \ref{fig:CSeA-text} and \ref{fig:CSeA-test} show the display and simvision results of the RTL simulation. The detailed results are included with this report under the CSeA directory in the file \texttt{stim\_proj.out}.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CSeA/CSeA-text}
@@ -357,45 +409,48 @@ The Carry Select Adder divides the operands to be added into r bit blocks simila
 \end{figure}
 
 \subsubsection{Logic Synthesis and Post-Synthesis Simulation}
+Figures \ref{fig:synth-text-CSeA} and \ref{fig:synth-test-CSeA} show the display and simvision results of the simulation. The results are included under the CSA directory under the files \texttt{timing.rep} and \texttt{cell.rep}. They show that this design uses 49150.726672nm of area and has a slack time of 26.14 meaning that the clock rate can be increased.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CSeA/synth-text}
 \caption{Display}
-\label{fig:synth-text}
+\label{fig:synth-text-CSeA}
 \end{figure}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../CSeA/synth-test}
 \caption{Simvision}
-\label{fig:synth-test}
+\label{fig:synth-test-CSeA}
 \end{figure}
 
 \subsubsection{Place \& Route and Post-P\&R Simulation}
+Figures \ref{fig:EC-text-CSeA} and \ref{fig:EC-test-CSeA} show the display and simvision results. The file \texttt{timing.rep.5.final} is located under the CSeA directory included with this report. It shows that the slack time is about 18.144 which is an improvement from the post-synthesis design, but the clock can still be increased. The max clock rate was found to be $\approx$ 66 MHz.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CSeA/encounter-text}
 \caption{Display}
-\label{fig:encounter-text}
+\label{fig:EC-text-CSeA}
 \end{figure}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../CSeA/encounter-test}
 \caption{Simvision}
-\label{fig:encounter-test}
+\label{fig:EC-test-CSeA}
 \end{figure}
 
 \subsubsection{Test Bench}
+Figures \ref{fig:test-text-CSeA} and \ref{fig:test-test-CSeA} show the display and simvision results. For a detailed analysis of the output please refer to the file \texttt{stim\_proj\_CSeA.out} located under the CSeA directory included with this report. Figures  \ref{fig:alu1-CSeA} and \ref{fig:alu2-CSeA} show a detailed view of the ALU results.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../CSeA/test-text}
 \caption{Display}
-\label{fig:test-text}
+\label{fig:test-text-CSeA}
 \end{figure}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../CSeA/test-test}
 \caption{Simvision}
-\label{fig:test-test}
+\label{fig:test-test-CSeA}
 \end{figure}
 
 
@@ -403,13 +458,13 @@ The Carry Select Adder divides the operands to be added into r bit blocks simila
 \centering
 \includegraphics[width=\linewidth]{../CSeA/alu1}
 \caption{ALU Operations 1}
-\label{fig:alu1}
+\label{fig:alu1-CSeA}
 \end{figure}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../CSeA/alu2}
 \caption{ALU Operations 2}
-\label{fig:alu2}
+\label{fig:alu2-CSeA}
 \end{figure}
 
 \subsection{Delay Comparison}
@@ -435,7 +490,7 @@ The Carry Select Adder divides the operands to be added into r bit blocks simila
 			\hline
 			FFFF\_FFFF - 5555\_555A & 24.1ns & 22.2ns & 24.6ns & 30.1ns \\
 			\hline
-			AAAA\_AAAB + 5555\_5555 & 22.1ns & 22.1ns & 25.2ns & find it \\
+			AAAA\_AAAB + 5555\_5555 & 22.1ns & 22.1ns & 25.2ns & 23.2ns \\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -443,13 +498,20 @@ The Carry Select Adder divides the operands to be added into r bit blocks simila
 	\label{tab:2nd}
 \end{table}
 
+Overall each adder performed reasonably well. It should be noted that some adders had longer delays on some operations than others. This has to due with how they each algorithmically perform operations. It should be noted that the Carry Select Adder performed the best on average.
+\subsection{New Test Bench Code}
+This code for \texttt{tb\_test.v} is displayed below and is also included under the directory code included with this report.
+\lstinputlisting{tb_test.v}
 
 \section{32-Bit CPU Design with New ALU Architecture}
 \subsection{Code}
+Below is the code developed to include the 32-bit comparator in the CPU.
 \lstinputlisting[firstnumber=1935,firstline=1935, lastline=2076]{cpu_comp.v}
 
-\subsection{Test Bench}
 
+The file \texttt{tb\_test\_comp.v} is not included in this report due to the length. It is included separately with the report under the directory code.
+\subsection{RTL Test Bench}
+Figures \ref{fig:rtl-results1} - \ref{fig:rtl-results4} show the RTL simulation simvision results of \texttt{tb\_test\_comp.v}, which is included in under the code directory included with this report. The results are also included in the file \texttt{stim\_proj.out} under the directory case2.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../case2/rtl-results1}
@@ -477,7 +539,7 @@ The Carry Select Adder divides the operands to be added into r bit blocks simila
 
 
 \subsubsection{Logic Synthesis and Post-Synthesis Simulation}
-
+The results of the post synthesis simulation simvision results are shown in Figures \ref{fig:synth1} - \ref{fig:synth4}. The area of this design is 49305.595675nm and the slack is 26.48. The results of \texttt{timing.rep} and \texttt{timing.cell} are included with this report under the directory case2.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../case2/synth1}
@@ -505,6 +567,7 @@ The Carry Select Adder divides the operands to be added into r bit blocks simila
 
 
 \subsubsection{Place \& Route and Post-P\&R Simulation}
+The results of the post-P\&R simulation simvision results are shown in Figures \ref{fig:power} - \ref{fig:enc4}. The results of \texttt{timing.rep.5.final} show a slack of 19.848. This file is included under the directory case2. The maximum clock frequency was found to be $\approx$ 71 MHz.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\linewidth]{../case2/power}
@@ -536,6 +599,7 @@ The Carry Select Adder divides the operands to be added into r bit blocks simila
 \caption{Layout Simulation 4}
 \label{fig:enc4}
 \end{figure}
+
 
 \section{Conclusions}
 Overall a 32-bit pipelined CPU was successfully studied. Through the simulation and analysis of the code, it is clear how a CPU is both physically and logically constructed. Different adder types were adequately analyzed and it is apparent that each configuration affects the power and delay of the CPU as a whole. Furthermore, a comparator was successfully added to the ALU of the CPU. The goals of this project were all achieved successfully.

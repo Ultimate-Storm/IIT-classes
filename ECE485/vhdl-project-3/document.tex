@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float}
+\usepackage{graphicx}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+	xleftmargin=2em,
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+	basicstyle=\small,%\footnotesize,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=false,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	%	frame=single,                    % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	language=VHDL, % the language of the code
+	morekeywords={*,...},            % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\small\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,                    % step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=2                  % sets default tabsize to 2 spac                  % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%opening
+\title{\textbf{Project 3: Designing a 32-bit CPU}}
+\author{\textbf{Adam Sumner} - A20283081, \textbf{Contribution} - 25\% \\
+		\textbf{Bobby Unverzagt} - A2028923, \textbf{Contribution} - 25\% \\
+		\textbf{Emilie Woog} - A20265269, \textbf{Contribution} - 25\% \\
+		\textbf{Nash Kaminski} - A20283999, \textbf{Contribution} - 25\% \\ ~\\ ECE 485}
+\date{December 5\textsuperscript{th}, 2015}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This goal of this project is to design a stripped down version of the MIPS processor. The processor will be a 32-bit version of the processor discussed in class and the text book, however, its instruction set will be a small subset of the MIPS processor's full capability. 
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\texttt{OpCode[31:26]} & \texttt{Function Field [5:0]} & Instruction \\ 
+		\hline
+		$100011_2$ & -- & \texttt{lw} \\
+		\hline
+		$101011_2$ & -- & \texttt{sw}\\
+		\hline
+		$000000_2$ & $100000_2$ & \texttt{add} \\
+		\hline
+		$000000_2$ & $110000_2$ & \texttt{sub}\\
+		\hline
+		$000100_2$ & -- & \texttt{beq}\\
+		\hline
+		$000001_2$ & $000001_2$ & \texttt{nand} \\
+		\hline
+		$000010_2$ & $000010_2$ & \texttt{andi} \\
+		\hline
+		$000011_2$ & $000001_2$ & \texttt{or} \\
+		\hline
+		$000011_2$ & $000010_2$ & \texttt{ori} \\
+		\hline		
+	\end{tabular}
+	\caption{CPU Instruction Set}
+	\label{tab:operations}
+\end{table}
+\section{Design}
+\subsection{Architecture}
+
+
+
+
+\subsection{Behavior}
+
+
+
+
+
+
+
+\section{Analysis}
+
+\section{Simulation Results}
+
+
+\section{Conclusion}
+The design and implementation of an 32-bit CPU was a success. An architecture was designed and a behavior was successfully put into practice. All requested functionality was achieved. This 32-bit CPU can now be used in further projects.
+\end{document}
