@@ -50,48 +50,72 @@
 \section{Introduction}
 This goal of this project is to design a stripped down version of the MIPS processor. The processor will be a 32-bit version of the processor discussed in class and the text book, however, its instruction set will be a small subset of the MIPS processor's full capability. 
 
+\subsection{Background Information}
+MIPS is a reduced instruction set computer (RISC) instruction set architecture (ISA). It defines three types of instruction types: R (register), I (Immediate), and J (Jump). For the implementation that this project is focused on, only R and I instructions will be executed. R type instructions are the most common form of instructions. The format for an r-type instruction is:
 
+\begin{center}
+
+\resizebox{\textwidth}{!}{\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	\texttt{Bits[31:26]} & \texttt{Bits[25:21]} & \texttt{Bits[20:16]} & \texttt{Bits[15:11]} & \texttt{Bits[10:6]} & \texttt{Bits[5:0]} \\ \hline
+	opcode & Rs & Rt & Rd & shamt & funct \\ \hline
+	
+\end{tabular}}
+\end{center}
+
+\noindent For this instruction, the opcode field is always $000000_2$, while the function code \texttt{funct} is used to determine which instruction is to be carried out. Rs and Rt are the two registers in which the operation reads and Rd is the destination of the result. Some instructions require a shift amount (\texttt{shamt}), so it is specified explicitly.
+\\
+
+\noindent The I type instruction involves an immediate value, so the instruction format must accommodate this. The format of this type of instruction is: \\
+\begin{center}
+
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	\texttt{Bits[31:26]} & \texttt{Bits[25:21]} & \texttt{Bits[20:16]} & \texttt{Bits[15:0]} \\ \hline
+	opcode & Rs & Rt & immediate \\ \hline
+\end{tabular}
+
+\end{center}
+
+\noindent For this isntruction, the op code field is used to define the specific instruction, Rs is the register in which the operation acts on along with the immediate value as the other operand. Rt is the destination register in which the result is stored.
+
+\section{Design}
+\subsection{Instruction Set}
+Table \ref{tab:operations} shows the instructions that are implemented in the CPU with the respective OpCode and Function Field for each instruction.
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|c|c|c|}
+	\begin{tabular}{|c|c|c|c|}
 		\hline
-		\texttt{OpCode[31:26]} & \texttt{Function Field [5:0]} & Instruction \\ 
+		\texttt{OpCode[31:26]} & \texttt{Function Field [5:0]} & Instruction & Operation \\ 
 		\hline
-		$100011_2$ & -- & \texttt{lw} \\
+		$100011_2$ & \texttt{--} & \texttt{lw} & \texttt{lw \$t3, 200(\$s2)}  \\
 		\hline
-		$101011_2$ & -- & \texttt{sw}\\
+		$101011_2$ & \texttt{--} & \texttt{sw} & \texttt{sw \$t4, 100(\$t3)} \\
 		\hline
-		$000000_2$ & $100000_2$ & \texttt{add} \\
+		$000000_2$ & $100000_2$ & \texttt{add} & \texttt{add \$s3, \$t2, \$s2} \\
 		\hline
-		$000000_2$ & $110000_2$ & \texttt{sub}\\
+		$000000_2$ & $110000_2$ & \texttt{sub}& \texttt{sub \$s3, \$t2, \$s2}\\
 		\hline
-		$000100_2$ & -- & \texttt{beq}\\
+		$000100_2$ & \texttt{--} & \texttt{beq}&\texttt{beq \$s5, \$s2, 500}\\
 		\hline
-		$000001_2$ & $000001_2$ & \texttt{nand} \\
+		$000000_2$ & $000001_2$ & \texttt{nand}& \texttt{tbd} \\
 		\hline
-		$000010_2$ & $000010_2$ & \texttt{andi} \\
+		$000010_2$ & \texttt{--} & \texttt{andi}& \texttt{tbd} \\
 		\hline
-		$000011_2$ & $000001_2$ & \texttt{or} \\
+		$000000_2$ & $000001_2$ & \texttt{or}& \texttt{tbd} \\
 		\hline
-		$000011_2$ & $000010_2$ & \texttt{ori} \\
+		$000011_2$ & \texttt{--} & \texttt{ori}& \texttt{tbd} \\
 		\hline		
 	\end{tabular}
 	\caption{CPU Instruction Set}
 	\label{tab:operations}
 \end{table}
-\section{Design}
-\subsection{Architecture}
 
+\subsection{Memory}
+For this project, it seemed unnecessary to implement memory of 4GB ($2^{32}$). It was chosen to use an array of 256 words instead. If need be, this memory size could be upgraded easily, so this choice does not hinder performance on the actual design of the CPU.
+\subsection{DataPath}
 
-
-
-\subsection{Behavior}
-
-
-
-
-
-
+\subsection{Control}
 
 \section{Analysis}
 
@@ -99,5 +123,5 @@ This goal of this project is to design a stripped down version of the MIPS proce
 
 
 \section{Conclusion}
-The design and implementation of an 32-bit CPU was a success. An architecture was designed and a behavior was successfully put into practice. All requested functionality was achieved. This 32-bit CPU can now be used in further projects.
+The design and implementation of a 32-bit CPU was a success. An architecture was designed and a behavior was successfully put into practice. All requested functionality was achieved. This 32-bit CPU can now be used in further projects.
 \end{document}
