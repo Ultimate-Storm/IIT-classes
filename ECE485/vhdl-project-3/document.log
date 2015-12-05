@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  3 DEC 2015 20:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  5 DEC 2015 14:06
 entering extended mode
 **document.tex
 (C:\Users\Adam\classes\ECE485\vhdl-project-3\document.tex
@@ -140,46 +140,59 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 48.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 63.
+(Font)              <12> on input line 64.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 63.
+(Font)              <8> on input line 64.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 63.
+(Font)              <6> on input line 64.
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--68
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
 
  []
 
 [1
 
 {C:/Users/Adam/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
+<textbook-datapth.jpg, id=9, 244.2726pt x 189.8292pt>
+File: textbook-datapth.jpg Graphic file (type jpg)
 
-Overfull \hbox (23.27596pt too wide) in paragraph at lines 87--110
+<use textbook-datapth.jpg>
+Package pdftex.def Info: textbook-datapth.jpg used on input line 87.
+(pdftex.def)             Requested size: 390.0pt x 303.10144pt.
+ [2]
+Overfull \hbox (23.27596pt too wide) in paragraph at lines 96--119
  [][] 
  []
 
-[2] [3] (C:\Users\Adam\classes\ECE485\vhdl-project-3\document.aux) ) 
+[3 <C:/Users/Adam/classes/ECE485/vhdl-project-3/textbook-datapth.jpg>]
+<datapth.jpg, id=17, 2023.56pt x 1144.275pt>
+File: datapth.jpg Graphic file (type jpg)
+ <use datapth.jpg>
+Package pdftex.def Info: datapth.jpg used on input line 130.
+(pdftex.def)             Requested size: 390.0pt x 220.52242pt.
+ [4] [5 <C:/Users/Adam/classes/ECE485/vhdl-project-3/datapth.jpg>] [6]
+(C:\Users\Adam\classes\ECE485\vhdl-project-3\document.aux) ) 
 Here is how much of TeX's memory you used:
- 2461 strings out of 493921
- 34821 string characters out of 3144880
- 121175 words of memory out of 3000000
- 5774 multiletter control sequences out of 15000+200000
- 8977 words of font info for 32 fonts, out of 3000000 for 9000
+ 2479 strings out of 493921
+ 35103 string characters out of 3144880
+ 120175 words of memory out of 3000000
+ 5788 multiletter control sequences out of 15000+200000
+ 9284 words of font info for 33 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 26i,10n,36p,393b,236s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on document.pdf (3 pages, 65147 bytes).
+ 26i,10n,36p,531b,236s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on document.pdf (6 pages, 855915 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

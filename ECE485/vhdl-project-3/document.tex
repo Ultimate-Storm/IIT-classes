@@ -51,6 +51,7 @@
 This goal of this project is to design a stripped down version of the MIPS processor. The processor will be a 32-bit version of the processor discussed in class and the text book, however, its instruction set will be a small subset of the MIPS processor's full capability. 
 
 \subsection{Background Information}
+\subsubsection{MIPS}
 MIPS is a reduced instruction set computer (RISC) instruction set architecture (ISA). It defines three types of instruction types: R (register), I (Immediate), and J (Jump). For the implementation that this project is focused on, only R and I instructions will be executed. R type instructions are the most common form of instructions. The format for an r-type instruction is:
 
 \begin{center}
@@ -77,11 +78,19 @@ MIPS is a reduced instruction set computer (RISC) instruction set architecture (
 
 \end{center}
 
-\noindent For this isntruction, the op code field is used to define the specific instruction, Rs is the register in which the operation acts on along with the immediate value as the other operand. Rt is the destination register in which the result is stored.
+\noindent For this instruction, the op code field is used to define the specific instruction, Rs is the register in which the operation acts on along with the immediate value as the other operand. Rt is the destination register in which the result is stored.
 
+\subsubsection{Datapath and Control}
+A datapath is a collection of functional units that perform data processing operations. It includes units such as a program counter, a register file, instruction memory, an ALU, data memory, and a control unit. Figure \ref{fig:textbook-datapth} shows a high level overview of a simple datapath with control.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{textbook-datapth}
+\caption{Datapath Overview}
+\label{fig:textbook-datapth}
+\end{figure}
 \section{Design}
 \subsection{Instruction Set}
-Table \ref{tab:operations} shows the instructions that are implemented in the CPU with the respective OpCode and Function Field for each instruction.
+Table \ref{tab:operations} shows the instructions that were chosen to be implemented in the CPU with the respective OpCode and Function Field for each instruction.
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
@@ -102,7 +111,7 @@ Table \ref{tab:operations} shows the instructions that are implemented in the CP
 		\hline
 		$000010_2$ & \texttt{--} & \texttt{andi}& \texttt{tbd} \\
 		\hline
-		$000000_2$ & $000001_2$ & \texttt{or}& \texttt{tbd} \\
+		$000000_2$ & $000010_2$ & \texttt{or}& \texttt{tbd} \\
 		\hline
 		$000011_2$ & \texttt{--} & \texttt{ori}& \texttt{tbd} \\
 		\hline		
@@ -111,17 +120,25 @@ Table \ref{tab:operations} shows the instructions that are implemented in the CP
 	\label{tab:operations}
 \end{table}
 
+\noindent Because it was only required to implement 9 instructions, and the MIPS instruction set format requires 6 bits for op code and function field, it was an easy decision to choose these values for the implemented instructions. For all R-type instructions, the functions fields were chosen to be vastly different from one another to make debugging easier for the team. Likewise, the same approach was taken for the op code decisions for the I-type instructions.
 \subsection{Memory}
 For this project, it seemed unnecessary to implement memory of 4GB ($2^{32}$). It was chosen to use an array of 256 words instead. If need be, this memory size could be upgraded easily, so this choice does not hinder performance on the actual design of the CPU.
 \subsection{DataPath}
+Figure \ref{fig:datapth} shows the overview block diagram of the implemented datapath for the CPU.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{datapth}
+\caption{Implemented Data Path Overview}
+\label{fig:datapth}
+\end{figure}
 
 \subsection{Control}
-
+The control can also be seen in Figure \ref{fig:datapth}. It is a simple design of several signals acting as the \texttt{sel} line of a series of multiplexers. Based on the op codes and function field read from the instruction memory, the signals are asserted accordingly to relay the correct signals into the Register File, ALU, and Data memory.
 \section{Analysis}
-
+While this processor is designed to be able to fully accomplish the tasks specified in the business requirements document, it could still be improved. In its current stage, it can be considered a bare bones prototype. To transform the current design into a processor on par with the current industry standard, a complete instruction set would have to be implemented. Furthermore, pipelining is a necessity to add. Any processor that doesn't implement pipelining is not making efficient use of its own components.   
 \section{Simulation Results}
 
 
 \section{Conclusion}
-The design and implementation of a 32-bit CPU was a success. An architecture was designed and a behavior was successfully put into practice. All requested functionality was achieved. This 32-bit CPU can now be used in further projects.
+The design and implementation of a 32-bit CPU was a success. a set of 9 instructions were successfully implemented and verified with test bench code. All requested functionality was achieved. This 32-bit CPU can now be used in further projects.
 \end{document}
