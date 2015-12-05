@@ -135,9 +135,9 @@ Figure \ref{fig:datapth} shows the overview block diagram of the implemented dat
 \subsection{Control}
 The control can also be seen in Figure \ref{fig:datapth}. It is a simple design of several signals acting as the \texttt{sel} line of a series of multiplexers. Based on the op codes and function field read from the instruction memory, the signals are asserted accordingly to relay the correct signals into the Register File, ALU, and Data memory.
 \section{Analysis}
-While this processor is designed to be able to fully accomplish the tasks specified in the business requirements document, it could still be improved. In its current stage, it can be considered a bare bones prototype. To transform the current design into a processor on par with the current industry standard, a complete instruction set would have to be implemented. Furthermore, pipelining is a necessity to add. Any processor that doesn't implement pipelining is not making efficient use of its own components.   
+While this processor was optimized to be able to fully accomplish the tasks specified in the business requirements document, it could still be improved. In its current stage, it can be considered a bare bones prototype. To transform the current design into a processor on par with the current industry standard, a complete instruction set would have to be implemented. Furthermore, pipelining is a necessity to add. Any processor that doesn't implement pipelining is not making efficient use of its own components.   
 \section{Simulation Results}
-
+Include blurb about test bench code and all figures of waveforms explaining each section of the test.
 
 \section{Conclusion}
 The design and implementation of a 32-bit CPU was a success. a set of 9 instructions were successfully implemented and verified with test bench code. All requested functionality was achieved. This 32-bit CPU can now be used in further projects.
