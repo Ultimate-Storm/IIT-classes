@@ -108,13 +108,13 @@ Table \ref{tab:operations} shows the instructions that were chosen to be impleme
 		\hline
 		$000100_2$ & \texttt{--} & \texttt{beq}&\texttt{beq \$s5, \$s2, 500}\\
 		\hline
-		$000000_2$ & $000001_2$ & \texttt{nand}& \texttt{nand \$5, \$1, \$2} \\
+		$000000_2$ & $000001_2$ & \texttt{nand}& \texttt{nand \$s5, \$s1, \$s2} \\
 		\hline
-		$000010_2$ & \texttt{--} & \texttt{andi}& \texttt{andi \$6, \$2, 00FF} \\
+		$000010_2$ & \texttt{--} & \texttt{andi}& \texttt{andi \$s6, \$s2, 00FF} \\
 		\hline
-		$000000_2$ & $000010_2$ & \texttt{or}& \texttt{or \$8, \$1, \$2} \\
+		$000000_2$ & $000010_2$ & \texttt{or}& \texttt{or \$s8, \$s1, \$s2} \\
 		\hline
-		$000011_2$ & \texttt{--} & \texttt{ori}& \texttt{ori \$7, \$1, 00FF} \\
+		$000011_2$ & \texttt{--} & \texttt{ori}& \texttt{ori \$s7, \$s1, 00FF} \\
 		\hline		
 	\end{tabular}
 	\caption{CPU Instruction Set}
@@ -142,100 +142,124 @@ The control lines can also be seen in Figure \ref{fig:datapth}. It is a simple d
 \section{Analysis}
 While this processor was optimized to be able to fully accomplish the tasks specified in the business requirements document, it could still be improved. In its current stage, it can be considered a bare bones prototype. To transform the current design into a processor on par with the current industry standard, a complete instruction set would have to be implemented. Furthermore, pipelining is a necessity to add. Any processor that doesn't implement pipelining is not making efficient use of its own components. After pipelining is implemented, hazard controls would need to coexist. This would allow for cool features of the processor to exist such as forwarding, making it a truly efficient piece of hardware.
 \section{Simulation Results}
-Once the processor was completely designed, it was necessary to write some test bench code to ensure the functionality it provided was desired. To test each instruction, data had to first be written to memory, along with the program being loaded onto the CPU. Due to the amount of signals involved in the CPU, not all will be shown in the simulation. The clock, contents of the registers, data memory, and program counter will only be shown. Data Memory addresses $00000001_{16} \to 00000005_{16}$ were initialized with starting data. Please refer to the Test Bench in the Appendix for a detailed view of the testing procedure. The execution of the program begins at 38ns. The tested instructions are:
+Once the processor was completely designed, it was necessary to write some test bench code. To test each instruction, data had to first be written to memory, along with the program being loaded onto the CPU. Due to the amount of signals involved in the CPU, not all will be shown in the simulation. The clock, contents of the registers, data memory, and program counter will only be shown. Data Memory addresses 0x00000001 $\to$ 0x00000005 were initialized with starting data. For simplicity, register numbers 1 $\to$ 8 are s registers. This is not the convention in a usual MIPS implemented processor, however, for testing the instructions, this assignment is arbitrary. Please refer to the Test Bench in the Appendix for a detailed view of the testing procedure. The execution of the program begins at 38ns. The tested instructions are:
 
 \begin{enumerate}
-	\item \texttt{lw \$1, 1(\$zero)}
-	\item \texttt{sw \$1, 6(\$zero)}
-	\item \texttt{lw \$2, 2(\$zero)}
-	\item \texttt{add \$3, \$1, \$2}
-	\item \texttt{sub \$4, \$2, \$1}
-	\item \texttt{beq \$1, \$2, 100}
+	\item \texttt{lw \$s1, 1(\$zero)}
+	\item \texttt{sw \$s1, 6(\$zero)}
+	\item \texttt{lw \$s2, 2(\$zero)}
+	\item \texttt{add \$s3, \$s1, \$s2}
+	\item \texttt{sub \$s4, \$s2, \$s1}
+	\item \texttt{beq \$s1, \$s2, 100}
 	\item \texttt{lw \$2, 4(\$zero)}
-	\item \texttt{nand \$5, \$1, \$2}
-	\item \texttt{andi \$6, \$2, 0x00FF}
-	\item \texttt{ori \$7, \$1, 0x00FF}
-	\item \texttt{or \$8, \$1, \$2}
-	\item \texttt{beq \$1, \$1, -0x000B}
+	\item \texttt{nand \$s5, \$s1, \$s2}
+	\item \texttt{andi \$s6, \$s2, 0x00FF}
+	\item \texttt{ori \$s7, \$s1, 0x00FF}
+	\item \texttt{or \$s8, \$s1, \$s2}
+	\item \texttt{beq \$s1, \$s1, -0x000B}
 \end{enumerate}
 
-Figure \ref{fig:1-instr} shows the first instruction being executed. The data memory at address 0x00000001 holds the value 0xAAAAAAAA and register \$1 is subsequently loaded with the data 0xAAAAAAAA.
+Figure \ref{fig:1-instr} shows the first instruction being executed. The data memory at address 0x00000001 holds the value 0xAAAAAAAA and register \$s1 is subsequently loaded with the data 0xAAAAAAAA.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{simulation/1-instr}
-\caption{\texttt{lw \$1, 1(\$zero)}}
+\caption{\texttt{lw \$s1, 1(\$zero)}}
 \label{fig:1-instr}
 \end{figure}
 
-Figure \ref{fig:2-instr} shows the second instruction. The value of 0xAAAAAAAA in register \$1 is successfully stored into the data memory at address 0x00000006.
+Figure \ref{fig:2-instr} shows the second instruction. The value of 0xAAAAAAAA in register \$s1 is successfully stored into the data memory at address 0x00000006.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{simulation/2-instr}
-\caption{\texttt{sw \$1, 6(\$zero)}}
+\caption{\texttt{sw \$s1, 6(\$zero)}}
 \label{fig:2-instr}
 \end{figure}
 
-Figure \ref{fig:3-instr} shows the third instruction. The value of 0xBBBBBBBB at address 0x00000002 is successfully loaded into register \$2.
+Figure \ref{fig:3-instr} shows the third instruction. The value of 0xBBBBBBBB at address 0x00000002 is successfully loaded into register \$s2.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{simulation/3-instr}
-\caption{\texttt{lw \$2, 2(\$zero)}}
+\caption{\texttt{lw \$s2, 2(\$zero)}}
 \label{fig:3-instr}
 \end{figure}
 
-Figure \ref{fig:4-instr} shows the fourth instruction. The values of 0xAAAAAAAA and 0xBBBBBBBB are successfully added with the result being 0x66666665 and writing this value into register \$3.
+Figure \ref{fig:4-instr} shows the fourth instruction. The values of 0xAAAAAAAA and 0xBBBBBBBB are successfully added with the correct result of 0x66666665 being written into register \$s3.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{simulation/4-instr}
-\caption{\texttt{add \$3, \$1, \$2}}
+\caption{\texttt{add \$s3, \$s1, \$s2}}
 \label{fig:4-instr}
 \end{figure}
 
-Figure \ref{fig:5-instr} shows the fifth instruction. The value of 0xAAAAAAAA in register \$1 is subtracted from register \$2. The result is 0x11111111 and is written back into register \$4.
+Figure \ref{fig:5-instr} shows the fifth instruction. The value of 0xAAAAAAAA in register \$s1 is subtracted from register \$s2. The result is 0x11111111 and is written back into register \$s4.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{simulation/5-instr}
-\caption{\texttt{sub \$4, \$2, \$1}}
+\caption{\texttt{sub \$s4, \$s2, \$s1}}
 \label{fig:5-instr}
 \end{figure}
 
 
-Figure \ref{fig:6-instr} shows the sixth instruction. The value of 0xBBBBBBBB in register \$2 is compared to 0xAAAAAAAA in register \$1 for equivalence. Since they are not, the program counter increments to the next instruction.
+Figure \ref{fig:6-instr} shows the sixth instruction. The value of 0xBBBBBBBB in register \$s2 is compared to 0xAAAAAAAA in register \$s1 for equivalence. Since they are not, the program counter increments to the next instruction.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{simulation/6-instr}
-\caption{\texttt{beq \$1, \$2, 100}}
+\caption{\texttt{beq \$s1, \$s2, 100}}
 \label{fig:6-instr}
 \end{figure}
 
 
-Figure \ref{fig:7-instr} shows the seventh instruction. The value of 0xFFFFFFFF at address 0x00000004 is loaded into register \$2 successfully.
+Figure \ref{fig:7-instr} shows the seventh instruction. The value of 0xFFFFFFFF at address 0x00000004 is loaded into register \$s2 successfully.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{simulation/7-instr}
-\caption{\texttt{lw \$2, 4(\$zero)}}
+\caption{\texttt{lw \$s2, 4(\$zero)}}
 \label{fig:7-instr}
 \end{figure}
 
-Figure \ref{fig:8-instr} shows the eight instruction. The value of 0xFFFFFFFF in register \$2 and 0xAAAAAAAA in register are nanded and the result of 0x55555555 is both accurate and stored in register \$5.
+Figure \ref{fig:8-instr} shows the eight instruction. The value of 0xFFFFFFFF in register \$s2 and 0xAAAAAAAA in register are nanded and the result of 0x55555555 is both accurate and stored in register \$s5.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{simulation/8-instr}
-\caption{\texttt{nand \$5, \$1, \$2}}
+\caption{\texttt{nand \$s5, \$s1, \$s2}}
 \label{fig:8-instr}
 \end{figure}
 
 
-Figure \ref{fig:9-instr} shows the ninth instruction. The immediate value of 0x000000FF is anded with the value of 0xFFFFFFFF in register \$2. The correct result of 0x000000FF is calculated and stored in register \$6.
+Figure \ref{fig:9-instr} shows the ninth instruction. The immediate value of 0x000000FF is anded with the value of 0xFFFFFFFF in register \$s2. The correct result of 0x000000FF is calculated and written into register \$s6.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{simulation/9-instr}
-\caption{\texttt{andi \$6, \$2, 0x00FF}}
+\caption{\texttt{andi \$s6, \$s2, 0x00FF}}
 \label{fig:9-instr}
 \end{figure}
 
+Figure \ref{fig:10-instr} shows the tenth instruction. The immediate value of 0x000000FF is or'ed with the value of 0xAAAAAAAA in register \$s1. The correct result of 0xAAAAAAFF is written into register \$s7.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/10-instr}
+\caption{\texttt{ori \$s7, \$s1, 0x00FF}}
+\label{fig:10-instr}
+\end{figure}
 
+
+Figure \ref{fig:11-instr} shows the eleventh instruction. The value of 0xFFFFFFFF in register \$s2 and 0xAAAAAAAA in register \$s1 are or'ed. The correct result of 0xFFFFFFFF is written into register \$s8.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/11-instr}
+\caption{\texttt{or \$s8, \$s1, \$s2}}
+\label{fig:11-instr}
+\end{figure}
+
+
+Figure \ref{fig:12-instr} shows the twelfth instruction. The value in register \$s1 is checked for equivalence with itself. Since it is equal, the program counter branches backwards successfully back to 0x00000001. Thus the test program infinitely loops. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/12-instr}
+\caption{\texttt{beq \$s1, \$s1, -0x000B}}
+\label{fig:12-instr}
+\end{figure}
 
 
 \section{Conclusion}
