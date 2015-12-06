@@ -8,25 +8,25 @@ z2
 !i10f 100
 cModel Technology
 dC:/Modeltech_pe_edu_10.4a/examples
-Ealu8
-Z0 w1447678591
+Ealu
+Z0 w1449364246
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z4 dC:/Users/Adam/classes/ECE485/vhdl-project-2
-Z5 8C:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd
-Z6 FC:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd
+Z5 8C:/Users/Adam/Documents/GitHub/alu/mips.vhd
+Z6 FC:/Users/Adam/Documents/GitHub/alu/mips.vhd
 l0
-L5
-VZ6W];0YX5PAdYU9nN8R<J1
-!s100 ZmBeL8jDK6eaN72Ul3jP`2
+L222
+V:5dJDk3DfebZBaV:_VE7H0
+!s100 E3nEUEL4Rf?D^5W4@0;mL3
 Z7 OP;C;10.4a;61
 32
-Z8 !s110 1447678593
+Z8 !s110 1449367052
 !i10b 1
-Z9 !s108 1447678593.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd|
-Z11 !s107 C:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd|
+Z9 !s108 1449367052.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Adam/Documents/GitHub/alu/mips.vhd|
+Z11 !s107 C:/Users/Adam/Documents/GitHub/alu/mips.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit -O0
 Z13 tExplicit 1
@@ -34,11 +34,11 @@ Abehavioral
 R1
 R2
 R3
-Z14 DEx4 work 4 alu8 0 22 Z6W];0YX5PAdYU9nN8R<J1
-l22
-L17
-VU28R6]I;C61LCPm3`EgH>0
-!s100 d6X:`nEXz]AM?5cC@WI231
+Z14 DEx4 work 3 alu 0 22 :5dJDk3DfebZBaV:_VE7H0
+l236
+L230
+Vb^K@MnVmcU751d4kXg=@i0
+!s100 Ai]czR`@S[K3oQAG`_ZWS0
 R7
 32
 R8
@@ -46,6 +46,257 @@ R8
 R9
 R10
 R11
+!i113 1
+R12
+R13
+Ealu8
+Z15 w1447678591
+R1
+R2
+R3
+R4
+Z16 8C:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd
+Z17 FC:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd
+l0
+L5
+VZ6W];0YX5PAdYU9nN8R<J1
+!s100 ZmBeL8jDK6eaN72Ul3jP`2
+R7
+32
+Z18 !s110 1449366815
+!i10b 1
+Z19 !s108 1449366814.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd|
+Z21 !s107 C:/Users/Adam/classes/ECE485/vhdl-project-2/alu.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 4 alu8 0 22 Z6W];0YX5PAdYU9nN8R<J1
+l22
+L17
+VU28R6]I;C61LCPm3`EgH>0
+!s100 d6X:`nEXz]AM?5cC@WI231
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Econtrol
+R0
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L44
+V96NN0aZ1CRWW_394N_I<:2
+!s100 1g7<:J]`k75YZiCK=JYk82
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+Z22 DEx4 work 7 control 0 22 96NN0aZ1CRWW_394N_I<:2
+l64
+L59
+VhznMiB@eQ8f2;TNZ?NEd_1
+!s100 lCJ<Lf2;CIAE<D>_1lDZ92
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Edatamem
+R0
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L190
+VXX>5H7VP8cnlg:^1Na0VA3
+!s100 9l^ji4MN>H94ok3@WfF]H1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+Z23 DEx4 work 7 datamem 0 22 XX>5H7VP8cnlg:^1Na0VA3
+l202
+L199
+V0D0>64TIm;di:=ijdf?cM0
+!s100 mSMT3OE5D0R=H:>ZG_dm^2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eprocessor
+R0
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L258
+VdH5[o3moX:PfAOC8VMmi10
+!s100 <]HhUS]6fHGOflzaMACE51
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R22
+R14
+Z24 DEx4 work 7 regfile 0 22 n`JUBXN9OQI?Hzd_;WX_K2
+R23
+R1
+R2
+R3
+Z25 DEx4 work 9 processor 0 22 dH5[o3moX:PfAOC8VMmi10
+l286
+L271
+V[VPBT@D1ei_eBn?j8T_Xg3
+!s100 4oR_UYFg_U_ieTUNdz5]V1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eregfile
+R0
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L5
+Vn`JUBXN9OQI?Hzd_;WX_K2
+!s100 CdSYzd9TSGQ5<YEhCfXDi2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+R24
+l20
+L17
+V?dXlihP<;8:;jUI9ml]322
+!s100 ]97n6U`UzZUE:Qo_CTzSG2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Etest_bench
+R0
+R1
+R2
+R3
+R4
+Z26 8C:/Users/Adam/Documents/GitHub/alu/test_bench.vhd
+Z27 FC:/Users/Adam/Documents/GitHub/alu/test_bench.vhd
+l0
+L5
+V[EdE0G=3IZ[FzmmlCDV`M2
+!s100 [T0@PNDC3eRi[6zf5:Xzi1
+R7
+32
+Z28 !s110 1449367053
+!i10b 1
+R9
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Adam/Documents/GitHub/alu/test_bench.vhd|
+Z30 !s107 C:/Users/Adam/Documents/GitHub/alu/test_bench.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R25
+R1
+R2
+R3
+Z31 DEx4 work 10 test_bench 0 22 [EdE0G=3IZ[FzmmlCDV`M2
+l13
+L8
+Z32 VWzHZ=?D3G[Y5H`QNTY^Ma2
+Z33 !s100 =:T=ffX06bEZFH1zDWIXK1
+R7
+32
+R28
+!i10b 1
+R9
+R29
+R30
 !i113 1
 R12
 R13

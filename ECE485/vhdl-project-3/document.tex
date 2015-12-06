@@ -93,9 +93,10 @@ A datapath is a collection of functional units that perform data processing oper
 Table \ref{tab:operations} shows the instructions that were chosen to be implemented in the CPU with the respective OpCode and Function Field for each instruction.
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|c|c|c|c|}
+	\begin{tabular}{|c|c|c|l|}
 		\hline
-		\texttt{OpCode[31:26]} & \texttt{Function Field [5:0]} & Instruction & Operation \\ 
+		\texttt{OpCode[31:26]} & \texttt{Function Field [5:0]} & Instruction & 
+		Example Operation \\ 
 		\hline
 		$100011_2$ & \texttt{--} & \texttt{lw} & \texttt{lw \$t3, 200(\$s2)}  \\
 		\hline
@@ -107,20 +108,20 @@ Table \ref{tab:operations} shows the instructions that were chosen to be impleme
 		\hline
 		$000100_2$ & \texttt{--} & \texttt{beq}&\texttt{beq \$s5, \$s2, 500}\\
 		\hline
-		$000000_2$ & $000001_2$ & \texttt{nand}& \texttt{tbd} \\
+		$000000_2$ & $000001_2$ & \texttt{nand}& \texttt{nand \$5, \$1, \$2} \\
 		\hline
-		$000010_2$ & \texttt{--} & \texttt{andi}& \texttt{tbd} \\
+		$000010_2$ & \texttt{--} & \texttt{andi}& \texttt{andi \$6, \$2, 00FF} \\
 		\hline
-		$000000_2$ & $000010_2$ & \texttt{or}& \texttt{tbd} \\
+		$000000_2$ & $000010_2$ & \texttt{or}& \texttt{or \$8, \$1, \$2} \\
 		\hline
-		$000011_2$ & \texttt{--} & \texttt{ori}& \texttt{tbd} \\
+		$000011_2$ & \texttt{--} & \texttt{ori}& \texttt{ori \$7, \$1, 00FF} \\
 		\hline		
 	\end{tabular}
 	\caption{CPU Instruction Set}
 	\label{tab:operations}
 \end{table}
 
-\noindent Because it was only required to implement 9 instructions, and the MIPS instruction set format requires 6 bits for op code and function field, it was an easy decision to choose these values for the implemented instructions. For all R-type instructions, the functions fields were chosen to be vastly different from one another to make debugging easier for the team. Likewise, the same approach was taken for the op code decisions for the I-type instructions.
+\noindent Because it was only required to implement 9 instructions and the MIPS instruction set format requires 6 bits for op code and function field, it was an easy decision to choose these values for the implemented instructions. For all R-type instructions, the functions fields were chosen to be vastly different from one another to make debugging easier for the team. Likewise, the same approach was taken for the op code decisions for the I-type instructions.
 \subsection{Memory}\label{sec:memory}
 For this project, it seemed unnecessary to implement memory of 4GB ($2^{32}$). It was chosen to use an array of 256 words instead. If need be, this memory size could be upgraded easily, so this choice does not hinder performance on the actual design of the CPU.
 \subsection{Datapath}
@@ -141,13 +142,19 @@ The control lines can also be seen in Figure \ref{fig:datapth}. It is a simple d
 \section{Analysis}
 While this processor was optimized to be able to fully accomplish the tasks specified in the business requirements document, it could still be improved. In its current stage, it can be considered a bare bones prototype. To transform the current design into a processor on par with the current industry standard, a complete instruction set would have to be implemented. Furthermore, pipelining is a necessity to add. Any processor that doesn't implement pipelining is not making efficient use of its own components. After pipelining is implemented, hazard controls would need to coexist. This would allow for cool features of the processor to exist such as forwarding, making it a truly efficient piece of hardware.
 \section{Simulation Results}
-Include blurb about test bench code and all figures of waveforms explaining each section of the test.
+Once the processor was completely designed, it was necessary to write some test bench code to ensure the functionality it provided was desired. To test each instruction, data had to first be written to memory, along with the program being loaded onto the CPU. Due to the amount of signals involved in the CPU, not all will be shown in the simulation. The clock, contents of the registers, data memory, and program counter will only be shown. Please refer to the Test Bench in the Appendix for a detailed view of the testing procedure. The execution of the program begins at 38ns. The tested instructions are:
 
+\begin{enumerate}
+	\item \texttt{lw \$1, 1(\$zero)}
+	\item \texttt{sw \$1, 6(\$zero)}
+	\item \texttt{lw \$2, 2(\$zero)}
+	\item \texttt{add \$3, \$1, \$2}
+\end{enumerate}
 \section{Conclusion}
 The design and implementation of a 32-bit CPU was a success. a set of 9 instructions were successfully implemented and verified with test bench code. All requested functionality was achieved. This 32-bit CPU can now be used in further projects.
 
 \section*{Appendix}
 \lstinputlisting[label=cpuCode, caption=CPU Code]{mips.vhd}
-\lstinputlisting[label=tbCode, caption=Test Bench Code]{test_bench.vhd}
+\lstinputlisting[label=tbCode, caption=Test Bench Code]{test_bench.vhd}\label{code:tbCode}
 
 \end{document}
