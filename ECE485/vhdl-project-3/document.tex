@@ -3,6 +3,7 @@
 \usepackage{color}
 \usepackage{float}
 \usepackage{graphicx}
+\usepackage{afterpage}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -171,93 +172,94 @@ Figure \ref{fig:1-instr} shows the first instruction being executed. The data me
 \end{figure}
 
 Figure \ref{fig:2-instr} shows the second instruction. The value of 0xAAAAAAAA in register \$s1 is successfully stored into the data memory at address 0x00000006.
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{simulation/2-instr}
 \caption{\texttt{sw \$s1, 6(\$zero)}}
 \label{fig:2-instr}
 \end{figure}
-
+\clearpage
 Figure \ref{fig:3-instr} shows the third instruction. The value of 0xBBBBBBBB at address 0x00000002 is successfully loaded into register \$s2.
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{simulation/3-instr}
 \caption{\texttt{lw \$s2, 2(\$zero)}}
 \label{fig:3-instr}
 \end{figure}
-
+\clearpage
 Figure \ref{fig:4-instr} shows the fourth instruction. The values of 0xAAAAAAAA and 0xBBBBBBBB are successfully added with the correct result of 0x66666665 being written into register \$s3.
-
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{simulation/4-instr}
 \caption{\texttt{add \$s3, \$s1, \$s2}}
 \label{fig:4-instr}
 \end{figure}
+\clearpage
 
-Figure \ref{fig:5-instr} shows the fifth instruction. The value of 0xAAAAAAAA in register \$s1 is subtracted from register \$s2. The result is 0x11111111 and is written back into register \$s4.
-\begin{figure}[H]
+ Figure \ref{fig:5-instr} shows the fifth instruction. The value of 0xAAAAAAAA in register \$s1 is subtracted from register \$s2. The result is 0x11111111 and is written back into register \$s4.
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{simulation/5-instr}
 \caption{\texttt{sub \$s4, \$s2, \$s1}}
 \label{fig:5-instr}
 \end{figure}
-
+\clearpage
 
 Figure \ref{fig:6-instr} shows the sixth instruction. The value of 0xBBBBBBBB in register \$s2 is compared to 0xAAAAAAAA in register \$s1 for equivalence. Since they are not, the program counter increments to the next instruction.
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{simulation/6-instr}
 \caption{\texttt{beq \$s1, \$s2, 100}}
 \label{fig:6-instr}
 \end{figure}
-
+\clearpage
 
 Figure \ref{fig:7-instr} shows the seventh instruction. The value of 0xFFFFFFFF at address 0x00000004 is loaded into register \$s2 successfully.
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{simulation/7-instr}
 \caption{\texttt{lw \$s2, 4(\$zero)}}
 \label{fig:7-instr}
 \end{figure}
-
+\clearpage
 Figure \ref{fig:8-instr} shows the eighth instruction. The value of 0xFFFFFFFF in register \$s2 and 0xAAAAAAAA in register are nanded and the result of 0x55555555 is both accurate and stored in register \$s5.
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{simulation/8-instr}
 \caption{\texttt{nand \$s5, \$s1, \$s2}}
 \label{fig:8-instr}
 \end{figure}
-
+\clearpage
 
 Figure \ref{fig:9-instr} shows the ninth instruction. The immediate value of 0x000000FF is anded with the value of 0xFFFFFFFF in register \$s2. The correct result of 0x000000FF is calculated and written into register \$s6.
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{simulation/9-instr}
 \caption{\texttt{andi \$s6, \$s2, 0x00FF}}
 \label{fig:9-instr}
 \end{figure}
+\clearpage
 
 Figure \ref{fig:10-instr} shows the tenth instruction. The immediate value of 0x000000FF is or'ed with the value of 0xAAAAAAAA in register \$s1. The correct result of 0xAAAAAAFF is written into register \$s7.
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{simulation/10-instr}
 \caption{\texttt{ori \$s7, \$s1, 0x00FF}}
 \label{fig:10-instr}
 \end{figure}
-
+\clearpage
 
 Figure \ref{fig:11-instr} shows the eleventh instruction. The value of 0xFFFFFFFF in register \$s2 and 0xAAAAAAAA in register \$s1 are or'ed. The correct result of 0xFFFFFFFF is written into register \$s8.
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{simulation/11-instr}
 \caption{\texttt{or \$s8, \$s1, \$s2}}
 \label{fig:11-instr}
 \end{figure}
-
+\clearpage
 
 Figure \ref{fig:12-instr} shows the twelfth instruction. The value in register \$s1 is checked for equivalence with itself. Since it is equal, the program counter branches backwards successfully back to 0x00000001. Thus the test program infinitely loops. 
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{simulation/12-instr}
 \caption{\texttt{beq \$s1, \$s1, -0x000B}}
