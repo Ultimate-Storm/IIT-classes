@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  5 DEC 2015 20:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  5 DEC 2015 21:01
 entering extended mode
 **document.tex
 (C:\Users\Adam\classes\ECE485\vhdl-project-3\document.tex
@@ -185,8 +185,71 @@ File: simulation/1-instr.png Graphic file (type png)
 <use simulation/1-instr.png>
 Package pdftex.def Info: simulation/1-instr.png used on input line 165.
 (pdftex.def)             Requested size: 390.0pt x 252.83566pt.
- [7 <C:/Users/Adam/classes/ECE485/vhdl-project-3/simulation/1-instr.png>] (C:\U
-sers\Adam\classes\ECE485\vhdl-project-3\mips.vhd
+
+<simulation/2-instr.png, id=30, 493.0922pt x 395.22656pt>
+File: simulation/2-instr.png Graphic file (type png)
+
+<use simulation/2-instr.png>
+Package pdftex.def Info: simulation/2-instr.png used on input line 173.
+(pdftex.def)             Requested size: 390.0pt x 312.61151pt.
+ [7 <C:/Users/Adam/classes/ECE485/vhdl-project-3/simulation/1-instr.png>]
+<simulation/3-instr.png, id=36, 494.59781pt x 411.03563pt>
+File: simulation/3-instr.png Graphic file (type png)
+
+<use simulation/3-instr.png>
+Package pdftex.def Info: simulation/3-instr.png used on input line 181.
+(pdftex.def)             Requested size: 390.0pt x 324.10622pt.
+ [8 <C:/Users/Adam/classes/ECE485/vhdl-project-3/simulation/2-instr.png>]
+<simulation/4-instr.png, id=41, 491.58656pt x 408.02437pt>
+File: simulation/4-instr.png Graphic file (type png)
+
+<use simulation/4-instr.png>
+Package pdftex.def Info: simulation/4-instr.png used on input line 190.
+(pdftex.def)             Requested size: 390.0pt x 323.71788pt.
+ [9 <C:/Users/Adam/classes/ECE485/vhdl-project-3/simulation/3-instr.png>]
+<simulation/5-instr.png, id=46, 493.845pt x 414.79968pt>
+File: simulation/5-instr.png Graphic file (type png)
+
+<use simulation/5-instr.png>
+Package pdftex.def Info: simulation/5-instr.png used on input line 198.
+(pdftex.def)             Requested size: 390.0pt x 327.57423pt.
+ [10 <C:/Users/Adam/classes/ECE485/vhdl-project-3/simulation/4-instr.png>]
+<simulation/6-instr.png, id=51, 609.77812pt x 380.17032pt>
+File: simulation/6-instr.png Graphic file (type png)
+
+<use simulation/6-instr.png>
+Package pdftex.def Info: simulation/6-instr.png used on input line 207.
+(pdftex.def)             Requested size: 390.0pt x 243.15735pt.
+ [11 <C:/Users/Adam/classes/ECE485/vhdl-project-3/simulation/5-instr.png>]
+<simulation/7-instr.png, id=56, 495.35063pt x 409.53pt>
+File: simulation/7-instr.png Graphic file (type png)
+
+<use simulation/7-instr.png>
+Package pdftex.def Info: simulation/7-instr.png used on input line 216.
+(pdftex.def)             Requested size: 390.0pt x 322.43158pt.
+ [12 <C:/Users/Adam/classes/ECE485/vhdl-project-3/simulation/6-instr.png>]
+<simulation/8-instr.png, id=61, 493.0922pt x 411.03563pt>
+File: simulation/8-instr.png Graphic file (type png)
+
+<use simulation/8-instr.png>
+Package pdftex.def Info: simulation/8-instr.png used on input line 224.
+(pdftex.def)             Requested size: 390.0pt x 325.11598pt.
+ [13 <C:/Users/Adam/classes/ECE485/vhdl-project-3/simulation/7-instr.png>]
+<simulation/9-instr.png, id=67, 496.85625pt x 411.03563pt>
+File: simulation/9-instr.png Graphic file (type png)
+
+<use simulation/9-instr.png>
+Package pdftex.def Info: simulation/9-instr.png used on input line 233.
+(pdftex.def)             Requested size: 390.0pt x 322.6386pt.
+
+Overfull \hbox (5.17046pt too wide) in paragraph at lines 230--236
+[]\OT1/cmr/m/n/12 Figure 11[] shows the ninth in-struc-tion. The im-me-di-ate v
+alue of 0x000000FF
+ []
+
+[14 <C:/Users/Adam/classes/ECE485/vhdl-project-3/simulation/8-instr.png>]
+(C:\Users\Adam\classes\ECE485\vhdl-project-3\mips.vhd [15 <C:/Users/Adam/classe
+s/ECE485/vhdl-project-3/simulation/9-instr.png>]
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 22.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
@@ -194,18 +257,17 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 22.
- [8]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 38.
- [9] [10]
-[11] [12] [13] [14] [15] [16])
-(C:\Users\Adam\classes\ECE485\vhdl-project-3\test_bench.vhd [17] [18] [19])
-[20] (C:\Users\Adam\classes\ECE485\vhdl-project-3\document.aux) ) 
+ [16] [17]
+[18] [19] [20] [21] [22] [23] [24])
+(C:\Users\Adam\classes\ECE485\vhdl-project-3\test_bench.vhd [25] [26] [27])
+[28] (C:\Users\Adam\classes\ECE485\vhdl-project-3\document.aux) ) 
 Here is how much of TeX's memory you used:
- 2733 strings out of 493921
- 38215 string characters out of 3144880
- 257173 words of memory out of 3000000
- 6030 multiletter control sequences out of 15000+200000
+ 2781 strings out of 493921
+ 39263 string characters out of 3144880
+ 260173 words of memory out of 3000000
+ 6070 multiletter control sequences out of 15000+200000
  10200 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  32i,10n,36p,730b,1605s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -217,9 +279,9 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on document.pdf (20 pages, 951960 bytes).
+Output written on document.pdf (28 pages, 1131178 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 141 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

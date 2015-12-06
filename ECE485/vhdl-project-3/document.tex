@@ -159,13 +159,84 @@ Once the processor was completely designed, it was necessary to write some test 
 	\item \texttt{beq \$1, \$1, -0x000B}
 \end{enumerate}
 
-Figure \ref{fig:1-instr} shows the first instruction being executed. The data memory at address 0x00000001 houses the data holds the value 0xAAAAAAAA and register \$1 is loaded with the data 0xAAAAAAAA.
+Figure \ref{fig:1-instr} shows the first instruction being executed. The data memory at address 0x00000001 holds the value 0xAAAAAAAA and register \$1 is subsequently loaded with the data 0xAAAAAAAA.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{simulation/1-instr}
-\caption{Instruction 1}
+\caption{\texttt{lw \$1, 1(\$zero)}}
 \label{fig:1-instr}
 \end{figure}
+
+Figure \ref{fig:2-instr} shows the second instruction. The value of 0xAAAAAAAA in register \$1 is successfully stored into the data memory at address 0x00000006.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/2-instr}
+\caption{\texttt{sw \$1, 6(\$zero)}}
+\label{fig:2-instr}
+\end{figure}
+
+Figure \ref{fig:3-instr} shows the third instruction. The value of 0xBBBBBBBB at address 0x00000002 is successfully loaded into register \$2.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/3-instr}
+\caption{\texttt{lw \$2, 2(\$zero)}}
+\label{fig:3-instr}
+\end{figure}
+
+Figure \ref{fig:4-instr} shows the fourth instruction. The values of 0xAAAAAAAA and 0xBBBBBBBB are successfully added with the result being 0x66666665 and writing this value into register \$3.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/4-instr}
+\caption{\texttt{add \$3, \$1, \$2}}
+\label{fig:4-instr}
+\end{figure}
+
+Figure \ref{fig:5-instr} shows the fifth instruction. The value of 0xAAAAAAAA in register \$1 is subtracted from register \$2. The result is 0x11111111 and is written back into register \$4.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/5-instr}
+\caption{\texttt{sub \$4, \$2, \$1}}
+\label{fig:5-instr}
+\end{figure}
+
+
+Figure \ref{fig:6-instr} shows the sixth instruction. The value of 0xBBBBBBBB in register \$2 is compared to 0xAAAAAAAA in register \$1 for equivalence. Since they are not, the program counter increments to the next instruction.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/6-instr}
+\caption{\texttt{beq \$1, \$2, 100}}
+\label{fig:6-instr}
+\end{figure}
+
+
+Figure \ref{fig:7-instr} shows the seventh instruction. The value of 0xFFFFFFFF at address 0x00000004 is loaded into register \$2 successfully.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/7-instr}
+\caption{\texttt{lw \$2, 4(\$zero)}}
+\label{fig:7-instr}
+\end{figure}
+
+Figure \ref{fig:8-instr} shows the eight instruction. The value of 0xFFFFFFFF in register \$2 and 0xAAAAAAAA in register are nanded and the result of 0x55555555 is both accurate and stored in register \$5.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/8-instr}
+\caption{\texttt{nand \$5, \$1, \$2}}
+\label{fig:8-instr}
+\end{figure}
+
+
+Figure \ref{fig:9-instr} shows the ninth instruction. The immediate value of 0x000000FF is anded with the value of 0xFFFFFFFF in register \$2. The correct result of 0x000000FF is calculated and stored in register \$6.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/9-instr}
+\caption{\texttt{andi \$6, \$2, 0x00FF}}
+\label{fig:9-instr}
+\end{figure}
+
+
+
 
 \section{Conclusion}
 The design and implementation of a 32-bit CPU was a success. a set of 9 instructions were successfully implemented and verified with test bench code. All requested functionality was achieved. This 32-bit CPU can now be used in further projects.
