@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  6 DEC 2015 15:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.2)  6 DEC 2015 16:11
 entering extended mode
-**project3.tex
-(C:\Users\Adam\classes\ECE449\reports\project3\project3.tex
+**project4.tex
+(C:\Users\Adam\classes\ECE449\reports\project4\project4.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -30,7 +30,7 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\Users\Adam\classes\ECE449\reports\project3\project3.aux)
+(C:\Users\Adam\classes\ECE449\reports\project4\project4.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
@@ -50,23 +50,22 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {C:/Users/Adam/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(C:\Users\Adam\classes\ECE449\reports\project3\project3.aux) ) 
+(C:\Users\Adam\classes\ECE449\reports\project4\project4.aux) ) 
 Here is how much of TeX's memory you used:
- 222 strings out of 493921
- 2689 string characters out of 3144880
- 51031 words of memory out of 3000000
+ 221 strings out of 493921
+ 2686 string characters out of 3144880
+ 52031 words of memory out of 3000000
  3595 multiletter control sequences out of 15000+200000
- 6579 words of font info for 24 fonts, out of 3000000 for 9000
+ 6410 words of font info for 23 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 22i,6n,19p,572b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 22i,6n,19p,1262b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on project3.pdf (2 pages, 46825 bytes).
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on project4.pdf (2 pages, 44782 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
+ 21 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
