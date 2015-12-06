@@ -13,8 +13,8 @@
 	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
 	basicstyle=\small,%\footnotesize,        % the size of the fonts that are used for the code
 	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-	breaklines=false,                 % sets automatic line breaking
-	captionpos=b,                    % sets the caption-position to bottom
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=t,                    % sets the caption-position to bottom
 	commentstyle=\color{mygreen},    % comment style
 	deletekeywords={...},            % if you want to delete keywords from the given language
 	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
@@ -142,4 +142,9 @@ Include blurb about test bench code and all figures of waveforms explaining each
 
 \section{Conclusion}
 The design and implementation of a 32-bit CPU was a success. a set of 9 instructions were successfully implemented and verified with test bench code. All requested functionality was achieved. This 32-bit CPU can now be used in further projects.
+
+\section*{Appendix}
+\lstinputlisting[label=cpuCode, caption=CPU Code]{mips.vhd}
+\lstinputlisting[label=tbCode, caption=Test Bench Code]{test_bench.vhd}
+
 \end{document}
