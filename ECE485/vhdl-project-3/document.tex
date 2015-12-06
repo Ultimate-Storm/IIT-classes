@@ -142,14 +142,31 @@ The control lines can also be seen in Figure \ref{fig:datapth}. It is a simple d
 \section{Analysis}
 While this processor was optimized to be able to fully accomplish the tasks specified in the business requirements document, it could still be improved. In its current stage, it can be considered a bare bones prototype. To transform the current design into a processor on par with the current industry standard, a complete instruction set would have to be implemented. Furthermore, pipelining is a necessity to add. Any processor that doesn't implement pipelining is not making efficient use of its own components. After pipelining is implemented, hazard controls would need to coexist. This would allow for cool features of the processor to exist such as forwarding, making it a truly efficient piece of hardware.
 \section{Simulation Results}
-Once the processor was completely designed, it was necessary to write some test bench code to ensure the functionality it provided was desired. To test each instruction, data had to first be written to memory, along with the program being loaded onto the CPU. Due to the amount of signals involved in the CPU, not all will be shown in the simulation. The clock, contents of the registers, data memory, and program counter will only be shown. Please refer to the Test Bench in the Appendix for a detailed view of the testing procedure. The execution of the program begins at 38ns. The tested instructions are:
+Once the processor was completely designed, it was necessary to write some test bench code to ensure the functionality it provided was desired. To test each instruction, data had to first be written to memory, along with the program being loaded onto the CPU. Due to the amount of signals involved in the CPU, not all will be shown in the simulation. The clock, contents of the registers, data memory, and program counter will only be shown. Data Memory addresses $00000001_{16} \to 00000005_{16}$ were initialized with starting data. Please refer to the Test Bench in the Appendix for a detailed view of the testing procedure. The execution of the program begins at 38ns. The tested instructions are:
 
 \begin{enumerate}
 	\item \texttt{lw \$1, 1(\$zero)}
 	\item \texttt{sw \$1, 6(\$zero)}
 	\item \texttt{lw \$2, 2(\$zero)}
 	\item \texttt{add \$3, \$1, \$2}
+	\item \texttt{sub \$4, \$2, \$1}
+	\item \texttt{beq \$1, \$2, 100}
+	\item \texttt{lw \$2, 4(\$zero)}
+	\item \texttt{nand \$5, \$1, \$2}
+	\item \texttt{andi \$6, \$2, 0x00FF}
+	\item \texttt{ori \$7, \$1, 0x00FF}
+	\item \texttt{or \$8, \$1, \$2}
+	\item \texttt{beq \$1, \$1, -0x000B}
 \end{enumerate}
+
+Figure \ref{fig:1-instr} shows the first instruction being executed. The data memory at address 0x00000001 houses the data holds the value 0xAAAAAAAA and register \$1 is loaded with the data 0xAAAAAAAA.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{simulation/1-instr}
+\caption{Instruction 1}
+\label{fig:1-instr}
+\end{figure}
+
 \section{Conclusion}
 The design and implementation of a 32-bit CPU was a success. a set of 9 instructions were successfully implemented and verified with test bench code. All requested functionality was achieved. This 32-bit CPU can now be used in further projects.
 
