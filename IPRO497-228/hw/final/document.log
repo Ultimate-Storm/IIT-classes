@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.21)  6 MAY 2016 06:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.21)  6 MAY 2016 07:00
 entering extended mode
 **./document.tex
 (document.tex
@@ -127,13 +127,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 26.
- [2] [3]
+ [2] [3] [4]
 (document.aux) ) 
 Here is how much of TeX's memory you used:
- 855 strings out of 493634
- 11740 string characters out of 3141317
- 72332 words of memory out of 3000000
- 4286 multiletter control sequences out of 15000+200000
+ 857 strings out of 493634
+ 11759 string characters out of 3141317
+ 72350 words of memory out of 3000000
+ 4288 multiletter control sequences out of 15000+200000
  9278 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  24i,6n,32p,1091b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -144,9 +144,9 @@ cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
 12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.p
 fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on document.pdf (3 pages, 80519 bytes).
+Output written on document.pdf (4 pages, 84080 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
+ 43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
