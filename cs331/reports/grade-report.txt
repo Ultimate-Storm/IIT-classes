@@ -1,0 +1,29 @@
+Grade Report for Adam K. Sumner
+Produced 2014-05-13 21:07
+Netid: asumner cwid: A20283081
+Course: cs331 (2014-01)  Section: 02
+
+                    Assignment   Status Raw Max    Norm Weight  Points 
+------------------------------ -------- --- --- ------- ------ ------- 
+                        Exam 1 Replaced n/a  72  95.60% 0.2500 23.9011 
+                        Exam 2   Graded 110 110 100.00% 0.2500 25.0000 
+                    Final Exam   Graded 174 182  95.60% 0.2500 23.9011 
+               Linked List Lab   Graded 100 100 100.00% 0.0500  5.0000 
+                  L System Lab   Graded 100 100 100.00% 0.0500  5.0000 
+                   Dequeue Lab   Graded 100 100 100.00% 0.0500  5.0000 
+                 Traversal Lab  Dropped   0 100   0.00% 0.0000  0.0000 
+         Pre Course Assessment   Graded   1   1 100.00% 0.0100  1.0000 
+ Clojure Introduction Activity   Graded   1   1 100.00% 0.0100  1.0000 
+                  Clojure Data   Graded   1   1 100.00% 0.0100  1.0000 
+               Record Activity   Graded   1   1 100.00% 0.0100  1.0000 
+            Recursion Activity Canceled n/a   1     n/a 0.0000  0.0000 
+      Immutable Lists Activity   Graded   1   1 100.00% 0.0100  1.0000 
+        Mutable Lists Activity   Graded   1   1 100.00% 0.0100  1.0000 
+Reversing a Doubly Linked List   Graded   1   1 100.00% 0.0100  1.0000 
+         Vectors (Running Sum)   Graded   1   1 100.00% 0.0100  1.0000 
+               Writing Dequeue   Graded   1   1 100.00% 0.0100  1.0000 
+            Traversal Activity   Graded   1   1 100.00% 0.0100  1.0000 
+                  List Zippers Canceled n/a   1     n/a 0.0000  0.0000 
+             Quadratic Sorting Canceled n/a   1     n/a 0.0000  0.0000 
+------------------------------ -------- --- --- ------- ------ ------- 
+                         Total                   97.80% 1.0000 97.8022 

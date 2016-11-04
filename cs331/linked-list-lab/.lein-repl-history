@@ -1,0 +1,500 @@
+(delete-all 2 '(1 2 2 3 2))
+exit
+(delete-all 2 '(1 2 3))
+(delete-all 2 '(1 2 2 3))
+exit
+(delete-all 1 '(1 2 3))
+exit
+(delete-all 2 '(1 2 3))
+exit
+(delete-all 2 '(1 2 3))
+exit
+(delete-all 2 '(1 2 3))
+exit
+(delete-all 1 ())
+(delete-all 1 '(1))
+(delete-all 1 '())
+exit
+(delete 1 '(1 2))
+(delete-all 1 '(1 2))
+(delete-all 1 '(1 1))
+exit
+(delete-all 1 '(1 1 1 ))
+(delete-all 1 '(1 2 1 ))
+(delete-all 1 '(1 2 1 2 ))
+(delete-all 1 '(1 2 1 2 1 ))
+exit
+(delete-all 1 '(1 2 1 2 1 ))
+(delete-all 2 '(1 2 1 2 1 ))
+exit
+(delete-all 2 '(1 2 1 2 1 ))
+exit
+(delete-all 2 '(1 2 1 2 1 ))
+(delete-all 1 '(1 2 1 2 1 ))
+exit
+(delete-all 1 '(1 2 1 2 1 ))
+exit
+(delete-all 1 '(1 2 1 2 1 ))
+(delete-all 2 '(1 2 1 2 1 ))
+exit
+(delete-all 2 '(1 2 1 2 1 ))
+(delete-all 1 '(1 2 1 2 1 ))
+exit
+(delete-all 1 '(1 2 1 2 1 ))
+(delete-all 2 '(1 2 1 2 1 ))
+(delete-all 2 '(1 2 1 2 2 ))
+(delete-all 2 '(1 2 1 2 1 2 ))
+(delete-all 2 '(1 2 1 2 1 2 1))
+(delete-all 2 '(1 2 1 2 1 2 1 1 1))
+(delete-all 1 '(1 2 1 2 1 2 1 1 1))
+(delete-all 1 '(1 1 1))
+(delete-all 1 '(1 1 1 1))
+exit
+(delete-all 1 '(1 1 1 1))
+(delete-all 1 '(1 2 1 1 1))
+exit
+(delete-all 1 '(1 2 1 1 1))
+(delete-all 2 '(1 2 1 1 1))
+(delete-all 1 '(1 1 1 1 1))
+(delete-all 2 '(1 1 1 1 1))
+exit
+(delete-all 2 '(1 1 1 1 1))
+(delete-all 1 '(1 1 1 1 1))
+(delete-all 1 '(1 1 2 1 1))
+exit
+(delete-all 1 '(1 1 2 1 1))
+exit
+(delete-all 1 '(1 1 2 1 1))
+exit
+(delete-all 1 '(1 1 2 1 1))
+(delete-all 2 '(1 1 2 1 1))
+(delete-all 2 '(1 1 1 1 1 1 1 2 2 2 2 2 1 1))
+exit
+(delete-all 2 '(3 2 5 2 6))
+exit
+(delete 1 '())
+exit
+(make-list)
+(delete 1 (make-list))
+(delete 1 '())
+(delete 1 (make-list))
+(delete 1 '())
+(make-list 2)
+(make-list )
+(make-list)
+(delete 1 (make-list))
+exit
+(List [ ])
+(List [1 ])
+(List [1])
+(List.  0)
+(List. '' 0)
+(List. 1 0)
+(delete 1  (List. 1 0))
+(delete 1  (make-list))
+(delete '() 1)
+(delete '(1 2 3) 1)
+(delete 1 (List. 5))
+ (List. 5)
+ (List. 5 0)
+ (List. 5 5)
+(delete 5 (List. 5 5))
+(car (List. 5 5))
+(first (List. 5 5))
+exit
+(delete 1 '())
+(delete 1 '(1))
+(delete 1 '(nil))
+(delete 1 (List. 123 3 ))
+(delete 1 (List. 1,2,3 3 ))
+(delete 1 (List. (1 2 3) 3 ))
+(delete 1 (List. '(1 2 3) 3 ))
+(delete 1 '('(1 2 3) 2 3))
+(delete 1 (1 2 3))
+(delete 1 '(2 3 4 1))
+(delete-all 1 '(2 3 1 4 1))
+(Cons. 3 nil)
+(list-to-cons '(1 2 3 4))
+(cons-to-list '(1 2 3 4))
+(cons-to-list '(1))
+(cons-to-list (List. 4 5))
+(List. 0 0)
+(list-tocons '(0 1 5 8))
+(list-to-cons '(0 1 5 8))
+(delete-all 1 '(1 2 4 2 1 5 6 1))
+(delete (:data 1) (List. 1 1))
+(= (:data 1) (:data 1))
+(let [nulist (List. 1 4])
+(let [nulist (List. 1 4)])
+nulist
+(nulist)
+(let [nulist (List. 1 4)])
+(let [(insert-front (make-list) 10])])
+(let [nulist (insert-front (make-list) 10])])
+(let [nulist (insert-front (make-list) 10]))
+(let [nulist (insert-front (make-list) 10)])
+nulist
+(nulist)
+(let [nulist (insert-front (make-list) 10)])
+(let [nulist (insert-front (make-list) 10)] (:size nulist))
+(let [nulist (insert-front (make-list) 10)] (:data nulist))
+(delete 10 (insert-front (make-list) 10))
+(delete :car 10 (insert-front (make-list) 10))
+(delete (:car 10) (insert-front (make-list) 10))
+(delete 10 (insert-front (make-list) 10))
+(delete :car 10 (insert-front (make-list) 10))
+(delete (:car 10) (insert-front (make-list) 10))
+exit
+(:size (List. 10 3))
+exit
+(make-list 1 2 3)
+(make-list)
+(insert-front 10 (make-list))
+(insert-front  (make-list) 10)
+(insert-front 11 (insert-front  (make-list) 10))
+(insert-front (insert-front  (make-list) 10) 11)
+exit
+(delete 1 (insert-front(insert-front (make-list) 10) 1))
+(delete 10 (insert-front(insert-front (make-list) 10) 1))
+(delete 10 '(1 10 9 8))
+(delete 10 '(1 '(10 '(9))))
+exit
+(delete 10 '(1 '(10 '(9))))
+exit
+(delete 10 '(1 '(10 '(9))))
+'(1 '(10 '(9)))
+'(1 (10 (9)))
+(delete 10 '(1 (10 (9))))
+(delete 10 (1 (10 (9))))
+(delete 10 (List. 10 1))
+exit
+(delete 10 (List. 10 1))
+(List. 10 1)
+(insert-front (List. 10 1) 11)
+(insert-front (insert-front (List. 10 1) 11) 13)
+(delete 10 (insert-front (insert-front (List. 10 1) 11) 13))
+(rest (insert-front (insert-front (List. 10 1) 11) 13))
+(car (insert-front (insert-front (List. 10 1) 11) 13))
+(first (insert-front (insert-front (List. 10 1) 11) 13))
+(first (rest (insert-front (insert-front (List. 10 1) 11) 13)))
+(delete 10 (insert-front (insert-front (List. 10 1) 11) 13))
+(:car (:cdr (insert-front (insert-front (List. 10 1) 11) 13)))
+(:car (insert-front (insert-front (List. 10 1) 11) 13))
+exit
+(delete 10 (list-to-cons '(1 2 3 4 10))
+sad
+asd
+(delete 10 (list-to-cons '(1 2 3 4 10)))
+(list-to-cons '(1 2 3 4 10))
+(delete 10 '(10 9 8 7 6)))
+(delete 10 '(10 9 8 7 6))
+(delete 10 '(1 10 9 8))
+(delete 1 '(1 10 9 8))
+(delete 1 '(1 10 9 1 8))
+(delete 10 '(1 10 9 1 8))
+(delete 1 '(1 10 9 1 8))
+(make-list)
+(def x (make-list))
+x
+(car x)
+(car (x))
+(first x)
+(rest x)
+q
+exit
+(set!)
+(set! x 5)
+(def x 1)
+x
+(set! x 5)
+(def y '(1 2 3 4 5))
+y
+(set! (first y) 6)
+y
+exit
+(def x '(1 2 3 4 5 6))
+x
+(insert-ordered 7 x)
+(insert-ordered x 7)
+(def x (List. 1 2 3 4 5))
+(def x (List. 5))
+(def x (List. 5 nil))
+x
+(Cons. 6 x)
+(Cons. x 6)
+exit
+(def x (mlist 2 3 5))
+exit
+(def x mlist( 2 3 5))
+(def x (mlist 2 3 5))
+x
+(def y '(1 2 3 4 5))
+(def t (mlist y))
+t
+exit
+q
+q1
+exit
+(def x '(1 2 3 4 5))
+(delete 3 x)
+exit
+(def x '(1 2 3 4 5))
+(delete 3 x)
+(MCons. '(1 2 3 4 5))
+(def x (mlist 2 3 4))
+x
+(set-car x 5)
+(set-car! x 5)
+x
+exit
+(def xx (mlist 1 4 5 7 9))
+(delete 5 xx)
+(delete 5 '(1 4 5 7 9))
+exit
+(def x mlist(1 2 3 4 5))
+(def x mlist(1 2 3))
+(def x (mlist 1 2 3 4 5))
+(delete 4 x)
+exit
+(def x (mlist 1 2 3 4 5))
+(delete 4 x)
+(list-to-cons '(1 2 3 4 5))
+(def x (list-to-cons '(1 2 3 4 5)))
+x
+(delete 3 x)
+exit
+(def x (list-to-cons '(1 2 3 4 5)))
+exit
+(def x (list-to-cons '(1 2 3 4 5)))
+x
+(delete 3 x)
+(def x '(1 1 3 4 5 6 1 1 )
+(def x '(1 1 3 4 5 6 1 1 ))
+x
+(delete-all 1 x)
+(def x (List. (Cons. 3 (Cons. 3 (Cons. 2 (Cons. 1 nil)))) 4)
+x
+X
+x
+(def y (List. (Cons. 3 (Cons. 3 (Cons. 2 (Cons. 1 nil)))) 4)
+(def x '(1 2 3 4 5))
+(delete 2 x)
+(def x (List. (Cons. 3 (Cons. 2 (Cons. 1 nil))) 3))
+x
+(first (:data x))
+(first (:car x))
+(first (:cdr x))
+(first (:data :car x))
+(first (:data (:car x)))
+(:data x)
+(first (:data x))
+(= (first (:data x)) 3)
+(= (first (:data x)) :car 3)
+(= (first (:data x)) (:car 3))
+(car x)
+(:car x)
+(:data (:car x))
+(:data (first x))
+(first x)
+(car x)
+(:car x)
+(def g (make-list))
+g
+(list-to-cons g)
+(def x (Cons 1 nil))
+(def x (Cons. 1 nil))
+x
+(:car x)
+(List. (Cons. 1(Cons. 2(Cons. 3 nil))) 3)
+x
+(def x (List. (Cons. 1(Cons. 2(Cons. 3 nil))) 3))
+x
+(first x)
+(first (:car x))
+(first x)
+(-> first :car x)
+(-> x first :car )
+(-> x first)
+(-> x first first)
+(first (first x))
+(first x)
+(first (first (firstx)))
+x
+(:data x)
+(:data (:car x))
+(:data (car x))
+(:data (:car x))
+(:data x)
+(:size x)
+(:data x)
+(:data :car x)
+(:data (:car x))
+(:data (:car (:carx)))
+(:data (:cdr x))
+(:data (first x))
+(:data (rest x))
+x
+(def y (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+y
+(:data (:car y))
+(:data y (:car y))
+(:car (:data y))
+(:car(:data y))
+(rest y)
+(:car (:car (:data y)))
+( (:car (:data y)))
+ (:car (:data y))
+(:cdr (:car (:data y)))
+(:cdr (:data y))
+exit
+(def x (List. (Cons. 2(Cons. 3(Cons. 4 nil)))))
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil)))))
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))))))
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+x
+(delete 3 x)
+x
+exit
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+x
+(delete 3 x)
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+x
+(delete 3 x)
+(delete 2 x)
+(delete 4 x)
+(delete 2 x)
+exit
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+(delete 2 x)
+(delete 4 x)
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+x
+(delete 2 x)
+(delete 4 x)
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+(delete 2 x)
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+(delete 2 x)
+(delete 4 x)
+(delete 2 x)
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+(delete 2 x)
+(let [y (:car (:data xx))])
+(let [y (:car (:data x))])
+y
+x
+(:car (:data x))
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+(delete 2 x)
+(:car (:data x))
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+(delete 2 x)
+(:cdr (:data x))
+(def x (List. (Cons. 2 (Cons. 3 (Cons. 4 nil))) 3))
+(delete 2 x)
+(def x (Cons. 1(Cons. 2(Cons. 3 nil))))
+x
+(delete 1 x)
+(delete 2 x)
+(delete 3 x)
+(def x (Cons. 2(Cons. 3(Cons. 4 nil))))
+x
+(delete 2 x)
+(def x (Cons. 3 (Cons. 3(Cons. 4))))
+(def x (Cons. 3 (Cons. 3(Cons. 4 nil))))
+x
+(delete-all 3 x)
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4)
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+x
+(delete 3 x)
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+x
+(delete 3 x)
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+x
+(first (first x))
+(first x)
+(rest x)
+(rest (first x))
+(:car (first x))
+(:car x)
+(:car (:data x))
+x
+(:car (:data x))
+exit
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+(delete 1 x)
+(delete 2 x)
+(delete 3 x)
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+(delete 1 x)
+(delete 2 x)
+(delete 1 x)
+(delete 2 x)
+(delete 4 x)
+(delete 1 x)
+(delete 2 x)
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+(delete 1 x)
+cd ..
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+x
+(first (first x))
+(first x)
+(first (first (first x))))
+(first (first (first x)))
+(rest (first x))
+(rest (rest (first x)))
+(first (rest (first x)))
+(next (first x))
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+(delete 2 x)
+(first (first x))
+(:car (:data x))
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+(delete 2 x)
+(def x (Cons. 1(Cons. 2(Cons. 4))))
+(def x (Cons. 1(Cons. 2(Cons. 4 nil))))
+x
+(delete 1 x)
+(delete 2 x)
+(delete 4 x)
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+(delete 2 x)
+(delete 7 x)
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+(delete 1 x)
+(delete 4 x)
+(delete 7 x)
+(def x (Cons. 2(Cons. 3 (Cons. 2(Cons.6(Cons.7(Cons.2 ni))))))))
+(def x (Cons. 2(Cons. 3 (Cons. 2(Cons. 6(Cons.7(Cons.2 ni))))))))
+(def x (Cons. 2(Cons. 3 (Cons. 2(Cons. 6(Cons.7(Cons.2 ni)))))))))
+(def x (Cons. 2(Cons. 3 (Cons. 2(Cons. 6(Cons.7(Cons.2 nil)))))))
+(def x (Cons. 2(Cons. 3 (Cons. 2(Cons. 6(Cons. 7(Cons. 2 nil)))))))
+x
+(delete-all 2 x)
+(def x (List. (Cons. 1(Cons. 2(Cons. 3(Cons. 4 nil)))) 4))
+(delete 7 x)
+(delete 4 x)
+(def x (List. (Cons. 1(Cons. 2 (Cons. 2 (Cons. 1 nil))))))
+(def x (List. (Cons. 1(Cons. 2 (Cons. 2 (Cons. 1 nil)))) 4))
+x
+(delete-all 1 x)
+(delete-all 2 x)
+(def x (List. (Cons. 1(Cons. 2 (Cons. 2 (Cons. 1 nil)))) 4))
+(difference 1 x)
+(difference 2 x)
+(difference 7 x)
+(def x (List. (Cons. 1(Cons. 2 (Cons. 2 (Cons. 1 nil)))) 4))
+(delete-all 2 x)
+(delete-all 7 x)
+(def x (make-list))
+x
+(delete 2 x)
+(delete-all 2 x)
+(def x (List. (Cons. 3 (Cons. 3 (Cons. 2 nil))) 3))
+x
+(delete-all 3 x)
+exit
