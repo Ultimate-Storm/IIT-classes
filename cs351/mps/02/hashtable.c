@@ -77,26 +77,17 @@ void free_hashtable(hashtable_t *ht) {
   unsigned long i;
   for (i=0; i<ht->size; i++) {
     b = ht->buckets[i];
+    bucket_t *temp = b;
     while (b) {
-      if (b->next){
-        bucket_t *temp = b;
+        temp = b;
         b = b->next;
         free(temp->key);
         free(temp->val);
         free(temp);
-        temp = NULL;
-      } else {
-          free(b->key);
-          free(b->val);
-          free(b);
-          b = NULL;
-          break;
-      }
     }
   }
   free(ht->buckets);
   free(ht); // FIXME: must free all substructures!
-  ht = NULL;
 }
 
 /* TODO */
@@ -109,7 +100,6 @@ void  ht_del(hashtable_t *ht, char *key) {
     free(b->key);
     free(b->val);
     free(b);
-    b = NULL;
     return;
   }
   while (next){
@@ -118,7 +108,6 @@ void  ht_del(hashtable_t *ht, char *key) {
       free(next->val);
       b->next = next->next;
       free(next);
-      next = NULL;
       return;
     }
     b = b->next;
@@ -137,24 +126,15 @@ void  ht_rehash(hashtable_t *ht, unsigned long newsize) {
         strcpy(nkey, b->key);
         strcpy(nval, b->val);
         ht_put(nht, nkey, nval);
-      if (b->next){
         bucket_t *temp = b;
         b = b->next;
         free(temp->key);
         free(temp->val);
         free(temp);
-      } else {
-        free(b->key);
-        free(b->val);
-        free(b);
-        b = NULL;
-        break;
-      }
     }
   }
   free(ht->buckets);
   ht->buckets = nht->buckets;
   ht->size = nht->size;
   free(nht);
-  nht = NULL;
 }
